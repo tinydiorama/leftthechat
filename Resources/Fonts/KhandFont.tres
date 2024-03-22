@@ -1,0 +1,7 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://dgw8ew0ylavxy"]
+
+[ext_resource type="FontFile" uid="uid://cirhsdu2u3f8x" path="res://Resources/Fonts/Khand-Regular.ttf" id="1_uqyth"]
+
+[resource]
+base_font = ExtResource("1_uqyth")
+spacing_bottom = -2

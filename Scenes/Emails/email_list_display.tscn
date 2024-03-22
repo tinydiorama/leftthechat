@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxjeo4gf3f2a3"]
+
+[ext_resource type="Script" path="res://Scripts/Interfaces/Emails/EmailListDisplay.gd" id="1_66bhm"]
+[ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_my6wd"]
+
+[node name="EmailListDisplay" type="VBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 222.0
+grow_horizontal = 2
+theme_override_constants/separation = 30
+script = ExtResource("1_66bhm")
+
+[node name="EmailListDisplayInner" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="EmailIcon" type="TextureRect" parent="EmailListDisplayInner"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("1_my6wd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EmailListDisplayInner"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="From" type="Label" parent="EmailListDisplayInner/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "asdfasdf"
+
+[node name="Subject" type="Label" parent="EmailListDisplayInner/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "asdfasdfasdfasdf"
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 2

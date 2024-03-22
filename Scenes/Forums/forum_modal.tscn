@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://40sog0wluj4r"]
+
+[ext_resource type="Script" path="res://Scripts/Interfaces/ForumModal.gd" id="1_mup0r"]
+[ext_resource type="PackedScene" uid="uid://ifij1i447f6s" path="res://Scenes/Forums/forum_thread.tscn" id="2_gop48"]
+[ext_resource type="PackedScene" uid="uid://clr7jqiotljyu" path="res://Scenes/Forums/forum_main_subject.tscn" id="3_uymx1"]
+[ext_resource type="PackedScene" uid="uid://c4tr0djruvbli" path="res://Scenes/Forums/forum_post.tscn" id="4_o6fs0"]
+[ext_resource type="Texture2D" uid="uid://mvbdbdswo8ql" path="res://Sprites/backbutton.png" id="5_gak2y"]
+[ext_resource type="Texture2D" uid="uid://ci2ghcg7qj01l" path="res://Sprites/menuHeader.png" id="6_buqlv"]
+
+[node name="ForumModal" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 5.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 100
+script = ExtResource("1_mup0r")
+forumThreadScene = ExtResource("2_gop48")
+forumMainSubject = ExtResource("3_uymx1")
+forumPost = ExtResource("4_o6fs0")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="SettingsMarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 125
+theme_override_constants/margin_bottom = 20
+
+[node name="ForumList" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Header" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/ForumList"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/ForumList/Header"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Tableaux"
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/SettingsMarginContainer/ForumList/Header"]
+layout_mode = 2
+
+[node name="ForumThreadPosts" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Header" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/ForumThreadPosts"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/SettingsMarginContainer/ForumThreadPosts/Header"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureButton" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/ForumThreadPosts/Header/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_gak2y")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/ForumThreadPosts/Header/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Tableaux"
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/SettingsMarginContainer/ForumThreadPosts/Header"]
+layout_mode = 2
+
+[node name="CloseButton" type="TextureButton" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+texture_normal = ExtResource("6_buqlv")
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

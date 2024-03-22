@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Chatroom" load_steps=3 format=3 uid="uid://di3w1ny06ny64"]
+
+[ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_hw43k"]
+[ext_resource type="Resource" uid="uid://1oxf4tm8q7pc" path="res://Resources/Chats/TestChat.tres" id="1_orv6l"]
+
+[resource]
+script = ExtResource("1_hw43k")
+chatName = "Horror Fanatics"
+unlocked = true
+numPeople = 1
+category = "Chatrooms"
+chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("1_orv6l")])

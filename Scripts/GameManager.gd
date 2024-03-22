@@ -1,0 +1,69 @@
+class_name GameManager
+extends Node
+
+var savedId = "savedDataModels"
+
+var emails:Emails = Emails.new()
+var articles:Articles = Articles.new()
+var friends:Friends = Friends.new()
+var forums:Forums = Forums.new()
+var chats:Chats = Chats.new()
+
+var seenEmails:Array[String] = ["initialEmails"]
+var seenFriends:Array[String] = ["initialFriends"]
+var seenForums:Array[String] = ["initialForums"]
+var seenChats:Array[String] = ["initialChatrooms"]
+
+@onready var storyManager = %StoryManager
+
+func add_email(email:Email):
+	emails.add_email(email)
+
+func add_friend(friend:Friend):
+	friends.add_friend(friend)
+	
+func add_forum(thread:ForumThread):
+	forums.add_thread(thread)
+	
+func add_chat(chat:Chatroom):
+	chats.add_chatroom(chat)
+
+func _ready():
+	#storyManager.addInitialContent()
+	pass
+
+func on_save_game(saved_data:Array[SavedData]):
+	var my_data = GameSavedData.new()
+	my_data.id = "savedDataModels"
+	my_data.scene_path = scene_file_path
+	my_data.parent_node = get_parent().get_path()
+	my_data.seenChats = seenChats
+	my_data.seenEmails = seenEmails
+	my_data.seenForums = seenForums
+	my_data.seenFriends = seenFriends
+	
+	saved_data.append(my_data)
+	
+func on_before_load_game():
+	print("before load game")
+	
+func on_load_game(saved_data:SavedData):
+	var my_data:GameSavedData = saved_data as GameSavedData
+	
+	print("gets here")
+	#for chat in my_data.seenChats:
+		#seenChats.append(chat)
+	seenChats = my_data.seenChats
+	seenEmails = my_data.seenEmails
+	seenForums = my_data.seenForums
+	seenFriends = my_data.seenFriends
+	
+	populate_data()
+
+func populate_data():
+	for chatName in seenChats:
+		var chatData = storyManager.allChatrooms.get(chatName)
+		for chatroom in chatData:
+			add_chat(chatroom)
+			
+	print(chats.get_chatrooms())

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ForumThread" load_steps=4 format=3 uid="uid://cia4k2k3l588d"]
+
+[ext_resource type="Script" path="res://Resources/Forums/ForumThread.gd" id="1_54uih"]
+[ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_id6rj"]
+[ext_resource type="Resource" uid="uid://dvw4pkwn8qgvu" path="res://Resources/Forums/PostTest.tres" id="2_xppp0"]
+
+[resource]
+script = ExtResource("1_54uih")
+subject = "This is a test thread"
+originalPoster = "@op"
+avatar = ExtResource("1_id6rj")
+upvotes = 10
+posts = Array[Resource("res://Resources/Forums/ForumPost.gd")]([ExtResource("2_xppp0")])
+body = "asdfasdfasdfsadf asdf asdf asdf asdf"

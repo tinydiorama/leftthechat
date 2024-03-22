@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Email" load_steps=3 format=3 uid="uid://bcu8p08oh6tb"]
+
+[ext_resource type="Script" path="res://Resources/Emails/Email.gd" id="1_ethh7"]
+[ext_resource type="Texture2D" uid="uid://dae0gw5vglkn0" path="res://Sprites/MapIcon.png" id="1_qs0v3"]
+
+[resource]
+script = ExtResource("1_ethh7")
+fromName = "Test"
+subject = "testing"
+body = "Test test test"
+icon = ExtResource("1_qs0v3")

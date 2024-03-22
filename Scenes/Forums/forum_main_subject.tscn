@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=3 uid="uid://clr7jqiotljyu"]
+
+[ext_resource type="Script" path="res://Scripts/Interfaces/Forums/ForumMainSubject.gd" id="1_ib0df"]
+[ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_s07bd"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="2_y57aa"]
+[ext_resource type="Texture2D" uid="uid://jwygeo26l1o0" path="res://Sprites/upvote-arrow.png" id="3_7lemt"]
+[ext_resource type="Texture2D" uid="uid://cv3pkdnco2ibr" path="res://Sprites/comments-icon.png" id="4_vksh3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02obw"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+
+[node name="ForumMainSubject" type="PanelContainer"]
+theme_override_styles/panel = SubResource("StyleBoxFlat_02obw")
+script = ExtResource("1_ib0df")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="Post" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="PostHeader" type="HBoxContainer" parent="MarginContainer/Post"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PostAvatar" type="TextureRect" parent="MarginContainer/Post/PostHeader"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("1_s07bd")
+
+[node name="PostUsername" type="Label" parent="MarginContainer/Post/PostHeader"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_y57aa")
+theme_override_font_sizes/font_size = 40
+text = "sdfasdf"
+
+[node name="PostSubject" type="Label" parent="MarginContainer/Post"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "fajsldfjalksdjf"
+
+[node name="PostBody" type="Label" parent="MarginContainer/Post"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_y57aa")
+theme_override_font_sizes/font_size = 40
+text = "fajsldfjalksdjf"
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Post"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Post/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_7lemt")
+stretch_mode = 5
+
+[node name="Upvotes" type="Label" parent="MarginContainer/Post/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_y57aa")
+theme_override_font_sizes/font_size = 40
+text = "33"
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/Post/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_vksh3")
+stretch_mode = 5
+
+[node name="Comments" type="Label" parent="MarginContainer/Post/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_y57aa")
+theme_override_font_sizes/font_size = 40
+text = "10
+"
+vertical_alignment = 1

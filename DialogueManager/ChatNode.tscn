@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://badputgvkcok"]
+
+[ext_resource type="Texture2D" uid="uid://b5yum1q04mod5" path="res://icon.svg" id="1_05uv2"]
+[ext_resource type="Script" path="res://DialogueManager/ChatNode.gd" id="1_arjx3"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_r83tf"]
+[ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="3_jpiul"]
+[ext_resource type="FontFile" uid="uid://imsbfhmgiiot" path="res://Resources/Fonts/PressStart2P-Regular.ttf" id="4_17dhq"]
+
+[node name="Balloon" type="MarginContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+script = ExtResource("1_arjx3")
+
+[node name="ChatNode" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Avatar" type="TextureRect" parent="ChatNode"]
+layout_mode = 2
+texture = ExtResource("1_05uv2")
+stretch_mode = 2
+
+[node name="Message" type="VBoxContainer" parent="ChatNode"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="Meta" type="HBoxContainer" parent="ChatNode/Message"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 19
+
+[node name="CharacterLabel" type="RichTextLabel" parent="ChatNode/Message/Meta"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme = ExtResource("3_jpiul")
+theme_override_fonts/normal_font = ExtResource("4_17dhq")
+theme_override_font_sizes/normal_font_size = 20
+text = "asdf"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="date" type="Label" parent="ChatNode/Message/Meta"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_17dhq")
+theme_override_font_sizes/font_size = 20
+text = "at 9:20am"
+
+[node name="DialogueLabel" parent="ChatNode/Message" instance=ExtResource("2_r83tf")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "sdfasdfasdf"

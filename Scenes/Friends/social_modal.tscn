@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://de4wqdhgkairk"]
+
+[ext_resource type="Script" path="res://Scripts/Interfaces/SocialModal.gd" id="1_lslnb"]
+[ext_resource type="Texture2D" uid="uid://3cdno1a3tm4n" path="res://Sprites/friendloop-logo.png" id="2_3gtqt"]
+[ext_resource type="Script" path="res://Scripts/Interfaces/Friends/FriendList.gd" id="3_y2gpj"]
+[ext_resource type="PackedScene" uid="uid://bb866shpsdjrb" path="res://Scenes/Friends/friend_listbutton.tscn" id="4_w8cyy"]
+[ext_resource type="PackedScene" uid="uid://cpa760xnubmn3" path="res://Scenes/Friends/friend_panel.tscn" id="5_mcbgw"]
+[ext_resource type="Texture2D" uid="uid://ci2ghcg7qj01l" path="res://Sprites/menuHeader.png" id="6_3rg3q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cujk"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="SocialModal" type="MarginContainer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 5.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 100
+script = ExtResource("1_lslnb")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="SettingsMarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 110
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="Panel" type="Panel" parent="PanelContainer/SettingsMarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4cujk")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/SettingsMarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 40
+
+[node name="FriendSplashScreen" type="MarginContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendSplashScreen"]
+layout_mode = 2
+texture = ExtResource("2_3gtqt")
+stretch_mode = 3
+
+[node name="FriendList" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 80
+script = ExtResource("3_y2gpj")
+friend_list_scene = ExtResource("4_w8cyy")
+
+[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendList"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.964706, 0.92549, 1)
+theme_override_font_sizes/font_size = 40
+text = "
+Friendlööp
+"
+horizontal_alignment = 1
+
+[node name="FriendGrid" type="GridContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendList"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="FriendPanel" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer" instance=ExtResource("5_mcbgw")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="FriendTimer" type="Timer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer"]
+unique_name_in_owner = true
+
+[node name="CloseButton" type="TextureButton" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+texture_normal = ExtResource("6_3rg3q")
+
+[connection signal="timeout" from="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendTimer" to="." method="_on_friend_timer_timeout"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

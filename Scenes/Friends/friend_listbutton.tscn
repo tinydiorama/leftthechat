@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb866shpsdjrb"]
+
+[ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_62pyj"]
+[ext_resource type="Script" path="res://Scripts/Interfaces/Friends/FriendListButton.gd" id="2_bo28w"]
+
+[node name="FriendListbutton" type="TextureButton"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_62pyj")
+script = ExtResource("2_bo28w")
+
+[node name="FriendName" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "asdfasdf"
+horizontal_alignment = 2
+vertical_alignment = 2

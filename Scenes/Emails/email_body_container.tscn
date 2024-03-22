@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://cq2fpt0fc6brl"]
+
+[ext_resource type="Script" path="res://Scripts/Interfaces/Emails/EmailBodyContainer.gd" id="1_dnq4v"]
+[ext_resource type="Texture2D" uid="uid://ukl6xlmbv2cy" path="res://Sprites/Notes.png" id="1_ybfhs"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="2_5jusd"]
+[ext_resource type="Texture2D" uid="uid://mvbdbdswo8ql" path="res://Sprites/backbutton.png" id="2_r6suy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0g5hq"]
+bg_color = Color(0.968627, 0.952941, 0.92549, 1)
+
+[node name="EmailBodyContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 120
+script = ExtResource("1_dnq4v")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0g5hq")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 30
+
+[node name="EmailHeader" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="BackButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/EmailHeader"]
+layout_mode = 2
+texture_normal = ExtResource("2_r6suy")
+stretch_mode = 5
+
+[node name="EmailSubject" type="Label" parent="ScrollContainer/VBoxContainer/EmailHeader"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Subject"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="EmailIcon" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("1_ybfhs")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 15
+
+[node name="EmailFrom" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5jusd")
+text = "From:"
+
+[node name="EmailDate" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5jusd")
+text = "Sent:"
+
+[node name="EmailBody" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Email body"
+fit_content = true
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/EmailHeader/BackButton" to="." method="_on_back_button_pressed"]

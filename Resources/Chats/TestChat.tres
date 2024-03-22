@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://1oxf4tm8q7pc"]
+
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_esu4h"]
+[ext_resource type="Resource" uid="uid://cu5igbyw34rtt" path="res://Resources/Dialogue/test.dialogue" id="1_vwl2e"]
+
+[resource]
+script = ExtResource("1_esu4h")
+chatPath = ExtResource("1_vwl2e")
+unlocked = false

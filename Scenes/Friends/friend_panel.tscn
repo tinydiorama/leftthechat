@@ -1,0 +1,120 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpa760xnubmn3"]
+
+[ext_resource type="Script" path="res://Scripts/Interfaces/Friends/FriendPanel.gd" id="1_3ukrl"]
+[ext_resource type="Texture2D" uid="uid://orjqrijt4me2" path="res://Sprites/backbutton-light.png" id="2_l75f4"]
+[ext_resource type="Texture2D" uid="uid://dqy07yro1id58" path="res://Sprites/EmailIcon.png" id="3_445ex"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="4_hdnsc"]
+[ext_resource type="FontFile" uid="uid://bkch1qbh5k5e1" path="res://Resources/Fonts/Prompt-Bold.ttf" id="5_80dlb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aigsi"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="FriendPanel" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_aigsi")
+script = ExtResource("1_3ukrl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+
+[node name="Header" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Header"]
+layout_mode = 2
+texture_normal = ExtResource("2_l75f4")
+
+[node name="Label" type="Label" parent="VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.964706, 0.92549, 1)
+theme_override_font_sizes/font_size = 40
+text = "Friendlööp"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_445ex")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.964706, 0.92549, 1)
+theme_override_font_sizes/font_size = 36
+text = "asdfasdf"
+horizontal_alignment = 1
+
+[node name="Handle" type="Label" parent="VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.964706, 0.92549, 1)
+theme_override_fonts/font = ExtResource("4_hdnsc")
+theme_override_font_sizes/font_size = 40
+text = "asdfasdf"
+horizontal_alignment = 1
+
+[node name="Age" type="Label" parent="VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.964706, 0.92549, 1)
+theme_override_fonts/font = ExtResource("4_hdnsc")
+theme_override_font_sizes/font_size = 40
+text = "asdfasdf"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="RelationshipLabel" type="Label" parent="VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.964706, 0.92549, 1)
+theme_override_fonts/font = ExtResource("5_80dlb")
+theme_override_font_sizes/font_size = 30
+text = "Relationship"
+horizontal_alignment = 1
+
+[node name="RelationshipStatus" type="Label" parent="VBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.964706, 0.92549, 1)
+theme_override_fonts/font = ExtResource("4_hdnsc")
+theme_override_font_sizes/font_size = 40
+text = "Relationship"
+horizontal_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.964706, 0.92549, 1)
+theme_override_fonts/font = ExtResource("5_80dlb")
+theme_override_font_sizes/font_size = 30
+text = "Status"
+horizontal_alignment = 1
+
+[node name="Status" type="Label" parent="VBoxContainer/VBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.964706, 0.92549, 1)
+theme_override_fonts/font = ExtResource("4_hdnsc")
+theme_override_font_sizes/font_size = 40
+text = "Status"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="VBoxContainer/Header/TextureButton" to="." method="_on_back_button_pressed"]

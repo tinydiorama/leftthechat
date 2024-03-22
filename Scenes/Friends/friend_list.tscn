@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdiw3aj1abk0n"]
+
+[ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_v7gd7"]
+
+[node name="FriendList" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 80
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.964706, 0.92549, 1)
+theme_override_font_sizes/font_size = 40
+text = "
+Friendlööp
+"
+horizontal_alignment = 1
+
+[node name="FriendGrid" type="GridContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="TextureButton" type="TextureButton" parent="FriendGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_v7gd7")
+
+[node name="Label" type="Label" parent="FriendGrid/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "asdfasdf"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="TextureButton2" type="TextureButton" parent="FriendGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_v7gd7")
+
+[node name="Label" type="Label" parent="FriendGrid/TextureButton2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "asdfasdf"
+horizontal_alignment = 2
+vertical_alignment = 2

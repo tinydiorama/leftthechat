@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://btkvl25l0o6oa"]
+
+[ext_resource type="Texture2D" uid="uid://dqy07yro1id58" path="res://Sprites/EmailIcon.png" id="1_3l4cf"]
+[ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="1_dxpgu"]
+
+[resource]
+script = ExtResource("1_dxpgu")
+friendName = "Name McName"
+handle = "@namehandle"
+age = "28"
+relationship = "Married to Dave Walker"
+status = "was having a bad day until I pet a puppy!! 🐶 now I'm having a good day 😃"
+avatar = ExtResource("1_3l4cf")

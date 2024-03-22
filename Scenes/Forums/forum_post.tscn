@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4tr0djruvbli"]
+
+[ext_resource type="Script" path="res://Scripts/Interfaces/Forums/ForumPost.gd" id="1_606tj"]
+[ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_la1ig"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="2_wy2mt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02obw"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+
+[node name="ForumPost" type="PanelContainer"]
+theme_override_styles/panel = SubResource("StyleBoxFlat_02obw")
+script = ExtResource("1_606tj")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="Post" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="PostHeader" type="HBoxContainer" parent="MarginContainer/Post"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PostAvatar" type="TextureRect" parent="MarginContainer/Post/PostHeader"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("1_la1ig")
+
+[node name="PostUsername" type="Label" parent="MarginContainer/Post/PostHeader"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wy2mt")
+theme_override_font_sizes/font_size = 40
+text = "sdfasdf"
+
+[node name="PostBody" type="Label" parent="MarginContainer/Post"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wy2mt")
+theme_override_font_sizes/font_size = 40
+text = "fajsldfjalksdjf"
+autowrap_mode = 3

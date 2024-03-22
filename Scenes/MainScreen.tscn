@@ -1,0 +1,424 @@
+[gd_scene load_steps=34 format=3 uid="uid://drxmlpy8vc5si"]
+
+[ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="1_fmx65"]
+[ext_resource type="Texture2D" uid="uid://dikti0npwvcsv" path="res://Sprites/pinkbg.png" id="2_4edjn"]
+[ext_resource type="Texture2D" uid="uid://bu3yrme120qfj" path="res://Sprites/BatteryIcon.png" id="3_7a62f"]
+[ext_resource type="Script" path="res://Scripts/Interfaces/MainGameNav.gd" id="3_43ho7"]
+[ext_resource type="Texture2D" uid="uid://cu41suhwtisb3" path="res://Sprites/Wifi Icon.png" id="4_0evgf"]
+[ext_resource type="Texture2D" uid="uid://b0nqmx55y876a" path="res://Sprites/Rewind.png" id="5_vl4ww"]
+[ext_resource type="Texture2D" uid="uid://dteqolydpkrix" path="res://Sprites/Play Icon.png" id="6_ynvid"]
+[ext_resource type="Texture2D" uid="uid://bu75no3ajfwfk" path="res://Sprites/Fast Forward.png" id="7_ccobo"]
+[ext_resource type="PackedScene" uid="uid://b1iqc2pt1d7f" path="res://Scenes/Main/MenuButton.tscn" id="8_05vng"]
+[ext_resource type="Texture2D" uid="uid://c48o8vs2vjhcl" path="res://Sprites/InternetIcon.png" id="9_aqcj8"]
+[ext_resource type="Texture2D" uid="uid://barij1cyk8g7d" path="res://Sprites/SocialMediaIcon.png" id="10_bqpv4"]
+[ext_resource type="Texture2D" uid="uid://dqy07yro1id58" path="res://Sprites/EmailIcon.png" id="11_gtd4j"]
+[ext_resource type="Texture2D" uid="uid://ccy0ho4ni8xvt" path="res://Sprites/ForumIcon.png" id="12_lfx4t"]
+[ext_resource type="Texture2D" uid="uid://dae0gw5vglkn0" path="res://Sprites/MapIcon.png" id="13_2as7o"]
+[ext_resource type="Texture2D" uid="uid://ukl6xlmbv2cy" path="res://Sprites/Notes.png" id="14_l5ku8"]
+[ext_resource type="Texture2D" uid="uid://d2h8nf7wod7yf" path="res://Sprites/Settings.png" id="15_2yo3h"]
+[ext_resource type="Texture2D" uid="uid://ci2ghcg7qj01l" path="res://Sprites/menuHeader.png" id="16_7fr74"]
+[ext_resource type="Texture2D" uid="uid://b5yum1q04mod5" path="res://icon.svg" id="17_he4bv"]
+[ext_resource type="Script" path="res://Scripts/Interfaces/ChatModal.gd" id="18_fiuyv"]
+[ext_resource type="PackedScene" uid="uid://oxasxbuqawd3" path="res://Scenes/Chats/ChatStoryPlayer.tscn" id="19_ygnef"]
+[ext_resource type="PackedScene" uid="uid://cpm4j31xovhci" path="res://Scenes/Chats/chat_selection.tscn" id="21_hr4m2"]
+[ext_resource type="PackedScene" uid="uid://imchgvulrhua" path="res://Scenes/Articles/internet_modal.tscn" id="22_7un36"]
+[ext_resource type="Script" path="res://Scripts/Interfaces/SettingsModal.gd" id="22_lqk8e"]
+[ext_resource type="PackedScene" uid="uid://40sog0wluj4r" path="res://Scenes/Forums/forum_modal.tscn" id="23_ao6xp"]
+[ext_resource type="Script" path="res://Scripts/DataManagement/SaverLoader.gd" id="23_xeikl"]
+[ext_resource type="PackedScene" uid="uid://de4wqdhgkairk" path="res://Scenes/Friends/social_modal.tscn" id="24_ycsi1"]
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="25_cmm8w"]
+[ext_resource type="PackedScene" uid="uid://drrj27plfuxpt" path="res://Scenes/Emails/email_modal.tscn" id="25_u6bpq"]
+[ext_resource type="Script" path="res://Scripts/Managers/StoryManager.gd" id="27_l0knw"]
+[ext_resource type="Resource" uid="uid://bcu8p08oh6tb" path="res://Resources/Emails/TestEmail.tres" id="28_kipm7"]
+[ext_resource type="Resource" uid="uid://cia4k2k3l588d" path="res://Resources/Forums/TestThread.tres" id="31_tw8qy"]
+[ext_resource type="Resource" uid="uid://di3w1ny06ny64" path="res://Resources/Chats/TestChatroom.tres" id="32_m253y"]
+[ext_resource type="Resource" uid="uid://btkvl25l0o6oa" path="res://Resources/Friends/TestFriend.tres" id="36_j5bbx"]
+
+[node name="MainScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_fmx65")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 840.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4edjn")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+offset_right = 1080.0
+grow_horizontal = 2
+theme = ExtResource("1_fmx65")
+
+[node name="MainGameNav" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_43ho7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainGameNav"]
+layout_mode = 2
+offset_left = 30.0
+offset_top = 15.0
+offset_right = 1050.0
+offset_bottom = 1742.0
+theme_override_constants/separation = 100
+
+[node name="Status Bar" type="MarginContainer" parent="MainGameNav/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_fmx65")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainGameNav/VBoxContainer/Status Bar"]
+layout_direction = 3
+layout_mode = 2
+theme = ExtResource("1_fmx65")
+
+[node name="time" type="Label" parent="MainGameNav/VBoxContainer/Status Bar/HBoxContainer"]
+layout_mode = 2
+text = "8:30 AM"
+
+[node name="day" type="Label" parent="MainGameNav/VBoxContainer/Status Bar/HBoxContainer"]
+layout_mode = 2
+text = "TUES"
+
+[node name="Battery" type="TextureRect" parent="MainGameNav/VBoxContainer/Status Bar/HBoxContainer"]
+custom_minimum_size = Vector2(60, 40)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("3_7a62f")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Wifi" type="TextureRect" parent="MainGameNav/VBoxContainer/Status Bar/HBoxContainer"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("4_0evgf")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="MusicPlayerContainer" type="PanelContainer" parent="MainGameNav/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MainGameNav/VBoxContainer/MusicPlayerContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_bottom = 60
+
+[node name="MusicPlayer" type="VBoxContainer" parent="MainGameNav/VBoxContainer/MusicPlayerContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="MusicControls" type="HBoxContainer" parent="MainGameNav/VBoxContainer/MusicPlayerContainer/MarginContainer/MusicPlayer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Previous" type="TextureButton" parent="MainGameNav/VBoxContainer/MusicPlayerContainer/MarginContainer/MusicPlayer/MusicControls"]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("5_vl4ww")
+
+[node name="PlayPause" type="TextureButton" parent="MainGameNav/VBoxContainer/MusicPlayerContainer/MarginContainer/MusicPlayer/MusicControls"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("6_ynvid")
+
+[node name="Next" type="TextureButton" parent="MainGameNav/VBoxContainer/MusicPlayerContainer/MarginContainer/MusicPlayer/MusicControls"]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("7_ccobo")
+
+[node name="CurrentSong" type="Label" parent="MainGameNav/VBoxContainer/MusicPlayerContainer/MarginContainer/MusicPlayer"]
+layout_mode = 2
+text = "CURRENT SONG BY CURRENT ARTIST"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MainGameNav/VBoxContainer/MusicPlayerContainer/MarginContainer/MusicPlayer"]
+layout_mode = 2
+value = 18.95
+
+[node name="Menu" type="GridContainer" parent="MainGameNav/VBoxContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="ChatroomButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+layout_mode = 2
+
+[node name="Label" parent="MainGameNav/VBoxContainer/Menu/ChatroomButton/VBoxContainer" index="1"]
+text = "Bubble"
+
+[node name="InternetButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+layout_mode = 2
+
+[node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/InternetButton/VBoxContainer" index="0"]
+texture = ExtResource("9_aqcj8")
+
+[node name="Label" parent="MainGameNav/VBoxContainer/Menu/InternetButton/VBoxContainer" index="1"]
+text = "Foundit"
+
+[node name="SocialButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+layout_mode = 2
+
+[node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/SocialButton/VBoxContainer" index="0"]
+texture = ExtResource("10_bqpv4")
+
+[node name="Label" parent="MainGameNav/VBoxContainer/Menu/SocialButton/VBoxContainer" index="1"]
+text = "Friendlööp"
+
+[node name="EmailButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+layout_mode = 2
+
+[node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/EmailButton/VBoxContainer" index="0"]
+texture = ExtResource("11_gtd4j")
+
+[node name="Label" parent="MainGameNav/VBoxContainer/Menu/EmailButton/VBoxContainer" index="1"]
+text = "Email"
+
+[node name="ForumButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+layout_mode = 2
+
+[node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer" index="0"]
+texture = ExtResource("12_lfx4t")
+
+[node name="Label" parent="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer" index="1"]
+text = "Tableaux"
+
+[node name="SettingsModal" type="MarginContainer" parent="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label" index="0"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 5.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 100
+script = ExtResource("22_lqk8e")
+
+[node name="PanelContainer" type="PanelContainer" parent="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal"]
+layout_mode = 2
+
+[node name="SettingsMarginContainer" type="MarginContainer" parent="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 135
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal/PanelContainer/SettingsMarginContainer"]
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Save"
+flat = true
+
+[node name="LoadButton" type="Button" parent="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load"
+flat = true
+
+[node name="CloseButton" type="TextureButton" parent="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal"]
+layout_mode = 2
+size_flags_vertical = 0
+texture_normal = ExtResource("16_7fr74")
+
+[node name="MapButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+layout_mode = 2
+
+[node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/MapButton/VBoxContainer" index="0"]
+texture = ExtResource("13_2as7o")
+
+[node name="Label" parent="MainGameNav/VBoxContainer/Menu/MapButton/VBoxContainer" index="1"]
+text = "Maps"
+
+[node name="NotesButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+layout_mode = 2
+
+[node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/NotesButton/VBoxContainer" index="0"]
+texture = ExtResource("14_l5ku8")
+
+[node name="Label" parent="MainGameNav/VBoxContainer/Menu/NotesButton/VBoxContainer" index="1"]
+text = "Notes"
+
+[node name="SettingsButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+layout_mode = 2
+
+[node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/SettingsButton/VBoxContainer" index="0"]
+texture = ExtResource("15_2yo3h")
+
+[node name="Label" parent="MainGameNav/VBoxContainer/Menu/SettingsButton/VBoxContainer" index="1"]
+text = "Settings"
+
+[node name="StartupScreen" type="MarginContainer" parent="MainGameNav/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MainGameNav/VBoxContainer/StartupScreen"]
+layout_mode = 2
+texture = ExtResource("17_he4bv")
+stretch_mode = 3
+
+[node name="StartupTimer" type="Timer" parent="MainGameNav/VBoxContainer"]
+one_shot = true
+autostart = true
+
+[node name="ChatModal" type="MarginContainer" parent="MainGameNav"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 100
+script = ExtResource("18_fiuyv")
+
+[node name="ChatSelection" parent="MainGameNav/ChatModal" instance=ExtResource("21_hr4m2")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ChatStoryPlayer" parent="MainGameNav/ChatModal" instance=ExtResource("19_ygnef")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="MainGameNav/ChatModal"]
+layout_mode = 2
+size_flags_vertical = 0
+texture_normal = ExtResource("16_7fr74")
+stretch_mode = 4
+
+[node name="SettingsModal" type="MarginContainer" parent="MainGameNav"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 5.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 100
+script = ExtResource("22_lqk8e")
+
+[node name="PanelContainer" type="PanelContainer" parent="MainGameNav/SettingsModal"]
+layout_mode = 2
+
+[node name="SettingsMarginContainer" type="MarginContainer" parent="MainGameNav/SettingsModal/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 135
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer"]
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Save"
+flat = true
+
+[node name="LoadButton" type="Button" parent="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load"
+flat = true
+
+[node name="CloseButton" type="TextureButton" parent="MainGameNav/SettingsModal"]
+layout_mode = 2
+size_flags_vertical = 0
+texture_normal = ExtResource("16_7fr74")
+
+[node name="InternetModal" parent="MainGameNav" instance=ExtResource("22_7un36")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="ForumModal" parent="MainGameNav" instance=ExtResource("23_ao6xp")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="SocialModal" parent="MainGameNav" instance=ExtResource("24_ycsi1")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="EmailModal" parent="MainGameNav" instance=ExtResource("25_u6bpq")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="Utilities" type="Node" parent="."]
+
+[node name="SaverLoader" type="Node" parent="Utilities"]
+unique_name_in_owner = true
+script = ExtResource("23_xeikl")
+
+[node name="GameManager" type="Node" parent="Utilities" groups=["gameEvents"]]
+unique_name_in_owner = true
+script = ExtResource("25_cmm8w")
+
+[node name="StoryManager" type="Node" parent="Utilities"]
+unique_name_in_owner = true
+script = ExtResource("27_l0knw")
+allEmails = {
+"initialEmails": [ExtResource("28_kipm7")]
+}
+allFriends = {
+"initialFriends": [ExtResource("36_j5bbx")]
+}
+allForums = {
+"initialForums": [ExtResource("31_tw8qy")]
+}
+allChatrooms = {
+"initialChatrooms": [ExtResource("32_m253y")]
+}
+
+[connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/ChatroomButton" to="MainGameNav" method="_on_menu_button_pressed"]
+[connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/InternetButton" to="MainGameNav" method="_on_internet_button_pressed"]
+[connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/SocialButton" to="MainGameNav" method="_on_social_button_pressed"]
+[connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/EmailButton" to="MainGameNav" method="_on_email_button_pressed"]
+[connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/ForumButton" to="MainGameNav" method="_on_forum_button_pressed"]
+[connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/SaveButton" to="Utilities/SaverLoader" method="save_game"]
+[connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/LoadButton" to="Utilities/SaverLoader" method="load_game"]
+[connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal/CloseButton" to="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal" method="_on_close_button_pressed"]
+[connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/SettingsButton" to="MainGameNav" method="_on_settings_button_pressed"]
+[connection signal="timeout" from="MainGameNav/VBoxContainer/StartupTimer" to="MainGameNav" method="_on_timer_timeout"]
+[connection signal="chat_selected" from="MainGameNav/ChatModal/ChatSelection" to="MainGameNav/ChatModal" method="_on_chat_selected"]
+[connection signal="pressed" from="MainGameNav/ChatModal/TextureButton" to="MainGameNav/ChatModal" method="_on_close_button_pressed"]
+[connection signal="pressed" from="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/SaveButton" to="Utilities/SaverLoader" method="save_game"]
+[connection signal="pressed" from="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/LoadButton" to="Utilities/SaverLoader" method="load_game"]
+[connection signal="pressed" from="MainGameNav/SettingsModal/CloseButton" to="MainGameNav/SettingsModal" method="_on_close_button_pressed"]
+
+[editable path="MainGameNav/VBoxContainer/Menu/ChatroomButton"]
+[editable path="MainGameNav/VBoxContainer/Menu/InternetButton"]
+[editable path="MainGameNav/VBoxContainer/Menu/SocialButton"]
+[editable path="MainGameNav/VBoxContainer/Menu/EmailButton"]
+[editable path="MainGameNav/VBoxContainer/Menu/ForumButton"]
+[editable path="MainGameNav/VBoxContainer/Menu/MapButton"]
+[editable path="MainGameNav/VBoxContainer/Menu/NotesButton"]
+[editable path="MainGameNav/VBoxContainer/Menu/SettingsButton"]

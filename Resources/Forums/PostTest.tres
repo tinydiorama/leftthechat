@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ForumPost" load_steps=3 format=3 uid="uid://dvw4pkwn8qgvu"]
+
+[ext_resource type="Script" path="res://Resources/Forums/ForumPost.gd" id="1_mqilk"]
+[ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_q8co4"]
+
+[resource]
+script = ExtResource("1_mqilk")
+username = "@sdlfkj"
+avatar = ExtResource("1_q8co4")
+body = "adsfasfa das dfasd fasd fasd fasdf asd fa sdfas dfad sfasd asdfasd fasdf "
