@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Email" load_steps=3 format=3 uid="uid://28lpfp3ahoqb"]
+
+[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="1_6glox"]
+[ext_resource type="Script" path="res://Resources/Emails/Email.gd" id="1_cddao"]
+
+[resource]
+script = ExtResource("1_cddao")
+fromName = "Universal Bank"
+subject = "Your Statement is Available"
+body = "Account: Checking Plus XXXXXXXX5504 
+Balance: $0.00
+
+Click here to log into account.
+
+© Universal Bank"
+icon = ExtResource("1_6glox")
+date = "October 9"

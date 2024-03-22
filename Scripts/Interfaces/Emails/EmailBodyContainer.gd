@@ -11,8 +11,8 @@ func display(email:Email):
 	show()
 	emailSubject.text = email.subject
 	emailIcon.texture = email.icon
-	emailFrom.text = email.fromName
-	#emailDate.text = email.date
+	emailFrom.text = "From: " + email.fromName
+	emailDate.text = "Sent: " + email.date
 	emailBody.text = email.body
 
 

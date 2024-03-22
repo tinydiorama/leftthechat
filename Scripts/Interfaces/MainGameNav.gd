@@ -1,11 +1,20 @@
 extends Control
 
+# Modals
 @onready var chatModal = $ChatModal
 @onready var settingsModal = %SettingsModal
 @onready var internetModal = %InternetModal
 @onready var emailModal = %EmailModal
 @onready var socialModal = %SocialModal
 @onready var forumModal = %ForumModal
+
+# Nav buttons
+@onready var chatButton = %ChatroomButton
+@onready var internetButton = %InternetButton
+@onready var socialButton = %SocialButton
+@onready var emailButton = %EmailButton
+@onready var forumButton = %ForumButton
+
 @onready var startupScreen = $VBoxContainer/StartupScreen
 @onready var musicPlayer = $VBoxContainer/MusicPlayerContainer
 @onready var mainMenu = $VBoxContainer/Menu
@@ -23,6 +32,7 @@ func _process(delta):
 
 
 func _on_menu_button_pressed():
+	chatButton.get_node("NotificationIcon").hide()
 	chatModal.openModal(gameManager.chats.get_chatrooms())
 
 
@@ -41,11 +51,30 @@ func _on_internet_button_pressed():
 
 
 func _on_email_button_pressed():
+	emailButton.get_node("NotificationIcon").hide()
 	emailModal.openModal(gameManager.emails.get_emails())
 
 func _on_social_button_pressed():
+	socialButton.get_node("NotificationIcon").hide()
 	socialModal.openModal(gameManager.friends.get_friends())
 
 
 func _on_forum_button_pressed():
+	forumButton.get_node("NotificationIcon").hide()
 	forumModal.openModal(gameManager.forums.get_threads())
+
+
+func _on_game_manager_new_chat():
+	chatButton.get_node("NotificationIcon").show()
+
+
+func _on_game_manager_new_email():
+	emailButton.get_node("NotificationIcon").show()
+
+
+func _on_game_manager_new_forum():
+	forumButton.get_node("NotificationIcon").show()
+
+
+func _on_game_manager_new_friend():
+	socialButton.get_node("NotificationIcon").show()

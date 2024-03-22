@@ -13,7 +13,6 @@ corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
 [node name="SocialModal" type="MarginContainer"]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -59,7 +58,6 @@ stretch_mode = 3
 
 [node name="FriendList" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 theme_override_constants/separation = 80
 script = ExtResource("3_y2gpj")
@@ -74,7 +72,11 @@ Friendlööp
 "
 horizontal_alignment = 1
 
-[node name="FriendGrid" type="GridContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendList"]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendList"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FriendGrid" type="GridContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendList/ScrollContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/h_separation = 20
@@ -83,6 +85,7 @@ columns = 2
 
 [node name="FriendPanel" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer" instance=ExtResource("5_mcbgw")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 
 [node name="FriendTimer" type="Timer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer"]

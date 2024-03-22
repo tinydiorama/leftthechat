@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://frcecft3b0x1"]
+
+[ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="1_7mky0"]
+[ext_resource type="Texture2D" uid="uid://blsrq82mubw6n" path="res://Sprites/blank-avatar.png" id="1_n77kq"]
+
+[resource]
+script = ExtResource("1_7mky0")
+friendName = "Minji Kim"
+handle = "@jijubee"
+age = "22"
+relationship = "Committed :)"
+status = "Playing Death's Redemption (Developer's Commentary)"
+avatar = ExtResource("1_n77kq")

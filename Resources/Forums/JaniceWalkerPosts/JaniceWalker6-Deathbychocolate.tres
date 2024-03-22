@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ForumPost" load_steps=3 format=3 uid="uid://byt7dakm47iq2"]
+
+[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="1_i80lt"]
+[ext_resource type="Script" path="res://Resources/Forums/ForumPost.gd" id="2_4c8ou"]
+
+[resource]
+script = ExtResource("2_4c8ou")
+username = "@Deathbychocolate"
+avatar = ExtResource("1_i80lt")
+body = "@PublicEye Dude. You can't make a mental health assessment based on a handful of blog posts."

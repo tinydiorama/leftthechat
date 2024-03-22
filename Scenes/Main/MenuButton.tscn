@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1iqc2pt1d7f"]
+[gd_scene load_steps=3 format=3 uid="uid://b1iqc2pt1d7f"]
 
 [ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_p7mmi"]
+[ext_resource type="Texture2D" uid="uid://cgda37hsh13x5" path="res://Sprites/notification-circle.png" id="2_nuh0s"]
 
 [node name="Menu Button" type="Button"]
 custom_minimum_size = Vector2(340, 320)
@@ -33,3 +34,12 @@ theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_constants/shadow_outline_size = 1
 text = "CHATROOM"
 horizontal_alignment = 1
+
+[node name="NotificationIcon" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+offset_left = 61.0
+offset_top = -1.0
+offset_right = 116.0
+offset_bottom = 54.0
+texture = ExtResource("2_nuh0s")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://cxasjnsdrfrx6"]
+
+[ext_resource type="Texture2D" uid="uid://blsrq82mubw6n" path="res://Sprites/blank-avatar.png" id="1_q70c5"]
+[ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="2_5ghyh"]
+
+[resource]
+script = ExtResource("2_5ghyh")
+friendName = "James Teller"
+handle = "@jamesthegiant"
+age = "35"
+relationship = "It’s complicated"
+status = "Truly amazing how people reveal their own ignorance when debating who is the strongest user of the force. (Hint: it's Yoda.)"
+avatar = ExtResource("1_q70c5")

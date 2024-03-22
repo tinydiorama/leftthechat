@@ -126,6 +126,11 @@ func _on_mutated(_mutation: Dictionary) -> void:
 	is_waiting_for_input = false
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
+	#todo add player choice into the actual game
+	currentChatNode = chatNode.instantiate()
+	chatMessageContainer.add_child(currentChatNode)
+
+	currentChatNode.showResponse(response)
 	next(response.next_id)
 
 func on_save_game(saved_data:Array[SavedData]):

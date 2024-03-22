@@ -14,6 +14,11 @@ var seenFriends:Array[String] = ["initialFriends"]
 var seenForums:Array[String] = ["initialForums"]
 var seenChats:Array[String] = ["initialChatrooms"]
 
+signal newEmail
+signal newFriend
+signal newForum
+signal newChat
+
 @onready var storyManager = %StoryManager
 
 func add_email(email:Email):
@@ -29,7 +34,11 @@ func add_chat(chat:Chatroom):
 	chats.add_chatroom(chat)
 
 func _ready():
-	#storyManager.addInitialContent()
+	storyManager.addInitialContent()
+	newEmail.emit()
+	newFriend.emit()
+	newForum.emit()
+	newChat.emit()
 	pass
 
 func on_save_game(saved_data:Array[SavedData]):
@@ -50,9 +59,6 @@ func on_before_load_game():
 func on_load_game(saved_data:SavedData):
 	var my_data:GameSavedData = saved_data as GameSavedData
 	
-	print("gets here")
-	#for chat in my_data.seenChats:
-		#seenChats.append(chat)
 	seenChats = my_data.seenChats
 	seenEmails = my_data.seenEmails
 	seenForums = my_data.seenForums
@@ -65,5 +71,18 @@ func populate_data():
 		var chatData = storyManager.allChatrooms.get(chatName)
 		for chatroom in chatData:
 			add_chat(chatroom)
+	
+	for emailName in seenEmails:
+		var emailData = storyManager.allEmails.get(emailName)
+		for email in emailData:
+			add_email(email)
 			
-	print(chats.get_chatrooms())
+	for forumName in seenForums:
+		var forumData = storyManager.allForums.get(forumName)
+		for forum in forumData:
+			add_forum(forum)
+			
+	for friendName in seenFriends:
+		var friendData = storyManager.allFriends.get(friendName)
+		for friend in friendData:
+			add_friend(friend)

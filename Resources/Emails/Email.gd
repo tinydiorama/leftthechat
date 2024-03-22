@@ -5,3 +5,4 @@ extends Resource
 @export var subject:String
 @export_multiline var body:String
 @export var icon:Texture2D
+@export var date:String

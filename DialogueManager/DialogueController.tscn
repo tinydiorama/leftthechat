@@ -1,8 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bg5ayc02w5k23"]
+[gd_scene load_steps=8 format=3 uid="uid://bg5ayc02w5k23"]
 
 [ext_resource type="Script" path="res://DialogueManager/DialogueController.gd" id="1_qvgyn"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="2_h8nk7"]
 [ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="3_eaqs5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u1rnf"]
+bg_color = Color(0.929412, 0.929412, 0.929412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qyti"]
+bg_color = Color(0.870588, 0.870588, 0.870588, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gdu2n"]
 bg_color = Color(1, 1, 1, 1)
@@ -16,7 +22,19 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[node name="DialogueController" type="VBoxContainer" groups=["gameEvents"]]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p2nt5"]
+bg_color = Color(0.909804, 0.909804, 0.909804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="DialogueController" type="VBoxContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -37,24 +55,26 @@ theme_override_constants/separation = 20
 [node name="Responses" type="MarginContainer" parent="."]
 layout_mode = 2
 
-[node name="ResponsesMenu" type="VBoxContainer" parent="Responses"]
+[node name="ResponsesMenu" type="VBoxContainer" parent="Responses" node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_constants/separation = 10
 script = ExtResource("2_h8nk7")
+response_template = NodePath("ResponseTemplate")
 
-[node name="ResponseExample" type="Button" parent="Responses/ResponsesMenu"]
+[node name="ResponseTemplate" type="Button" parent="Responses/ResponsesMenu"]
 layout_mode = 2
-text = "Response example"
-
-[node name="ResponseExample2" type="Button" parent="Responses/ResponsesMenu"]
-layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u1rnf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8qyti")
 text = "Response example"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
 theme = ExtResource("3_eaqs5")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_gdu2n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_p2nt5")
 text = "Next"
 
 [connection signal="response_selected" from="Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

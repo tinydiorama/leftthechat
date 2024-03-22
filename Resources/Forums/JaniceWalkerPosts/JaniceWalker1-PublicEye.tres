@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ForumPost" load_steps=3 format=3 uid="uid://bydot6eph5drb"]
+
+[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="1_cnoui"]
+[ext_resource type="Script" path="res://Resources/Forums/ForumPost.gd" id="1_pesmp"]
+
+[resource]
+script = ExtResource("1_pesmp")
+username = "@PublicEye"
+avatar = ExtResource("1_cnoui")
+body = "Seriously folks? Remove the tin foil hats. Cilbitoxin is an ingredient in Alleviol, the second most commonly used OTC drug in the country. An autopsy would reveal cilbitoxin in my system. These deaths are not related."

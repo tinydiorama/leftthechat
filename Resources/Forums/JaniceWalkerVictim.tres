@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ForumThread" load_steps=12 format=3 uid="uid://jigg7sgra4hj"]
+
+[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="1_h5v6b"]
+[ext_resource type="Script" path="res://Resources/Forums/ForumThread.gd" id="1_nmvo2"]
+[ext_resource type="Resource" uid="uid://bydot6eph5drb" path="res://Resources/Forums/JaniceWalkerPosts/JaniceWalker1-PublicEye.tres" id="2_pbu7f"]
+[ext_resource type="Resource" uid="uid://bwq5y2vxxrmql" path="res://Resources/Forums/JaniceWalkerPosts/JaniceWalker2-Deathbychocolate.tres" id="3_byok0"]
+[ext_resource type="Resource" uid="uid://cm03a4ka04shc" path="res://Resources/Forums/JaniceWalkerPosts/JaniceWalker3-PublicEye.tres" id="4_or0uw"]
+[ext_resource type="Resource" uid="uid://de0j43k15kv6r" path="res://Resources/Forums/JaniceWalkerPosts/JaniceWalker4-GhostGirl5776.tres" id="5_rbpvl"]
+[ext_resource type="Resource" uid="uid://caji6cx12iego" path="res://Resources/Forums/JaniceWalkerPosts/JaniceWalker5-Silkyworm420.tres" id="6_nnwhy"]
+[ext_resource type="Resource" uid="uid://byt7dakm47iq2" path="res://Resources/Forums/JaniceWalkerPosts/JaniceWalker6-Deathbychocolate.tres" id="7_l0yq8"]
+[ext_resource type="Resource" uid="uid://k085ctnxf34y" path="res://Resources/Forums/JaniceWalkerPosts/JaniceWalker7-PublicEye.tres" id="8_bcphd"]
+[ext_resource type="Resource" uid="uid://cj3auwnfsj2fp" path="res://Resources/Forums/JaniceWalkerPosts/JaniceWalker8-Ibelieve333.tres" id="9_y6ugg"]
+[ext_resource type="Resource" uid="uid://dqw4cw6oqb86g" path="res://Resources/Forums/JaniceWalkerPosts/JaniceWalker9-PublicEye.tres" id="10_bwcap"]
+
+[resource]
+script = ExtResource("1_nmvo2")
+subject = "Was Janice Walter another victim of the Ghost Girl Murders?"
+originalPoster = "@GhostGirl5776"
+avatar = ExtResource("1_h5v6b")
+upvotes = 33
+posts = Array[Resource("res://Resources/Forums/ForumPost.gd")]([ExtResource("2_pbu7f"), ExtResource("3_byok0"), ExtResource("4_or0uw"), ExtResource("5_rbpvl"), ExtResource("6_nnwhy"), ExtResource("7_l0yq8"), ExtResource("8_bcphd"), ExtResource("9_y6ugg"), ExtResource("10_bwcap")])
+body = "Walter’s autopsy revealed cilbitoxin in her system, just like Samson’s did. We know from Walter's public blog she began speaking with Samson after Samson's death. If you ask me this is one of the Ghost Girl Murders, all perpetrated by the same killer. "

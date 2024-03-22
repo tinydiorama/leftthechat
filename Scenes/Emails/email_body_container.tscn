@@ -42,8 +42,10 @@ stretch_mode = 5
 [node name="EmailSubject" type="Label" parent="ScrollContainer/VBoxContainer/EmailHeader"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 40
 text = "Subject"
+autowrap_mode = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2

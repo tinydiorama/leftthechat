@@ -6,6 +6,8 @@ extends MarginContainer
 
 @onready var forumList = %ForumList
 @onready var forumThreadPosts = %ForumThreadPosts
+@onready var forumThreadList = %ForumThreadList
+@onready var forumBodyPostList = %ForumBodyPostList
 
 var threads:Array[ForumThread] = []
 var mouseOver = false
@@ -19,12 +21,12 @@ func openModal(allThreads):
 	populateThreads()
 
 func populateThreads():
-	for child in forumList.get_children():
+	for child in forumThreadList.get_children():
 		child.queue_free()
 		
 	for thread in threads:
 		var forum_thread = forumThreadScene.instantiate()
-		forumList.add_child(forum_thread)
+		forumThreadList.add_child(forum_thread)
 		forum_thread.display(thread)
 		forum_thread.connect("gui_input", Callable(self, "_on_gui_input").bind([thread]))
 
@@ -42,17 +44,22 @@ func _input(event):
 func displayInnerThread():
 	forumList.hide()
 	forumThreadPosts.show()
-	for child in forumThreadPosts.get_children():
+	for child in forumBodyPostList.get_children():
 		child.queue_free()
 		
 	var forum_main_subject = forumMainSubject.instantiate()
-	forumThreadPosts.add_child(forum_main_subject)
+	forumBodyPostList.add_child(forum_main_subject)
 	forum_main_subject.display(currentThread)
 	
 	for post in currentThread.posts:
 		var forum_post_body = forumPost.instantiate()
-		forumThreadPosts.add_child(forum_post_body)
+		forumBodyPostList.add_child(forum_post_body)
 		forum_post_body.display(post)
 	
 func _on_close_button_pressed():
 	hide()
+
+
+func _on_back_button_pressed():
+	forumList.show()
+	forumThreadPosts.hide()

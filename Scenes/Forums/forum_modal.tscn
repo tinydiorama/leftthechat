@@ -31,7 +31,6 @@ theme_override_constants/margin_bottom = 20
 
 [node name="ForumList" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 theme_override_constants/separation = 40
 
@@ -43,9 +42,20 @@ theme_override_constants/separation = 20
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Tableaux"
+autowrap_mode = 3
 
 [node name="HSeparator" type="HSeparator" parent="PanelContainer/SettingsMarginContainer/ForumList/Header"]
 layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/SettingsMarginContainer/ForumList"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ForumThreadList" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/ForumList/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="ForumThreadPosts" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer"]
 unique_name_in_owner = true
@@ -60,7 +70,7 @@ theme_override_constants/separation = 20
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="TextureButton" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/ForumThreadPosts/Header/HBoxContainer"]
+[node name="BackButton" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/ForumThreadPosts/Header/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("5_gak2y")
 stretch_mode = 3
@@ -73,9 +83,21 @@ text = "Tableaux"
 [node name="HSeparator" type="HSeparator" parent="PanelContainer/SettingsMarginContainer/ForumThreadPosts/Header"]
 layout_mode = 2
 
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/SettingsMarginContainer/ForumThreadPosts"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ForumBodyPostList" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/ForumThreadPosts/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
 [node name="CloseButton" type="TextureButton" parent="."]
 layout_mode = 2
 size_flags_vertical = 0
 texture_normal = ExtResource("6_buqlv")
 
+[connection signal="pressed" from="PanelContainer/SettingsMarginContainer/ForumThreadPosts/Header/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

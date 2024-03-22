@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://drxmlpy8vc5si"]
+[gd_scene load_steps=43 format=3 uid="uid://drxmlpy8vc5si"]
 
 [ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="1_fmx65"]
 [ext_resource type="Texture2D" uid="uid://dikti0npwvcsv" path="res://Sprites/pinkbg.png" id="2_4edjn"]
@@ -29,10 +29,19 @@
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="25_cmm8w"]
 [ext_resource type="PackedScene" uid="uid://drrj27plfuxpt" path="res://Scenes/Emails/email_modal.tscn" id="25_u6bpq"]
 [ext_resource type="Script" path="res://Scripts/Managers/StoryManager.gd" id="27_l0knw"]
-[ext_resource type="Resource" uid="uid://bcu8p08oh6tb" path="res://Resources/Emails/TestEmail.tres" id="28_kipm7"]
-[ext_resource type="Resource" uid="uid://cia4k2k3l588d" path="res://Resources/Forums/TestThread.tres" id="31_tw8qy"]
+[ext_resource type="Resource" uid="uid://dl7qcnty45w14" path="res://Resources/Emails/WelcomeStudents.tres" id="30_p23g8"]
+[ext_resource type="Resource" uid="uid://28lpfp3ahoqb" path="res://Resources/Emails/BankInfo.tres" id="31_trvxv"]
+[ext_resource type="Resource" uid="uid://c7x7k38qnb4tn" path="res://Resources/Friends/Noah.tres" id="32_gwf6s"]
 [ext_resource type="Resource" uid="uid://di3w1ny06ny64" path="res://Resources/Chats/TestChatroom.tres" id="32_m253y"]
-[ext_resource type="Resource" uid="uid://btkvl25l0o6oa" path="res://Resources/Friends/TestFriend.tres" id="36_j5bbx"]
+[ext_resource type="Resource" uid="uid://c13oxwn6vg0fd" path="res://Resources/Friends/Amelia.tres" id="33_lprht"]
+[ext_resource type="Resource" uid="uid://yaxs0ti34l02" path="res://Resources/Friends/Andrew.tres" id="34_msaqv"]
+[ext_resource type="Resource" uid="uid://b2nx6lnllscjo" path="res://Resources/Friends/April.tres" id="35_dv6uj"]
+[ext_resource type="Resource" uid="uid://cxasjnsdrfrx6" path="res://Resources/Friends/James.tres" id="36_8fr4r"]
+[ext_resource type="Resource" uid="uid://frcecft3b0x1" path="res://Resources/Friends/Minji.tres" id="37_rvb3y"]
+[ext_resource type="Resource" uid="uid://bqqp17uvxm1hb" path="res://Resources/Friends/Paige.tres" id="38_gbxim"]
+[ext_resource type="Resource" uid="uid://chnn3drvnxwn5" path="res://Resources/Friends/Vanessa.tres" id="39_764d0"]
+[ext_resource type="Resource" uid="uid://jigg7sgra4hj" path="res://Resources/Forums/JaniceWalkerVictim.tres" id="40_obb53"]
+[ext_resource type="Resource" uid="uid://dgtqhco17uo0i" path="res://Resources/Chats/Mom.tres" id="42_dkb67"]
 
 [node name="MainScreen" type="Control"]
 layout_mode = 3
@@ -160,12 +169,14 @@ layout_mode = 2
 columns = 3
 
 [node name="ChatroomButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Label" parent="MainGameNav/VBoxContainer/Menu/ChatroomButton/VBoxContainer" index="1"]
 text = "Bubble"
 
 [node name="InternetButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/InternetButton/VBoxContainer" index="0"]
@@ -175,6 +186,7 @@ texture = ExtResource("9_aqcj8")
 text = "Foundit"
 
 [node name="SocialButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/SocialButton/VBoxContainer" index="0"]
@@ -184,6 +196,7 @@ texture = ExtResource("10_bqpv4")
 text = "Friendlööp"
 
 [node name="EmailButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/EmailButton/VBoxContainer" index="0"]
@@ -193,6 +206,7 @@ texture = ExtResource("11_gtd4j")
 text = "Email"
 
 [node name="ForumButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer" index="0"]
@@ -364,6 +378,7 @@ offset_bottom = 0.0
 
 [node name="SocialModal" parent="MainGameNav" instance=ExtResource("24_ycsi1")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 offset_right = 0.0
 offset_bottom = 0.0
@@ -386,16 +401,16 @@ script = ExtResource("25_cmm8w")
 unique_name_in_owner = true
 script = ExtResource("27_l0knw")
 allEmails = {
-"initialEmails": [ExtResource("28_kipm7")]
+"initialEmails": [ExtResource("30_p23g8"), ExtResource("31_trvxv")]
 }
 allFriends = {
-"initialFriends": [ExtResource("36_j5bbx")]
+"initialFriends": [ExtResource("32_gwf6s"), ExtResource("33_lprht"), ExtResource("34_msaqv"), ExtResource("35_dv6uj"), ExtResource("36_8fr4r"), ExtResource("37_rvb3y"), ExtResource("38_gbxim"), ExtResource("39_764d0")]
 }
 allForums = {
-"initialForums": [ExtResource("31_tw8qy")]
+"initialForums": [ExtResource("40_obb53")]
 }
 allChatrooms = {
-"initialChatrooms": [ExtResource("32_m253y")]
+"initialChatrooms": [ExtResource("32_m253y"), ExtResource("42_dkb67")]
 }
 
 [connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/ChatroomButton" to="MainGameNav" method="_on_menu_button_pressed"]
@@ -413,6 +428,10 @@ allChatrooms = {
 [connection signal="pressed" from="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/SaveButton" to="Utilities/SaverLoader" method="save_game"]
 [connection signal="pressed" from="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/LoadButton" to="Utilities/SaverLoader" method="load_game"]
 [connection signal="pressed" from="MainGameNav/SettingsModal/CloseButton" to="MainGameNav/SettingsModal" method="_on_close_button_pressed"]
+[connection signal="newChat" from="Utilities/GameManager" to="MainGameNav" method="_on_game_manager_new_chat"]
+[connection signal="newEmail" from="Utilities/GameManager" to="MainGameNav" method="_on_game_manager_new_email"]
+[connection signal="newForum" from="Utilities/GameManager" to="MainGameNav" method="_on_game_manager_new_forum"]
+[connection signal="newFriend" from="Utilities/GameManager" to="MainGameNav" method="_on_game_manager_new_friend"]
 
 [editable path="MainGameNav/VBoxContainer/Menu/ChatroomButton"]
 [editable path="MainGameNav/VBoxContainer/Menu/InternetButton"]

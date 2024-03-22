@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://yaxs0ti34l02"]
+
+[ext_resource type="Texture2D" uid="uid://blsrq82mubw6n" path="res://Sprites/blank-avatar.png" id="1_62sqx"]
+[ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="2_fuiqx"]
+
+[resource]
+script = ExtResource("2_fuiqx")
+friendName = "Prof. Andrew Simon"
+handle = "@TheProfessorDrew"
+age = "46"
+relationship = "Ready to mingle"
+status = "Beautiful day for a motorcycle ride! #Vespa #MotercycleGang #ProfOnWheels"
+avatar = ExtResource("1_62sqx")

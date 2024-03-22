@@ -5,6 +5,7 @@ extends Panel
 @onready var friendAge = %Age
 @onready var relationshipStatus = %RelationshipStatus
 @onready var status = %Status
+@onready var avatar = %Avatar
 
 # Called when the node enters the scene tree for the first time.
 func display(friend:Friend):
@@ -14,6 +15,7 @@ func display(friend:Friend):
 	friendAge.text = "Age: " + friend.age
 	relationshipStatus.text = friend.relationship
 	status.text = friend.status
+	avatar.texture = friend.avatar
 
 
 func _on_back_button_pressed():

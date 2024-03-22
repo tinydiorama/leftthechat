@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ForumPost" load_steps=3 format=3 uid="uid://bwq5y2vxxrmql"]
+
+[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="1_bd16k"]
+[ext_resource type="Script" path="res://Resources/Forums/ForumPost.gd" id="2_wjq2c"]
+
+[resource]
+script = ExtResource("2_wjq2c")
+username = "@Deathbychocolate"
+avatar = ExtResource("1_bd16k")
+body = "How do you explain Walter, Samson, and Spring referencing the same phrase: “In morte ero eius”? I think they were all members of the same death cult."

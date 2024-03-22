@@ -14,6 +14,9 @@ func _ready():
 
 
 func showChat(chat:Chatroom):
+	for child in dialogue_container.get_children():
+		child.queue_free()
+		
 	for chatMessages in chat.chats:
 		if ( chatMessages.unlocked ) : # just display the messages that have been previously shown
 			pass

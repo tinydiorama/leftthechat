@@ -89,7 +89,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		skip_typing()
 
-
 ## Start typing out the text
 func type_out() -> void:
 	text = dialogue_line.text

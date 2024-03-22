@@ -22,6 +22,7 @@ texture = ExtResource("1_my6wd")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="EmailListDisplayInner"]
 layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_override_constants/separation = 30
 
@@ -35,6 +36,7 @@ text = "asdfasdf"
 unique_name_in_owner = true
 layout_mode = 2
 text = "asdfasdfasdfasdf"
+autowrap_mode = 3
 
 [node name="HSeparator" type="HSeparator" parent="."]
 layout_mode = 2
