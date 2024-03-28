@@ -50,3 +50,15 @@ func showResponse(response):
 	dialogue_label.hide()
 	dialogue_label.text = response.text
 	dialogue_label.show()
+
+func showResponseFromRawText(dialogueText:String):
+	character_label.visible = true
+	character_label.text = tr("Player", "dialogue")
+	var portrait_path = null
+	
+	if portrait_path != null:
+		avatar.texture = portrait_path
+		
+	dialogue_label.hide()
+	dialogue_label.text = dialogueText
+	dialogue_label.show()

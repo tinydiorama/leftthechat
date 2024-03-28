@@ -15,7 +15,6 @@ extends Control
 @onready var emailButton = %EmailButton
 @onready var forumButton = %ForumButton
 
-@onready var startupScreen = $VBoxContainer/StartupScreen
 @onready var musicPlayer = $VBoxContainer/MusicPlayerContainer
 @onready var mainMenu = $VBoxContainer/Menu
 
@@ -34,12 +33,6 @@ func _process(delta):
 func _on_menu_button_pressed():
 	chatButton.get_node("NotificationIcon").hide()
 	chatModal.openModal(gameManager.chats.get_chatrooms())
-
-
-func _on_timer_timeout():
-	startupScreen.hide()
-	musicPlayer.show()
-	mainMenu.show()
 
 
 func _on_settings_button_pressed():

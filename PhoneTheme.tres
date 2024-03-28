@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=22 format=3 uid="uid://bnml4e7chgfkf"]
+[gd_resource type="Theme" load_steps=25 format=3 uid="uid://bnml4e7chgfkf"]
 
 [ext_resource type="FontVariation" uid="uid://dgw8ew0ylavxy" path="res://Resources/Fonts/KhandFont.tres" id="1_3ym5r"]
 [ext_resource type="FontFile" uid="uid://imsbfhmgiiot" path="res://Resources/Fonts/PressStart2P-Regular.ttf" id="2_227lq"]
@@ -16,6 +16,8 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_884k6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_380xv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3vdbm"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_bj6tg"]
 grow_begin = 4.0
@@ -86,6 +88,26 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cio5g"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nnv5b"]
+content_margin_left = 40.0
+content_margin_top = 0.0
+content_margin_right = 15.0
+content_margin_bottom = 30.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 10.0
+
 [resource]
 default_font = ExtResource("3_q3lmu")
 AcceptDialog/constants/buttons_separation = 0
@@ -114,18 +136,18 @@ Button/styles/focus = SubResource("StyleBoxEmpty_koxtu")
 Button/styles/hover = SubResource("StyleBoxEmpty_bfbf8")
 Button/styles/normal = SubResource("StyleBoxEmpty_884k6")
 Button/styles/pressed = SubResource("StyleBoxEmpty_380xv")
-CheckBox/colors/font_color = Color(0, 0, 0, 1)
-CheckBox/colors/font_disabled_color = Color(0, 0, 0, 1)
-CheckBox/colors/font_focus_color = Color(0, 0, 0, 1)
-CheckBox/colors/font_hover_color = Color(0, 0, 0, 1)
-CheckBox/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+CheckBox/colors/font_color = Color(1, 1, 1, 1)
+CheckBox/colors/font_disabled_color = Color(0.741176, 0.741176, 0.741176, 1)
+CheckBox/colors/font_focus_color = Color(1, 1, 1, 1)
+CheckBox/colors/font_hover_color = Color(1, 1, 1, 1)
+CheckBox/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 CheckBox/colors/font_outline_color = Color(0, 0, 0, 1)
-CheckBox/colors/font_pressed_color = Color(0, 0, 0, 1)
+CheckBox/colors/font_pressed_color = Color(1, 1, 1, 1)
 CheckBox/constants/check_v_offset = 0
-CheckBox/constants/h_separation = 0
+CheckBox/constants/h_separation = 20
 CheckBox/constants/outline_size = 0
-CheckBox/font_sizes/font_size = 16
-CheckBox/fonts/font = ExtResource("1_3ym5r")
+CheckBox/font_sizes/font_size = 30
+CheckBox/fonts/font = ExtResource("2_227lq")
 CheckBox/icons/checked = null
 CheckBox/icons/checked_disabled = null
 CheckBox/icons/radio_checked = null
@@ -138,7 +160,7 @@ CheckBox/styles/disabled = null
 CheckBox/styles/focus = null
 CheckBox/styles/hover = null
 CheckBox/styles/hover_pressed = null
-CheckBox/styles/normal = null
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_3vdbm")
 CheckBox/styles/pressed = null
 CheckButton/colors/font_color = Color(0, 0, 0, 1)
 CheckButton/colors/font_disabled_color = Color(0, 0, 0, 1)
@@ -584,28 +606,28 @@ TabContainer/styles/tab_hovered = null
 TabContainer/styles/tab_selected = null
 TabContainer/styles/tab_unselected = null
 TabContainer/styles/tabbar_background = null
-TextEdit/colors/background_color = Color(0, 0, 0, 1)
+TextEdit/colors/background_color = Color(1, 1, 1, 1)
 TextEdit/colors/caret_background_color = Color(0, 0, 0, 1)
 TextEdit/colors/caret_color = Color(0, 0, 0, 1)
 TextEdit/colors/current_line_color = Color(0, 0, 0, 1)
 TextEdit/colors/font_color = Color(0, 0, 0, 1)
 TextEdit/colors/font_outline_color = Color(0, 0, 0, 1)
-TextEdit/colors/font_placeholder_color = Color(0, 0, 0, 1)
-TextEdit/colors/font_readonly_color = Color(0, 0, 0, 1)
+TextEdit/colors/font_placeholder_color = Color(0.247059, 0.247059, 0.247059, 1)
+TextEdit/colors/font_readonly_color = Color(0.247059, 0.247059, 0.247059, 1)
 TextEdit/colors/font_selected_color = Color(0, 0, 0, 1)
-TextEdit/colors/search_result_border_color = Color(0, 0, 0, 1)
-TextEdit/colors/search_result_color = Color(0, 0, 0, 1)
-TextEdit/colors/selection_color = Color(0, 0, 0, 1)
+TextEdit/colors/search_result_border_color = Color(1, 1, 1, 1)
+TextEdit/colors/search_result_color = Color(1, 1, 1, 1)
+TextEdit/colors/selection_color = Color(0.662745, 0.662745, 0.662745, 1)
 TextEdit/colors/word_highlighted_color = Color(0, 0, 0, 1)
-TextEdit/constants/caret_width = 0
-TextEdit/constants/line_spacing = 0
+TextEdit/constants/caret_width = 5
+TextEdit/constants/line_spacing = 40
 TextEdit/constants/outline_size = 0
-TextEdit/font_sizes/font_size = 16
-TextEdit/fonts/font = ExtResource("1_3ym5r")
+TextEdit/font_sizes/font_size = 40
+TextEdit/fonts/font = ExtResource("3_q3lmu")
 TextEdit/icons/space = null
 TextEdit/icons/tab = null
-TextEdit/styles/focus = null
-TextEdit/styles/normal = null
+TextEdit/styles/focus = SubResource("StyleBoxFlat_cio5g")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_nnv5b")
 TextEdit/styles/read_only = null
 TooltipLabel/colors/font_color = Color(0, 0, 0, 1)
 TooltipLabel/colors/font_outline_color = Color(0, 0, 0, 1)

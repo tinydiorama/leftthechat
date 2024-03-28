@@ -1,10 +1,15 @@
 extends Control
 
-var POP_BALLOON = load("res://DialogueManager/DialogueController.tscn")
-@onready var dialogue_container = $PanelContainer/StoryMarginContainer/StoryVBoxContainer/StoryScrollContainer
 var TEXT = load("res://Resources/Dialogue/test.dialogue")
 
+@onready var dialogueController = %DialogueController
+@onready var dialogue_container = $PanelContainer/StoryMarginContainer/StoryVBoxContainer/StoryScrollContainer
 
+var currentChat:Chatroom
+var currentChatMeta:ChatMeta
+var gameManager:GameManager
+
+signal chat_back
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,13 +18,31 @@ func _ready():
 	pass
 
 
-func showChat(chat:Chatroom):
-	for child in dialogue_container.get_children():
-		child.queue_free()
+func showChat(chat:Chatroom, gameManagerPassed:GameManager):
+	gameManager = gameManagerPassed
+	
+	dialogueController.clearChat()
+		
+	currentChat = chat
 		
 	for chatMessages in chat.chats:
+		currentChatMeta = chatMessages
 		if ( chatMessages.unlocked ) : # just display the messages that have been previously shown
-			pass
+			dialogueController.addChatNode(currentChatMeta, gameManager)
 		else:
-			DialogueManager.append_dialogue_balloon_scene.call_deferred(POP_BALLOON, dialogue_container, chatMessages.chatPath, "start")
+			gameManager.deleteChatHistory(currentChatMeta.chatMetaName)
+			#var chatScene = DialogueManager.append_dialogue_balloon_scene(POP_BALLOON, dialogue_container, chatMessages.chatPath, "start")
+			dialogueController.start(chatMessages.chatPath, "start")
+			dialogueController.connect("chat_ended", _on_chat_ended)
+			dialogueController.connect("chat_message_seen", _on_chat_seen)
 		#print(chatMessages.chatPath)
+
+func _on_chat_ended():
+	currentChatMeta.unlocked = true
+	
+func _on_chat_seen(id:String):
+	gameManager.addChatHistory(currentChatMeta.chatMetaName, id)
+
+
+func _on_dialogue_controller_back_button():
+	chat_back.emit()

@@ -6,7 +6,6 @@
 [resource]
 script = ExtResource("1_hw43k")
 chatName = "Horror Fanatics"
-unlocked = true
 numPeople = 1
 category = "Chatrooms"
 chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("1_orv6l")])

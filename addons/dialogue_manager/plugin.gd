@@ -57,7 +57,8 @@ func _exit_tree() -> void:
 	translation_parser_plugin = null
 
 	if is_instance_valid(main_view):
-		main_view.queue_free()
+		#main_view.queue_free()
+		pass
 
 	Engine.remove_meta("DialogueManagerPlugin")
 	Engine.remove_meta("DialogueCache")

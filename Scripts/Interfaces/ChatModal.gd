@@ -2,6 +2,7 @@ extends MarginContainer
 
 @onready var chatSelection = %ChatSelection
 @onready var chatStoryPlayer = %ChatStoryPlayer
+@onready var gameManager = %GameManager
 
 var chats:Array[Chatroom] = []
 
@@ -18,7 +19,12 @@ func populateChatSelection():
 func _on_chat_selected(chat):
 	chatSelection.hide()
 	chatStoryPlayer.show()
-	chatStoryPlayer.showChat(chat)
+	chatStoryPlayer.showChat(chat, gameManager)
 
 func _on_close_button_pressed():
 	self.hide()
+
+func _on_chat_back():
+	chatSelection.show()
+	chatStoryPlayer.hide()
+	populateChatSelection()

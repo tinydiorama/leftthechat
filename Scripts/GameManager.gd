@@ -14,6 +14,8 @@ var seenFriends:Array[String] = ["initialFriends"]
 var seenForums:Array[String] = ["initialForums"]
 var seenChats:Array[String] = ["initialChatrooms"]
 
+var allChatHistory:Dictionary
+
 signal newEmail
 signal newFriend
 signal newForum
@@ -32,6 +34,43 @@ func add_forum(thread:ForumThread):
 	
 func add_chat(chat:Chatroom):
 	chats.add_chatroom(chat)
+	
+############################ Chat History
+func addChatHistory(chatMessageName:String, id:String) -> Array:
+	var arrayToAdd = []
+	if ( allChatHistory.get(chatMessageName) != null ):
+		arrayToAdd = allChatHistory.get(chatMessageName)
+	else:
+		allChatHistory[chatMessageName] = []
+		arrayToAdd = allChatHistory[chatMessageName]
+		
+	if ( arrayToAdd.find(id) != -1 ): #already contains id
+		return arrayToAdd
+	else:
+		arrayToAdd.append(id)
+		return arrayToAdd
+		
+func deleteChatHistory(chatMessageName:String):
+	if ( allChatHistory.get(chatMessageName) == null ):
+		return #nothing to delete
+	else:
+		allChatHistory[chatMessageName] = []
+		
+	
+func getChatHistory(chatMessageName:String) -> Array:
+	return allChatHistory.get(chatMessageName)
+		
+func containsChatHistory(chatMessageName:String):
+	return true if allChatHistory.find_key(chatMessageName) else false
+	
+func containsChatHistoryID(chatMessageName:String, id:String):
+	if ( ! allChatHistory.find_key(chatMessageName) ):
+		return false
+	else:
+		var arrayToCheck = allChatHistory.find_key(chatMessageName)
+		return true if arrayToCheck.find_key(id) else false
+########################### end chat history stuff
+
 
 func _ready():
 	storyManager.addInitialContent()

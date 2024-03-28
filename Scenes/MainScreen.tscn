@@ -1,7 +1,8 @@
-[gd_scene load_steps=43 format=3 uid="uid://drxmlpy8vc5si"]
+[gd_scene load_steps=56 format=3 uid="uid://drxmlpy8vc5si"]
 
 [ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="1_fmx65"]
 [ext_resource type="Texture2D" uid="uid://dikti0npwvcsv" path="res://Sprites/pinkbg.png" id="2_4edjn"]
+[ext_resource type="Script" path="res://Scripts/Interfaces/MainScreen.gd" id="2_g3hfy"]
 [ext_resource type="Texture2D" uid="uid://bu3yrme120qfj" path="res://Sprites/BatteryIcon.png" id="3_7a62f"]
 [ext_resource type="Script" path="res://Scripts/Interfaces/MainGameNav.gd" id="3_43ho7"]
 [ext_resource type="Texture2D" uid="uid://cu41suhwtisb3" path="res://Sprites/Wifi Icon.png" id="4_0evgf"]
@@ -29,6 +30,8 @@
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="25_cmm8w"]
 [ext_resource type="PackedScene" uid="uid://drrj27plfuxpt" path="res://Scenes/Emails/email_modal.tscn" id="25_u6bpq"]
 [ext_resource type="Script" path="res://Scripts/Managers/StoryManager.gd" id="27_l0knw"]
+[ext_resource type="Script" path="res://Scripts/Interfaces/Notification.gd" id="28_alrkr"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="28_hfkc3"]
 [ext_resource type="Resource" uid="uid://dl7qcnty45w14" path="res://Resources/Emails/WelcomeStudents.tres" id="30_p23g8"]
 [ext_resource type="Resource" uid="uid://28lpfp3ahoqb" path="res://Resources/Emails/BankInfo.tres" id="31_trvxv"]
 [ext_resource type="Resource" uid="uid://c7x7k38qnb4tn" path="res://Resources/Friends/Noah.tres" id="32_gwf6s"]
@@ -42,6 +45,104 @@
 [ext_resource type="Resource" uid="uid://chnn3drvnxwn5" path="res://Resources/Friends/Vanessa.tres" id="39_764d0"]
 [ext_resource type="Resource" uid="uid://jigg7sgra4hj" path="res://Resources/Forums/JaniceWalkerVictim.tres" id="40_obb53"]
 [ext_resource type="Resource" uid="uid://dgtqhco17uo0i" path="res://Resources/Chats/Mom.tres" id="42_dkb67"]
+[ext_resource type="ButtonGroup" uid="uid://it6chqvosfeb" path="res://Resources/CharacterCreatorGroup.tres" id="44_c5nvc"]
+[ext_resource type="FontFile" uid="uid://imsbfhmgiiot" path="res://Resources/Fonts/PressStart2P-Regular.ttf" id="45_gdvm6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iumoi"]
+bg_color = Color(0.968627, 0.952941, 0.92549, 1)
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_4ajlf"]
+resource_name = "NotificationSlide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -263), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_inakc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -263)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gd0mn"]
+resource_name = "NotificationSlideOut"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -263)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1a5nt"]
+_data = {
+"NotificationSlide": SubResource("Animation_4ajlf"),
+"NotificationSlideOut": SubResource("Animation_gd0mn"),
+"RESET": SubResource("Animation_inakc")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cujk"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wh73"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhpy0"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
 
 [node name="MainScreen" type="Control"]
 layout_mode = 3
@@ -51,6 +152,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_fmx65")
+script = ExtResource("2_g3hfy")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -70,7 +172,36 @@ offset_right = 1080.0
 grow_horizontal = 2
 theme = ExtResource("1_fmx65")
 
+[node name="Startup" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartupTimer" type="Timer" parent="Startup"]
+one_shot = true
+autostart = true
+
+[node name="StartupScreen" type="MarginContainer" parent="Startup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="Startup/StartupScreen"]
+layout_mode = 2
+texture = ExtResource("17_he4bv")
+stretch_mode = 3
+
 [node name="MainGameNav" type="Control" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -281,20 +412,6 @@ texture = ExtResource("15_2yo3h")
 [node name="Label" parent="MainGameNav/VBoxContainer/Menu/SettingsButton/VBoxContainer" index="1"]
 text = "Settings"
 
-[node name="StartupScreen" type="MarginContainer" parent="MainGameNav/VBoxContainer"]
-visible = false
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="TextureRect" type="TextureRect" parent="MainGameNav/VBoxContainer/StartupScreen"]
-layout_mode = 2
-texture = ExtResource("17_he4bv")
-stretch_mode = 3
-
-[node name="StartupTimer" type="Timer" parent="MainGameNav/VBoxContainer"]
-one_shot = true
-autostart = true
-
 [node name="ChatModal" type="MarginContainer" parent="MainGameNav"]
 unique_name_in_owner = true
 visible = false
@@ -387,6 +504,66 @@ offset_bottom = 0.0
 unique_name_in_owner = true
 layout_mode = 1
 
+[node name="Notification" type="Control" parent="MainGameNav"]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+script = ExtResource("28_alrkr")
+
+[node name="PanelContainer" type="PanelContainer" parent="MainGameNav/Notification"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -263.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iumoi")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainGameNav/Notification/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainGameNav/Notification/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="MainGameNav/Notification/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "New Chat"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainGameNav/Notification/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="NotificationAvatar" type="TextureRect" parent="MainGameNav/Notification/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("13_2as7o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainGameNav/Notification/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NotificationHandle" type="Label" parent="MainGameNav/Notification/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "@jijubee"
+
+[node name="NotificationText" type="Label" parent="MainGameNav/Notification/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("28_hfkc3")
+theme_override_font_sizes/font_size = 40
+text = "Hey, where are you? I don't see you"
+autowrap_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainGameNav/Notification"]
+active = false
+libraries = {
+"": SubResource("AnimationLibrary_1a5nt")
+}
+
 [node name="Utilities" type="Node" parent="."]
 
 [node name="SaverLoader" type="Node" parent="Utilities"]
@@ -413,6 +590,227 @@ allChatrooms = {
 "initialChatrooms": [ExtResource("32_m253y"), ExtResource("42_dkb67")]
 }
 
+[node name="CharacterBuilder" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterBuilderModal" type="MarginContainer" parent="CharacterBuilder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 100
+
+[node name="PanelContainer" type="PanelContainer" parent="CharacterBuilder/CharacterBuilderModal"]
+layout_mode = 2
+
+[node name="SettingsMarginContainer" type="MarginContainer" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 110
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="Panel" type="Panel" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4cujk")
+
+[node name="FriendLoopIntro" type="MarginContainer" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 400
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/FriendLoopIntro"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/FriendLoopIntro/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_bqpv4")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/FriendLoopIntro/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Friendlööp"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/FriendLoopIntro/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Welcome!"
+horizontal_alignment = 1
+
+[node name="LogoTimer" type="Timer" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/FriendLoopIntro"]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FriendLoopCharacterBuilder" type="MarginContainer" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_bqpv4")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Friendlööp"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Set up your profile"
+horizontal_alignment = 1
+
+[node name="Form" type="VBoxContainer" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Full name"
+
+[node name="FullNameForm" type="TextEdit" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form"]
+layout_mode = 2
+placeholder_text = "First Last"
+scroll_fit_content_height = true
+
+[node name="Name validation" type="Label" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.548798, 0.484859, 1)
+text = "Cannot be empty!"
+
+[node name="Form2" type="VBoxContainer" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Username"
+
+[node name="HandleForm" type="TextEdit" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form2"]
+layout_mode = 2
+placeholder_text = "@username"
+scroll_fit_content_height = true
+
+[node name="Handlevalidation" type="Label" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form2"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.548798, 0.484859, 1)
+text = "Cannot be empty!"
+
+[node name="Form3" type="VBoxContainer" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Pronouns that best match you"
+
+[node name="CheckBox" type="CheckBox" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form3"]
+layout_mode = 2
+button_pressed = true
+button_group = ExtResource("44_c5nvc")
+text = "They/Them"
+
+[node name="CheckBox2" type="CheckBox" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form3"]
+layout_mode = 2
+button_group = ExtResource("44_c5nvc")
+text = "She/Her"
+
+[node name="CheckBox3" type="CheckBox" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form3"]
+layout_mode = 2
+button_group = ExtResource("44_c5nvc")
+text = "He/Him"
+
+[node name="Form4" type="VBoxContainer" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Choose your avatar"
+
+[node name="Handlevalidation" type="Label" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form4"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.548798, 0.484859, 1)
+text = "Cannot be empty!"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form4"]
+layout_mode = 2
+
+[node name="Avatar1" type="TextureButton" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form4/HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+keep_pressed_outside = true
+texture_normal = ExtResource("13_2as7o")
+texture_pressed = ExtResource("14_l5ku8")
+
+[node name="Avatar2" type="TextureButton" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer/Form4/HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource("13_2as7o")
+texture_pressed = ExtResource("14_l5ku8")
+
+[node name="Button" type="Button" parent="CharacterBuilder/CharacterBuilderModal/PanelContainer/SettingsMarginContainer/Panel/ScrollContainer/FriendLoopCharacterBuilder/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.721569, 0.721569, 0.721569, 1)
+theme_override_colors/font_outline_color = Color(0.784314, 0.784314, 0.784314, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("45_gdvm6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2wh73")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jhpy0")
+text = "Finish"
+
+[node name="CloseButton" type="TextureButton" parent="CharacterBuilder/CharacterBuilderModal"]
+layout_mode = 2
+size_flags_vertical = 0
+texture_normal = ExtResource("16_7fr74")
+
 [connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/ChatroomButton" to="MainGameNav" method="_on_menu_button_pressed"]
 [connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/InternetButton" to="MainGameNav" method="_on_internet_button_pressed"]
 [connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/SocialButton" to="MainGameNav" method="_on_social_button_pressed"]
@@ -422,8 +820,8 @@ allChatrooms = {
 [connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/LoadButton" to="Utilities/SaverLoader" method="load_game"]
 [connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal/CloseButton" to="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal" method="_on_close_button_pressed"]
 [connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/SettingsButton" to="MainGameNav" method="_on_settings_button_pressed"]
-[connection signal="timeout" from="MainGameNav/VBoxContainer/StartupTimer" to="MainGameNav" method="_on_timer_timeout"]
 [connection signal="chat_selected" from="MainGameNav/ChatModal/ChatSelection" to="MainGameNav/ChatModal" method="_on_chat_selected"]
+[connection signal="chat_back" from="MainGameNav/ChatModal/ChatStoryPlayer" to="MainGameNav/ChatModal" method="_on_chat_back"]
 [connection signal="pressed" from="MainGameNav/ChatModal/TextureButton" to="MainGameNav/ChatModal" method="_on_close_button_pressed"]
 [connection signal="pressed" from="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/SaveButton" to="Utilities/SaverLoader" method="save_game"]
 [connection signal="pressed" from="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/LoadButton" to="Utilities/SaverLoader" method="load_game"]

@@ -122,11 +122,13 @@ func get_next_dialogue_line(resource: DialogueResource, key: String = "", extra_
 
 	# Get the line data
 	var dialogue: DialogueLine = await get_line(resource, key, extra_game_states)
-
+	
+	var next_line_dialogue: DialogueLine = await get_line(resource, dialogue.next_id, extra_game_states)
+	
 	# If our dialogue is nothing then we hit the end
-	if not is_valid(dialogue):
+	if (next_line_dialogue == null):
 		(func(): dialogue_ended.emit(resource)).call_deferred()
-		return null
+		#return null
 
 	# Run the mutation if it is one
 	if dialogue.type == DialogueConstants.TYPE_MUTATION:
@@ -306,22 +308,6 @@ func show_dialogue_balloon_scene(balloon_scene, resource: DialogueResource, titl
 		assert(false, DialogueConstants.translate("runtime.dialogue_balloon_missing_start_method"))
 	return balloon
 
-func append_dialogue_balloon_scene(balloon_scene, scene_to_append, resource: DialogueResource, title: String = "", extra_game_states: Array = []) -> Node:
-	if balloon_scene is String:
-		balloon_scene = load(balloon_scene)
-	if balloon_scene is PackedScene:
-		balloon_scene = balloon_scene.instantiate()
-
-	var balloon: Node = balloon_scene
-	scene_to_append.add_child(balloon)
-	if balloon.has_method("start"):
-		balloon.start(resource, title, extra_game_states)
-	elif balloon.has_method("Start"):
-		balloon.Start(resource, title, extra_game_states)
-	else:
-		assert(false, DialogueConstants.translate("runtime.dialogue_balloon_missing_start_method"))
-	return balloon
-
 # Get the path to the example balloon
 func _get_example_balloon_path() -> String:
 	var is_small_window: bool = ProjectSettings.get_setting("display/window/size/viewport_width") < 400
@@ -387,7 +373,6 @@ func get_line(resource: DialogueResource, key: String, extra_game_states: Array)
 		assert(false, DialogueConstants.translate("errors.key_not_found").format({ key = key }))
 
 	var data: Dictionary = resource.lines.get(key)
-
 	# Check for weighted random lines
 	if data.has("siblings"):
 		var target_weight: float = randf_range(0, data.siblings.reduce(func(total, sibling): return total + sibling.weight, 0))
@@ -450,6 +435,15 @@ func get_line(resource: DialogueResource, key: String, extra_game_states: Array)
 	line.next_id = "|".join(stack) if line.next_id == DialogueConstants.ID_NULL else line.next_id + id_trail
 	return line
 
+func get_response(resource: DialogueResource, key: String, extra_game_states: Array) -> Dictionary:
+	key = key.strip_edges()
+
+	if not resource.lines.has(key):
+		assert(false, DialogueConstants.translate("errors.key_not_found").format({ key = key }))
+
+	var data: Dictionary = resource.lines.get(key)
+	
+	return data
 
 # Show a message or crash with error
 func show_error_for_missing_state_value(message: String, will_show: bool = true) -> void:
