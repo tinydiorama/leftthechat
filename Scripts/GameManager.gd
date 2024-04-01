@@ -1,7 +1,16 @@
 class_name GameManager
 extends Node
 
+var gameStarted:bool = false
+
 var savedId = "savedDataModels"
+
+var firstName:String = ""
+var lastName:String = ""
+var handle:String = ""
+var directPronoun:String = "they"
+var indirectPronoun:String = "them"
+var avatar:Texture2D
 
 var emails:Emails = Emails.new()
 var articles:Articles = Articles.new()
@@ -20,8 +29,11 @@ signal newEmail
 signal newFriend
 signal newForum
 signal newChat
+signal newCharacterBuilder
 
 @onready var storyManager = %StoryManager
+@onready var saverLoader = %SaverLoader
+@onready var characterBuilder = %CharacterBuilder
 
 func add_email(email:Email):
 	emails.add_email(email)
@@ -73,12 +85,36 @@ func containsChatHistoryID(chatMessageName:String, id:String):
 
 
 func _ready():
-	storyManager.addInitialContent()
-	newEmail.emit()
-	newFriend.emit()
-	newForum.emit()
-	newChat.emit()
-	pass
+	saverLoader.load_game()
+	
+	if ( firstName == "" ):
+		newCharacterBuilder.emit()
+		
+	if ( ! gameStarted ):
+		storyManager.addInitialContent()
+		newEmail.emit()
+		newFriend.emit()
+		newForum.emit()
+		newChat.emit()
+	
+func _on_character_builder_modal_character_submit(fullName, handleParam, pronouns, avatarParam):
+	gameStarted = true
+	var names = fullName.split(" ")
+	firstName = names[0]
+	lastName = names[1]
+	handle = handleParam
+	if ( pronouns == "TheyCheckbox" ):
+		directPronoun = "they"
+		indirectPronoun = "them"
+	elif ( pronouns == "SheCheckbox" ):
+		directPronoun = "she"
+		indirectPronoun = "her"
+	else: #pronouns == "HeCheckbox"
+		directPronoun = "he"
+		indirectPronoun = "him"
+	avatar = avatarParam
+	saverLoader.save_game()
+	characterBuilder.hide()
 
 func on_save_game(saved_data:Array[SavedData]):
 	var my_data = GameSavedData.new()
@@ -89,6 +125,13 @@ func on_save_game(saved_data:Array[SavedData]):
 	my_data.seenEmails = seenEmails
 	my_data.seenForums = seenForums
 	my_data.seenFriends = seenFriends
+	my_data.firstName = firstName
+	my_data.lastName = lastName
+	my_data.handle = handle
+	my_data.directPronoun = directPronoun
+	my_data.indirectPronoun = indirectPronoun
+	my_data.avatar = avatar
+	my_data.gameStarted = gameStarted
 	
 	saved_data.append(my_data)
 	
@@ -102,6 +145,14 @@ func on_load_game(saved_data:SavedData):
 	seenEmails = my_data.seenEmails
 	seenForums = my_data.seenForums
 	seenFriends = my_data.seenFriends
+	
+	firstName = my_data.firstName
+	lastName = my_data.lastName
+	handle = my_data.handle
+	directPronoun = my_data.directPronoun
+	indirectPronoun = my_data.indirectPronoun
+	avatar = my_data.avatar
+	gameStarted = my_data.gameStarted
 	
 	populate_data()
 
@@ -125,3 +176,5 @@ func populate_data():
 		var friendData = storyManager.allFriends.get(friendName)
 		for friend in friendData:
 			add_friend(friend)
+
+

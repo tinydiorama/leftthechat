@@ -1,0 +1,429 @@
+[gd_scene load_steps=26 format=3 uid="uid://d3bwjynekexf0"]
+
+[ext_resource type="Script" path="res://Scripts/Managers/CharacterBuilder.gd" id="1_51qdq"]
+[ext_resource type="ButtonGroup" uid="uid://it6chqvosfeb" path="res://Resources/CharacterCreatorGroup.tres" id="2_3mlqd"]
+[ext_resource type="Texture2D" uid="uid://dae0gw5vglkn0" path="res://Sprites/MapIcon.png" id="3_kw3pw"]
+[ext_resource type="Script" path="res://addons/godot-form-validator/form_validator.gd" id="3_rbdyl"]
+[ext_resource type="Texture2D" uid="uid://ukl6xlmbv2cy" path="res://Sprites/Notes.png" id="4_b0qoa"]
+[ext_resource type="Texture2D" uid="uid://3cdno1a3tm4n" path="res://Sprites/friendloop-logo.png" id="4_tnf5x"]
+[ext_resource type="FontFile" uid="uid://imsbfhmgiiot" path="res://Resources/Fonts/PressStart2P-Regular.ttf" id="5_62cvj"]
+[ext_resource type="Script" path="res://addons/godot-form-validator/control_validator.gd" id="5_bdh8c"]
+[ext_resource type="Script" path="res://addons/godot-form-validator/rules/required_rule.gd" id="6_mkvsa"]
+[ext_resource type="Texture2D" uid="uid://ci2ghcg7qj01l" path="res://Sprites/menuHeader.png" id="6_uacet"]
+[ext_resource type="Script" path="res://addons/godot-form-validator/rules/matches_rule.gd" id="7_41bwh"]
+[ext_resource type="Script" path="res://addons/godot-form-validator/validators/text_edit_validator.gd" id="8_57ga6"]
+[ext_resource type="Script" path="res://addons/godot-form-validator/rules/length_rule.gd" id="9_sxv24"]
+[ext_resource type="ButtonGroup" uid="uid://bb3fvt8t33bgh" path="res://Resources/AvatarPickerGroup.tres" id="11_q07pn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cujk"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wh73"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+shadow_offset = Vector2(0, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhpy0"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="Resource" id="Resource_vv24l"]
+script = ExtResource("6_mkvsa")
+fail_message = "A value is required."
+
+[sub_resource type="Resource" id="Resource_jnlj8"]
+script = ExtResource("7_41bwh")
+pattern = "^[A-Za-z]+\\s?[A-Za-z\\'\\-]+$"
+fail_message = "Must contain only letters, and be a first and last name."
+
+[sub_resource type="Resource" id="Resource_6wf5n"]
+script = ExtResource("9_sxv24")
+min_length = 0
+max_length = 40
+fail_message = "Must be less than 40 characters."
+
+[sub_resource type="Resource" id="Resource_vf1hw"]
+script = ExtResource("8_57ga6")
+validation_order = 1
+validation_method = 0
+skip_validation = false
+rules = Array[Resource("res://addons/godot-form-validator/rules/validator_rule.gd")]([SubResource("Resource_vv24l"), SubResource("Resource_jnlj8"), SubResource("Resource_6wf5n")])
+
+[sub_resource type="Resource" id="Resource_xtv6n"]
+script = ExtResource("6_mkvsa")
+fail_message = "A value is required."
+
+[sub_resource type="Resource" id="Resource_pi4mj"]
+script = ExtResource("9_sxv24")
+min_length = 0
+max_length = 10
+fail_message = "Must be less than 10 characters"
+
+[sub_resource type="Resource" id="Resource_moiwo"]
+script = ExtResource("7_41bwh")
+pattern = "^[a-zA-Z0-9@\\s]*$"
+fail_message = "Must contain letters and numbers only."
+
+[sub_resource type="Resource" id="Resource_2jjf1"]
+script = ExtResource("8_57ga6")
+validation_order = 1
+validation_method = 0
+skip_validation = false
+rules = Array[Resource("res://addons/godot-form-validator/rules/validator_rule.gd")]([SubResource("Resource_xtv6n"), SubResource("Resource_pi4mj"), SubResource("Resource_moiwo")])
+
+[node name="CharacterBuilderModal" type="MarginContainer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 100
+script = ExtResource("1_51qdq")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="SettingsMarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 110
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="Panel" type="Panel" parent="PanelContainer/SettingsMarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4cujk")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/SettingsMarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 40
+
+[node name="FriendLoopIntro" type="MarginContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/margin_top = 400
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopIntro"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopIntro/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_tnf5x")
+stretch_mode = 3
+
+[node name="Label2" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopIntro/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Welcome!"
+horizontal_alignment = 1
+
+[node name="LogoTimer" type="Timer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopIntro"]
+unique_name_in_owner = true
+wait_time = 3.0
+one_shot = true
+
+[node name="FriendLoopWelcome" type="MarginContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/margin_top = 400
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopWelcome"]
+layout_mode = 2
+theme_override_constants/separation = 80
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopWelcome/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_tnf5x")
+stretch_mode = 3
+
+[node name="HelloName" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopWelcome/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Hello, Firstname Lastname"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopWelcome/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "You've successfully set up your profile!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="DoneButton" type="Button" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopWelcome/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.721569, 0.721569, 0.721569, 1)
+theme_override_colors/font_outline_color = Color(0.784314, 0.784314, 0.784314, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_62cvj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2wh73")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jhpy0")
+text = "Done"
+
+[node name="LogoTimer" type="Timer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopWelcome"]
+
+[node name="FriendLoopCharacterBuilder" type="MarginContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 40
+
+[node name="FormValidator" type="Control" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder"]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("3_rbdyl")
+
+[node name="FriendLoopScrollCharacter" type="ScrollContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_tnf5x")
+stretch_mode = 3
+
+[node name="Label2" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Set up your profile"
+horizontal_alignment = 1
+
+[node name="Form" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Full name"
+
+[node name="FullNameForm" type="TextEdit" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+placeholder_text = "First Last"
+scroll_fit_content_height = true
+
+[node name="ControlValidator" type="Node" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form/FullNameForm"]
+script = ExtResource("5_bdh8c")
+validator = SubResource("Resource_vf1hw")
+
+[node name="NameValidation" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.548798, 0.484859, 1)
+text = "Cannot be empty!"
+autowrap_mode = 2
+
+[node name="Form2" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Username"
+
+[node name="HandleForm" type="TextEdit" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form2"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+placeholder_text = "@username"
+scroll_fit_content_height = true
+
+[node name="ControlValidator" type="Node" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form2/HandleForm"]
+script = ExtResource("5_bdh8c")
+validator = SubResource("Resource_2jjf1")
+
+[node name="HandleValidation" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form2"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.548798, 0.484859, 1)
+text = "Cannot be empty!"
+autowrap_mode = 2
+
+[node name="Form3" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Pronouns that best match you"
+
+[node name="TheyCheckbox" type="CheckBox" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form3"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+button_pressed = true
+button_group = ExtResource("2_3mlqd")
+text = "They/Them"
+
+[node name="SheCheckbox" type="CheckBox" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form3"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+button_group = ExtResource("2_3mlqd")
+text = "She/Her"
+
+[node name="HeCheckbox" type="CheckBox" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form3"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+button_group = ExtResource("2_3mlqd")
+text = "He/Him"
+
+[node name="Form4" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Choose your avatar"
+
+[node name="AvatarValidation" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.548798, 0.484859, 1)
+text = "Cannot be empty!"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Avatar1" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+toggle_mode = true
+button_pressed = true
+keep_pressed_outside = true
+button_group = ExtResource("11_q07pn")
+texture_normal = ExtResource("3_kw3pw")
+texture_pressed = ExtResource("4_b0qoa")
+
+[node name="Avatar2" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+toggle_mode = true
+keep_pressed_outside = true
+button_group = ExtResource("11_q07pn")
+texture_normal = ExtResource("3_kw3pw")
+texture_pressed = ExtResource("4_b0qoa")
+
+[node name="Avatar3" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+toggle_mode = true
+keep_pressed_outside = true
+button_group = ExtResource("11_q07pn")
+texture_normal = ExtResource("3_kw3pw")
+texture_pressed = ExtResource("4_b0qoa")
+
+[node name="Avatar4" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+toggle_mode = true
+keep_pressed_outside = true
+button_group = ExtResource("11_q07pn")
+texture_normal = ExtResource("3_kw3pw")
+texture_pressed = ExtResource("4_b0qoa")
+
+[node name="Avatar5" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+toggle_mode = true
+keep_pressed_outside = true
+button_group = ExtResource("11_q07pn")
+texture_normal = ExtResource("3_kw3pw")
+texture_pressed = ExtResource("4_b0qoa")
+
+[node name="SubmitButton" type="Button" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.721569, 0.721569, 0.721569, 1)
+theme_override_colors/font_outline_color = Color(0.784314, 0.784314, 0.784314, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("5_62cvj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2wh73")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jhpy0")
+text = "Finish"
+
+[node name="Control" type="Control" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="CloseButton" type="TextureButton" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+texture_normal = ExtResource("6_uacet")
+
+[connection signal="timeout" from="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopIntro/LogoTimer" to="." method="_on_logo_timer_timeout"]
+[connection signal="pressed" from="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopWelcome/VBoxContainer/DoneButton" to="." method="_on_done_button_pressed"]
+[connection signal="control_validated" from="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator" to="." method="_on_form_validator_control_validated"]
+[connection signal="pressed" from="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
