@@ -6,3 +6,4 @@ extends Resource
 @export_multiline var body:String
 @export var icon:Texture2D
 @export var date:String
+@export var read:bool

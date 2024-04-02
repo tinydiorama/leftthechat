@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_5ghyh")
-friendName = "James Teller"
+friendName = "James T."
 handle = "@jamesthegiant"
 age = "35"
 relationship = "It’s complicated"

@@ -16,7 +16,6 @@ func displayChats(chats):
 	for chatroom in chats:
 		var chat_category = chatCategoryButton.instantiate()
 		chatCategoryList.add_child(chat_category)
-		print(chatroom)
 		chat_category.display(chatroom)
 		chat_category.connect("gui_input", Callable(self, "_on_gui_input").bind([chatroom]))
 

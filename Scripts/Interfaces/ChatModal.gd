@@ -3,6 +3,7 @@ extends MarginContainer
 @onready var chatSelection = %ChatSelection
 @onready var chatStoryPlayer = %ChatStoryPlayer
 @onready var gameManager = %GameManager
+@onready var closeButton = %ChatCloseButton
 
 var chats:Array[Chatroom] = []
 
@@ -27,4 +28,9 @@ func _on_close_button_pressed():
 func _on_chat_back():
 	chatSelection.show()
 	chatStoryPlayer.hide()
+	closeButton.disabled = false
 	populateChatSelection()
+
+
+func _on_chat_story_player_chat_playing():
+	closeButton.disabled = true

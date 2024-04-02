@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("2_fuiqx")
-friendName = "Prof. Andrew Simon"
-handle = "@TheProfessorDrew"
+friendName = "Prof. Calvin Lowe"
+handle = "@TheProfessorCal"
 age = "46"
 relationship = "Ready to mingle"
 status = "Beautiful day for a motorcycle ride! #Vespa #MotercycleGang #ProfOnWheels"

@@ -39,10 +39,10 @@ func populate(dialogue_line):
 		await dialogue_label.finished_typing
 
 func showResponse(response):
-	print(response)
 	character_label.visible = true
-	character_label.text = tr("Player", "dialogue")
-	var portrait_path = null
+	var gameManager = get_node("/root/MainScreen/Utilities/GameManager")
+	character_label.text = tr(gameManager.handle, "dialogue")
+	var portrait_path = gameManager.avatar
 	
 	if portrait_path != null:
 		avatar.texture = portrait_path

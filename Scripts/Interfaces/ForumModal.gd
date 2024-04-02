@@ -8,6 +8,7 @@ extends MarginContainer
 @onready var forumThreadPosts = %ForumThreadPosts
 @onready var forumThreadList = %ForumThreadList
 @onready var forumBodyPostList = %ForumBodyPostList
+@onready var gameManager = get_node("/root/MainScreen/Utilities/GameManager")
 
 var threads:Array[ForumThread] = []
 var mouseOver = false
@@ -29,16 +30,20 @@ func populateThreads():
 		forumThreadList.add_child(forum_thread)
 		forum_thread.display(thread)
 		forum_thread.connect("gui_input", Callable(self, "_on_gui_input").bind([thread]))
+		forum_thread.connect("mouse_exited", Callable(self, "_on_mouse_exit"))
 
 func _on_gui_input(event, params:Array):
 	mouseOver = true
 	currentThread = params[0]
+
+func _on_mouse_exit():
+	mouseOver = false
 	
 func _input(event):
 	if event is InputEventMouseButton:
 		if mouseOver == true:
 			displayInnerThread()
-			print("Clicked On Object")
+			gameManager.unreadForums.erase(currentThread.subject)
 			mouseOver = false
 
 func displayInnerThread():
@@ -57,9 +62,12 @@ func displayInnerThread():
 		forum_post_body.display(post)
 	
 func _on_close_button_pressed():
+	gameManager.saveGame()
 	hide()
 
 
 func _on_back_button_pressed():
 	forumList.show()
+	populateThreads()
+	gameManager.saveGame()
 	forumThreadPosts.hide()

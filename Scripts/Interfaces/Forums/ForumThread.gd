@@ -5,6 +5,8 @@ extends PanelContainer
 @onready var postSubject = %PostSubject
 @onready var upvotes = %Upvotes
 @onready var comments = %Comments
+@onready var newFlag = %NewFlag
+@onready var gameManager = get_node("/root/MainScreen/Utilities/GameManager")
 
 func display(forumThread:ForumThread):
 	postUsername.text = forumThread.originalPoster
@@ -12,3 +14,7 @@ func display(forumThread:ForumThread):
 	postSubject.text = forumThread.subject
 	upvotes.text = str(forumThread.upvotes)
 	comments.text = str(forumThread.posts.size())
+	if ( gameManager.unreadForums.has(forumThread.subject) ):
+		newFlag.show()
+	else:
+		newFlag.hide()

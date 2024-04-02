@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://j8bbrccht6xq"
+path="res://.godot/imported/Horror1.dialogue-a6d0b0162c15b28aefad894af09f9a62.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Horror1.dialogue"
+dest_files=["res://.godot/imported/Horror1.dialogue-a6d0b0162c15b28aefad894af09f9a62.tres"]
+
+[params]
+
+defaults=true

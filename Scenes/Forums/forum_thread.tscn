@@ -77,3 +77,12 @@ theme_override_font_sizes/font_size = 40
 text = "10
 "
 vertical_alignment = 1
+
+[node name="NewFlag" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.941176, 1, 1)
+theme_override_fonts/font = ExtResource("2_slm7y")
+theme_override_font_sizes/font_size = 40
+text = "NEW"
+vertical_alignment = 1

@@ -4,6 +4,7 @@ extends VBoxContainer
 
 @onready var friendGrid = %FriendGrid
 @onready var friendPanel = %FriendPanel
+@onready var gameManager = get_node("/root/MainScreen/Utilities/GameManager")
 
 var mouseOver = false
 var currentFriend:Friend
@@ -22,4 +23,5 @@ func populate_friends(allFriends:Array[Friend]):
 
 func _onPressed(params:Array):
 	currentFriend = params[0]	
+	gameManager.updatedFriends.erase(currentFriend.friendName)
 	friendPanel.display(currentFriend)

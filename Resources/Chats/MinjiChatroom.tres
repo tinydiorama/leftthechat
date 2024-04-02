@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Chatroom" load_steps=3 format=3 uid="uid://bn4lgfkjvtiev"]
+
+[ext_resource type="Resource" uid="uid://b0u7hn4oqxprf" path="res://Resources/Chats/Minji Chats/Minji-1.tres" id="1_kjeja"]
+[ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_yrk2o"]
+
+[resource]
+script = ExtResource("1_yrk2o")
+chatName = "Minji"
+numPeople = 1
+category = "Private"
+chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("1_kjeja")])

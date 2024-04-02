@@ -7,6 +7,8 @@ extends Panel
 @onready var status = %Status
 @onready var avatar = %Avatar
 
+signal friend_back_pressed
+
 # Called when the node enters the scene tree for the first time.
 func display(friend:Friend):
 	show()
@@ -19,4 +21,5 @@ func display(friend:Friend):
 
 
 func _on_back_button_pressed():
+	friend_back_pressed.emit()
 	hide()

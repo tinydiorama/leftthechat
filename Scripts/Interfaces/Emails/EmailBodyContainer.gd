@@ -6,6 +6,8 @@ extends MarginContainer
 @onready var emailDate = %EmailDate
 @onready var emailBody = %EmailBody
 
+signal close_email_body
+
 # Called when the node enters the scene tree for the first time.
 func display(email:Email):
 	show()
@@ -17,4 +19,5 @@ func display(email:Email):
 
 
 func _on_back_button_pressed():
+	close_email_body.emit()
 	hide()

@@ -23,6 +23,10 @@ var seenFriends:Array[String] = ["initialFriends"]
 var seenForums:Array[String] = ["initialForums"]
 var seenChats:Array[String] = ["initialChatrooms"]
 
+var unreadEmails:Array[String] = []
+var updatedFriends:Array[String] = []
+var unreadForums:Array[String] = []
+
 var allChatHistory:Dictionary
 
 signal newEmail
@@ -37,12 +41,14 @@ signal newCharacterBuilder
 
 func add_email(email:Email):
 	emails.add_email(email)
+	unreadEmails.append(email.subject)
 
 func add_friend(friend:Friend):
 	friends.add_friend(friend)
 	
 func add_forum(thread:ForumThread):
 	forums.add_thread(thread)
+	unreadForums.append(thread.subject)
 	
 func add_chat(chat:Chatroom):
 	chats.add_chatroom(chat)
@@ -115,6 +121,9 @@ func _on_character_builder_modal_character_submit(fullName, handleParam, pronoun
 	avatar = avatarParam
 	saverLoader.save_game()
 	characterBuilder.hide()
+	
+func saveGame():
+	saverLoader.save_game()
 
 func on_save_game(saved_data:Array[SavedData]):
 	var my_data = GameSavedData.new()
@@ -132,6 +141,9 @@ func on_save_game(saved_data:Array[SavedData]):
 	my_data.indirectPronoun = indirectPronoun
 	my_data.avatar = avatar
 	my_data.gameStarted = gameStarted
+	my_data.unreadEmails = unreadEmails
+	my_data.updatedFriends = updatedFriends
+	my_data.unreadForums = unreadForums
 	
 	saved_data.append(my_data)
 	
@@ -153,6 +165,9 @@ func on_load_game(saved_data:SavedData):
 	indirectPronoun = my_data.indirectPronoun
 	avatar = my_data.avatar
 	gameStarted = my_data.gameStarted
+	unreadEmails = my_data.unreadEmails
+	updatedFriends = my_data.updatedFriends
+	unreadForums = my_data.unreadForums
 	
 	populate_data()
 
@@ -165,12 +180,12 @@ func populate_data():
 	for emailName in seenEmails:
 		var emailData = storyManager.allEmails.get(emailName)
 		for email in emailData:
-			add_email(email)
+			emails.add_email(email)
 			
 	for forumName in seenForums:
 		var forumData = storyManager.allForums.get(forumName)
 		for forum in forumData:
-			add_forum(forum)
+			forums.add_thread(forum)
 			
 	for friendName in seenFriends:
 		var friendData = storyManager.allFriends.get(friendName)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxjeo4gf3f2a3"]
+[gd_scene load_steps=4 format=3 uid="uid://cxjeo4gf3f2a3"]
 
 [ext_resource type="Script" path="res://Scripts/Interfaces/Emails/EmailListDisplay.gd" id="1_66bhm"]
 [ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_my6wd"]
+[ext_resource type="Texture2D" uid="uid://cgda37hsh13x5" path="res://Sprites/notification-circle.png" id="2_lgqsi"]
 
 [node name="EmailListDisplay" type="VBoxContainer"]
 anchors_preset = 10
@@ -19,6 +20,16 @@ unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("1_my6wd")
+
+[node name="NotificationBubble" type="TextureRect" parent="EmailListDisplayInner/EmailIcon"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 56.0
+offset_bottom = 191.0
+texture = ExtResource("2_lgqsi")
+stretch_mode = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="EmailListDisplayInner"]
 layout_mode = 2

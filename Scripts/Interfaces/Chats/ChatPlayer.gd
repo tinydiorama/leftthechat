@@ -10,6 +10,7 @@ var currentChatMeta:ChatMeta
 var gameManager:GameManager
 
 signal chat_back
+signal chat_playing
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,11 +31,14 @@ func showChat(chat:Chatroom, gameManagerPassed:GameManager):
 		if ( chatMessages.unlocked ) : # just display the messages that have been previously shown
 			dialogueController.addChatNode(currentChatMeta, gameManager)
 		else:
+			chat_playing.emit()
 			gameManager.deleteChatHistory(currentChatMeta.chatMetaName)
 			#var chatScene = DialogueManager.append_dialogue_balloon_scene(POP_BALLOON, dialogue_container, chatMessages.chatPath, "start")
 			dialogueController.start(chatMessages.chatPath, "start")
-			dialogueController.connect("chat_ended", _on_chat_ended)
-			dialogueController.connect("chat_message_seen", _on_chat_seen)
+			if ( ! dialogueController.is_connected("chat_ended", _on_chat_ended)):
+				dialogueController.connect("chat_ended", _on_chat_ended)
+			if ( ! dialogueController.is_connected("chat_message_seen", _on_chat_seen)):
+				dialogueController.connect("chat_message_seen", _on_chat_seen)
 		#print(chatMessages.chatPath)
 
 func _on_chat_ended():
@@ -42,7 +46,7 @@ func _on_chat_ended():
 	
 func _on_chat_seen(id:String):
 	gameManager.addChatHistory(currentChatMeta.chatMetaName, id)
-
+	gameManager.saveGame()
 
 func _on_dialogue_controller_back_button():
 	chat_back.emit()

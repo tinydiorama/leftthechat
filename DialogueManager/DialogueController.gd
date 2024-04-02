@@ -106,8 +106,12 @@ func clearChat():
 ## Start some dialogue
 func start(dialogue_resource: DialogueResource, title: String, extra_game_states: Array = []) -> void:
 	var dialogue_manager = Engine.get_singleton("DialogueManager")
-	dialogue_manager.mutated.connect(_on_mutated)
-	dialogue_manager.dialogue_ended.connect(_on_dialogue_ended)
+	
+	if ( ! dialogue_manager.mutated.is_connected(_on_mutated)):
+		dialogue_manager.mutated.connect(_on_mutated)
+		
+	if ( ! dialogue_manager.dialogue_ended.is_connected(_on_dialogue_ended)):
+		dialogue_manager.dialogue_ended.connect(_on_dialogue_ended)
 	
 	backButton.hide()
 	temporary_game_states =  [self] + extra_game_states

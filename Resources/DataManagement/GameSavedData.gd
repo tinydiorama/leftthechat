@@ -12,3 +12,6 @@ extends SavedData
 @export var directPronoun:String
 @export var indirectPronoun:String
 @export var avatar:Texture2D
+@export var unreadEmails:Array[String]
+@export var updatedFriends:Array[String]
+@export var unreadForums:Array[String]

@@ -6,7 +6,7 @@
 [node name="CategoryButton" type="Button"]
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_lbdg1")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 36
 text = "Hello"
 alignment = 0
 script = ExtResource("2_xssve")
