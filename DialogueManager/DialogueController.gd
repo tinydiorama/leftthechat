@@ -113,6 +113,7 @@ func start(dialogue_resource: DialogueResource, title: String, extra_game_states
 	if ( ! dialogue_manager.dialogue_ended.is_connected(_on_dialogue_ended)):
 		dialogue_manager.dialogue_ended.connect(_on_dialogue_ended)
 	
+	nextButton.show()
 	backButton.hide()
 	temporary_game_states =  [self] + extra_game_states
 	is_waiting_for_input = false
@@ -126,6 +127,8 @@ func next(next_id: String) -> void:
 func addChatNode(currentChatMeta:ChatMeta, gameManager:GameManager):
 	var currentHistory = gameManager.getChatHistory(currentChatMeta.chatMetaName)
 	var chatResource = currentChatMeta.chatPath
+	nextButton.hide()
+	backButton.show()
 	
 	for historyNode in currentHistory:
 		var dialogueLine = await DialogueManager.get_line(chatResource, historyNode, [])

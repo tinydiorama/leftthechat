@@ -5,6 +5,7 @@ extends Node
 @export var allFriends:Dictionary = {}
 @export var allForums:Dictionary = {}
 @export var allChatrooms:Dictionary = {}
+@export var chatroomUpdates:Dictionary = {}
 
 @onready var gameManager = %GameManager
 
@@ -22,3 +23,9 @@ func addInitialContent():
 
 	for chatroom in allChatrooms.get("initialChatrooms"):
 		gameManager.add_chat(chatroom)
+
+func advanceStory():
+	if ( gameManager.isAllUnreads() ):
+		if ( ! gameManager.seenChats.has("minjiInvite") && gameManager.seenEmails.has("initialEmails") && gameManager.seenChats.has("initialChatrooms") && gameManager.seenForums.has("initialForums")):
+			gameManager.seenChats.append("minjiInvite")
+			gameManager.add_chat_segment(chatroomUpdates.get("minjiInvite"), "Minji")

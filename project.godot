@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Validation="*res://addons/godot-form-validator/validation.gd"
+Globals="*res://Scripts/Globals.gd"
 
 [dialogic]
 
@@ -91,7 +92,7 @@ pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Resources/Dialogue/test.dialogue", "res://Resources/Dialogue/test2.dialogue", "res://Resources/Dialogue/Mom1.dialogue", "res://Resources/Dialogue/Minji1.dialogue", "res://Resources/Dialogue/Horror1.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Resources/Dialogue/test.dialogue", "res://Resources/Dialogue/test2.dialogue", "res://Resources/Dialogue/Mom1.dialogue", "res://Resources/Dialogue/Minji1.dialogue", "res://Resources/Dialogue/Horror1.dialogue", "res://Resources/Dialogue/Minji-2-Invite.dialogue")
 
 [physics]
 

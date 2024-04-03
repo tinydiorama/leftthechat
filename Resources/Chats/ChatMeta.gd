@@ -4,3 +4,4 @@ extends Resource
 @export var chatMetaName:String
 @export var chatPath:Resource
 @export var unlocked:bool
+@export var chatroomName:String

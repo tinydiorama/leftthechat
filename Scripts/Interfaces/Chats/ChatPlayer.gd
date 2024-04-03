@@ -28,7 +28,7 @@ func showChat(chat:Chatroom, gameManagerPassed:GameManager):
 		
 	for chatMessages in chat.chats:
 		currentChatMeta = chatMessages
-		if ( chatMessages.unlocked ) : # just display the messages that have been previously shown
+		if ( gameManager.completedChats.has(currentChatMeta.chatMetaName) ) : # just display the messages that have been previously shown
 			dialogueController.addChatNode(currentChatMeta, gameManager)
 		else:
 			chat_playing.emit()
@@ -43,6 +43,7 @@ func showChat(chat:Chatroom, gameManagerPassed:GameManager):
 
 func _on_chat_ended():
 	currentChatMeta.unlocked = true
+	gameManager.completedChats.append(currentChatMeta.chatMetaName)
 	
 func _on_chat_seen(id:String):
 	gameManager.addChatHistory(currentChatMeta.chatMetaName, id)

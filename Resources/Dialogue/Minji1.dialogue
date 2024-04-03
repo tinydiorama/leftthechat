@@ -7,8 +7,10 @@ Minji: Noah has such a crush on April, it's adorable
 	Minji: aw :)
 Minji: So. Burgers or ramen tonight?
 - Burgers!
+	do Globals.restaurantChoice = "burgers"
 	Minji: Can't wait!
 - Ramen!
+	do Globals.restaurantChoice = "ramen"
 	Minji: Can't wait!
 
 

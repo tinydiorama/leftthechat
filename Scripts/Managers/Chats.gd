@@ -8,8 +8,10 @@ func add_chatroom(chatroom:Chatroom):
 func remove_chatroom(chatroom:Chatroom):
 	_content.erase(chatroom)
 	
-#todo set chatroom to unlocked
-#todo set chat inside of chatroom to unlocked
+func add_chat_segment(chatSegment:ChatMeta, chatroomName:String):
+	for chatroom in _content:
+		if ( chatroom.chatName == chatroomName ):
+			chatroom.chats.append(chatSegment)
 	
 func get_chatrooms() -> Array[Chatroom]:
 	return _content

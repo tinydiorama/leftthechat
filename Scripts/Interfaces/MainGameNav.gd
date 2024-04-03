@@ -35,6 +35,10 @@ func _process(delta):
 		forumButton.get_node("NotificationIcon").show()
 	else:
 		forumButton.get_node("NotificationIcon").hide()
+	if ( gameManager.unreadChats.size() > 0 ):
+		chatButton.get_node("NotificationIcon").show()
+	else:
+		chatButton.get_node("NotificationIcon").hide()
 
 
 func _on_menu_button_pressed():

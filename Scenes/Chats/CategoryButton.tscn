@@ -1,12 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://p1yccx6mbog3"]
+[gd_scene load_steps=5 format=3 uid="uid://p1yccx6mbog3"]
 
 [ext_resource type="FontFile" uid="uid://imsbfhmgiiot" path="res://Resources/Fonts/PressStart2P-Regular.ttf" id="1_lbdg1"]
 [ext_resource type="Script" path="res://Scripts/Interfaces/Chats/CategoryButton.gd" id="2_xssve"]
+[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="3_jk1bx"]
+[ext_resource type="Texture2D" uid="uid://cgda37hsh13x5" path="res://Sprites/notification-circle.png" id="4_x0j1f"]
 
 [node name="CategoryButton" type="Button"]
+offset_right = 277.0
+offset_bottom = 49.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_lbdg1")
 theme_override_font_sizes/font_size = 36
-text = "Hello"
 alignment = 0
 script = ExtResource("2_xssve")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChatroomAvatar" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("3_jk1bx")
+
+[node name="NotificationIcon" type="TextureRect" parent="HBoxContainer/ChatroomAvatar"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.123
+anchor_bottom = 0.13
+offset_top = 1.0
+offset_right = 15.85
+offset_bottom = 15.5
+texture = ExtResource("4_x0j1f")
+expand_mode = 1
+
+[node name="ChatroomName" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Hello"

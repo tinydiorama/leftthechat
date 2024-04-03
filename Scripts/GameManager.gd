@@ -26,6 +26,8 @@ var seenChats:Array[String] = ["initialChatrooms"]
 var unreadEmails:Array[String] = []
 var updatedFriends:Array[String] = []
 var unreadForums:Array[String] = []
+var unreadChats:Array[String] = []
+var completedChats:Array[String] = []
 
 var allChatHistory:Dictionary
 
@@ -52,6 +54,11 @@ func add_forum(thread:ForumThread):
 	
 func add_chat(chat:Chatroom):
 	chats.add_chatroom(chat)
+	unreadChats.append(chat.chatName)
+	
+func add_chat_segment(chatSegment:ChatMeta, chatName:String):
+	chats.add_chat_segment(chatSegment, chatName)
+	unreadChats.append(chatName)
 	
 ############################ Chat History
 func addChatHistory(chatMessageName:String, id:String) -> Array:
@@ -89,6 +96,8 @@ func containsChatHistoryID(chatMessageName:String, id:String):
 		return true if arrayToCheck.find_key(id) else false
 ########################### end chat history stuff
 
+func isAllUnreads() -> bool:
+	return (unreadChats.size() == 0) && (unreadEmails.size() == 0) && (unreadForums.size() == 0)
 
 func _ready():
 	saverLoader.load_game()
@@ -107,7 +116,8 @@ func _on_character_builder_modal_character_submit(fullName, handleParam, pronoun
 	gameStarted = true
 	var names = fullName.split(" ")
 	firstName = names[0]
-	lastName = names[1]
+	if ( names.size() > 1 ):
+		lastName = names[1]
 	handle = handleParam
 	if ( pronouns == "TheyCheckbox" ):
 		directPronoun = "they"
@@ -123,6 +133,8 @@ func _on_character_builder_modal_character_submit(fullName, handleParam, pronoun
 	characterBuilder.hide()
 	
 func saveGame():
+	# Check for game progress
+	storyManager.advanceStory()
 	saverLoader.save_game()
 
 func on_save_game(saved_data:Array[SavedData]):
@@ -144,6 +156,9 @@ func on_save_game(saved_data:Array[SavedData]):
 	my_data.unreadEmails = unreadEmails
 	my_data.updatedFriends = updatedFriends
 	my_data.unreadForums = unreadForums
+	my_data.unreadChats = unreadChats
+	my_data.chatHistory = allChatHistory
+	my_data.completedChats = completedChats
 	
 	saved_data.append(my_data)
 	
@@ -168,14 +183,24 @@ func on_load_game(saved_data:SavedData):
 	unreadEmails = my_data.unreadEmails
 	updatedFriends = my_data.updatedFriends
 	unreadForums = my_data.unreadForums
+	unreadChats = my_data.unreadChats
+	allChatHistory = my_data.chatHistory
+	completedChats = my_data.completedChats
 	
 	populate_data()
 
 func populate_data():
 	for chatName in seenChats:
 		var chatData = storyManager.allChatrooms.get(chatName)
-		for chatroom in chatData:
-			add_chat(chatroom)
+		if ( chatData != null ):
+			for chatroom in chatData:
+				chats.add_chatroom(chatroom)
+				
+	for chatName in seenChats:
+		var chatData = storyManager.chatroomUpdates.get(chatName)
+		if ( chatData != null ):
+			var chatroomName = chatData.chatroomName
+			chats.add_chat_segment(chatData, chatData.chatroomName)
 	
 	for emailName in seenEmails:
 		var emailData = storyManager.allEmails.get(emailName)

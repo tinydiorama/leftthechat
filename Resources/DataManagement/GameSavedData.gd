@@ -15,3 +15,6 @@ extends SavedData
 @export var unreadEmails:Array[String]
 @export var updatedFriends:Array[String]
 @export var unreadForums:Array[String]
+@export var chatHistory:Dictionary
+@export var unreadChats:Array[String]
+@export var completedChats:Array[String]

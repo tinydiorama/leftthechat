@@ -8,3 +8,4 @@ script = ExtResource("1_qvrmw")
 chatMetaName = "Minji-1"
 chatPath = ExtResource("1_vgiqf")
 unlocked = false
+chatroomName = "Minji"

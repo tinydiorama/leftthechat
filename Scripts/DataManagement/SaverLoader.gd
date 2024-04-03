@@ -8,6 +8,7 @@ func save_game():
 	
 	var saved_data:Array[SavedData] = []
 	get_tree().call_group("gameEvents", "on_save_game", saved_data)
+	Globals.on_save_game(saved_data)
 	saved_game.saveData = saved_data
 	
 	ResourceSaver.save(saved_game, "user://savegame.tres")
@@ -19,7 +20,9 @@ func load_game():
 		print("Saved game was unsafe!")
 		return
 		
-	print(saved_game.day)
+	for savedData in saved_game.saveData:
+		if ( savedData.id == "globalDataModels"):
+			Globals.on_load_game(savedData)
 	
 	get_tree().call_group("gameEvents", "on_before_load_game")
 	
