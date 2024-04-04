@@ -1,17 +1,17 @@
 ~ start
 
-Minji: Noah has such a crush on April, it's adorable
+@jijubee: Noah has such a crush on April, it's adorable
 - I know. Too bad she's already taken by “Gare Bear”
-	Minji: omg stop :P
+	@jijubee: omg stop :P
 - Reminds me of me and you :P
-	Minji: aw :)
-Minji: So. Burgers or ramen tonight?
+	@jijubee: aw :)
+@jijubee: So. Burgers or ramen tonight?
 - Burgers!
 	do Globals.restaurantChoice = "burgers"
-	Minji: Can't wait!
+	@jijubee: Can't wait!
 - Ramen!
 	do Globals.restaurantChoice = "ramen"
-	Minji: Can't wait!
+	@jijubee: Can't wait!
 
 
 => END

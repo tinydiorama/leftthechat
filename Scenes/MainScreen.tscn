@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://drxmlpy8vc5si"]
+[gd_scene load_steps=55 format=3 uid="uid://drxmlpy8vc5si"]
 
 [ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="1_fmx65"]
 [ext_resource type="Texture2D" uid="uid://dikti0npwvcsv" path="res://Sprites/pinkbg.png" id="2_4edjn"]
@@ -48,6 +48,7 @@
 [ext_resource type="PackedScene" uid="uid://d3bwjynekexf0" path="res://Scenes/CharacterBuilder/character_builder_modal.tscn" id="46_bon3v"]
 [ext_resource type="Resource" uid="uid://bn4lgfkjvtiev" path="res://Resources/Chats/MinjiChatroom.tres" id="46_sgmv0"]
 [ext_resource type="Resource" uid="uid://g5qo25lww8d8" path="res://Resources/Chats/Minji Chats/Minji-2-Invite.tres" id="47_om4wu"]
+[ext_resource type="Resource" uid="uid://cjq5j2jxn1674" path="res://Resources/Chats/HorrorChats/Horror2-VanessaDeath.tres" id="48_l2ct2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iumoi"]
 bg_color = Color(0.968627, 0.952941, 0.92549, 1)
@@ -486,7 +487,7 @@ visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_right = 5400.0
+offset_right = 9720.0
 grow_horizontal = 2
 script = ExtResource("28_alrkr")
 
@@ -495,7 +496,7 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_top = -263.0
-offset_right = 16200.0
+offset_right = 48600.0
 offset_bottom = 2012.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iumoi")
@@ -570,7 +571,8 @@ allChatrooms = {
 "initialChatrooms": [ExtResource("44_if2et"), ExtResource("42_dkb67"), ExtResource("46_sgmv0")]
 }
 chatroomUpdates = {
-"minjiInvite": ExtResource("47_om4wu")
+"minjiInvite": ExtResource("47_om4wu"),
+"vanessaDeath": ExtResource("48_l2ct2")
 }
 
 [node name="CharacterBuilder" type="Control" parent="."]

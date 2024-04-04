@@ -23,10 +23,15 @@ func populate(dialogue_line):
 	
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
-	var portrait_path = characterPortraits.get(dialogue_line.character.to_lower())
+	var characterName = dialogue_line.character.to_lower()
+	if ( characterName.substr(0, 1) == '@' ):
+		characterName = characterName.substr(1, characterName.length())
+	var portrait_path = characterPortraits.get(characterName)
 	
 	if portrait_path != null:
 		avatar.texture = portrait_path
+	if ( characterName == "System" ):
+		avatar.texture = null
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line
@@ -53,8 +58,9 @@ func showResponse(response):
 
 func showResponseFromRawText(dialogueText:String):
 	character_label.visible = true
-	character_label.text = tr("Player", "dialogue")
-	var portrait_path = null
+	var gameManager = get_node("/root/MainScreen/Utilities/GameManager")
+	character_label.text = tr(gameManager.handle, "dialogue")
+	var portrait_path = gameManager.avatar
 	
 	if portrait_path != null:
 		avatar.texture = portrait_path

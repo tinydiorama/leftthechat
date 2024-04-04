@@ -44,6 +44,7 @@ func showChat(chat:Chatroom, gameManagerPassed:GameManager):
 func _on_chat_ended():
 	currentChatMeta.unlocked = true
 	gameManager.completedChats.append(currentChatMeta.chatMetaName)
+	gameManager.unreadChats.erase(currentChatMeta.chatroomName)
 	
 func _on_chat_seen(id:String):
 	gameManager.addChatHistory(currentChatMeta.chatMetaName, id)

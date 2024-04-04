@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvwatphq10vi5"
-path="res://.godot/imported/noah.png-9d1913d20922ecebefb6631db6644d53.ctex"
+path="res://.godot/imported/noahfence.png-030b4067a8040fb46620e07ebdeb9504.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/noah.png"
-dest_files=["res://.godot/imported/noah.png-9d1913d20922ecebefb6631db6644d53.ctex"]
+source_file="res://Sprites/noahfence.png"
+dest_files=["res://.godot/imported/noahfence.png-030b4067a8040fb46620e07ebdeb9504.ctex"]
 
 [params]
 

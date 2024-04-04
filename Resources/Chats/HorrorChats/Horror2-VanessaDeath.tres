@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://cjq5j2jxn1674"]
+
+[ext_resource type="Resource" uid="uid://bgck56okax1i3" path="res://Resources/Dialogue/Horror2-VanessaDeath.dialogue" id="1_epwib"]
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_r1fw7"]
+
+[resource]
+script = ExtResource("1_r1fw7")
+chatMetaName = "Horror2-VanessaDeath"
+chatPath = ExtResource("1_epwib")
+unlocked = false
+chatroomName = "Horror Fanatics - General"

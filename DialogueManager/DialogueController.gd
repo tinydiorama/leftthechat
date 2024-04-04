@@ -7,7 +7,7 @@ const NEXT_ACTION = &"ui_accept"
 const SKIP_ACTION = &"ui_cancel"
 
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
-@onready var chatMessageContainer = $ScrollContainer/ChatMessages
+@onready var chatMessageContainer = $DialogueScrollContainer/ChatMessages
 @onready var nextButton = %NextButton
 @onready var backButton = %BackButton
 var chatNode = load("res://DialogueManager/ChatNode.tscn")

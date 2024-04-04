@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b5yum1q04mod5" path="res://icon.svg" id="1_05uv2"]
 [ext_resource type="Script" path="res://DialogueManager/ChatNode.gd" id="1_arjx3"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_r83tf"]
-[ext_resource type="Texture2D" uid="uid://dvwatphq10vi5" path="res://Sprites/noah.png" id="2_u0i3b"]
+[ext_resource type="Texture2D" uid="uid://dvwatphq10vi5" path="res://Sprites/noahfence.png" id="2_u0i3b"]
 [ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="3_jpiul"]
 [ext_resource type="FontFile" uid="uid://imsbfhmgiiot" path="res://Resources/Fonts/PressStart2P-Regular.ttf" id="4_17dhq"]
 
@@ -19,7 +19,8 @@ theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 script = ExtResource("1_arjx3")
 characterPortraits = {
-"noah": ExtResource("2_u0i3b")
+"noah": ExtResource("2_u0i3b"),
+"noahfence": ExtResource("2_u0i3b")
 }
 
 [node name="ChatNode" type="HBoxContainer" parent="."]

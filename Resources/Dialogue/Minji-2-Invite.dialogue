@@ -1,10 +1,10 @@
 ~ start
 
 if Globals.restaurantChoice == "burgers"
-	Minji: Hey I'm here at Burger Paradise.
+	@jijubee: Hey I'm here at Burger Paradise.
 elif Globals.restaurantChoice == "ramen"
-	Minji: Hey I'm here at The Ramen Bowl.
-Minji: Where are you? 
-Minji: Oh wait I see you! I'm in the booth near the window
+	@jijubee: Hey I'm here at The Ramen Bowl.
+@jijubee: Where are you? 
+@jijubee: Oh wait I see you! I'm in the booth near the window
 
 => END

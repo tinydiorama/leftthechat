@@ -57,6 +57,7 @@ func _on_email_button_pressed():
 	emailModal.openModal(gameManager.emails.get_emails())
 
 func _on_social_button_pressed():
+	socialButton.get_node("NotificationIcon").hide()
 	socialModal.openModal(gameManager.friends.get_friends())
 
 

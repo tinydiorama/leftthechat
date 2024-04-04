@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bgck56okax1i3"
+path="res://.godot/imported/Horror2-VanessaDeath.dialogue-4f7b407258bbfd75561e3a61220c3368.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Horror2-VanessaDeath.dialogue"
+dest_files=["res://.godot/imported/Horror2-VanessaDeath.dialogue-4f7b407258bbfd75561e3a61220c3368.tres"]
+
+[params]
+
+defaults=true

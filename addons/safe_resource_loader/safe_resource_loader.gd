@@ -24,7 +24,7 @@ static func load(path:String, type_hint:String = "", \
 		
 	# Check if the file exists.
 	if not FileAccess.file_exists(path):
-		push_error("Cannot load resource '" + path + "' because it does not exist or is not accessible.")
+		push_warning("Cannot load resource '" + path + "' because it does not exist or is not accessible.")
 		return null
 	
 	# Load it as text content, only. This will not execute any scripts.

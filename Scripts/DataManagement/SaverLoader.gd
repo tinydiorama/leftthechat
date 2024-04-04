@@ -14,8 +14,12 @@ func save_game():
 	ResourceSaver.save(saved_game, "user://savegame.tres")
 	
 func load_game():
-	var saved_game:SavedGame = SafeResourceLoader.load("user://savegame.tres") as SavedGame
-	
+	var file_load = SafeResourceLoader.load("user://savegame.tres")
+	if ( file_load == null ):
+		print("Saved game was unsafe!")
+		return
+	var saved_game:SavedGame = file_load as SavedGame
+
 	if saved_game == null:
 		print("Saved game was unsafe!")
 		return

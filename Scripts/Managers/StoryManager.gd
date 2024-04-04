@@ -26,6 +26,10 @@ func addInitialContent():
 
 func advanceStory():
 	if ( gameManager.isAllUnreads() ):
-		if ( ! gameManager.seenChats.has("minjiInvite") && gameManager.seenEmails.has("initialEmails") && gameManager.seenChats.has("initialChatrooms") && gameManager.seenForums.has("initialForums")):
+		if ( ! gameManager.completedChats.has("Minji-2-Invite") && gameManager.seenEmails.has("initialEmails") && gameManager.seenChats.has("initialChatrooms") && gameManager.seenForums.has("initialForums")):
 			gameManager.seenChats.append("minjiInvite")
-			gameManager.add_chat_segment(chatroomUpdates.get("minjiInvite"), "Minji")
+			gameManager.add_chat_segment(chatroomUpdates.get("minjiInvite"), "@jijubee")
+		if ( ! gameManager.completedChats.has("Horror2-VanessaDeath") && gameManager.completedChats.has("Minji-2-Invite") ):
+			gameManager.seenChats.append("vanessaDeath")
+			gameManager.add_chat_segment(chatroomUpdates.get("vanessaDeath"), "Horror Fanatics - General")
+		
