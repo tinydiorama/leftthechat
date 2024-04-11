@@ -1,10 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://d3bwjynekexf0"]
+[gd_scene load_steps=39 format=3 uid="uid://d3bwjynekexf0"]
 
 [ext_resource type="Script" path="res://Scripts/Managers/CharacterBuilder.gd" id="1_51qdq"]
 [ext_resource type="ButtonGroup" uid="uid://it6chqvosfeb" path="res://Resources/CharacterCreatorGroup.tres" id="2_3mlqd"]
-[ext_resource type="Texture2D" uid="uid://dae0gw5vglkn0" path="res://Sprites/MapIcon.png" id="3_kw3pw"]
 [ext_resource type="Script" path="res://addons/godot-form-validator/form_validator.gd" id="3_rbdyl"]
-[ext_resource type="Texture2D" uid="uid://ukl6xlmbv2cy" path="res://Sprites/Notes.png" id="4_b0qoa"]
 [ext_resource type="Texture2D" uid="uid://3cdno1a3tm4n" path="res://Sprites/friendloop-logo.png" id="4_tnf5x"]
 [ext_resource type="FontFile" uid="uid://imsbfhmgiiot" path="res://Resources/Fonts/PressStart2P-Regular.ttf" id="5_62cvj"]
 [ext_resource type="Script" path="res://addons/godot-form-validator/control_validator.gd" id="5_bdh8c"]
@@ -14,6 +12,21 @@
 [ext_resource type="Script" path="res://addons/godot-form-validator/validators/text_edit_validator.gd" id="8_57ga6"]
 [ext_resource type="Script" path="res://addons/godot-form-validator/rules/length_rule.gd" id="9_sxv24"]
 [ext_resource type="ButtonGroup" uid="uid://bb3fvt8t33bgh" path="res://Resources/AvatarPickerGroup.tres" id="11_q07pn"]
+[ext_resource type="Texture2D" uid="uid://di8pyrlghvfon" path="res://Sprites/avatars-player/playeravatar1-normal.png" id="12_jib7u"]
+[ext_resource type="Texture2D" uid="uid://ccyikastegt7l" path="res://Sprites/avatars-player/playeravatar1-selected.png" id="13_wl30x"]
+[ext_resource type="Texture2D" uid="uid://dk1p7vfbdeg4v" path="res://Sprites/avatars-player/playeravatar1-display.png" id="14_s20l2"]
+[ext_resource type="Texture2D" uid="uid://bdbo7gvptkae0" path="res://Sprites/avatars-player/playeravatar5-normal.png" id="15_81dpc"]
+[ext_resource type="Texture2D" uid="uid://b484ar60lb27i" path="res://Sprites/avatars-player/playeravatar5-selected.png" id="16_ljnqq"]
+[ext_resource type="Texture2D" uid="uid://pynx4kkt0tyb" path="res://Sprites/avatars-player/playeravatar5-display.png" id="17_vyav2"]
+[ext_resource type="Texture2D" uid="uid://mux88lyfl1fj" path="res://Sprites/avatars-player/playeravatar3-normal.png" id="18_ey5lt"]
+[ext_resource type="Texture2D" uid="uid://b6ivhyy0t7wii" path="res://Sprites/avatars-player/playeravatar3-selected.png" id="19_4c834"]
+[ext_resource type="Texture2D" uid="uid://c78d3icm5jiwy" path="res://Sprites/avatars-player/playeravatar3-display.png" id="20_4l4vn"]
+[ext_resource type="Texture2D" uid="uid://dd86vs88aagoh" path="res://Sprites/avatars-player/playeravatar4-normal.png" id="21_g2px2"]
+[ext_resource type="Texture2D" uid="uid://wn0st8i1bj0f" path="res://Sprites/avatars-player/playeravatar4-selected.png" id="22_5njoy"]
+[ext_resource type="Texture2D" uid="uid://dys3tiqfvqmw7" path="res://Sprites/avatars-player/playeravatar4-display.png" id="23_6wdlt"]
+[ext_resource type="Texture2D" uid="uid://dpbs54dp4myar" path="res://Sprites/avatars-player/playeravatar2-normal.png" id="24_ueoo2"]
+[ext_resource type="Texture2D" uid="uid://brpbf7bt01q4v" path="res://Sprites/avatars-player/playeravatar2-selected.png" id="25_1ebnf"]
+[ext_resource type="Texture2D" uid="uid://diflqvqkmkjso" path="res://Sprites/avatars-player/playeravatar2-display.png" id="26_ki6qk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cujk"]
 bg_color = Color(0, 0, 0, 1)
@@ -348,53 +361,68 @@ theme_override_constants/separation = 40
 [node name="Avatar1" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_filter = 1
 toggle_mode = true
 button_pressed = true
 keep_pressed_outside = true
 button_group = ExtResource("11_q07pn")
-texture_normal = ExtResource("3_kw3pw")
-texture_pressed = ExtResource("4_b0qoa")
+texture_normal = ExtResource("12_jib7u")
+texture_pressed = ExtResource("13_wl30x")
+texture_disabled = ExtResource("14_s20l2")
 
 [node name="Avatar2" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_filter = 1
 toggle_mode = true
 keep_pressed_outside = true
 button_group = ExtResource("11_q07pn")
-texture_normal = ExtResource("3_kw3pw")
-texture_pressed = ExtResource("4_b0qoa")
+texture_normal = ExtResource("15_81dpc")
+texture_pressed = ExtResource("16_ljnqq")
+texture_disabled = ExtResource("17_vyav2")
 
 [node name="Avatar3" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_filter = 1
 toggle_mode = true
 keep_pressed_outside = true
 button_group = ExtResource("11_q07pn")
-texture_normal = ExtResource("3_kw3pw")
-texture_pressed = ExtResource("4_b0qoa")
+texture_normal = ExtResource("18_ey5lt")
+texture_pressed = ExtResource("19_4c834")
+texture_disabled = ExtResource("20_4l4vn")
 
 [node name="Avatar4" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_filter = 1
 toggle_mode = true
 keep_pressed_outside = true
 button_group = ExtResource("11_q07pn")
-texture_normal = ExtResource("3_kw3pw")
-texture_pressed = ExtResource("4_b0qoa")
+texture_normal = ExtResource("21_g2px2")
+texture_pressed = ExtResource("22_5njoy")
+texture_disabled = ExtResource("23_6wdlt")
 
 [node name="Avatar5" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_filter = 1
 toggle_mode = true
 keep_pressed_outside = true
 button_group = ExtResource("11_q07pn")
-texture_normal = ExtResource("3_kw3pw")
-texture_pressed = ExtResource("4_b0qoa")
+texture_normal = ExtResource("24_ueoo2")
+texture_pressed = ExtResource("25_1ebnf")
+texture_disabled = ExtResource("26_ki6qk")
 
 [node name="SubmitButton" type="Button" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
 unique_name_in_owner = true

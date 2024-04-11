@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Chatroom" load_steps=3 format=3 uid="uid://1ex2ewkd4t0v"]
+
+[ext_resource type="Resource" uid="uid://bcak0tg11doe7" path="res://Resources/Chats/DadChats/Dad-1.tres" id="1_ivbre"]
+[ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_qabfb"]
+
+[resource]
+script = ExtResource("1_qabfb")
+chatName = "Dad"
+numPeople = 1
+category = "Private"
+chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("1_ivbre")])

@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="Chatroom" load_steps=3 format=3 uid="uid://dgtqhco17uo0i"]
+[gd_resource type="Resource" script_class="Chatroom" load_steps=4 format=3 uid="uid://dgtqhco17uo0i"]
 
+[ext_resource type="Texture2D" uid="uid://bnyqpfd6tibgy" path="res://Sprites/avatars-chat/ameliarate.png" id="1_5u6tu"]
 [ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_kh216"]
 [ext_resource type="Resource" uid="uid://be31lqe3sqc4r" path="res://Resources/Chats/MomChats/Mom-1.tres" id="1_nv01r"]
 
 [resource]
 script = ExtResource("1_kh216")
 chatName = "Mom"
+avatar = ExtResource("1_5u6tu")
 numPeople = 1
 category = "Private"
 chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("1_nv01r")])

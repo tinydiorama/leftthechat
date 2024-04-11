@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://bqqp17uvxm1hb"]
 
-[ext_resource type="Texture2D" uid="uid://blsrq82mubw6n" path="res://Sprites/blank-avatar.png" id="1_yl1pu"]
+[ext_resource type="Texture2D" uid="uid://dbjt47mpkhfw6" path="res://Sprites/avatars-big/paige-friend-avatar.png" id="1_4egix"]
 [ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="2_fg7mh"]
 
 [resource]
@@ -10,4 +10,4 @@ handle = "@bookofpaige"
 age = "26"
 relationship = "Ready to mingle"
 status = "Frankly, my dear, I don't give a damn!"
-avatar = ExtResource("1_yl1pu")
+avatar = ExtResource("1_4egix")

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://wwditxss7wkt"
+path="res://.godot/imported/Horror4-PostVanessObit.dialogue-addb88dec6855cfd75d4954e1caf1109.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Horror4-PostVanessObit.dialogue"
+dest_files=["res://.godot/imported/Horror4-PostVanessObit.dialogue-addb88dec6855cfd75d4954e1caf1109.tres"]
+
+[params]
+
+defaults=true

@@ -79,3 +79,7 @@ func _on_game_manager_new_forum():
 
 func _on_game_manager_new_friend():
 	socialButton.get_node("NotificationIcon").show()
+	
+func unlockInternet():
+	internetButton.show()
+	internetButton.get_node("NotificationIcon").show()

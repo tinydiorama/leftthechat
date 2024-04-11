@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://drxmlpy8vc5si"]
+[gd_scene load_steps=62 format=3 uid="uid://drxmlpy8vc5si"]
 
 [ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="1_fmx65"]
 [ext_resource type="Texture2D" uid="uid://dikti0npwvcsv" path="res://Sprites/pinkbg.png" id="2_4edjn"]
@@ -32,13 +32,16 @@
 [ext_resource type="Script" path="res://Scripts/Managers/StoryManager.gd" id="27_l0knw"]
 [ext_resource type="Script" path="res://Scripts/Interfaces/Notification.gd" id="28_alrkr"]
 [ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="28_hfkc3"]
+[ext_resource type="PackedScene" uid="uid://5iww0467vemc" path="res://Scenes/Main/day_notification.tscn" id="30_88mvv"]
 [ext_resource type="Resource" uid="uid://dl7qcnty45w14" path="res://Resources/Emails/WelcomeStudents.tres" id="30_p23g8"]
 [ext_resource type="Resource" uid="uid://28lpfp3ahoqb" path="res://Resources/Emails/BankInfo.tres" id="31_trvxv"]
 [ext_resource type="Resource" uid="uid://c7x7k38qnb4tn" path="res://Resources/Friends/Noah.tres" id="32_gwf6s"]
 [ext_resource type="Resource" uid="uid://c13oxwn6vg0fd" path="res://Resources/Friends/Amelia.tres" id="33_lprht"]
 [ext_resource type="Resource" uid="uid://yaxs0ti34l02" path="res://Resources/Friends/Calvin.tres" id="34_msaqv"]
 [ext_resource type="Resource" uid="uid://b2nx6lnllscjo" path="res://Resources/Friends/April.tres" id="35_dv6uj"]
+[ext_resource type="Resource" uid="uid://dkv5mn48ol2ss" path="res://Resources/Emails/BurgerEmail.tres" id="36_6dgd0"]
 [ext_resource type="Resource" uid="uid://cxasjnsdrfrx6" path="res://Resources/Friends/James.tres" id="36_8fr4r"]
+[ext_resource type="Resource" uid="uid://dsmtlq7j0uga2" path="res://Resources/Emails/RamenEmail.tres" id="37_58cvp"]
 [ext_resource type="Resource" uid="uid://frcecft3b0x1" path="res://Resources/Friends/Minji.tres" id="37_rvb3y"]
 [ext_resource type="Resource" uid="uid://bqqp17uvxm1hb" path="res://Resources/Friends/Paige.tres" id="38_gbxim"]
 [ext_resource type="Resource" uid="uid://chnn3drvnxwn5" path="res://Resources/Friends/Vanessa.tres" id="39_764d0"]
@@ -48,7 +51,11 @@
 [ext_resource type="PackedScene" uid="uid://d3bwjynekexf0" path="res://Scenes/CharacterBuilder/character_builder_modal.tscn" id="46_bon3v"]
 [ext_resource type="Resource" uid="uid://bn4lgfkjvtiev" path="res://Resources/Chats/MinjiChatroom.tres" id="46_sgmv0"]
 [ext_resource type="Resource" uid="uid://g5qo25lww8d8" path="res://Resources/Chats/Minji Chats/Minji-2-Invite.tres" id="47_om4wu"]
+[ext_resource type="Resource" uid="uid://1ex2ewkd4t0v" path="res://Resources/Chats/Dad.tres" id="48_8pvd5"]
 [ext_resource type="Resource" uid="uid://cjq5j2jxn1674" path="res://Resources/Chats/HorrorChats/Horror2-VanessaDeath.tres" id="48_l2ct2"]
+[ext_resource type="Resource" uid="uid://bpkf4vfv8hudp" path="res://Resources/Chats/MomChats/Mom-2.tres" id="51_5tn64"]
+[ext_resource type="Resource" uid="uid://26t6u8y5b16o" path="res://Resources/Chats/HorrorChats/Horror3-PostVanessaDeath.tres" id="54_n2xkc"]
+[ext_resource type="Resource" uid="uid://bhitpqx7apbs6" path="res://Resources/Chats/HorrorChats/Horror4-PostVanessaObit.tres" id="55_rf06y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iumoi"]
 bg_color = Color(0.968627, 0.952941, 0.92549, 1)
@@ -285,6 +292,7 @@ text = "Bubble"
 
 [node name="InternetButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 
 [node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/InternetButton/VBoxContainer" index="0"]
@@ -315,6 +323,7 @@ text = "Email"
 
 [node name="ForumButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 
 [node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer" index="0"]
@@ -363,6 +372,7 @@ size_flags_vertical = 0
 texture_normal = ExtResource("16_7fr74")
 
 [node name="MapButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+visible = false
 layout_mode = 2
 
 [node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/MapButton/VBoxContainer" index="0"]
@@ -487,7 +497,7 @@ visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_right = 9720.0
+offset_right = 15120.0
 grow_horizontal = 2
 script = ExtResource("28_alrkr")
 
@@ -496,7 +506,7 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_top = -263.0
-offset_right = 48600.0
+offset_right = 113400.0
 offset_bottom = 2012.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iumoi")
@@ -545,6 +555,10 @@ libraries = {
 "": SubResource("AnimationLibrary_1a5nt")
 }
 
+[node name="DayNotification" parent="MainGameNav" instance=ExtResource("30_88mvv")]
+unique_name_in_owner = true
+layout_mode = 1
+
 [node name="Utilities" type="Node" parent="."]
 
 [node name="SaverLoader" type="Node" parent="Utilities"]
@@ -559,7 +573,9 @@ script = ExtResource("25_cmm8w")
 unique_name_in_owner = true
 script = ExtResource("27_l0knw")
 allEmails = {
-"initialEmails": [ExtResource("30_p23g8"), ExtResource("31_trvxv")]
+"burgerEmail": [ExtResource("36_6dgd0")],
+"initialEmails": [ExtResource("30_p23g8"), ExtResource("31_trvxv")],
+"ramenEmail": [ExtResource("37_58cvp")]
 }
 allFriends = {
 "initialFriends": [ExtResource("32_gwf6s"), ExtResource("33_lprht"), ExtResource("34_msaqv"), ExtResource("35_dv6uj"), ExtResource("36_8fr4r"), ExtResource("37_rvb3y"), ExtResource("38_gbxim"), ExtResource("39_764d0")]
@@ -568,10 +584,14 @@ allForums = {
 "initialForums": [ExtResource("40_obb53")]
 }
 allChatrooms = {
+"day2DadChat": [ExtResource("48_8pvd5")],
 "initialChatrooms": [ExtResource("44_if2et"), ExtResource("42_dkb67"), ExtResource("46_sgmv0")]
 }
 chatroomUpdates = {
+"day2PostObit": ExtResource("55_rf06y"),
+"day2PostVanessa": ExtResource("54_n2xkc"),
 "minjiInvite": ExtResource("47_om4wu"),
+"mom2": ExtResource("51_5tn64"),
 "vanessaDeath": ExtResource("48_l2ct2")
 }
 

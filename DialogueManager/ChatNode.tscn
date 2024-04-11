@@ -1,11 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://badputgvkcok"]
+[gd_scene load_steps=14 format=3 uid="uid://badputgvkcok"]
 
 [ext_resource type="Texture2D" uid="uid://b5yum1q04mod5" path="res://icon.svg" id="1_05uv2"]
 [ext_resource type="Script" path="res://DialogueManager/ChatNode.gd" id="1_arjx3"]
+[ext_resource type="Texture2D" uid="uid://du13wgpeh504r" path="res://Sprites/avatars-chat/noahfence.png" id="2_qmyjf"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_r83tf"]
-[ext_resource type="Texture2D" uid="uid://dvwatphq10vi5" path="res://Sprites/noahfence.png" id="2_u0i3b"]
+[ext_resource type="Texture2D" uid="uid://drhr56gpdsk6" path="res://Sprites/avatars-chat/jamesthegiant.png" id="3_02y6b"]
 [ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="3_jpiul"]
+[ext_resource type="Texture2D" uid="uid://bnyqpfd6tibgy" path="res://Sprites/avatars-chat/ameliarate.png" id="4_3ufd3"]
 [ext_resource type="FontFile" uid="uid://imsbfhmgiiot" path="res://Resources/Fonts/PressStart2P-Regular.ttf" id="4_17dhq"]
+[ext_resource type="Texture2D" uid="uid://b00yks6428kw0" path="res://Sprites/avatars-chat/aprilfoolz.png" id="5_0imaw"]
+[ext_resource type="Texture2D" uid="uid://hrj2rod1wrym" path="res://Sprites/avatars-chat/bookofpaige.png" id="6_t0noy"]
+[ext_resource type="Texture2D" uid="uid://budyfojw65xt7" path="res://Sprites/avatars-chat/jijubee.png" id="7_fcbhy"]
+[ext_resource type="Texture2D" uid="uid://r2be8pmkqtos" path="res://Sprites/avatars-chat/The_Professor_Cal.png" id="8_5g7h3"]
+[ext_resource type="Texture2D" uid="uid://rqx4scr2q2vs" path="res://Sprites/avatars-chat/wolfeinthefold.png" id="9_2m8xg"]
 
 [node name="Balloon" type="MarginContainer"]
 anchors_preset = 10
@@ -19,8 +26,14 @@ theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 script = ExtResource("1_arjx3")
 characterPortraits = {
-"noah": ExtResource("2_u0i3b"),
-"noahfence": ExtResource("2_u0i3b")
+"The_Professor_Cal": ExtResource("8_5g7h3"),
+"ameliarate": ExtResource("4_3ufd3"),
+"aprilfoolz": ExtResource("5_0imaw"),
+"bookofpaige": ExtResource("6_t0noy"),
+"jamesthegiant": ExtResource("3_02y6b"),
+"jijubee": ExtResource("7_fcbhy"),
+"noahfence": ExtResource("2_qmyjf"),
+"wolfeinthefold": ExtResource("9_2m8xg")
 }
 
 [node name="ChatNode" type="HBoxContainer" parent="."]
@@ -57,6 +70,7 @@ scroll_active = false
 autowrap_mode = 0
 
 [node name="date" type="Label" parent="ChatNode/Message/Meta"]
+visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_17dhq")

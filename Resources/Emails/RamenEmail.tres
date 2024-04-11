@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Email" load_steps=2 format=3 uid="uid://dsmtlq7j0uga2"]
+
+[ext_resource type="Script" path="res://Resources/Emails/Email.gd" id="1_tgi0y"]
+
+[resource]
+script = ExtResource("1_tgi0y")
+fromName = "Ramen Bowl"
+subject = "Receipt for Order # 6829094"
+body = "Ordered from Ramen Bowl
+Order No. 6829094 
+Charged on October 9 at 21:32
+Total cost $34.50
+Items 2 orders Miso Ramen
+
+Thank you for your business. Have a nice day!
+
+© Ramen Bowl"
+date = "October 10"
+read = false

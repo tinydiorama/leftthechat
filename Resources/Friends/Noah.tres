@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://c7x7k38qnb4tn"]
 
-[ext_resource type="Texture2D" uid="uid://blsrq82mubw6n" path="res://Sprites/blank-avatar.png" id="1_5c8hm"]
 [ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="1_6hehc"]
+[ext_resource type="Texture2D" uid="uid://leq01rtu0jq8" path="res://Sprites/avatars-big/noah-friend-avatar.png" id="1_ikw1i"]
 
 [resource]
 script = ExtResource("1_6hehc")
@@ -10,4 +10,4 @@ handle = "@noahfence"
 age = "17"
 relationship = "Single"
 status = "was having a bad day until I pet a puppy!! now I'm having a good day :) :)"
-avatar = ExtResource("1_5c8hm")
+avatar = ExtResource("1_ikw1i")

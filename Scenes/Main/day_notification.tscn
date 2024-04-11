@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://5iww0467vemc"]
+
+[ext_resource type="Script" path="res://Scripts/Interfaces/DayNotification.gd" id="1_vebfc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pb8uo"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="DayNotification" type="Panel"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pb8uo")
+script = ExtResource("1_vebfc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DayNotification" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+text = "Day Two"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DayNotificationTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 4.0
+
+[connection signal="timeout" from="DayNotificationTimer" to="." method="_on_day_notification_timer_timeout"]

@@ -38,7 +38,7 @@ func _on_submit_button_pressed():
 		var actualHandle = handleForm.text
 		if ( handleForm.text.substr(0, 1) != '@' ):
 			actualHandle = '@' + actualHandle
-		character_submit.emit(fullNameForm.text, actualHandle, theyCheckbox.button_group.get_pressed_button().name, avatar1.button_group.get_pressed_button().texture_normal)
+		character_submit.emit(fullNameForm.text, actualHandle, theyCheckbox.button_group.get_pressed_button().name, avatar1.button_group.get_pressed_button().texture_disabled)
 		friendLoopCharacterBuilder.hide()
 		helloName.text = "Hello, " + fullNameForm.text
 		friendLoopWelcome.show()
