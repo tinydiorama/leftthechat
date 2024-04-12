@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b00yks6428kw0" path="res://Sprites/avatars-chat/aprilfoolz.png" id="5_0imaw"]
 [ext_resource type="Texture2D" uid="uid://hrj2rod1wrym" path="res://Sprites/avatars-chat/bookofpaige.png" id="6_t0noy"]
 [ext_resource type="Texture2D" uid="uid://budyfojw65xt7" path="res://Sprites/avatars-chat/jijubee.png" id="7_fcbhy"]
-[ext_resource type="Texture2D" uid="uid://r2be8pmkqtos" path="res://Sprites/avatars-chat/The_Professor_Cal.png" id="8_5g7h3"]
+[ext_resource type="Texture2D" uid="uid://r2be8pmkqtos" path="res://Sprites/avatars-chat/the_professor_cal.png" id="8_5g7h3"]
 [ext_resource type="Texture2D" uid="uid://rqx4scr2q2vs" path="res://Sprites/avatars-chat/wolfeinthefold.png" id="9_2m8xg"]
 
 [node name="Balloon" type="MarginContainer"]
@@ -33,6 +33,7 @@ characterPortraits = {
 "jamesthegiant": ExtResource("3_02y6b"),
 "jijubee": ExtResource("7_fcbhy"),
 "noahfence": ExtResource("2_qmyjf"),
+"the_professor_cal": ExtResource("8_5g7h3"),
 "wolfeinthefold": ExtResource("9_2m8xg")
 }
 

@@ -50,6 +50,7 @@ func _on_settings_button_pressed():
 
 
 func _on_internet_button_pressed():
+	internetButton.get_node("NotificationIcon").hide()
 	internetModal.show()
 
 
@@ -83,3 +84,13 @@ func _on_game_manager_new_friend():
 func unlockInternet():
 	internetButton.show()
 	internetButton.get_node("NotificationIcon").show()
+	gameManager.internetUnlocked = true
+
+func showInternet():
+	internetButton.show()
+	
+func getInternetUnlockedArticles() -> Array:
+	return internetModal.searchResults
+	
+func setInternetUnlockedArticles(articlesToSet:Array):
+	internetModal.searchResults = articlesToSet

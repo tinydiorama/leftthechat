@@ -27,7 +27,7 @@ func advanceStory():
 	if ( gameManager.isAllUnreads() ):
 		if ( ! gameManager.completedChats.has("Minji-2-Invite") && gameManager.seenEmails.has("initialEmails") && gameManager.seenChats.has("initialChatrooms") && gameManager.seenForums.has("initialForums")):
 			gameManager.seenChats.append("minjiInvite")
-			gameManager.add_chat_segment(chatroomUpdates.get("minjiInvite"), "@jijubee")
+			gameManager.add_chat_segment(chatroomUpdates.get("minjiInvite"), "Minji")
 		if ( ! gameManager.completedChats.has("Horror2-VanessaDeath") && gameManager.completedChats.has("Minji-2-Invite") ):
 			gameManager.seenChats.append("vanessaDeath")
 			gameManager.add_chat_segment(chatroomUpdates.get("vanessaDeath"), "Horror Fanatics - General")
@@ -51,4 +51,8 @@ func advanceStory():
 		if ( ! gameManager.completedChats.has("Horror3-PostVanessaDeath") && gameManager.completedChats.has("Dad-1") && gameManager.completedChats.has("Mom-2")):
 			gameManager.seenChats.append("day2PostVanessa")
 			gameManager.add_chat_segment(chatroomUpdates.get("day2PostVanessa"), "Horror Fanatics - General")
+		if ( ! gameManager.internetUnlocked && gameManager.completedChats.has("Horror3-PostVanessaDeath")):
 			mainGameNav.unlockInternet()
+		if ( ! gameManager.completedChats.has("Horror4-PostVanessaObit") && gameManager.vanessaArticleRead ):
+			gameManager.seenChats.append("day2PostObit")
+			gameManager.add_chat_segment(chatroomUpdates.get("day2PostObit"), "Horror Fanatics - General")

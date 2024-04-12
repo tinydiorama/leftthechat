@@ -1,16 +1,16 @@
 ~ start
 
-Mom: Are you settled into your dorm?
-Mom: Do you have enough money?
+@Mom: Are you settled into your dorm?
+@Mom: Do you have enough money?
 - I'm fine
-	Mom: I transferred some money anyway.
+	@Mom: I transferred some money anyway.
 - I could use $40
-	Mom: Well, okay. I'll send it today.
-Mom: Have you made any new friends?
+	@Mom: Well, okay. I'll send it today.
+@Mom: Have you made any new friends?
 - I already have plenty of friends.
-	Mom: I mean real friends! Online is not real life you know!!!
+	@Mom: I mean real friends! Online is not real life you know!!!
 - Not yet.
-	Mom: Make sure you get outside! It's not healthy to spend too much time in!
+	@Mom: Make sure you get outside! It's not healthy to spend too much time in!
 
 
 => END

@@ -1,12 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://imchgvulrhua"]
+[gd_scene load_steps=10 format=3 uid="uid://imchgvulrhua"]
 
 [ext_resource type="Script" path="res://Scripts/Interfaces/InternetModal.gd" id="1_o0p4i"]
-[ext_resource type="Texture2D" uid="uid://ccy0ho4ni8xvt" path="res://Sprites/ForumIcon.png" id="2_7d7ik"]
+[ext_resource type="PackedScene" uid="uid://f35kiotd6037" path="res://Scenes/Articles/vanessa_wolfe_obituary.tscn" id="2_bu4sv"]
+[ext_resource type="Texture2D" uid="uid://c48o8vs2vjhcl" path="res://Sprites/InternetIcon.png" id="2_wsp1g"]
 [ext_resource type="Texture2D" uid="uid://cvh2srh7mbujf" path="res://Sprites/search-icon.png" id="3_45je6"]
 [ext_resource type="Texture2D" uid="uid://ci2ghcg7qj01l" path="res://Sprites/menuHeader.png" id="4_ie1ga"]
+[ext_resource type="Texture2D" uid="uid://mvbdbdswo8ql" path="res://Sprites/backbutton.png" id="4_vhf1d"]
+[ext_resource type="Texture2D" uid="uid://cnytro4gfvccy" path="res://Sprites/foundit-icon.png" id="5_s1tf4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jwdn"]
 bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ns1p"]
+bg_color = Color(0, 0, 0, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -18,36 +29,46 @@ visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 5.0
+offset_right = -55.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_top = 100
 script = ExtResource("1_o0p4i")
+searchResults = [ExtResource("2_bu4sv")]
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2
 
-[node name="SettingsMarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="MainSearchPage" type="MarginContainer" parent="PanelContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/margin_top = 400
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MainSearchPage"]
 layout_mode = 2
 theme_override_constants/separation = 80
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/SettingsMarginContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MainSearchPage/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_7d7ik")
+texture = ExtResource("2_wsp1g")
 stretch_mode = 5
 
-[node name="Panel" type="Panel" parent="PanelContainer/SettingsMarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/MainSearchPage/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "FoundIt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="PanelContainer/MainSearchPage/VBoxContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1jwdn")
 
-[node name="OptionButton" type="OptionButton" parent="PanelContainer/SettingsMarginContainer/VBoxContainer/Panel"]
+[node name="InternetDropdown" type="OptionButton" parent="PanelContainer/MainSearchPage/VBoxContainer/Panel"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -58,12 +79,52 @@ theme_override_font_sizes/font_size = 28
 theme_override_icons/arrow = ExtResource("3_45je6")
 flat = true
 item_count = 1
-popup/item_0/text = "zxdfasdfasdf"
+popup/item_0/text = "Vanessa Wolfe"
 popup/item_0/id = 0
+
+[node name="SearchResult" type="MarginContainer" parent="PanelContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/margin_top = 120
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/SearchResult"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/SearchResult/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="BackButton" type="TextureButton" parent="PanelContainer/SearchResult/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("4_vhf1d")
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/SearchResult/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_s1tf4")
+
+[node name="Label" type="Label" parent="PanelContainer/SearchResult/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "FoundIt"
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/SearchResult/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+theme_override_styles/separator = SubResource("StyleBoxFlat_6ns1p")
+
+[node name="ArticleContainer" type="MarginContainer" parent="PanelContainer/SearchResult/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
 
 [node name="CloseButton" type="TextureButton" parent="."]
 layout_mode = 2
 size_flags_vertical = 0
 texture_normal = ExtResource("4_ie1ga")
 
+[connection signal="item_selected" from="PanelContainer/MainSearchPage/VBoxContainer/Panel/InternetDropdown" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="PanelContainer/SearchResult/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

@@ -9,7 +9,7 @@ fromName = "Dean MerryWeather"
 subject = "Welcome Students, Faculty and Staff"
 body = "Dear Students, Faculty, and Staff of State Collegiate University,
 
-Thank you all for what was a very auspicious start to our fall semester. I am so pleased to see many of you have brought an open mind, a sense of curiosity, and a fresh enthusiasm for learning as we traverse this exploration of knowledge together. October rings in our traditional State Collegiate Fall Forum, where we host a number of seminars and social events. Don't be a stranger! These four years are a once in a lifetime opportunity for you. I encourage you to fully immerse yourself in college activities and campus life. 
+Thank you all for a very auspicious start to our fall semester. These four years are invaluable. Be sure to approach every opportunity with an open mind, a sense of curiosity, and a fresh enthusiasm for knowledge. Tomorrow night marks our traditional Full Moon Festival, where you can enjoy various seminars and social events. Don’t be a stranger!
 
 On a more serious note I would like to remind you all that hazing, bullying and harassment of any kind are not tolerated at State Collegiate University. We do not want a repeat of the incident last year.
 
@@ -19,3 +19,4 @@ Warmly,
 Dean Merryweather"
 icon = ExtResource("1_8xmms")
 date = "October 9"
+read = false

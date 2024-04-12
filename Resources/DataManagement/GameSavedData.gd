@@ -18,3 +18,6 @@ extends SavedData
 @export var chatHistory:Dictionary
 @export var unreadChats:Array[String]
 @export var completedChats:Array[String]
+@export var internetUnlocked:bool
+@export var vanessaArticleRead:bool
+@export var internetSearchTerms:Array

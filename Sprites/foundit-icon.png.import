@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r2be8pmkqtos"
-path="res://.godot/imported/the_professor_cal.png-931210d331d6230c8371c157da5e76ec.ctex"
+uid="uid://cnytro4gfvccy"
+path="res://.godot/imported/foundit-icon.png-08bb7426e16c0192ea81c313fe839301.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/avatars-chat/the_professor_cal.png"
-dest_files=["res://.godot/imported/the_professor_cal.png-931210d331d6230c8371c157da5e76ec.ctex"]
+source_file="res://Sprites/foundit-icon.png"
+dest_files=["res://.godot/imported/foundit-icon.png-08bb7426e16c0192ea81c313fe839301.ctex"]
 
 [params]
 

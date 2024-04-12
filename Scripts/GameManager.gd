@@ -31,6 +31,9 @@ var completedChats:Array[String] = []
 
 var allChatHistory:Dictionary
 
+var internetUnlocked:bool
+var vanessaArticleRead:bool
+
 signal newEmail
 signal newFriend
 signal newForum
@@ -40,6 +43,7 @@ signal newCharacterBuilder
 @onready var storyManager = %StoryManager
 @onready var saverLoader = %SaverLoader
 @onready var characterBuilder = %CharacterBuilder
+@onready var mainGameNav = %MainGameNav
 
 func add_email(email:Email):
 	emails.add_email(email)
@@ -159,7 +163,9 @@ func on_save_game(saved_data:Array[SavedData]):
 	my_data.unreadChats = unreadChats
 	my_data.chatHistory = allChatHistory
 	my_data.completedChats = completedChats
-	
+	my_data.internetUnlocked = internetUnlocked
+	my_data.internetSearchTerms = mainGameNav.getInternetUnlockedArticles()
+	my_data.vanessaArticleRead = vanessaArticleRead
 	saved_data.append(my_data)
 	
 func on_before_load_game():
@@ -186,6 +192,10 @@ func on_load_game(saved_data:SavedData):
 	unreadChats = my_data.unreadChats
 	allChatHistory = my_data.chatHistory
 	completedChats = my_data.completedChats
+	internetUnlocked = my_data.internetUnlocked
+	vanessaArticleRead = my_data.vanessaArticleRead
+	
+	mainGameNav.setInternetUnlockedArticles(my_data.internetSearchTerms)
 	
 	populate_data()
 
@@ -216,5 +226,11 @@ func populate_data():
 		var friendData = storyManager.allFriends.get(friendName)
 		for friend in friendData:
 			add_friend(friend)
+			
+	if internetUnlocked:
+		mainGameNav.showInternet()
 
 
+
+func _on_internet_modal_vanessa_article_read():
+	vanessaArticleRead = true
