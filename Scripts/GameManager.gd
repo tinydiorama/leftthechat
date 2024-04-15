@@ -120,9 +120,11 @@ func _on_character_builder_modal_character_submit(fullName, handleParam, pronoun
 	gameStarted = true
 	var names = fullName.split(" ")
 	firstName = names[0]
+	Globals.playerFirstname = firstName
 	if ( names.size() > 1 ):
 		lastName = names[1]
 	handle = handleParam
+	Globals.playerUsername = handle
 	if ( pronouns == "TheyCheckbox" ):
 		directPronoun = "they"
 		indirectPronoun = "them"

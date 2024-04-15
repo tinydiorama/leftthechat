@@ -165,12 +165,20 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 ### Signals
 
 func _on_back_gui_input(event: InputEvent) -> void:
-	var mouse_was_clicked: bool = event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed()
-	var skip_button_was_pressed: bool = event.is_action_pressed(SKIP_ACTION)
-	if mouse_was_clicked:
-		get_viewport().set_input_as_handled()
-		back_button.emit()
-		return
+	
+		# See if we need to skip typing of the dialogue
+	if currentChatNode != null && currentChatNode.dialogue_label.is_typing:
+		var mouse_was_clicked: bool = event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed()
+		var skip_button_was_pressed: bool = event.is_action_pressed(SKIP_ACTION)
+		if mouse_was_clicked or skip_button_was_pressed:
+			get_viewport().set_input_as_handled()
+			currentChatNode.dialogue_label.skip_typing()
+			return
+	else:
+		var mouse_was_clicked: bool = event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed()
+		if mouse_was_clicked:
+			get_viewport().set_input_as_handled()
+			back_button.emit()
 
 func _on_mutated(_mutation: Dictionary) -> void:
 	is_waiting_for_input = false

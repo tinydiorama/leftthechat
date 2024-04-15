@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://drxmlpy8vc5si"]
+[gd_scene load_steps=70 format=3 uid="uid://drxmlpy8vc5si"]
 
 [ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="1_fmx65"]
 [ext_resource type="Texture2D" uid="uid://dikti0npwvcsv" path="res://Sprites/pinkbg.png" id="2_4edjn"]
@@ -44,6 +44,7 @@
 [ext_resource type="Resource" uid="uid://dsmtlq7j0uga2" path="res://Resources/Emails/RamenEmail.tres" id="37_58cvp"]
 [ext_resource type="Resource" uid="uid://frcecft3b0x1" path="res://Resources/Friends/Minji.tres" id="37_rvb3y"]
 [ext_resource type="Resource" uid="uid://bqqp17uvxm1hb" path="res://Resources/Friends/Paige.tres" id="38_gbxim"]
+[ext_resource type="Resource" uid="uid://dr686w8hpi625" path="res://Resources/Emails/MinjiVanessaEmail.tres" id="38_uivbn"]
 [ext_resource type="Resource" uid="uid://chnn3drvnxwn5" path="res://Resources/Friends/Vanessa.tres" id="39_764d0"]
 [ext_resource type="Resource" uid="uid://jigg7sgra4hj" path="res://Resources/Forums/JaniceWalkerVictim.tres" id="40_obb53"]
 [ext_resource type="Resource" uid="uid://dgtqhco17uo0i" path="res://Resources/Chats/Mom.tres" id="42_dkb67"]
@@ -54,8 +55,15 @@
 [ext_resource type="Resource" uid="uid://1ex2ewkd4t0v" path="res://Resources/Chats/Dad.tres" id="48_8pvd5"]
 [ext_resource type="Resource" uid="uid://cjq5j2jxn1674" path="res://Resources/Chats/HorrorChats/Horror2-VanessaDeath.tres" id="48_l2ct2"]
 [ext_resource type="Resource" uid="uid://bpkf4vfv8hudp" path="res://Resources/Chats/MomChats/Mom-2.tres" id="51_5tn64"]
+[ext_resource type="Resource" uid="uid://cmtr4rniw06if" path="res://Resources/Chats/April.tres" id="51_c1f2f"]
+[ext_resource type="Resource" uid="uid://ced1fcfu2cv1" path="res://Resources/Chats/Paige.tres" id="52_i7bed"]
 [ext_resource type="Resource" uid="uid://26t6u8y5b16o" path="res://Resources/Chats/HorrorChats/Horror3-PostVanessaDeath.tres" id="54_n2xkc"]
 [ext_resource type="Resource" uid="uid://bhitpqx7apbs6" path="res://Resources/Chats/HorrorChats/Horror4-PostVanessaObit.tres" id="55_rf06y"]
+[ext_resource type="Resource" uid="uid://dj3vf3ljljx3f" path="res://Resources/Chats/Minji Chats/Minji3-Worried.tres" id="56_e4kow"]
+[ext_resource type="Resource" uid="uid://b8ugbb1oxn2uc" path="res://Resources/Chats/HorrorChats/Horror5-Aftermath.tres" id="57_8834e"]
+[ext_resource type="Resource" uid="uid://mk2yi3u4kss3" path="res://Resources/Chats/Minji Chats/Minji4-VanessaEmail.tres" id="58_yx3y3"]
+[ext_resource type="Resource" uid="uid://70goh8on4ksa" path="res://Resources/Chats/Minji Chats/Minji5-Trust.tres" id="61_wor3x"]
+[ext_resource type="Resource" uid="uid://f7yk21ukuj03" path="res://Resources/Chats/HorrorChats/Horror6-NoOneCameForward.tres" id="62_sstyt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iumoi"]
 bg_color = Color(0.968627, 0.952941, 0.92549, 1)
@@ -502,7 +510,7 @@ visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_right = 18360.0
+offset_right = 21600.0
 grow_horizontal = 2
 script = ExtResource("28_alrkr")
 
@@ -511,7 +519,7 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_top = -263.0
-offset_right = 165240.0
+offset_right = 226800.0
 offset_bottom = 2012.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iumoi")
@@ -580,6 +588,7 @@ script = ExtResource("27_l0knw")
 allEmails = {
 "burgerEmail": [ExtResource("36_6dgd0")],
 "initialEmails": [ExtResource("30_p23g8"), ExtResource("31_trvxv")],
+"minjiVanessaEmail": [ExtResource("38_uivbn")],
 "ramenEmail": [ExtResource("37_58cvp")]
 }
 allFriends = {
@@ -589,13 +598,20 @@ allForums = {
 "initialForums": [ExtResource("40_obb53")]
 }
 allChatrooms = {
+"aprilInitialDMs": [ExtResource("51_c1f2f")],
 "day2DadChat": [ExtResource("48_8pvd5")],
-"initialChatrooms": [ExtResource("44_if2et"), ExtResource("42_dkb67"), ExtResource("46_sgmv0")]
+"initialChatrooms": [ExtResource("44_if2et"), ExtResource("42_dkb67"), ExtResource("46_sgmv0")],
+"paigeInitialDMs": [ExtResource("52_i7bed")]
 }
 chatroomUpdates = {
 "day2PostObit": ExtResource("55_rf06y"),
 "day2PostVanessa": ExtResource("54_n2xkc"),
+"horror5Aftermath": ExtResource("57_8834e"),
+"horrorNoOneCameForward": ExtResource("62_sstyt"),
+"minji5Trust": ExtResource("61_wor3x"),
 "minjiInvite": ExtResource("47_om4wu"),
+"minjiVanessaEmail": ExtResource("58_yx3y3"),
+"minjiWorried": ExtResource("56_e4kow"),
 "mom2": ExtResource("51_5tn64"),
 "vanessaDeath": ExtResource("48_l2ct2")
 }
@@ -633,6 +649,7 @@ offset_right = 5.0
 [connection signal="pressed" from="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/NewGame" to="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal" method="_on_new_game_pressed"]
 [connection signal="pressed" from="MainGameNav/SettingsModal/CloseButton" to="MainGameNav/SettingsModal" method="_on_close_button_pressed"]
 [connection signal="vanessaArticleRead" from="MainGameNav/InternetModal" to="Utilities/GameManager" method="_on_internet_modal_vanessa_article_read"]
+[connection signal="dayNotificationDisplay" from="MainGameNav/DayNotification" to="MainGameNav/ChatModal" method="_on_day_notification_day_notification_display"]
 [connection signal="newCharacterBuilder" from="Utilities/GameManager" to="." method="_on_game_manager_new_character_builder"]
 [connection signal="newChat" from="Utilities/GameManager" to="MainGameNav" method="_on_game_manager_new_chat"]
 [connection signal="newEmail" from="Utilities/GameManager" to="MainGameNav" method="_on_game_manager_new_email"]

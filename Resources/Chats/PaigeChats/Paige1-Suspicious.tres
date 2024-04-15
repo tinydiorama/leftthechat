@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=2 format=3 uid="uid://cnx5mvm7v4ffk"]
+
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_ne151"]
+
+[resource]
+script = ExtResource("1_ne151")
+chatMetaName = "Paige1-Suspicious"
+unlocked = false
+chatroomName = "Paige"

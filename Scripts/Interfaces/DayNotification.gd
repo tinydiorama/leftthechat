@@ -3,11 +3,13 @@ extends Panel
 @onready var dayNotificationLabel = %DayNotification
 @onready var dayNotificationTimer = %DayNotificationTimer
 
+signal dayNotificationDisplay
+
 func display(label:String):
 	show()
-	print("displaying")
 	dayNotificationLabel.text = label
 	dayNotificationTimer.start()
+	dayNotificationDisplay.emit()
 	
 
 

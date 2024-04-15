@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Chatroom" load_steps=4 format=3 uid="uid://cmtr4rniw06if"]
+
+[ext_resource type="Texture2D" uid="uid://b00yks6428kw0" path="res://Sprites/avatars-chat/aprilfoolz.png" id="1_2ku4d"]
+[ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_miubn"]
+[ext_resource type="Resource" uid="uid://cnxm3n8ktutw5" path="res://Resources/Chats/AprilChats/April1-Worried.tres" id="2_joksq"]
+
+[resource]
+script = ExtResource("1_miubn")
+chatName = "April"
+avatar = ExtResource("1_2ku4d")
+numPeople = 1
+category = "Private"
+chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("2_joksq")])

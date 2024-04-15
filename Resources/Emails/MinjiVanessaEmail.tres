@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Email" load_steps=3 format=3 uid="uid://dr686w8hpi625"]
+
+[ext_resource type="Texture2D" uid="uid://budyfojw65xt7" path="res://Sprites/avatars-chat/jijubee.png" id="1_5aivg"]
+[ext_resource type="Script" path="res://Resources/Emails/Email.gd" id="1_sdgyh"]
+
+[resource]
+script = ExtResource("1_sdgyh")
+fromName = "Minji Kim"
+subject = "FW: Are you one of us?"
+body = "Here it is, what do you think?
+____________________
+From: Vanessa Wolfe <wolfeinthefold@bubble.com>
+To: Minji Kim <jijubee@bubble.com>
+Date: Oct 11
+
+Minji,
+
+I'm breaking tradition. I'm choosing someone I know. They told me not to. They think I'm being reckless. But you're the next one. I can feel it in my bones. He needs me to pick the right one. Someone who will serve Him well.
+
+Write back quickly. And don't tell anyone. I'm in hiding right now for good reason. All will be revealed in time.
+
+Vanessa"
+icon = ExtResource("1_5aivg")
+date = "Oct 11"
+read = false

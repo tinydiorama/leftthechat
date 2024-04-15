@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cu5jcpvpbm7ab"
+path="res://.godot/imported/Minji5-Trust.dialogue-6bdaf145455899222a8eb2b7f583baf3.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Minji5-Trust.dialogue"
+dest_files=["res://.godot/imported/Minji5-Trust.dialogue-6bdaf145455899222a8eb2b7f583baf3.tres"]
+
+[params]
+
+defaults=true

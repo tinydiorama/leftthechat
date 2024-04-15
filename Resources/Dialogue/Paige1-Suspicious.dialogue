@@ -1,0 +1,12 @@
+~ start
+
+@bookofpaige: This is outrageous. Vanessa was my best friend and I am not taking this lightly.
+@bookofpaige: Was it you, {{Globals.playerFirstname}}? 
+@bookofpaige: I won’t tell anyone. I just need to know who did it.
+- No. Absolutely not.
+	@bookofpaige: Hmm...
+- It wasn’t me! I swear.
+	@bookofpaige: Okay... 
+@bookofpaige: Well let me know if you hear anything.
+
+=> END

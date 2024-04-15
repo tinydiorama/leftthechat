@@ -56,3 +56,26 @@ func advanceStory():
 		if ( ! gameManager.completedChats.has("Horror4-PostVanessaObit") && gameManager.vanessaArticleRead ):
 			gameManager.seenChats.append("day2PostObit")
 			gameManager.add_chat_segment(chatroomUpdates.get("day2PostObit"), "Horror Fanatics - General")
+		if ( ! gameManager.completedChats.has("Minji3-Worried") && gameManager.completedChats.has("Horror4-PostVanessaObit")):
+			gameManager.seenChats.append("minjiWorried")
+			gameManager.add_chat_segment(chatroomUpdates.get("minjiWorried"), "Minji")
+		if ( ! gameManager.completedChats.has("Horror5-Aftermath") && gameManager.completedChats.has("Minji3-Worried")):
+			gameManager.seenChats.append("horror5Aftermath")
+			gameManager.add_chat_segment(chatroomUpdates.get("horror5Aftermath"), "Horror Fanatics - General")
+			gameManager.seenChats.append("minjiVanessaEmail")
+			gameManager.add_chat_segment(chatroomUpdates.get("minjiVanessaEmail"), "Minji")
+			for chatroom in allChatrooms.get("aprilInitialDMs"):
+				gameManager.add_chat(chatroom)
+			gameManager.seenChats.append("aprilInitialDMs")
+			dayNotification.display("Day Three")
+	if ( gameManager.completedChats.has("Minji4-VanessaEmail") && ! gameManager.emails.has("MinjiVanessaEmail")):
+		for email in allEmails.get("minjiVanessaEmail"):
+			gameManager.add_email(email)
+			gameManager.seenEmails.append("MinjiVanessaEmail")
+	if ( ! gameManager.completedChats.has("Paige1-Suspicious") && gameManager.completedChats.has("Horror5-Aftermath") ):
+		for chatroom in allChatrooms.get("paigeInitialDMs"):
+			gameManager.add_chat(chatroom)
+		gameManager.seenChats.append("paigeInitialDMs")
+	if ( ! gameManager.completedChats.has("Minji5-Trust") && gameManager.emails.has("MinjiVanessaEmail")):
+		gameManager.seenChats.append("minji5Trust")
+		gameManager.add_chat_segment(chatroomUpdates.get("minji5Trust"), "Minji")

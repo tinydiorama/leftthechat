@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://f7yk21ukuj03"]
+
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_6ct7c"]
+[ext_resource type="Resource" uid="uid://baejbo4g4dq8k" path="res://Resources/Dialogue/Horror6-NoOneCameFoward.dialogue" id="1_r7mtv"]
+
+[resource]
+script = ExtResource("1_6ct7c")
+chatMetaName = "Horror6-NoOneCameForward"
+chatPath = ExtResource("1_r7mtv")
+unlocked = false
+chatroomName = "Horror Fanatics - General"

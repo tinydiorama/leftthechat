@@ -16,6 +16,9 @@ func display():
 	searchResult.hide()
 
 func _on_close_button_pressed():
+	internetDropdown.select(-1)
+	mainSearch.show()
+	searchResult.hide()
 	gameManager.saveGame()
 	self.hide()
 
@@ -38,6 +41,7 @@ func add_option(itemName:String):
 
 
 func _on_back_button_pressed():
+	internetDropdown.select(-1)
 	mainSearch.show()
 	searchResult.hide()
 	gameManager.saveGame()

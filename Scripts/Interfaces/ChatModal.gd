@@ -18,18 +18,15 @@ func populateChatSelection():
 	chatSelection.displayChats(chats)
 
 func _on_chat_selected(chat):
-	print("chat selected being emitted")
 	chatSelection.hide()
 	chatStoryPlayer.show()
 	chatStoryPlayer.showChat(chat, gameManager)
 
 func _on_close_button_pressed():
-	print("chat closed being emitted")
 	gameManager.saveGame()
 	self.hide()
 
 func _on_chat_back():
-	print("chat back being emitted")
 	gameManager.saveGame()
 	chatSelection.show()
 	chatStoryPlayer.hide()
@@ -39,3 +36,7 @@ func _on_chat_back():
 
 func _on_chat_story_player_chat_playing():
 	closeButton.disabled = true
+
+
+func _on_day_notification_day_notification_display():
+	_on_close_button_pressed()
