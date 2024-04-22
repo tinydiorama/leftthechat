@@ -68,14 +68,42 @@ func advanceStory():
 				gameManager.add_chat(chatroom)
 			gameManager.seenChats.append("aprilInitialDMs")
 			dayNotification.display("Day Three")
-	if ( gameManager.completedChats.has("Minji4-VanessaEmail") && ! gameManager.emails.has("MinjiVanessaEmail")):
+	if ( gameManager.completedChats.has("Minji4-VanessaEmail") && ! gameManager.seenEmails.has("minjiVanessaEmail")):
 		for email in allEmails.get("minjiVanessaEmail"):
 			gameManager.add_email(email)
-			gameManager.seenEmails.append("MinjiVanessaEmail")
-	if ( ! gameManager.completedChats.has("Paige1-Suspicious") && gameManager.completedChats.has("Horror5-Aftermath") ):
+			gameManager.seenEmails.append("minjiVanessaEmail")
+	if ( ! gameManager.seenChats.has("paigeInitialDMs") && gameManager.completedChats.has("Horror5-Aftermath") ):
 		for chatroom in allChatrooms.get("paigeInitialDMs"):
 			gameManager.add_chat(chatroom)
 		gameManager.seenChats.append("paigeInitialDMs")
-	if ( ! gameManager.completedChats.has("Minji5-Trust") && gameManager.emails.has("MinjiVanessaEmail")):
+	if ( ! gameManager.seenChats.has("minji5Trust") && gameManager.unreadEmails.size() == 0 && gameManager.seenEmails.has("minjiVanessaEmail")):
 		gameManager.seenChats.append("minji5Trust")
 		gameManager.add_chat_segment(chatroomUpdates.get("minji5Trust"), "Minji")
+	if ( gameManager.isAllUnreads()): 
+		if ( ! gameManager.completedChats.has("Horror6-NoOneCameForward") && gameManager.completedChats.has("Paige1-Suspicious")):
+			gameManager.add_chat_segment(chatroomUpdates.get("horrorNoOneCameForward"), "Horror Fanatics - General")
+			gameManager.seenChats.append("horrorNoOneCameForward")
+		if ( ! gameManager.completedChats.has("NoahMinji-VanessaEmails") && gameManager.completedChats.has("Horror6-NoOneCameForward")):
+			for chatroom in allChatrooms.get("noahMinjiInitialDMs"):
+				gameManager.add_chat(chatroom)
+			gameManager.seenChats.append("noahMinjiInitialDMs")
+			
+			gameManager.friends.clear()
+			gameManager.seenFriends.clear()
+			for friend in allFriends.get("update1Friends"):
+				gameManager.add_friend(friend)
+			gameManager.seenFriends.append("update1Friends")
+			dayNotification.display("Day Four")
+		if ( ! gameManager.seenEmails.has("noahMinjiEmail") && gameManager.completedChats.has("NoahMinji-VanessaEmails") ):
+			for email in allEmails.get("noahMinjiEmail"):
+				gameManager.add_email(email)
+			gameManager.seenEmails.append("noahMinjiEmail")
+		# Search Unlock: Janice Walter & Tableaux
+		if ( ! gameManager.completedChats.has("Calvin1-Translate") && gameManager.completedChats.has("NoahMinji-VanessaEmails")):
+			for chatroom in allChatrooms.get("calvinInitialDMs"):
+				gameManager.add_chat(chatroom)
+			gameManager.seenChats.append("calvinInitialDMs")
+		if ( ! gameManager.completedChats.has("James1-Translate") && gameManager.completedChats.has("Calvin1-Translate")):
+			for chatroom in allChatrooms.get("jamesInitialDMs"):
+				gameManager.add_chat(chatroom)
+			gameManager.seenChats.append("jamesInitialDMs")

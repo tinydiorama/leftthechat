@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://imchgvulrhua"]
+[gd_scene load_steps=11 format=3 uid="uid://imchgvulrhua"]
 
 [ext_resource type="Script" path="res://Scripts/Interfaces/InternetModal.gd" id="1_o0p4i"]
 [ext_resource type="PackedScene" uid="uid://f35kiotd6037" path="res://Scenes/Articles/vanessa_wolfe_obituary.tscn" id="2_bu4sv"]
 [ext_resource type="Texture2D" uid="uid://c48o8vs2vjhcl" path="res://Sprites/InternetIcon.png" id="2_wsp1g"]
 [ext_resource type="Texture2D" uid="uid://cvh2srh7mbujf" path="res://Sprites/search-icon.png" id="3_45je6"]
-[ext_resource type="Texture2D" uid="uid://ci2ghcg7qj01l" path="res://Sprites/menuHeader.png" id="4_ie1ga"]
+[ext_resource type="Texture2D" uid="uid://dttv8fwldjisy" path="res://Sprites/9slicepanel.png" id="3_b5i25"]
 [ext_resource type="Texture2D" uid="uid://mvbdbdswo8ql" path="res://Sprites/backbutton.png" id="4_vhf1d"]
 [ext_resource type="Texture2D" uid="uid://cnytro4gfvccy" path="res://Sprites/foundit-icon.png" id="5_s1tf4"]
+[ext_resource type="Texture2D" uid="uid://dg0n43t7iluph" path="res://Sprites/closebutton-pixel.png" id="8_tm4ne"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jwdn"]
 bg_color = Color(1, 1, 1, 1)
@@ -37,12 +38,19 @@ theme_override_constants/margin_top = 100
 script = ExtResource("1_o0p4i")
 searchResults = [ExtResource("2_bu4sv")]
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="NinePatchRect" parent="."]
 layout_mode = 2
+texture = ExtResource("3_b5i25")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
 
 [node name="MainSearchPage" type="MarginContainer" parent="PanelContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+offset_right = 1025.0
+offset_bottom = 1819.0
 theme_override_constants/margin_top = 400
 theme_override_constants/margin_bottom = 20
 
@@ -123,7 +131,7 @@ size_flags_vertical = 3
 [node name="CloseButton" type="TextureButton" parent="."]
 layout_mode = 2
 size_flags_vertical = 0
-texture_normal = ExtResource("4_ie1ga")
+texture_normal = ExtResource("8_tm4ne")
 
 [connection signal="item_selected" from="PanelContainer/MainSearchPage/VBoxContainer/Panel/InternetDropdown" to="." method="_on_option_button_item_selected"]
 [connection signal="pressed" from="PanelContainer/SearchResult/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

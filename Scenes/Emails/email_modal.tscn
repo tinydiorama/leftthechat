@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://drrj27plfuxpt"]
+[gd_scene load_steps=8 format=3 uid="uid://drrj27plfuxpt"]
 
 [ext_resource type="Script" path="res://Scripts/Interfaces/EmailModal.gd" id="1_e7srn"]
 [ext_resource type="Script" path="res://Scripts/Interfaces/EmailList.gd" id="2_2b8lq"]
+[ext_resource type="Texture2D" uid="uid://dttv8fwldjisy" path="res://Sprites/9slicepanel.png" id="2_omn5k"]
 [ext_resource type="PackedScene" uid="uid://cxjeo4gf3f2a3" path="res://Scenes/Emails/email_list_display.tscn" id="3_7akpf"]
 [ext_resource type="PackedScene" uid="uid://cq2fpt0fc6brl" path="res://Scenes/Emails/email_body_container.tscn" id="4_1q7dg"]
-[ext_resource type="Texture2D" uid="uid://ci2ghcg7qj01l" path="res://Sprites/menuHeader.png" id="5_fa6tt"]
+[ext_resource type="Texture2D" uid="uid://dg0n43t7iluph" path="res://Sprites/closebutton-pixel.png" id="6_h4jio"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vibnb"]
 bg_color = Color(0, 0, 0, 1)
@@ -14,18 +15,25 @@ visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 5.0
+offset_right = 3.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_top = 100
 script = ExtResource("1_e7srn")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="NinePatchRect" parent="."]
 layout_mode = 2
+texture = ExtResource("2_omn5k")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
 
 [node name="SettingsMarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
+offset_right = 1015.0
+offset_bottom = 1819.0
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 110
 theme_override_constants/margin_right = 0
@@ -80,7 +88,7 @@ layout_mode = 2
 [node name="CloseButton" type="TextureButton" parent="."]
 layout_mode = 2
 size_flags_vertical = 0
-texture_normal = ExtResource("5_fa6tt")
+texture_normal = ExtResource("6_h4jio")
 
 [connection signal="close_email_body" from="PanelContainer/SettingsMarginContainer/EmailBodyContainer" to="." method="_on_email_body_container_close_email_body"]
 [connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

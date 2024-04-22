@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="Email" load_steps=3 format=3 uid="uid://bb60x8kkvwqlk"]
+
+[ext_resource type="Texture2D" uid="uid://du13wgpeh504r" path="res://Sprites/avatars-chat/noahfence.png" id="1_5c6vu"]
+[ext_resource type="Script" path="res://Resources/Emails/Email.gd" id="1_q13kd"]
+
+[resource]
+script = ExtResource("1_q13kd")
+fromName = "Noah Lopez"
+subject = "FW: FW: Re: Re: Re: Re: Are you one of us?"
+body = "____________________
+From: Noah Lopez <noahfence@bubble.com>
+To: Minji Kim <jijubee@bubble.com>
+Date: Oct 12
+
+
+____________________
+From: Vanessa Wolfe <wolfeinthefold@bubble.com>
+To: Noah Lopez <noahfence@bubble.com>
+Date: August 6
+
+Noah, can you do your hacking stuff to figure out who this is?
+
+Thx,
+Vanessa
+
+Sent from my ePhone
+____________________
+____________________
+
+From: Janice Walter <beyondtheveil@bubble.com>
+To: Vanessa Wolfe <wolfeinthefold@bubble.com>
+Date: August 4
+
+Hi.
+
+I’ve had my eye on you. For quite a while now, actually.
+
+I can tell you’re not like other girls. You can see past the pathetic little lies people tell themselves so they can sleep at night. You know the truth about life. I think you know the truth about death, too. Do you think so?
+
+Janice
+____________________
+From: Vanessa Wolfe <wolfeinthefold@bubble.com>
+To: Janice Walter <beyondtheveil@bubble.com>
+Date: August 4
+
+Who is this? I can't find you on Friendloop.
+
+Sent from my ePhone
+____________________
+From: Janice Walter <beyondtheveil@bubble.com>
+To: Vanessa Wolfe <wolfeinthefold@bubble.com>
+Date: August 5
+
+I'm not on Friendloop. I'm not anywhere you could find me now.
+
+Janice
+
+____________________
+From: Vanessa Wolfe <wolfeinthefold@bubble.com>
+To: Janice Walter <beyondtheveil@bubble.com>
+Date: August 5
+
+Okay, jerk. I searched Foundit and Janice Walter is dead. Who is this? What do you want from me? 
+
+Sent from my ePhone
+____________________
+From: Janice Walter <beyondtheveil@bubble.com>
+To: Vanessa Wolfe <wolfeinthefold@bubble.com>
+Date: August 6
+
+You're starting to understand. Yes, I’m the Janice Walter you found in your search. But everything is not what it seems. 
+
+I wouldn't have approached you if I didn't think you were able to see beyond the illusions, beyond the lies. I can see beyond yours, by the way.
+
+I know your secret.
+
+Janice
+____________________"
+icon = ExtResource("1_5c6vu")
+date = "October 12"
+read = false

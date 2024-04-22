@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MurderMysteryGame"
-run/main_scene="res://Scenes/MainScreen.tscn"
+run/main_scene="res://Scenes/TitleScreen.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 run/low_processor_mode=true
 config/icon="res://icon.svg"
@@ -92,7 +92,7 @@ pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Resources/Dialogue/test.dialogue", "res://Resources/Dialogue/test2.dialogue", "res://Resources/Dialogue/Mom1.dialogue", "res://Resources/Dialogue/Minji1.dialogue", "res://Resources/Dialogue/Horror1.dialogue", "res://Resources/Dialogue/Minji-2-Invite.dialogue", "res://Resources/Dialogue/Horror2-VanessaDeath.dialogue", "res://Resources/Dialogue/Mom2.dialogue", "res://Resources/Dialogue/Dad1.dialogue", "res://Resources/Dialogue/Horror3-PostVanessaDeath.dialogue", "res://Resources/Dialogue/Horror4-PostVanessObit.dialogue", "res://Resources/Dialogue/Minji3-Worried.dialogue", "res://Resources/Dialogue/Horror5-Aftermath.dialogue", "res://Resources/Dialogue/Horror6-NoOneCameFoward.dialogue", "res://Resources/Dialogue/Minji4-VanessaEmail.dialogue", "res://Resources/Dialogue/April1-Worried.dialogue", "res://Resources/Dialogue/Paige1-Suspicious.dialogue", "res://Resources/Dialogue/Minji5-Trust.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Resources/Dialogue/test.dialogue", "res://Resources/Dialogue/test2.dialogue", "res://Resources/Dialogue/Mom1.dialogue", "res://Resources/Dialogue/Minji1.dialogue", "res://Resources/Dialogue/Horror1.dialogue", "res://Resources/Dialogue/Minji-2-Invite.dialogue", "res://Resources/Dialogue/Horror2-VanessaDeath.dialogue", "res://Resources/Dialogue/Mom2.dialogue", "res://Resources/Dialogue/Dad1.dialogue", "res://Resources/Dialogue/Horror3-PostVanessaDeath.dialogue", "res://Resources/Dialogue/Horror4-PostVanessObit.dialogue", "res://Resources/Dialogue/Minji3-Worried.dialogue", "res://Resources/Dialogue/Horror5-Aftermath.dialogue", "res://Resources/Dialogue/Horror6-NoOneCameFoward.dialogue", "res://Resources/Dialogue/Minji4-VanessaEmail.dialogue", "res://Resources/Dialogue/April1-Worried.dialogue", "res://Resources/Dialogue/Paige1-Suspicious.dialogue", "res://Resources/Dialogue/Minji5-Trust.dialogue", "res://Resources/Dialogue/NoahMinji-VanessaEmails.dialogue", "res://Resources/Dialogue/Calvin1-Translate.dialogue", "res://Resources/Dialogue/James1-Translate.dialogue", "res://Resources/Dialogue/Minji6-AnotherEmail.dialogue", "res://Resources/Dialogue/Minji7-FreakedOut.dialogue", "res://Resources/Dialogue/Minji8-AnottherEmail2.dialogue", "res://Sprites/avatars-chat/Minji9-MomDiagnosis.dialogue")
 
 [physics]
 

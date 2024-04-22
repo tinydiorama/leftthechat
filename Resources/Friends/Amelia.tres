@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://c13oxwn6vg0fd"]
 
-[ext_resource type="Texture2D" uid="uid://3d1t75wlig6i" path="res://Sprites/avatars-big/amelia-friend-avatar.png" id="1_ek1gl"]
+[ext_resource type="Texture2D" uid="uid://htg8vkwqh6xj" path="res://Sprites/avatars-big/AmeliaAvatar.png" id="1_b76ww"]
 [ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="2_8arli"]
 
 [resource]
@@ -10,4 +10,4 @@ handle = "@AmeliaRate"
 age = "43"
 relationship = "Married to Dave Walker"
 status = "Limited time 50% OFF SALE on all homemade soaps on my Sellsy shop xX"
-avatar = ExtResource("1_ek1gl")
+avatar = ExtResource("1_b76ww")

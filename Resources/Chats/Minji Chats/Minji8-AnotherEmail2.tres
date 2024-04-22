@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://c78kudov58o8h"]
+
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_52cln"]
+[ext_resource type="Resource" uid="uid://bnq5c2xgbqwbd" path="res://Resources/Dialogue/Minji8-AnottherEmail2.dialogue" id="1_i8noy"]
+
+[resource]
+script = ExtResource("1_52cln")
+chatMetaName = "Minji8-AnotherEmail2"
+chatPath = ExtResource("1_i8noy")
+unlocked = false
+chatroomName = "Minji"

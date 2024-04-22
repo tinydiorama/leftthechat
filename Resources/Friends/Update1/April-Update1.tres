@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://da8y3y2i7mxb1"]
+
+[ext_resource type="Texture2D" uid="uid://dnj14jpq5wccd" path="res://Sprites/avatars-big/AprilAvatar.png" id="1_2aas1"]
+[ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="2_uxpi2"]
+
+[resource]
+script = ExtResource("2_uxpi2")
+friendName = "April S."
+handle = "@aprilfoolz"
+age = "16"
+relationship = "Committed to Gary"
+status = "They say time heals all wounds but this one hell of a wound #depression #death"
+avatar = ExtResource("1_2aas1")

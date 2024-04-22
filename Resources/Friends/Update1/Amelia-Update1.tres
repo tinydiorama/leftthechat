@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://bnemqp4s83qja"]
+
+[ext_resource type="Texture2D" uid="uid://htg8vkwqh6xj" path="res://Sprites/avatars-big/AmeliaAvatar.png" id="1_wtfix"]
+[ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="2_0glqk"]
+
+[resource]
+script = ExtResource("2_0glqk")
+friendName = "Amelia Walker"
+handle = "@AmeliaRate"
+age = "43"
+relationship = "Married to Dave Walker"
+status = "You may be gone but you are not forgotten. #RIPVanessa #TWGrief"
+avatar = ExtResource("1_wtfix")

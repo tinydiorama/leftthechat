@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Chatroom" load_steps=2 format=3 uid="uid://can5wm2opjpwj"]
+
+[ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_vgx51"]
+
+[resource]
+script = ExtResource("1_vgx51")
+chatName = ""
+numPeople = 0
+category = ""
+chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([])

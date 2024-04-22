@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Email" load_steps=2 format=3 uid="uid://digohsp1i0n0h"]
+
+[ext_resource type="Script" path="res://Resources/Emails/Email.gd" id="1_og1ge"]
+
+[resource]
+script = ExtResource("1_og1ge")
+fromName = ""
+subject = ""
+body = ""
+date = ""
+read = false

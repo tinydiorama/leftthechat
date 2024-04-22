@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Chatroom" load_steps=3 format=3 uid="uid://owl2bk5qjxjm"]
+
+[ext_resource type="Texture2D" uid="uid://bnyqpfd6tibgy" path="res://Sprites/avatars-chat/ameliarate.png" id="1_hai6n"]
+[ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_puea2"]
+
+[resource]
+script = ExtResource("1_puea2")
+chatName = "Amelia"
+avatar = ExtResource("1_hai6n")
+numPeople = 1
+category = "Private"
+chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([null])

@@ -1,13 +1,13 @@
 [gd_scene load_steps=39 format=3 uid="uid://d3bwjynekexf0"]
 
 [ext_resource type="Script" path="res://Scripts/Managers/CharacterBuilder.gd" id="1_51qdq"]
+[ext_resource type="Texture2D" uid="uid://bpp1lgwi60rj1" path="res://Sprites/9slicepane-black.png" id="2_0ijoc"]
 [ext_resource type="ButtonGroup" uid="uid://it6chqvosfeb" path="res://Resources/CharacterCreatorGroup.tres" id="2_3mlqd"]
 [ext_resource type="Script" path="res://addons/godot-form-validator/form_validator.gd" id="3_rbdyl"]
 [ext_resource type="Texture2D" uid="uid://3cdno1a3tm4n" path="res://Sprites/friendloop-logo.png" id="4_tnf5x"]
 [ext_resource type="FontFile" uid="uid://imsbfhmgiiot" path="res://Resources/Fonts/PressStart2P-Regular.ttf" id="5_62cvj"]
 [ext_resource type="Script" path="res://addons/godot-form-validator/control_validator.gd" id="5_bdh8c"]
 [ext_resource type="Script" path="res://addons/godot-form-validator/rules/required_rule.gd" id="6_mkvsa"]
-[ext_resource type="Texture2D" uid="uid://ci2ghcg7qj01l" path="res://Sprites/menuHeader.png" id="6_uacet"]
 [ext_resource type="Script" path="res://addons/godot-form-validator/rules/matches_rule.gd" id="7_41bwh"]
 [ext_resource type="Script" path="res://addons/godot-form-validator/validators/text_edit_validator.gd" id="8_57ga6"]
 [ext_resource type="Script" path="res://addons/godot-form-validator/rules/length_rule.gd" id="9_sxv24"]
@@ -27,11 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://dpbs54dp4myar" path="res://Sprites/avatars-player/playeravatar2-normal.png" id="24_ueoo2"]
 [ext_resource type="Texture2D" uid="uid://brpbf7bt01q4v" path="res://Sprites/avatars-player/playeravatar2-selected.png" id="25_1ebnf"]
 [ext_resource type="Texture2D" uid="uid://diflqvqkmkjso" path="res://Sprites/avatars-player/playeravatar2-display.png" id="26_ki6qk"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cujk"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
+[ext_resource type="Texture2D" uid="uid://dg0n43t7iluph" path="res://Sprites/closebutton-pixel.png" id="28_ljhtf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wh73"]
 bg_color = Color(0, 0, 0, 1)
@@ -109,88 +105,86 @@ grow_vertical = 2
 theme_override_constants/margin_top = 100
 script = ExtResource("1_51qdq")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="NinePatchRect" parent="."]
 layout_mode = 2
+texture = ExtResource("2_0ijoc")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
 
 [node name="SettingsMarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
+offset_right = 1025.0
+offset_bottom = 1820.0
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 110
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 
-[node name="Panel" type="Panel" parent="PanelContainer/SettingsMarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/SettingsMarginContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_4cujk")
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/SettingsMarginContainer/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 40
 
-[node name="FriendLoopIntro" type="MarginContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer"]
+[node name="FriendLoopIntro" type="MarginContainer" parent="PanelContainer/SettingsMarginContainer/MarginContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme_override_constants/margin_top = 400
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopIntro"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopIntro"]
 layout_mode = 2
 theme_override_constants/separation = 40
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopIntro/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopIntro/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("4_tnf5x")
 stretch_mode = 3
 
-[node name="Label2" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopIntro/VBoxContainer"]
+[node name="Label2" type="Label" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopIntro/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Welcome!"
 horizontal_alignment = 1
 
-[node name="LogoTimer" type="Timer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopIntro"]
+[node name="LogoTimer" type="Timer" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopIntro"]
 unique_name_in_owner = true
 wait_time = 3.0
 one_shot = true
 
-[node name="FriendLoopWelcome" type="MarginContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer"]
+[node name="FriendLoopWelcome" type="MarginContainer" parent="PanelContainer/SettingsMarginContainer/MarginContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme_override_constants/margin_top = 400
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopWelcome"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopWelcome"]
 layout_mode = 2
 theme_override_constants/separation = 80
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopWelcome/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopWelcome/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("4_tnf5x")
 stretch_mode = 3
 
-[node name="HelloName" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopWelcome/VBoxContainer"]
+[node name="HelloName" type="Label" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopWelcome/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Hello, Firstname Lastname"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopWelcome/VBoxContainer"]
+[node name="Label3" type="Label" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopWelcome/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "You've successfully set up your profile!"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="DoneButton" type="Button" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopWelcome/VBoxContainer"]
+[node name="DoneButton" type="Button" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopWelcome/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 1
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -207,9 +201,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_2wh73")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jhpy0")
 text = "Done"
 
-[node name="LogoTimer" type="Timer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopWelcome"]
+[node name="LogoTimer" type="Timer" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopWelcome"]
 
-[node name="FriendLoopCharacterBuilder" type="MarginContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer"]
+[node name="FriendLoopCharacterBuilder" type="MarginContainer" parent="PanelContainer/SettingsMarginContainer/MarginContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -219,12 +213,12 @@ theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 40
 
-[node name="FormValidator" type="Control" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder"]
+[node name="FormValidator" type="Control" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder"]
 unique_name_in_owner = true
 layout_mode = 2
 script = ExtResource("3_rbdyl")
 
-[node name="FriendLoopScrollCharacter" type="ScrollContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator"]
+[node name="FriendLoopScrollCharacter" type="ScrollContainer" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -234,44 +228,44 @@ grow_horizontal = 2
 grow_vertical = 2
 horizontal_scroll_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 40
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("4_tnf5x")
 stretch_mode = 3
 
-[node name="Label2" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+[node name="Label2" type="Label" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Set up your profile"
 horizontal_alignment = 1
 
-[node name="Form" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+[node name="Form" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 40
 
-[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form"]
+[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Full name"
+text = "Full name (first and last)"
 
-[node name="FullNameForm" type="TextEdit" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form"]
+[node name="FullNameForm" type="TextEdit" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form"]
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 1
 placeholder_text = "First Last"
 scroll_fit_content_height = true
 
-[node name="ControlValidator" type="Node" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form/FullNameForm"]
+[node name="ControlValidator" type="Node" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form/FullNameForm"]
 script = ExtResource("5_bdh8c")
 validator = SubResource("Resource_vf1hw")
 
-[node name="NameValidation" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form"]
+[node name="NameValidation" type="Label" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -279,27 +273,27 @@ theme_override_colors/font_color = Color(1, 0.548798, 0.484859, 1)
 text = "Cannot be empty!"
 autowrap_mode = 2
 
-[node name="Form2" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+[node name="Form2" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 40
 
-[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form2"]
+[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Username"
 
-[node name="HandleForm" type="TextEdit" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form2"]
+[node name="HandleForm" type="TextEdit" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form2"]
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 1
 placeholder_text = "@username"
 scroll_fit_content_height = true
 
-[node name="ControlValidator" type="Node" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form2/HandleForm"]
+[node name="ControlValidator" type="Node" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form2/HandleForm"]
 script = ExtResource("5_bdh8c")
 validator = SubResource("Resource_2jjf1")
 
-[node name="HandleValidation" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form2"]
+[node name="HandleValidation" type="Label" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form2"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -307,16 +301,17 @@ theme_override_colors/font_color = Color(1, 0.548798, 0.484859, 1)
 text = "Cannot be empty!"
 autowrap_mode = 2
 
-[node name="Form3" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+[node name="Form3" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 40
 
-[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form3"]
+[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form3"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Pronouns that best match you"
 
-[node name="TheyCheckbox" type="CheckBox" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form3"]
+[node name="TheyCheckbox" type="CheckBox" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form3"]
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 1
@@ -324,41 +319,41 @@ button_pressed = true
 button_group = ExtResource("2_3mlqd")
 text = "They/Them"
 
-[node name="SheCheckbox" type="CheckBox" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form3"]
+[node name="SheCheckbox" type="CheckBox" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form3"]
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 1
 button_group = ExtResource("2_3mlqd")
 text = "She/Her"
 
-[node name="HeCheckbox" type="CheckBox" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form3"]
+[node name="HeCheckbox" type="CheckBox" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form3"]
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 1
 button_group = ExtResource("2_3mlqd")
 text = "He/Him"
 
-[node name="Form4" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+[node name="Form4" type="VBoxContainer" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 40
 
-[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4"]
+[node name="Label" type="Label" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Choose your avatar"
 
-[node name="AvatarValidation" type="Label" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4"]
+[node name="AvatarValidation" type="Label" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.548798, 0.484859, 1)
 text = "Cannot be empty!"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4"]
 layout_mode = 2
 theme_override_constants/separation = 40
 
-[node name="Avatar1" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
+[node name="Avatar1" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -372,7 +367,7 @@ texture_normal = ExtResource("12_jib7u")
 texture_pressed = ExtResource("13_wl30x")
 texture_disabled = ExtResource("14_s20l2")
 
-[node name="Avatar2" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
+[node name="Avatar2" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -385,7 +380,7 @@ texture_normal = ExtResource("15_81dpc")
 texture_pressed = ExtResource("16_ljnqq")
 texture_disabled = ExtResource("17_vyav2")
 
-[node name="Avatar3" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
+[node name="Avatar3" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -398,7 +393,7 @@ texture_normal = ExtResource("18_ey5lt")
 texture_pressed = ExtResource("19_4c834")
 texture_disabled = ExtResource("20_4l4vn")
 
-[node name="Avatar4" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
+[node name="Avatar4" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -411,7 +406,7 @@ texture_normal = ExtResource("21_g2px2")
 texture_pressed = ExtResource("22_5njoy")
 texture_disabled = ExtResource("23_6wdlt")
 
-[node name="Avatar5" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
+[node name="Avatar5" type="TextureButton" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/Form4/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -424,7 +419,7 @@ texture_normal = ExtResource("24_ueoo2")
 texture_pressed = ExtResource("25_1ebnf")
 texture_disabled = ExtResource("26_ki6qk")
 
-[node name="SubmitButton" type="Button" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+[node name="SubmitButton" type="Button" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -442,16 +437,16 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_2wh73")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jhpy0")
 text = "Finish"
 
-[node name="Control" type="Control" parent="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
+[node name="Control" type="Control" parent="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
 [node name="CloseButton" type="TextureButton" parent="."]
 layout_mode = 2
 size_flags_vertical = 0
-texture_normal = ExtResource("6_uacet")
+texture_normal = ExtResource("28_ljhtf")
 
-[connection signal="timeout" from="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopIntro/LogoTimer" to="." method="_on_logo_timer_timeout"]
-[connection signal="pressed" from="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopWelcome/VBoxContainer/DoneButton" to="." method="_on_done_button_pressed"]
-[connection signal="control_validated" from="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator" to="." method="_on_form_validator_control_validated"]
-[connection signal="pressed" from="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
+[connection signal="timeout" from="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopIntro/LogoTimer" to="." method="_on_logo_timer_timeout"]
+[connection signal="pressed" from="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopWelcome/VBoxContainer/DoneButton" to="." method="_on_done_button_pressed"]
+[connection signal="control_validated" from="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator" to="." method="_on_form_validator_control_validated"]
+[connection signal="pressed" from="PanelContainer/SettingsMarginContainer/MarginContainer/FriendLoopCharacterBuilder/FormValidator/FriendLoopScrollCharacter/VBoxContainer/SubmitButton" to="." method="_on_submit_button_pressed"]

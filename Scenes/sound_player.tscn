@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://0x5u6cmfk2u5"]
+
+[ext_resource type="Script" path="res://Scripts/Managers/SoundPlayer.gd" id="1_jxxk1"]
+
+[node name="SoundPlayer" type="Node"]
+script = ExtResource("1_jxxk1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

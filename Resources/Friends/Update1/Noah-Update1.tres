@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://b7g3ltbo3qpb"]
+
+[ext_resource type="Texture2D" uid="uid://fmnplrg7dqnx" path="res://Sprites/avatars-big/NoahAvatar.png" id="1_5fvx4"]
+[ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="2_cy12h"]
+
+[resource]
+script = ExtResource("2_cy12h")
+friendName = "Noah L."
+handle = "@noahfence"
+age = "17"
+relationship = "Single"
+status = "Sometimes I want to tell the world to stop. But it just keeps moving. "
+avatar = ExtResource("1_5fvx4")

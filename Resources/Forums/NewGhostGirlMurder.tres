@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ForumThread" load_steps=2 format=3 uid="uid://dt5gkgqypdcns"]
+
+[ext_resource type="Script" path="res://Resources/Forums/ForumThread.gd" id="1_b0i16"]
+
+[resource]
+script = ExtResource("1_b0i16")
+subject = ""
+originalPoster = ""
+upvotes = 0
+posts = Array[Resource("res://Resources/Forums/ForumPost.gd")]([])
+body = ""

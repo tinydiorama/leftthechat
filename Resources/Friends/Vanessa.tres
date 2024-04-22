@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://chnn3drvnxwn5"]
 
-[ext_resource type="Texture2D" uid="uid://bce4mp05jju7q" path="res://Sprites/avatars-big/vanessa-friend-avatar.png" id="1_3ia3s"]
+[ext_resource type="Texture2D" uid="uid://explvxaf0qgg" path="res://Sprites/avatars-big/VanessaAvatar.png" id="1_lor0m"]
 [ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="2_p6jlk"]
 
 [resource]
@@ -10,4 +10,4 @@ handle = "@WolfeintheFold"
 age = "28"
 relationship = "Single"
 status = "“If the dead were to come back, what would they come back knowing? Could we face them?” - Joan Didion"
-avatar = ExtResource("1_3ia3s")
+avatar = ExtResource("1_lor0m")

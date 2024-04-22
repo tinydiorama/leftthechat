@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bg22mra2tdtfd"
+path="res://.godot/imported/NoahMinji-VanessaEmails.dialogue-a4d110889b0748d91b05beba46155be7.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/NoahMinji-VanessaEmails.dialogue"
+dest_files=["res://.godot/imported/NoahMinji-VanessaEmails.dialogue-a4d110889b0748d91b05beba46155be7.tres"]
+
+[params]
+
+defaults=true

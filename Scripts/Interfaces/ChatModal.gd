@@ -1,4 +1,4 @@
-extends MarginContainer
+extends NinePatchRect
 
 @onready var chatSelection = %ChatSelection
 @onready var chatStoryPlayer = %ChatStoryPlayer

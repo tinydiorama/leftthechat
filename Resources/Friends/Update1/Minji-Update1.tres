@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://crruokecuyy6g"]
+
+[ext_resource type="Texture2D" uid="uid://c3qscomhvg068" path="res://Sprites/avatars-big/MinjiAvatar.png" id="1_esgj5"]
+[ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="2_8ik50"]
+
+[resource]
+script = ExtResource("2_8ik50")
+friendName = "Minji K."
+handle = "@jijubee"
+age = "22"
+relationship = "Committed :)"
+status = "Sometimes I don't know if I'm dreaming or awake"
+avatar = ExtResource("1_esgj5")

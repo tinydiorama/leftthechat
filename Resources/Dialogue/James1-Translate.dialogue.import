@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dylay84wxuieo"
+path="res://.godot/imported/James1-Translate.dialogue-7239fb80e7db6c62012a66c61c535134.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/James1-Translate.dialogue"
+dest_files=["res://.godot/imported/James1-Translate.dialogue-7239fb80e7db6c62012a66c61c535134.tres"]
+
+[params]
+
+defaults=true

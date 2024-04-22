@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cjm3bp6gntlb0"
+path="res://.godot/imported/Minji9-MomDiagnosis.dialogue-0f4e4311242cc3451d4d8390cb33cac6.tres"
+
+[deps]
+
+source_file="res://Sprites/avatars-chat/Minji9-MomDiagnosis.dialogue"
+dest_files=["res://.godot/imported/Minji9-MomDiagnosis.dialogue-0f4e4311242cc3451d4d8390cb33cac6.tres"]
+
+[params]
+
+defaults=true

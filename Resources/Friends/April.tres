@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://b2nx6lnllscjo"]
 
-[ext_resource type="Texture2D" uid="uid://cwwd8xbxd7s0d" path="res://Sprites/avatars-big/april-friend-avatar.png" id="1_83qyq"]
+[ext_resource type="Texture2D" uid="uid://dnj14jpq5wccd" path="res://Sprites/avatars-big/AprilAvatar.png" id="1_3bs1u"]
 [ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="2_xeu88"]
 
 [resource]
@@ -10,4 +10,4 @@ handle = "@aprilfoolz"
 age = "16"
 relationship = "Committed to Gary"
 status = "I may be a demon but at least I'm his demon XD with @GareBear"
-avatar = ExtResource("1_83qyq")
+avatar = ExtResource("1_3bs1u")

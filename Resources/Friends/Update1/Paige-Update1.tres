@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://0hcb8xb7l3mf"]
+
+[ext_resource type="Texture2D" uid="uid://csu20uoi1y4g0" path="res://Sprites/avatars-big/PaigeAvatar.png" id="1_0ujfu"]
+[ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="2_ur56s"]
+
+[resource]
+script = ExtResource("2_ur56s")
+friendName = "Paige K."
+handle = "@bookofpaige"
+age = "26"
+relationship = "Ready to mingle"
+status = "The universe only gives you challenges it knows you're ready to face."
+avatar = ExtResource("1_0ujfu")

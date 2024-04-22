@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Friend" load_steps=3 format=3 uid="uid://diqmgr60hvgcu"]
+
+[ext_resource type="Texture2D" uid="uid://u7ymjgs6tkn1" path="res://Sprites/avatars-big/JamesAvatar.png" id="1_najxn"]
+[ext_resource type="Script" path="res://Resources/Friends/Friend.gd" id="2_43kni"]
+
+[resource]
+script = ExtResource("2_43kni")
+friendName = "James T."
+handle = "@jamesthegiant"
+age = "35"
+relationship = "It’s complicated"
+status = "Phonies coming out of the woodwork pretending they knew her. You did not know her."
+avatar = ExtResource("1_najxn")

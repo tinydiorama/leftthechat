@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ForumPost" load_steps=2 format=3 uid="uid://burbgxwgm3qsw"]
+
+[ext_resource type="Script" path="res://Resources/Forums/ForumPost.gd" id="1_ht151"]
+
+[resource]
+script = ExtResource("1_ht151")
+username = ""
+body = ""

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Chatroom" load_steps=4 format=3 uid="uid://dp8c2ybu3hwy7"]
+
+[ext_resource type="Texture2D" uid="uid://du13wgpeh504r" path="res://Sprites/avatars-chat/noahfence.png" id="1_0tljc"]
+[ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_a7sgy"]
+[ext_resource type="Resource" uid="uid://doxyhuh2f3wcc" path="res://Resources/Chats/NoahMinji/NoahMinji-VanessaEmails.tres" id="2_eoobr"]
+
+[resource]
+script = ExtResource("1_a7sgy")
+chatName = "Noah, Minji"
+avatar = ExtResource("1_0tljc")
+numPeople = 2
+category = "Private"
+chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("2_eoobr")])

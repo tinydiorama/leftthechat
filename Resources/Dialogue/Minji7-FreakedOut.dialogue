@@ -1,0 +1,10 @@
+~ start
+
+@jijubee: I'm so freaked out right now.
+@jijubee: Should I write back?
+- Yes 
+	@jijubee: Yeah. I need to think about it.
+- No
+	@jijubee: Yeah. I need to think about it.
+
+=> END
