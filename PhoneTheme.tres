@@ -3,7 +3,7 @@
 [ext_resource type="FontVariation" uid="uid://dgw8ew0ylavxy" path="res://Resources/Fonts/KhandFont.tres" id="1_3ym5r"]
 [ext_resource type="FontFile" uid="uid://imsbfhmgiiot" path="res://Resources/Fonts/PressStart2P-Regular.ttf" id="2_227lq"]
 [ext_resource type="Texture2D" uid="uid://dhulba058lfrn" path="res://Sprites/checkbox-checked.png" id="3_fjgoy"]
-[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="3_q3lmu"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Scripts/Interfaces/Prompt-Regular.ttf" id="3_q3lmu"]
 [ext_resource type="Texture2D" uid="uid://bcoc0bjc4i2ij" path="res://Sprites/checkbox-empty.png" id="4_snyl2"]
 [ext_resource type="FontFile" uid="uid://bkch1qbh5k5e1" path="res://Resources/Fonts/Prompt-Bold.ttf" id="4_vavlh"]
 [ext_resource type="FontFile" uid="uid://c6sci1h6rpwvs" path="res://Resources/Fonts/Prompt-BoldItalic.ttf" id="5_70u4w"]

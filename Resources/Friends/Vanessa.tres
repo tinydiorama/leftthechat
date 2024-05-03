@@ -11,3 +11,4 @@ age = "28"
 relationship = "Single"
 status = "“If the dead were to come back, what would they come back knowing? Could we face them?” - Joan Didion"
 avatar = ExtResource("1_lor0m")
+friendId = "vanessaProfile"

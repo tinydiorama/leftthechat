@@ -1,11 +1,14 @@
-[gd_resource type="Resource" script_class="Chatroom" load_steps=3 format=3 uid="uid://1ex2ewkd4t0v"]
+[gd_resource type="Resource" script_class="Chatroom" load_steps=4 format=3 uid="uid://1ex2ewkd4t0v"]
 
 [ext_resource type="Resource" uid="uid://bcak0tg11doe7" path="res://Resources/Chats/DadChats/Dad-1.tres" id="1_ivbre"]
 [ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_qabfb"]
+[ext_resource type="Texture2D" uid="uid://bjqf4wfk4iv1n" path="res://Sprites/avatars-chat/Dadosaurus.png" id="1_qm4rp"]
 
 [resource]
 script = ExtResource("1_qabfb")
 chatName = "Dad"
+avatar = ExtResource("1_qm4rp")
 numPeople = 1
 category = "Private"
 chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("1_ivbre")])
+chatId = "dad"

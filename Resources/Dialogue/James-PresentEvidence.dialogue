@@ -1,0 +1,9 @@
+~ start
+
+@jamesthegiant: Hm? What do you need?
+- Present Evidence
+	do Globals.showEvidenceSelect()
+- Back
+	do Globals.dialogueBack()
+
+=> END

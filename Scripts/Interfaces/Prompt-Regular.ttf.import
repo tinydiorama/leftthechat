@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ccpintqmys7cq"
-path="res://.godot/imported/Prompt-Regular.ttf-e191bb59eaaf42755f2bb8c4051cc7f2.fontdata"
+path="res://.godot/imported/Prompt-Regular.ttf-b239a19d5a8899c2a4fe57abd17e009a.fontdata"
 
 [deps]
 
-source_file="res://Resources/Fonts/Prompt-Regular.ttf"
-dest_files=["res://.godot/imported/Prompt-Regular.ttf-e191bb59eaaf42755f2bb8c4051cc7f2.fontdata"]
+source_file="res://Scripts/Interfaces/Prompt-Regular.ttf"
+dest_files=["res://.godot/imported/Prompt-Regular.ttf-b239a19d5a8899c2a4fe57abd17e009a.fontdata"]
 
 [params]
 

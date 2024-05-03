@@ -31,3 +31,7 @@ func _on_friend_timer_timeout():
 func _on_friend_panel_friend_back_pressed():
 	friendList.populate_friends(friends)
 	gameManager.saveGame()
+
+
+func _on_friend_list_friend_selected(friend):
+	gameManager.onSelectView(friend.friendId)

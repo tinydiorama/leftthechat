@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Interfaces/Friends/FriendPanel.gd" id="1_3ukrl"]
 [ext_resource type="Texture2D" uid="uid://orjqrijt4me2" path="res://Sprites/backbutton-light.png" id="2_l75f4"]
 [ext_resource type="Texture2D" uid="uid://dqy07yro1id58" path="res://Sprites/EmailIcon.png" id="3_445ex"]
-[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="4_hdnsc"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Scripts/Interfaces/Prompt-Regular.ttf" id="4_hdnsc"]
 [ext_resource type="FontFile" uid="uid://bkch1qbh5k5e1" path="res://Resources/Fonts/Prompt-Bold.ttf" id="5_80dlb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aigsi"]

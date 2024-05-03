@@ -123,32 +123,37 @@ func get_next_dialogue_line(resource: DialogueResource, key: String = "", extra_
 	# Get the line data
 	var dialogue: DialogueLine = await get_line(resource, key, extra_game_states)
 	
-	var next_line_dialogue: DialogueLine = await get_line(resource, dialogue.next_id, extra_game_states)
+	if ( dialogue != null ):
+		var next_line_dialogue: DialogueLine = await get_line(resource, dialogue.next_id, extra_game_states)
 	
-	# If our dialogue is nothing then we hit the end
-	if (next_line_dialogue == null):
-		(func(): dialogue_ended.emit(resource)).call_deferred()
-		#return null
-
-	# Run the mutation if it is one
-	if dialogue.type == DialogueConstants.TYPE_MUTATION:
-		var actual_next_id: String = dialogue.next_id.split(",")[0]
-		match mutation_behaviour:
-			MutationBehaviour.Wait:
-				await mutate(dialogue.mutation, extra_game_states)
-			MutationBehaviour.DoNotWait:
-				mutate(dialogue.mutation, extra_game_states)
-			MutationBehaviour.Skip:
-				pass
-		if actual_next_id in [DialogueConstants.ID_END_CONVERSATION, DialogueConstants.ID_NULL, null]:
-			# End the conversation
+		# If our dialogue is nothing then we hit the end
+		if (next_line_dialogue == null):
 			(func(): dialogue_ended.emit(resource)).call_deferred()
-			return null
+			#return null
+
+		# Run the mutation if it is one
+		if dialogue.type == DialogueConstants.TYPE_MUTATION:
+			var actual_next_id: String = dialogue.next_id.split(",")[0]
+			match mutation_behaviour:
+				MutationBehaviour.Wait:
+					await mutate(dialogue.mutation, extra_game_states)
+				MutationBehaviour.DoNotWait:
+					mutate(dialogue.mutation, extra_game_states)
+				MutationBehaviour.Skip:
+					pass
+			if actual_next_id in [DialogueConstants.ID_END_CONVERSATION, DialogueConstants.ID_NULL, null]:
+				# End the conversation
+				(func(): dialogue_ended.emit(resource)).call_deferred()
+				return null
+			else:
+				return await get_next_dialogue_line(resource, dialogue.next_id, extra_game_states, mutation_behaviour)
 		else:
-			return await get_next_dialogue_line(resource, dialogue.next_id, extra_game_states, mutation_behaviour)
+			got_dialogue.emit(dialogue)
+			return dialogue
 	else:
-		got_dialogue.emit(dialogue)
-		return dialogue
+		# End the conversation
+		(func(): dialogue_ended.emit(resource)).call_deferred()
+		return null
 
 
 func get_resolved_line_data(data: Dictionary, extra_game_states: Array = []) -> ResolvedLineData:

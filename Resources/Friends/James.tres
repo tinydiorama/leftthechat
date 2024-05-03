@@ -11,3 +11,4 @@ age = "35"
 relationship = "It’s complicated"
 status = "Truly amazing how people reveal their own ignorance when debating who is the strongest user of the force. (Hint: it's Yoda.)"
 avatar = ExtResource("1_curmg")
+friendId = "jamesProfile"

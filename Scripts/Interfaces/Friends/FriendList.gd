@@ -9,6 +9,8 @@ extends VBoxContainer
 var mouseOver = false
 var currentFriend:Friend
 
+signal friendSelected(friend)
+
 func populate_friends(allFriends:Array[Friend]):
 	show()
 	
@@ -23,5 +25,6 @@ func populate_friends(allFriends:Array[Friend]):
 
 func _onPressed(params:Array):
 	currentFriend = params[0]	
+	friendSelected.emit(currentFriend)
 	gameManager.updatedFriends.erase(currentFriend.friendName)
 	friendPanel.display(currentFriend)

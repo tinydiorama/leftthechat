@@ -11,3 +11,4 @@ age = "46"
 relationship = "Ready to mingle"
 status = "Beautiful day for a motorcycle ride! #Vespa #MotercycleGang #ProfOnWheels"
 avatar = ExtResource("1_w3tt2")
+friendId = "calvinProfile"

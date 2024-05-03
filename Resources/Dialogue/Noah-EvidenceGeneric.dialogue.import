@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c2k61e650e1r6"
+path="res://.godot/imported/Noah-EvidenceGeneric.dialogue-1ab1708ec534075a41e883a6d48df67c.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Noah-EvidenceGeneric.dialogue"
+dest_files=["res://.godot/imported/Noah-EvidenceGeneric.dialogue-1ab1708ec534075a41e883a6d48df67c.tres"]
+
+[params]
+
+defaults=true

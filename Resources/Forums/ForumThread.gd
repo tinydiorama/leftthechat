@@ -7,3 +7,4 @@ extends Resource
 @export var upvotes:int
 @export var posts:Array[ForumPost]
 @export_multiline var body:String
+@export var threadId:String

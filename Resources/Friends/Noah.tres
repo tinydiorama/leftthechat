@@ -11,3 +11,4 @@ age = "17"
 relationship = "Single"
 status = "was having a bad day until I pet a puppy!! now I'm having a good day :) :)"
 avatar = ExtResource("1_3c0d5")
+friendId = "noahProfile"

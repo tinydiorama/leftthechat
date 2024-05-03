@@ -6,6 +6,7 @@ extends SavedData
 @export var seenEmails:Array[String]
 @export var seenFriends:Array[String]
 @export var seenForums:Array[String]
+@export var obtainedEvidence:Array[String]
 @export var firstName:String
 @export var lastName:String
 @export var handle:String
@@ -21,3 +22,4 @@ extends SavedData
 @export var internetUnlocked:bool
 @export var vanessaArticleRead:bool
 @export var internetSearchTerms:Array
+@export var dayIndicator:String

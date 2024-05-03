@@ -11,3 +11,4 @@ age = "35"
 relationship = "It’s complicated"
 status = "Phonies coming out of the woodwork pretending they knew her. You did not know her."
 avatar = ExtResource("1_najxn")
+friendId = "jamesProfile"

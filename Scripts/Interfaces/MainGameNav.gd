@@ -7,6 +7,7 @@ extends Control
 @onready var emailModal = %EmailModal
 @onready var socialModal = %SocialModal
 @onready var forumModal = %ForumModal
+@onready var notesModal = %NotesModal
 
 # Nav buttons
 @onready var chatButton = %ChatroomButton
@@ -14,6 +15,7 @@ extends Control
 @onready var socialButton = %SocialButton
 @onready var emailButton = %EmailButton
 @onready var forumButton = %ForumButton
+@onready var notesButton = %NotesButton
 
 @onready var musicPlayer = $VBoxContainer/MusicPlayerContainer
 @onready var mainMenu = $VBoxContainer/Menu
@@ -64,6 +66,10 @@ func _on_social_button_pressed():
 
 func _on_forum_button_pressed():
 	forumModal.openModal(gameManager.forums.get_threads())
+	
+
+func _on_notes_button_pressed():
+	notesModal.openModal(gameManager.evidences.get_evidence())
 
 
 func _on_game_manager_new_chat():
@@ -94,3 +100,5 @@ func getInternetUnlockedArticles() -> Array:
 	
 func setInternetUnlockedArticles(articlesToSet:Array):
 	internetModal.searchResults = articlesToSet
+
+

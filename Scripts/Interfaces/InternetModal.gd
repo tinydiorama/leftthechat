@@ -34,6 +34,7 @@ func _on_option_button_item_selected(index):
 	articleContainer.add_child(instance)
 	
 	if ( index == 0 ):
+		gameManager.onSelectView("vanessaArticle")
 		vanessaArticleRead.emit()
 
 func add_option(itemName:String):

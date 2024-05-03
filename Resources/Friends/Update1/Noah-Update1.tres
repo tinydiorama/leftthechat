@@ -11,3 +11,4 @@ age = "17"
 relationship = "Single"
 status = "Sometimes I want to tell the world to stop. But it just keeps moving. "
 avatar = ExtResource("1_5fvx4")
+friendId = "noahProfile"

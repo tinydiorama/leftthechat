@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://drxmlpy8vc5si"]
+[gd_scene load_steps=104 format=3 uid="uid://drxmlpy8vc5si"]
 
 [ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="1_fmx65"]
 [ext_resource type="Texture2D" uid="uid://dikti0npwvcsv" path="res://Sprites/pinkbg.png" id="2_4edjn"]
@@ -33,12 +33,21 @@
 [ext_resource type="PackedScene" uid="uid://de4wqdhgkairk" path="res://Scenes/Friends/social_modal.tscn" id="24_ycsi1"]
 [ext_resource type="Texture2D" uid="uid://dg0n43t7iluph" path="res://Sprites/closebutton-pixel.png" id="25_aj7a0"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="25_cmm8w"]
+[ext_resource type="Resource" uid="uid://cet7ynlxhh2yw" path="res://Resources/Dialogue/Minji-EvidenceGeneric.dialogue" id="25_eulrv"]
 [ext_resource type="PackedScene" uid="uid://drrj27plfuxpt" path="res://Scenes/Emails/email_modal.tscn" id="25_u6bpq"]
+[ext_resource type="Resource" uid="uid://ckfmrxrg80cbs" path="res://Resources/Dialogue/James-EvidenceGeneric.dialogue" id="26_dqixn"]
 [ext_resource type="Script" path="res://Scripts/Managers/StoryManager.gd" id="27_l0knw"]
+[ext_resource type="Resource" uid="uid://c6s1pfwf8ib7j" path="res://Resources/Dialogue/Amelia-EvidenceGeneric.dialogue" id="27_xe8n2"]
+[ext_resource type="Resource" uid="uid://7scs3rj00qtw" path="res://Resources/Dialogue/April-EvidenceGeneric.dialogue" id="28_62exp"]
 [ext_resource type="Script" path="res://Scripts/Interfaces/Notification.gd" id="28_alrkr"]
-[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="28_hfkc3"]
+[ext_resource type="PackedScene" uid="uid://bnng0mkesov6l" path="res://Scenes/Evidence/select_evidence.tscn" id="28_e20sr"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Scripts/Interfaces/Prompt-Regular.ttf" id="28_hfkc3"]
+[ext_resource type="PackedScene" uid="uid://da5d0bcmkaulf" path="res://Scenes/Evidence/notes_modal.tscn" id="28_v2uax"]
+[ext_resource type="Resource" uid="uid://csh5m16knqjs7" path="res://Resources/Dialogue/Calvin-EvidenceGeneric.dialogue" id="29_m75ow"]
 [ext_resource type="PackedScene" uid="uid://5iww0467vemc" path="res://Scenes/Main/day_notification.tscn" id="30_88mvv"]
+[ext_resource type="Resource" uid="uid://c2k61e650e1r6" path="res://Resources/Dialogue/Noah-EvidenceGeneric.dialogue" id="30_b5nwn"]
 [ext_resource type="Resource" uid="uid://dl7qcnty45w14" path="res://Resources/Emails/WelcomeStudents.tres" id="30_p23g8"]
+[ext_resource type="Resource" uid="uid://dug7qbbtd87ti" path="res://Resources/Dialogue/Paige-EvidenceGeneric.dialogue" id="31_mk4b5"]
 [ext_resource type="Resource" uid="uid://28lpfp3ahoqb" path="res://Resources/Emails/BankInfo.tres" id="31_trvxv"]
 [ext_resource type="Resource" uid="uid://c7x7k38qnb4tn" path="res://Resources/Friends/Noah.tres" id="32_gwf6s"]
 [ext_resource type="Resource" uid="uid://c13oxwn6vg0fd" path="res://Resources/Friends/Amelia.tres" id="33_lprht"]
@@ -81,7 +90,11 @@
 [ext_resource type="Resource" uid="uid://f7yk21ukuj03" path="res://Resources/Chats/HorrorChats/Horror6-NoOneCameForward.tres" id="62_sstyt"]
 [ext_resource type="Resource" uid="uid://h2bhxrk8wn70" path="res://Resources/Chats/Calvin.tres" id="68_8sp0r"]
 [ext_resource type="Resource" uid="uid://cbnd2i7kfpkwb" path="res://Resources/Chats/James.tres" id="69_ckw2v"]
+[ext_resource type="Resource" uid="uid://b6w0limrhfw0l" path="res://Resources/Evidence/SchoolId.tres" id="81_8ipud"]
 [ext_resource type="PackedScene" uid="uid://0x5u6cmfk2u5" path="res://Scenes/sound_player.tscn" id="82_uaxm6"]
+[ext_resource type="Resource" uid="uid://doykoduke65t6" path="res://Resources/Evidence/BurgerEmail.tres" id="85_cyeqd"]
+[ext_resource type="Resource" uid="uid://crigq3vrexjk1" path="res://Resources/Evidence/RamenEmail.tres" id="86_vb4ov"]
+[ext_resource type="Texture2D" uid="uid://cnytro4gfvccy" path="res://Sprites/foundit-icon.png" id="94_qc2nk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iumoi"]
 bg_color = Color(0.968627, 0.952941, 0.92549, 1)
@@ -152,6 +165,43 @@ _data = {
 "NotificationSlide": SubResource("Animation_4ajlf"),
 "NotificationSlideOut": SubResource("Animation_gd0mn"),
 "RESET": SubResource("Animation_inakc")
+}
+
+[sub_resource type="Animation" id="Animation_e8uw1"]
+resource_name = "EvidenceGet"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.4, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1080, 0), Vector2(0, 0), Vector2(0, 0), Vector2(1080, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_y8a8s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1080, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bloi5"]
+_data = {
+"EvidenceGet": SubResource("Animation_e8uw1"),
+"RESET": SubResource("Animation_y8a8s")
 }
 
 [node name="MainScreen" type="Control"]
@@ -426,6 +476,7 @@ texture = ExtResource("19_bn7qj")
 text = "Maps"
 
 [node name="NotesButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/NotesButton/VBoxContainer" index="0"]
@@ -453,7 +504,228 @@ anchor_bottom = 1.0
 offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+draw_center = false
 script = ExtResource("18_fiuyv")
+evidencePlan = {
+"day1": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {
+"default": ExtResource("26_dqixn")
+},
+"Minji": {
+"default": ExtResource("25_eulrv"),
+"schoolId": ExtResource("25_eulrv")
+},
+"Noah": {},
+"Paige": {}
+},
+"day10": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day11": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day12": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day13": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day14": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day15": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day16": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day17": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day18": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day19": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day2": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {
+"default": ExtResource("26_dqixn")
+},
+"Minji": {
+"default": ExtResource("25_eulrv")
+},
+"Noah": {},
+"Paige": {}
+},
+"day20": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day21": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day22": {},
+"day23": {},
+"day24": {},
+"day25": {},
+"day26": {},
+"day27": {},
+"day28": {},
+"day29": {},
+"day3": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day30": {},
+"day31": {},
+"day32": {},
+"day4": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day5": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day6": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day7": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day8": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"day9": {
+"Amelia": {},
+"April": {},
+"Calvin": {},
+"James": {},
+"Minji": {},
+"Noah": {},
+"Paige": {}
+},
+"defaults": {
+"Amelia": ExtResource("27_xe8n2"),
+"April": ExtResource("28_62exp"),
+"Calvin": ExtResource("29_m75ow"),
+"James": ExtResource("26_dqixn"),
+"Minji": ExtResource("25_eulrv"),
+"Noah": ExtResource("30_b5nwn"),
+"Paige": ExtResource("31_mk4b5")
+}
+}
 
 [node name="ChatSelection" parent="MainGameNav/ChatModal" instance=ExtResource("21_hr4m2")]
 unique_name_in_owner = true
@@ -482,6 +754,15 @@ offset_bottom = 199.0
 size_flags_vertical = 0
 texture_normal = ExtResource("25_aj7a0")
 stretch_mode = 4
+
+[node name="SelectEvidence" parent="MainGameNav/ChatModal" instance=ExtResource("28_e20sr")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_left = -464.5
+offset_top = -760.0
+offset_right = 468.5
+offset_bottom = 920.0
 
 [node name="SettingsModal" type="MarginContainer" parent="MainGameNav"]
 unique_name_in_owner = true
@@ -537,6 +818,13 @@ layout_mode = 2
 size_flags_vertical = 0
 texture_normal = ExtResource("25_aj7a0")
 
+[node name="NotesModal" parent="MainGameNav" instance=ExtResource("28_v2uax")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
 [node name="InternetModal" parent="MainGameNav" instance=ExtResource("22_7un36")]
 unique_name_in_owner = true
 layout_mode = 1
@@ -564,7 +852,7 @@ visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_right = 28080.0
+offset_right = 43200.0
 grow_horizontal = 2
 script = ExtResource("28_alrkr")
 
@@ -573,7 +861,7 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_top = -263.0
-offset_right = 379080.0
+offset_right = 885600.0
 offset_bottom = 2012.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iumoi")
@@ -674,6 +962,17 @@ chatroomUpdates = {
 "mom2": ExtResource("51_5tn64"),
 "vanessaDeath": ExtResource("48_l2ct2")
 }
+allEvidence = {
+"schoolid": ExtResource("81_8ipud")
+}
+evidencePlan = {
+"day1": {},
+"day2": {
+"burgerEmail": ExtResource("85_cyeqd"),
+"ramenEmail": ExtResource("86_vb4ov")
+},
+"day3": {}
+}
 
 [node name="CharacterBuilder" type="Control" parent="."]
 unique_name_in_owner = true
@@ -690,6 +989,43 @@ unique_name_in_owner = true
 layout_mode = 1
 offset_right = 5.0
 
+[node name="EvidenceGet" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1080.0
+offset_right = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="VBoxContainer" parent="EvidenceGet"]
+layout_mode = 2
+offset_left = 30.0
+offset_top = 880.0
+offset_right = 1050.0
+offset_bottom = 1040.0
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="EvidenceGet/Control"]
+layout_mode = 2
+texture = ExtResource("94_qc2nk")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="EvidenceGet/Control"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 40
+text = "Evidence: GET"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EvidenceGet"]
+libraries = {
+"": SubResource("AnimationLibrary_bloi5")
+}
+
 [node name="SoundPlayer" parent="." instance=ExtResource("82_uaxm6")]
 unique_name_in_owner = true
 
@@ -704,11 +1040,13 @@ unique_name_in_owner = true
 [connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/SaveButton" to="Utilities/SaverLoader" method="save_game"]
 [connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/LoadButton" to="Utilities/SaverLoader" method="load_game"]
 [connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal/CloseButton" to="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal" method="_on_close_button_pressed"]
+[connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/NotesButton" to="MainGameNav" method="_on_notes_button_pressed"]
 [connection signal="pressed" from="MainGameNav/VBoxContainer/Menu/SettingsButton" to="MainGameNav" method="_on_settings_button_pressed"]
 [connection signal="chat_selected" from="MainGameNav/ChatModal/ChatSelection" to="MainGameNav/ChatModal" method="_on_chat_selected"]
 [connection signal="chat_back" from="MainGameNav/ChatModal/ChatStoryPlayer" to="MainGameNav/ChatModal" method="_on_chat_back"]
 [connection signal="chat_playing" from="MainGameNav/ChatModal/ChatStoryPlayer" to="MainGameNav/ChatModal" method="_on_chat_story_player_chat_playing"]
 [connection signal="pressed" from="MainGameNav/ChatModal/ChatCloseButton" to="MainGameNav/ChatModal" method="_on_close_button_pressed"]
+[connection signal="evidenceSelected" from="MainGameNav/ChatModal/SelectEvidence" to="MainGameNav/ChatModal" method="_on_select_evidence_evidence_selected"]
 [connection signal="pressed" from="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/SaveButton" to="Utilities/SaverLoader" method="save_game"]
 [connection signal="pressed" from="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/LoadButton" to="Utilities/SaverLoader" method="load_game"]
 [connection signal="pressed" from="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/NewGame" to="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal" method="_on_new_game_pressed"]

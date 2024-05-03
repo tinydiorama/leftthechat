@@ -1,0 +1,9 @@
+~ start
+
+@ameliarate: Hey there, hon! How are you doing?
+- Present Evidence
+	do Globals.showEvidenceSelect()
+- Back
+	do Globals.dialogueBack()
+
+=> END

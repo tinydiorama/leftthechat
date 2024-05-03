@@ -1,0 +1,9 @@
+~ start
+
+@noahfence: hey hey
+- Present Evidence
+	do Globals.showEvidenceSelect()
+- Back
+	do Globals.dialogueBack()
+
+=> END

@@ -9,3 +9,4 @@ originalPoster = ""
 upvotes = 0
 posts = Array[Resource("res://Resources/Forums/ForumPost.gd")]([])
 body = ""
+threadId = "newGhostGirlMurder"

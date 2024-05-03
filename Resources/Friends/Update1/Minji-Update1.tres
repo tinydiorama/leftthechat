@@ -11,3 +11,4 @@ age = "22"
 relationship = "Committed :)"
 status = "Sometimes I don't know if I'm dreaming or awake"
 avatar = ExtResource("1_esgj5")
+friendId = "minjiProfile"

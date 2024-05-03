@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dnsso18w3xvnk"
+path="res://.godot/imported/Calvin-PresentEvidence.dialogue-a6dde5a80c8f492f649a3f619e9d4579.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Calvin-PresentEvidence.dialogue"
+dest_files=["res://.godot/imported/Calvin-PresentEvidence.dialogue-a6dde5a80c8f492f649a3f619e9d4579.tres"]
+
+[params]
+
+defaults=true

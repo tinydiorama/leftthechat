@@ -33,5 +33,6 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if mouseOver == true:
 			emailBodyContainer.display(currentEmail)
+			gameManager.onSelectView(currentEmail.emailId)
 			gameManager.unreadEmails.erase(currentEmail.subject)
 			mouseOver = false

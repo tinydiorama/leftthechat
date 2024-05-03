@@ -1,0 +1,9 @@
+~ start
+
+@the_professor_cal: Hello, my fine friend! What can I help you with today?
+- Present Evidence
+	do Globals.showEvidenceSelect()
+- Back
+	do Globals.dialogueBack()
+
+=> END

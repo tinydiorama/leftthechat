@@ -11,3 +11,4 @@ age = "43"
 relationship = "Married to Dave Walker"
 status = "Limited time 50% OFF SALE on all homemade soaps on my Sellsy shop xX"
 avatar = ExtResource("1_b76ww")
+friendId = "ameliaProfile"

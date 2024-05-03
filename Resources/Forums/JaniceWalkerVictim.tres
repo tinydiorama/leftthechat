@@ -20,3 +20,4 @@ avatar = ExtResource("1_h5v6b")
 upvotes = 33
 posts = Array[Resource("res://Resources/Forums/ForumPost.gd")]([ExtResource("2_pbu7f"), ExtResource("3_byok0"), ExtResource("4_or0uw"), ExtResource("5_rbpvl"), ExtResource("6_nnwhy"), ExtResource("7_l0yq8"), ExtResource("8_bcphd"), ExtResource("9_y6ugg"), ExtResource("10_bwcap")])
 body = "Walter’s autopsy revealed cilbitoxin in her system, just like Samson’s did. We know from Walter's public blog she began speaking with Samson after Samson's death. If you ask me this is one of the Ghost Girl Murders, all perpetrated by the same killer. "
+threadId = "janiceWalkerVictim"

@@ -7,3 +7,4 @@ extends Resource
 @export_multiline var relationship:String
 @export_multiline var status:String
 @export var avatar:Texture2D
+@export var friendId:String

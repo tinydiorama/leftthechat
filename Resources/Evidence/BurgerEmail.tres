@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Evidence" load_steps=3 format=3 uid="uid://doykoduke65t6"]
+
+[ext_resource type="Texture2D" uid="uid://dqy07yro1id58" path="res://Sprites/EmailIcon.png" id="1_l7650"]
+[ext_resource type="Script" path="res://Resources/Evidence/Evidence.gd" id="1_pgsaw"]
+
+[resource]
+script = ExtResource("1_pgsaw")
+evidenceId = "burgerEmail"
+evidenceTitle = "Burger Paradise Receipt"
+description = "I can use this to prove I was at the restaurant with Minji on October 9."
+icon = ExtResource("1_l7650")

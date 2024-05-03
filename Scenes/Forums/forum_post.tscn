@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Interfaces/Forums/ForumPost.gd" id="1_606tj"]
 [ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_la1ig"]
-[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="2_wy2mt"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Scripts/Interfaces/Prompt-Regular.ttf" id="2_wy2mt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02obw"]
 bg_color = Color(1, 1, 1, 1)

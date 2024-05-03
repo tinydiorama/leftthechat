@@ -11,3 +11,4 @@ age = "16"
 relationship = "Committed to Gary"
 status = "They say time heals all wounds but this one hell of a wound #depression #death"
 avatar = ExtResource("1_2aas1")
+friendId = "aprilProfile"

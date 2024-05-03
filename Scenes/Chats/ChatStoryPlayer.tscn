@@ -45,3 +45,5 @@ unique_name_in_owner = true
 layout_mode = 2
 
 [connection signal="back_button" from="PanelContainer/StoryMarginContainer/StoryVBoxContainer/StoryScrollContainer/DialogueController" to="." method="_on_dialogue_controller_back_button"]
+[connection signal="chat_ended" from="PanelContainer/StoryMarginContainer/StoryVBoxContainer/StoryScrollContainer/DialogueController" to="." method="_on_chat_ended"]
+[connection signal="chat_message_seen" from="PanelContainer/StoryMarginContainer/StoryVBoxContainer/StoryScrollContainer/DialogueController" to="." method="_on_chat_seen"]

@@ -11,3 +11,4 @@ age = "22"
 relationship = "Committed :)"
 status = "Playing Death's Redemption (Developer's Commentary)"
 avatar = ExtResource("1_dptwn")
+friendId = "minjiProfile"

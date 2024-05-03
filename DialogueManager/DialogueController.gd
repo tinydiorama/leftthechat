@@ -91,6 +91,7 @@ func _ready() -> void:
 	pass
 
 func _on_dialogue_ended(_resource: DialogueResource):
+	responses_menu.hide()
 	nextButton.hide()
 	backButton.show()
 	chat_ended.emit()

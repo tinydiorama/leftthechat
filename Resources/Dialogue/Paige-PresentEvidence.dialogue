@@ -1,0 +1,9 @@
+~ start
+
+@bookofpaige: Hey, {{Globals.playerFirstname}}. What’s up?
+- Present Evidence
+	do Globals.showEvidenceSelect()
+- Back
+	do Globals.dialogueBack()
+
+=> END

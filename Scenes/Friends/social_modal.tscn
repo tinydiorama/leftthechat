@@ -102,6 +102,7 @@ layout_mode = 2
 size_flags_vertical = 0
 texture_normal = ExtResource("7_q5ol8")
 
+[connection signal="friendSelected" from="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendList" to="." method="_on_friend_list_friend_selected"]
 [connection signal="friend_back_pressed" from="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendPanel" to="." method="_on_friend_panel_friend_back_pressed"]
 [connection signal="timeout" from="PanelContainer/SettingsMarginContainer/Panel/MarginContainer/FriendTimer" to="." method="_on_friend_timer_timeout"]
 [connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

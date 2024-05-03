@@ -42,6 +42,7 @@ func _on_mouse_exit():
 func _input(event):
 	if event is InputEventMouseButton:
 		if mouseOver == true:
+			gameManager.onSelectView(currentThread.threadId)
 			displayInnerThread()
 			gameManager.unreadForums.erase(currentThread.subject)
 			mouseOver = false

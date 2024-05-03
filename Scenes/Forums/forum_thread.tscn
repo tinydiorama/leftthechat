@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_3pirs"]
 [ext_resource type="Script" path="res://Scripts/Interfaces/Forums/ForumThread.gd" id="1_78js8"]
-[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="2_slm7y"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Scripts/Interfaces/Prompt-Regular.ttf" id="2_slm7y"]
 [ext_resource type="Texture2D" uid="uid://jwygeo26l1o0" path="res://Sprites/upvote-arrow.png" id="3_lncd4"]
 [ext_resource type="Texture2D" uid="uid://cv3pkdnco2ibr" path="res://Sprites/comments-icon.png" id="4_gcgwb"]
 

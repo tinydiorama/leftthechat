@@ -11,3 +11,4 @@ age = "43"
 relationship = "Married to Dave Walker"
 status = "You may be gone but you are not forgotten. #RIPVanessa #TWGrief"
 avatar = ExtResource("1_wtfix")
+friendId = "ameliaProfile"

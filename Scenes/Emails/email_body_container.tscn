@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Interfaces/Emails/EmailBodyContainer.gd" id="1_dnq4v"]
 [ext_resource type="Texture2D" uid="uid://ukl6xlmbv2cy" path="res://Sprites/Notes.png" id="1_ybfhs"]
-[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="2_5jusd"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Scripts/Interfaces/Prompt-Regular.ttf" id="2_5jusd"]
 [ext_resource type="Texture2D" uid="uid://mvbdbdswo8ql" path="res://Sprites/backbutton.png" id="2_r6suy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0g5hq"]

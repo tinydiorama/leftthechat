@@ -11,3 +11,4 @@ avatar = ExtResource("1_gt0en")
 numPeople = 1
 category = "Private"
 chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("2_pesd2")])
+chatId = "james"

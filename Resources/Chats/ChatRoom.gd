@@ -6,3 +6,4 @@ extends Resource
 @export var numPeople:int
 @export var category:String
 @export var chats:Array[ChatMeta]
+@export var chatId:String

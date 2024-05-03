@@ -1,0 +1,9 @@
+~ start
+
+@aprilfoolz: Heyyyyy. What’s up?
+- Present Evidence
+	do Globals.showEvidenceSelect()
+- Back
+	do Globals.dialogueBack()
+
+=> END

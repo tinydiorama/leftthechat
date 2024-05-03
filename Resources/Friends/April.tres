@@ -11,3 +11,4 @@ age = "16"
 relationship = "Committed to Gary"
 status = "I may be a demon but at least I'm his demon XD with @GareBear"
 avatar = ExtResource("1_3bs1u")
+friendId = "aprilProfile"

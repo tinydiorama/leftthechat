@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://badputgvkcok"]
+[gd_scene load_steps=16 format=3 uid="uid://badputgvkcok"]
 
 [ext_resource type="Texture2D" uid="uid://b5yum1q04mod5" path="res://icon.svg" id="1_05uv2"]
 [ext_resource type="Script" path="res://DialogueManager/ChatNode.gd" id="1_arjx3"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://budyfojw65xt7" path="res://Sprites/avatars-chat/jijubee.png" id="7_fcbhy"]
 [ext_resource type="Texture2D" uid="uid://r2be8pmkqtos" path="res://Sprites/avatars-chat/the_professor_cal.png" id="8_5g7h3"]
 [ext_resource type="Texture2D" uid="uid://rqx4scr2q2vs" path="res://Sprites/avatars-chat/wolfeinthefold.png" id="9_2m8xg"]
+[ext_resource type="Texture2D" uid="uid://dwjhyav2nusjc" path="res://Sprites/avatars-chat/MomBear567.png" id="10_rnba4"]
+[ext_resource type="Texture2D" uid="uid://bjqf4wfk4iv1n" path="res://Sprites/avatars-chat/Dadosaurus.png" id="11_aqabm"]
 
 [node name="Balloon" type="MarginContainer"]
 anchors_preset = 10
@@ -30,8 +32,10 @@ characterPortraits = {
 "ameliarate": ExtResource("4_3ufd3"),
 "aprilfoolz": ExtResource("5_0imaw"),
 "bookofpaige": ExtResource("6_t0noy"),
+"dadosaurus": ExtResource("11_aqabm"),
 "jamesthegiant": ExtResource("3_02y6b"),
 "jijubee": ExtResource("7_fcbhy"),
+"mombear567": ExtResource("10_rnba4"),
 "noahfence": ExtResource("2_qmyjf"),
 "the_professor_cal": ExtResource("8_5g7h3"),
 "wolfeinthefold": ExtResource("9_2m8xg")

@@ -17,11 +17,13 @@ var articles:Articles = Articles.new()
 var friends:Friends = Friends.new()
 var forums:Forums = Forums.new()
 var chats:Chats = Chats.new()
+var evidences:Evidences = Evidences.new()
 
 var seenEmails:Array[String] = ["initialEmails"]
 var seenFriends:Array[String] = ["initialFriends"]
 var seenForums:Array[String] = ["initialForums"]
 var seenChats:Array[String] = ["initialChatrooms"]
+var obtainedEvidence:Array[String] = []
 
 var unreadEmails:Array[String] = []
 var updatedFriends:Array[String] = []
@@ -33,6 +35,7 @@ var allChatHistory:Dictionary
 
 var internetUnlocked:bool
 var vanessaArticleRead:bool
+var dayIndicator:String
 
 signal newEmail
 signal newFriend
@@ -63,6 +66,9 @@ func add_chat(chat:Chatroom):
 func add_chat_segment(chatSegment:ChatMeta, chatName:String):
 	chats.add_chat_segment(chatSegment, chatName)
 	unreadChats.append(chatName)
+	
+func add_evidence(evidence:Evidence):
+	evidences.add_evidence(evidence)
 	
 ############################ Chat History
 func addChatHistory(chatMessageName:String, id:String) -> Array:
@@ -105,6 +111,7 @@ func isAllUnreads() -> bool:
 
 func _ready():
 	saverLoader.load_game()
+	Globals.gameManager = self
 	
 	if ( firstName == "" ):
 		newCharacterBuilder.emit()
@@ -138,6 +145,9 @@ func _on_character_builder_modal_character_submit(fullName, handleParam, pronoun
 	saverLoader.save_game()
 	characterBuilder.hide()
 	
+func onSelectView(id:String):
+	storyManager.checkForNewEvidence(id)
+	
 func saveGame():
 	# Check for game progress
 	storyManager.advanceStory()
@@ -152,6 +162,7 @@ func on_save_game(saved_data:Array[SavedData]):
 	my_data.seenEmails = seenEmails
 	my_data.seenForums = seenForums
 	my_data.seenFriends = seenFriends
+	my_data.obtainedEvidence = obtainedEvidence
 	my_data.firstName = firstName
 	my_data.lastName = lastName
 	my_data.handle = handle
@@ -168,6 +179,7 @@ func on_save_game(saved_data:Array[SavedData]):
 	my_data.internetUnlocked = internetUnlocked
 	my_data.internetSearchTerms = mainGameNav.getInternetUnlockedArticles()
 	my_data.vanessaArticleRead = vanessaArticleRead
+	my_data.dayIndicator = dayIndicator
 	saved_data.append(my_data)
 	
 func on_before_load_game():
@@ -180,6 +192,7 @@ func on_load_game(saved_data:SavedData):
 	seenEmails = my_data.seenEmails
 	seenForums = my_data.seenForums
 	seenFriends = my_data.seenFriends
+	obtainedEvidence = my_data.obtainedEvidence
 	
 	firstName = my_data.firstName
 	lastName = my_data.lastName
@@ -196,6 +209,7 @@ func on_load_game(saved_data:SavedData):
 	completedChats = my_data.completedChats
 	internetUnlocked = my_data.internetUnlocked
 	vanessaArticleRead = my_data.vanessaArticleRead
+	dayIndicator = my_data.dayIndicator
 	
 	mainGameNav.setInternetUnlockedArticles(my_data.internetSearchTerms)
 	
@@ -228,6 +242,10 @@ func populate_data():
 		var friendData = storyManager.allFriends.get(friendName)
 		for friend in friendData:
 			add_friend(friend)
+			
+	for evidenceName in obtainedEvidence:
+		var evidenceData = storyManager.allEvidence.get(evidenceName)
+		add_evidence(evidenceData)
 			
 	if internetUnlocked:
 		mainGameNav.showInternet()

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cet7ynlxhh2yw"
+path="res://.godot/imported/Minji-EvidenceGeneric.dialogue-b12565235e90c6f660c9662cd2718d3e.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Minji-EvidenceGeneric.dialogue"
+dest_files=["res://.godot/imported/Minji-EvidenceGeneric.dialogue-b12565235e90c6f660c9662cd2718d3e.tres"]
+
+[params]
+
+defaults=true

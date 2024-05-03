@@ -6,6 +6,9 @@ extends Node
 @export var allForums:Dictionary = {}
 @export var allChatrooms:Dictionary = {}
 @export var chatroomUpdates:Dictionary = {}
+@export var allEvidence:Dictionary = {}
+
+@export var evidencePlan:Dictionary = {}
 
 @onready var gameManager = %GameManager
 @onready var dayNotification = %DayNotification
@@ -22,6 +25,9 @@ func addInitialContent():
 
 	for chatroom in allChatrooms.get("initialChatrooms"):
 		gameManager.add_chat(chatroom)
+		
+	gameManager.add_evidence(allEvidence.get("schoolid"))
+	gameManager.obtainedEvidence.append("schoolid")
 
 func advanceStory():
 	if ( gameManager.isAllUnreads() ):
@@ -47,6 +53,7 @@ func advanceStory():
 					gameManager.add_email(email)
 					gameManager.seenEmails.append("ramenEmail")
 		
+			gameManager.dayIndicator = "day2"
 			dayNotification.display("Day Two")
 		if ( ! gameManager.completedChats.has("Horror3-PostVanessaDeath") && gameManager.completedChats.has("Dad-1") && gameManager.completedChats.has("Mom-2")):
 			gameManager.seenChats.append("day2PostVanessa")
@@ -67,6 +74,8 @@ func advanceStory():
 			for chatroom in allChatrooms.get("aprilInitialDMs"):
 				gameManager.add_chat(chatroom)
 			gameManager.seenChats.append("aprilInitialDMs")
+			
+			gameManager.dayIndicator = "day3"
 			dayNotification.display("Day Three")
 	if ( gameManager.completedChats.has("Minji4-VanessaEmail") && ! gameManager.seenEmails.has("minjiVanessaEmail")):
 		for email in allEmails.get("minjiVanessaEmail"):
@@ -93,6 +102,8 @@ func advanceStory():
 			for friend in allFriends.get("update1Friends"):
 				gameManager.add_friend(friend)
 			gameManager.seenFriends.append("update1Friends")
+			
+			gameManager.dayIndicator = "day4"
 			dayNotification.display("Day Four")
 		if ( ! gameManager.seenEmails.has("noahMinjiEmail") && gameManager.completedChats.has("NoahMinji-VanessaEmails") ):
 			for email in allEmails.get("noahMinjiEmail"):
@@ -107,3 +118,13 @@ func advanceStory():
 			for chatroom in allChatrooms.get("jamesInitialDMs"):
 				gameManager.add_chat(chatroom)
 			gameManager.seenChats.append("jamesInitialDMs")
+
+func checkForNewEvidence(id:String):
+	print("selected a thing " + id)
+	print(gameManager.dayIndicator)
+	var evidenceDict = evidencePlan.get(gameManager.dayIndicator)
+	if ( evidenceDict != null ):
+		var evidence = evidenceDict.get(id)
+		if ( evidence != null && ! gameManager.evidences.contains(evidence)):
+			gameManager.evidences.add_evidence(evidence)
+			gameManager.obtainedEvidence.append(evidence.evidenceId)
