@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://bhitpqx7apbs6"]
 
 [ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_b5wr2"]
-[ext_resource type="Resource" uid="uid://wwditxss7wkt" path="res://Resources/Dialogue/Horror4-PostVanessObit.dialogue" id="1_m7o4f"]
+[ext_resource type="Resource" uid="uid://wwditxss7wkt" path="res://Resources/Dialogue/HorrorChat/Horror4-PostVanessObit.dialogue" id="1_m7o4f"]
 
 [resource]
 script = ExtResource("1_b5wr2")

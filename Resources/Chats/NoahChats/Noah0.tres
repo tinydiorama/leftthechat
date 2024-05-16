@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://cfd13vbv26qw6"]
+
+[ext_resource type="Resource" uid="uid://c5s36yb8k17ed" path="res://Resources/Dialogue/Noah/Noah0.dialogue" id="1_bl4jk"]
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_nvxm2"]
+
+[resource]
+script = ExtResource("1_nvxm2")
+chatMetaName = "Noah0"
+chatPath = ExtResource("1_bl4jk")
+unlocked = true
+chatroomName = "Noah"

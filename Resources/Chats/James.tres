@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_5tjhn"]
 [ext_resource type="Texture2D" uid="uid://drhr56gpdsk6" path="res://Sprites/avatars-chat/jamesthegiant.png" id="1_gt0en"]
-[ext_resource type="Resource" uid="uid://cvvsoohf141x1" path="res://Resources/Chats/JamesChats/James1-Translate.tres" id="2_pesd2"]
+[ext_resource type="Resource" uid="uid://dvyavfu2aisrr" path="res://Resources/Chats/JamesChats/James0.tres" id="2_snkvc"]
 
 [resource]
 script = ExtResource("1_5tjhn")
@@ -10,5 +10,5 @@ chatName = "James"
 avatar = ExtResource("1_gt0en")
 numPeople = 1
 category = "Private"
-chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("2_pesd2")])
+chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("2_snkvc")])
 chatId = "james"

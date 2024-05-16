@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://coqooverp88br"
+path="res://.godot/imported/Horror3-PostVanessaDeath.dialogue-9bb7e0d7ddd441db360aace7183f49f7.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/HorrorChat/Horror3-PostVanessaDeath.dialogue"
+dest_files=["res://.godot/imported/Horror3-PostVanessaDeath.dialogue-9bb7e0d7ddd441db360aace7183f49f7.tres"]
+
+[params]
+
+defaults=true

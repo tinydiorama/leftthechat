@@ -36,6 +36,7 @@ var allChatHistory:Dictionary
 var internetUnlocked:bool
 var vanessaArticleRead:bool
 var dayIndicator:String
+var presentEvidenceUnlocked:bool
 
 signal newEmail
 signal newFriend
@@ -117,6 +118,7 @@ func _ready():
 		newCharacterBuilder.emit()
 		
 	if ( ! gameStarted ):
+		dayIndicator = "day1"
 		storyManager.addInitialContent()
 		newEmail.emit()
 		newFriend.emit()
@@ -177,6 +179,7 @@ func on_save_game(saved_data:Array[SavedData]):
 	my_data.chatHistory = allChatHistory
 	my_data.completedChats = completedChats
 	my_data.internetUnlocked = internetUnlocked
+	my_data.presentEvidenceUnlocked = presentEvidenceUnlocked
 	my_data.internetSearchTerms = mainGameNav.getInternetUnlockedArticles()
 	my_data.vanessaArticleRead = vanessaArticleRead
 	my_data.dayIndicator = dayIndicator
@@ -208,6 +211,7 @@ func on_load_game(saved_data:SavedData):
 	allChatHistory = my_data.chatHistory
 	completedChats = my_data.completedChats
 	internetUnlocked = my_data.internetUnlocked
+	presentEvidenceUnlocked = my_data.presentEvidenceUnlocked
 	vanessaArticleRead = my_data.vanessaArticleRead
 	dayIndicator = my_data.dayIndicator
 	

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://vmtufn834x8p"
+path="res://.godot/imported/James-PresentEvidence.dialogue-7fcd4006e9d26b58e95f888c4136d58e.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/James/James-PresentEvidence.dialogue"
+dest_files=["res://.godot/imported/James-PresentEvidence.dialogue-7fcd4006e9d26b58e95f888c4136d58e.tres"]
+
+[params]
+
+defaults=true

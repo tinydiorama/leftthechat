@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://ci7muihubis4s"
+path="res://.godot/imported/Noah-PresentEvidence.dialogue-dc158f58e99b45c381a796df7f0fa0ad.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Noah/Noah-PresentEvidence.dialogue"
+dest_files=["res://.godot/imported/Noah-PresentEvidence.dialogue-dc158f58e99b45c381a796df7f0fa0ad.tres"]
+
+[params]
+
+defaults=true

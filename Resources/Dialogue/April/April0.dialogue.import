@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dm4xn0ujxk78i"
+path="res://.godot/imported/April0.dialogue-1c700ac32324995e651e7cdcbe355ea3.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/April/April0.dialogue"
+dest_files=["res://.godot/imported/April0.dialogue-1c700ac32324995e651e7cdcbe355ea3.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bnq5c2xgbqwbd"
+path="res://.godot/imported/Minji8-AnottherEmail2.dialogue-4328279cb955d4af1808c62285a9b89e.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Minji/Minji8-AnottherEmail2.dialogue"
+dest_files=["res://.godot/imported/Minji8-AnottherEmail2.dialogue-4328279cb955d4af1808c62285a9b89e.tres"]
+
+[params]
+
+defaults=true

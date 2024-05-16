@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c5s36yb8k17ed"
+path="res://.godot/imported/Noah0.dialogue-75dc88f710cf10d0d12e1498f1edb248.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Noah/Noah0.dialogue"
+dest_files=["res://.godot/imported/Noah0.dialogue-75dc88f710cf10d0d12e1498f1edb248.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://c0uvcv7vgpo5"]
+
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_a0cqb"]
+[ext_resource type="Resource" uid="uid://dm4xn0ujxk78i" path="res://Resources/Dialogue/April/April0.dialogue" id="1_xm0rm"]
+
+[resource]
+script = ExtResource("1_a0cqb")
+chatMetaName = "April0"
+chatPath = ExtResource("1_xm0rm")
+unlocked = true
+chatroomName = "April"

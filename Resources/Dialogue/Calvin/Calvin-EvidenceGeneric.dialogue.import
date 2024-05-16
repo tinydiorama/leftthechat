@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://csh5m16knqjs7"
+path="res://.godot/imported/Calvin-EvidenceGeneric.dialogue-5e7d9ee07768e9670ae4c817281f9db0.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Calvin/Calvin-EvidenceGeneric.dialogue"
+dest_files=["res://.godot/imported/Calvin-EvidenceGeneric.dialogue-5e7d9ee07768e9670ae4c817281f9db0.tres"]
+
+[params]
+
+defaults=true

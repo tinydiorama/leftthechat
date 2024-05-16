@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://850vm5m1d4ax"
+path="res://.godot/imported/April1-Worried.dialogue-d18326c77e0c2ee3764f91f3ce64d740.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/April/April1-Worried.dialogue"
+dest_files=["res://.godot/imported/April1-Worried.dialogue-d18326c77e0c2ee3764f91f3ce64d740.tres"]
+
+[params]
+
+defaults=true

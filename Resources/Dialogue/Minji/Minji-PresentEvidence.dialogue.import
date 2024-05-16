@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://ccmqdga3wh8af"
+path="res://.godot/imported/Minji-PresentEvidence.dialogue-d03e221165276b8b919abfef21898ebd.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Minji/Minji-PresentEvidence.dialogue"
+dest_files=["res://.godot/imported/Minji-PresentEvidence.dialogue-d03e221165276b8b919abfef21898ebd.tres"]
+
+[params]
+
+defaults=true

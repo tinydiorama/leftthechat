@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://dj3vf3ljljx3f"]
 
-[ext_resource type="Resource" uid="uid://cughvox0n1gow" path="res://Resources/Dialogue/Minji3-Worried.dialogue" id="1_4shj0"]
+[ext_resource type="Resource" uid="uid://cughvox0n1gow" path="res://Resources/Dialogue/Minji/Minji3-Worried.dialogue" id="1_4shj0"]
 [ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_o7go0"]
 
 [resource]

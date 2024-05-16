@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dig6enghrkwyy"
+path="res://.godot/imported/Minji4-VanessaEmail.dialogue-5c020ab9c8e4b88a94b6abcbed11562f.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Minji/Minji4-VanessaEmail.dialogue"
+dest_files=["res://.godot/imported/Minji4-VanessaEmail.dialogue-5c020ab9c8e4b88a94b6abcbed11562f.tres"]
+
+[params]
+
+defaults=true

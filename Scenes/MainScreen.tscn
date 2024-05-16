@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=3 uid="uid://drxmlpy8vc5si"]
+[gd_scene load_steps=110 format=3 uid="uid://drxmlpy8vc5si"]
 
 [ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="1_fmx65"]
 [ext_resource type="Texture2D" uid="uid://dikti0npwvcsv" path="res://Sprites/pinkbg.png" id="2_4edjn"]
@@ -33,21 +33,21 @@
 [ext_resource type="PackedScene" uid="uid://de4wqdhgkairk" path="res://Scenes/Friends/social_modal.tscn" id="24_ycsi1"]
 [ext_resource type="Texture2D" uid="uid://dg0n43t7iluph" path="res://Sprites/closebutton-pixel.png" id="25_aj7a0"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="25_cmm8w"]
-[ext_resource type="Resource" uid="uid://cet7ynlxhh2yw" path="res://Resources/Dialogue/Minji-EvidenceGeneric.dialogue" id="25_eulrv"]
+[ext_resource type="Resource" uid="uid://cet7ynlxhh2yw" path="res://Resources/Dialogue/Minji/Minji-EvidenceGeneric.dialogue" id="25_eulrv"]
 [ext_resource type="PackedScene" uid="uid://drrj27plfuxpt" path="res://Scenes/Emails/email_modal.tscn" id="25_u6bpq"]
-[ext_resource type="Resource" uid="uid://ckfmrxrg80cbs" path="res://Resources/Dialogue/James-EvidenceGeneric.dialogue" id="26_dqixn"]
+[ext_resource type="Resource" uid="uid://ckfmrxrg80cbs" path="res://Resources/Dialogue/James/James-EvidenceGeneric.dialogue" id="26_dqixn"]
 [ext_resource type="Script" path="res://Scripts/Managers/StoryManager.gd" id="27_l0knw"]
-[ext_resource type="Resource" uid="uid://c6s1pfwf8ib7j" path="res://Resources/Dialogue/Amelia-EvidenceGeneric.dialogue" id="27_xe8n2"]
-[ext_resource type="Resource" uid="uid://7scs3rj00qtw" path="res://Resources/Dialogue/April-EvidenceGeneric.dialogue" id="28_62exp"]
+[ext_resource type="Resource" uid="uid://c6s1pfwf8ib7j" path="res://Resources/Dialogue/Amelia/Amelia-EvidenceGeneric.dialogue" id="27_xe8n2"]
+[ext_resource type="Resource" uid="uid://7scs3rj00qtw" path="res://Resources/Dialogue/April/April-EvidenceGeneric.dialogue" id="28_62exp"]
 [ext_resource type="Script" path="res://Scripts/Interfaces/Notification.gd" id="28_alrkr"]
 [ext_resource type="PackedScene" uid="uid://bnng0mkesov6l" path="res://Scenes/Evidence/select_evidence.tscn" id="28_e20sr"]
 [ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Scripts/Interfaces/Prompt-Regular.ttf" id="28_hfkc3"]
 [ext_resource type="PackedScene" uid="uid://da5d0bcmkaulf" path="res://Scenes/Evidence/notes_modal.tscn" id="28_v2uax"]
-[ext_resource type="Resource" uid="uid://csh5m16knqjs7" path="res://Resources/Dialogue/Calvin-EvidenceGeneric.dialogue" id="29_m75ow"]
+[ext_resource type="Resource" uid="uid://csh5m16knqjs7" path="res://Resources/Dialogue/Calvin/Calvin-EvidenceGeneric.dialogue" id="29_m75ow"]
 [ext_resource type="PackedScene" uid="uid://5iww0467vemc" path="res://Scenes/Main/day_notification.tscn" id="30_88mvv"]
-[ext_resource type="Resource" uid="uid://c2k61e650e1r6" path="res://Resources/Dialogue/Noah-EvidenceGeneric.dialogue" id="30_b5nwn"]
+[ext_resource type="Resource" uid="uid://c2k61e650e1r6" path="res://Resources/Dialogue/Noah/Noah-EvidenceGeneric.dialogue" id="30_b5nwn"]
 [ext_resource type="Resource" uid="uid://dl7qcnty45w14" path="res://Resources/Emails/WelcomeStudents.tres" id="30_p23g8"]
-[ext_resource type="Resource" uid="uid://dug7qbbtd87ti" path="res://Resources/Dialogue/Paige-EvidenceGeneric.dialogue" id="31_mk4b5"]
+[ext_resource type="Resource" uid="uid://dug7qbbtd87ti" path="res://Resources/Dialogue/Paige/Paige-EvidenceGeneric.dialogue" id="31_mk4b5"]
 [ext_resource type="Resource" uid="uid://28lpfp3ahoqb" path="res://Resources/Emails/BankInfo.tres" id="31_trvxv"]
 [ext_resource type="Resource" uid="uid://c7x7k38qnb4tn" path="res://Resources/Friends/Noah.tres" id="32_gwf6s"]
 [ext_resource type="Resource" uid="uid://c13oxwn6vg0fd" path="res://Resources/Friends/Amelia.tres" id="33_lprht"]
@@ -90,11 +90,17 @@
 [ext_resource type="Resource" uid="uid://f7yk21ukuj03" path="res://Resources/Chats/HorrorChats/Horror6-NoOneCameForward.tres" id="62_sstyt"]
 [ext_resource type="Resource" uid="uid://h2bhxrk8wn70" path="res://Resources/Chats/Calvin.tres" id="68_8sp0r"]
 [ext_resource type="Resource" uid="uid://cbnd2i7kfpkwb" path="res://Resources/Chats/James.tres" id="69_ckw2v"]
+[ext_resource type="Resource" uid="uid://owl2bk5qjxjm" path="res://Resources/Chats/Amelia.tres" id="76_fddy2"]
+[ext_resource type="Resource" uid="uid://dnns8o7hbpoc6" path="res://Resources/Chats/Noah.tres" id="79_52yjh"]
 [ext_resource type="Resource" uid="uid://b6w0limrhfw0l" path="res://Resources/Evidence/SchoolId.tres" id="81_8ipud"]
 [ext_resource type="PackedScene" uid="uid://0x5u6cmfk2u5" path="res://Scenes/sound_player.tscn" id="82_uaxm6"]
 [ext_resource type="Resource" uid="uid://doykoduke65t6" path="res://Resources/Evidence/BurgerEmail.tres" id="85_cyeqd"]
 [ext_resource type="Resource" uid="uid://crigq3vrexjk1" path="res://Resources/Evidence/RamenEmail.tres" id="86_vb4ov"]
+[ext_resource type="Resource" uid="uid://cnxm3n8ktutw5" path="res://Resources/Chats/AprilChats/April1-Worried.tres" id="91_n8n1q"]
+[ext_resource type="Resource" uid="uid://cvvsoohf141x1" path="res://Resources/Chats/JamesChats/James1-Translate.tres" id="92_5l8y8"]
+[ext_resource type="Resource" uid="uid://drxamxx52vx6c" path="res://Resources/Chats/CalvinChats/Calvin1-Translate.tres" id="93_qgqke"]
 [ext_resource type="Texture2D" uid="uid://cnytro4gfvccy" path="res://Sprites/foundit-icon.png" id="94_qc2nk"]
+[ext_resource type="Resource" uid="uid://cnx5mvm7v4ffk" path="res://Resources/Chats/PaigeChats/Paige1-Suspicious.tres" id="95_psgfx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iumoi"]
 bg_color = Color(0.968627, 0.952941, 0.92549, 1)
@@ -927,6 +933,15 @@ script = ExtResource("25_cmm8w")
 [node name="StoryManager" type="Node" parent="Utilities"]
 unique_name_in_owner = true
 script = ExtResource("27_l0knw")
+initialChatsTable = {
+"Amelia0": ["3"],
+"April0": ["3"],
+"Calvin0": ["3"],
+"James0": ["3"],
+"Minji0": ["3"],
+"Noah0": ["3"],
+"Paige0": ["3"]
+}
 allEmails = {
 "burgerEmail": [ExtResource("36_6dgd0")],
 "initialEmails": [ExtResource("30_p23g8"), ExtResource("31_trvxv")],
@@ -942,24 +957,24 @@ allForums = {
 "initialForums": [ExtResource("40_obb53")]
 }
 allChatrooms = {
-"aprilInitialDMs": [ExtResource("51_c1f2f")],
-"calvinInitialDMs": [ExtResource("68_8sp0r")],
 "day2DadChat": [ExtResource("48_8pvd5")],
-"initialChatrooms": [ExtResource("44_if2et"), ExtResource("42_dkb67"), ExtResource("46_sgmv0")],
-"jamesInitialDMs": [ExtResource("69_ckw2v")],
-"noahMinjiInitialDMs": [ExtResource("58_awdnb")],
-"paigeInitialDMs": [ExtResource("52_i7bed")]
+"initialChatrooms": [ExtResource("44_if2et"), ExtResource("42_dkb67"), ExtResource("46_sgmv0"), ExtResource("76_fddy2"), ExtResource("51_c1f2f"), ExtResource("68_8sp0r"), ExtResource("69_ckw2v"), ExtResource("79_52yjh"), ExtResource("52_i7bed")],
+"noahMinjiInitialDMs": [ExtResource("58_awdnb")]
 }
 chatroomUpdates = {
+"aprilInitialDMs": ExtResource("91_n8n1q"),
+"calvinInitialDMs": ExtResource("93_qgqke"),
 "day2PostObit": ExtResource("55_rf06y"),
 "day2PostVanessa": ExtResource("54_n2xkc"),
 "horror5Aftermath": ExtResource("57_8834e"),
 "horrorNoOneCameForward": ExtResource("62_sstyt"),
+"jamesInitialDMs": ExtResource("92_5l8y8"),
 "minji5Trust": ExtResource("61_wor3x"),
 "minjiInvite": ExtResource("47_om4wu"),
 "minjiVanessaEmail": ExtResource("58_yx3y3"),
 "minjiWorried": ExtResource("56_e4kow"),
 "mom2": ExtResource("51_5tn64"),
+"paigeInitialDMs": ExtResource("95_psgfx"),
 "vanessaDeath": ExtResource("48_l2ct2")
 }
 allEvidence = {

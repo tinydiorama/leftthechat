@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://2x6ptk0dqou8"
+path="res://.godot/imported/Calvin0.dialogue-bb4a0939cc4fdfee1cd8199c5f695e3a.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Calvin/Calvin0.dialogue"
+dest_files=["res://.godot/imported/Calvin0.dialogue-bb4a0939cc4fdfee1cd8199c5f695e3a.tres"]
+
+[params]
+
+defaults=true

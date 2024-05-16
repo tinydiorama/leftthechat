@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cljuy4p1r6d6f"
+path="res://.godot/imported/Paige0.dialogue-6e46dd487b73c23c77fd537a8689203b.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Paige/Paige0.dialogue"
+dest_files=["res://.godot/imported/Paige0.dialogue-6e46dd487b73c23c77fd537a8689203b.tres"]
+
+[params]
+
+defaults=true

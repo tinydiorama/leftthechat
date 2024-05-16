@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dx55xuyjb8t6f"
+path="res://.godot/imported/April-PresentEvidence.dialogue-ead9534c5991a84e3839641a2284749c.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/April/April-PresentEvidence.dialogue"
+dest_files=["res://.godot/imported/April-PresentEvidence.dialogue-ead9534c5991a84e3839641a2284749c.tres"]
+
+[params]
+
+defaults=true

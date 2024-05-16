@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://b0u7hn4oqxprf"]
 
 [ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_qvrmw"]
-[ext_resource type="Resource" uid="uid://c4cihb0va4o1h" path="res://Resources/Dialogue/Minji1.dialogue" id="1_vgiqf"]
+[ext_resource type="Resource" uid="uid://c4cihb0va4o1h" path="res://Resources/Dialogue/Minji/Minji1.dialogue" id="1_vgiqf"]
 
 [resource]
 script = ExtResource("1_qvrmw")

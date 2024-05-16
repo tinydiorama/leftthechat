@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://baejbo4g4dq8k"
+path="res://.godot/imported/Horror6-NoOneCameFoward.dialogue-fe5e26d05c898123b5307354eb614c4a.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/HorrorChat/Horror6-NoOneCameFoward.dialogue"
+dest_files=["res://.godot/imported/Horror6-NoOneCameFoward.dialogue-fe5e26d05c898123b5307354eb614c4a.tres"]
+
+[params]
+
+defaults=true

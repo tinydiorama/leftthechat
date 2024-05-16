@@ -56,6 +56,7 @@ func showSelectEvidenceModal():
 
 func _on_select_evidence_evidence_selected(evidenceToPresent:Evidence):
 	var evidenceSegment = evidencePlan.get(gameManager.dayIndicator)
+	print(gameManager.dayIndicator)
 	var evidenceDialogue = evidenceSegment.get(relevantChat).get(evidenceToPresent.evidenceId)
 	if ( evidenceDialogue != null):
 		chatStoryPlayer.playDialogueDirect(evidenceDialogue)

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cn31d1sb41ugu"
+path="res://.godot/imported/Minji0.dialogue-2767b2005b49343c414b3906debae761.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Minji/Minji0.dialogue"
+dest_files=["res://.godot/imported/Minji0.dialogue-2767b2005b49343c414b3906debae761.tres"]
+
+[params]
+
+defaults=true

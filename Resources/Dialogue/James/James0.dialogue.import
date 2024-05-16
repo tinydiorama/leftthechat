@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://fy1m6shqcoal"
+path="res://.godot/imported/James0.dialogue-0ffbc0df1d5513989c4c56ccf6d012cf.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/James/James0.dialogue"
+dest_files=["res://.godot/imported/James0.dialogue-0ffbc0df1d5513989c4c56ccf6d012cf.tres"]
+
+[params]
+
+defaults=true

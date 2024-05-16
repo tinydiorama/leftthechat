@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c5tn65y7ttpam"
+path="res://.godot/imported/Amelia0.dialogue-3e07c15cc5a6323baa353d3b9297dd43.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Amelia/Amelia0.dialogue"
+dest_files=["res://.godot/imported/Amelia0.dialogue-3e07c15cc5a6323baa353d3b9297dd43.tres"]
+
+[params]
+
+defaults=true

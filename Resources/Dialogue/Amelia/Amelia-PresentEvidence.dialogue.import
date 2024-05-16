@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://lr4jqev7njlm"
+path="res://.godot/imported/Amelia-PresentEvidence.dialogue-760b15d50140939906823768f16aedb3.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Amelia/Amelia-PresentEvidence.dialogue"
+dest_files=["res://.godot/imported/Amelia-PresentEvidence.dialogue-760b15d50140939906823768f16aedb3.tres"]
+
+[params]
+
+defaults=true

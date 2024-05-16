@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_jk645"]
 [ext_resource type="Texture2D" uid="uid://r2be8pmkqtos" path="res://Sprites/avatars-chat/the_professor_cal.png" id="1_wkpi5"]
-[ext_resource type="Resource" uid="uid://drxamxx52vx6c" path="res://Resources/Chats/CalvinChats/Calvin1-Translate.tres" id="2_a1atw"]
+[ext_resource type="Resource" uid="uid://b465hysnbfdyu" path="res://Resources/Chats/CalvinChats/Calvin0.tres" id="2_q0x2x"]
 
 [resource]
 script = ExtResource("1_jk645")
@@ -10,5 +10,5 @@ chatName = "Calvin"
 avatar = ExtResource("1_wkpi5")
 numPeople = 1
 category = "Private"
-chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("2_a1atw")])
+chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("2_q0x2x")])
 chatId = "calvin"

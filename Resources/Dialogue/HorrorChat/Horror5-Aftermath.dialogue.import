@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bu7561jnd7ex1"
+path="res://.godot/imported/Horror5-Aftermath.dialogue-e60f286f31cf563eeeb7189847794bf8.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/HorrorChat/Horror5-Aftermath.dialogue"
+dest_files=["res://.godot/imported/Horror5-Aftermath.dialogue-e60f286f31cf563eeeb7189847794bf8.tres"]
+
+[params]
+
+defaults=true

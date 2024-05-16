@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_3117y"]
 [ext_resource type="Texture2D" uid="uid://hrj2rod1wrym" path="res://Sprites/avatars-chat/bookofpaige.png" id="1_k745o"]
-[ext_resource type="Resource" uid="uid://cnx5mvm7v4ffk" path="res://Resources/Chats/PaigeChats/Paige1-Suspicious.tres" id="2_25yrv"]
+[ext_resource type="Resource" uid="uid://8r4hp0stcwh8" path="res://Resources/Chats/PaigeChats/Paige0.tres" id="2_u1s3a"]
 
 [resource]
 script = ExtResource("1_3117y")
@@ -10,5 +10,5 @@ chatName = "Paige"
 avatar = ExtResource("1_k745o")
 numPeople = 1
 category = "Private"
-chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("2_25yrv")])
+chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("2_u1s3a")])
 chatId = "paige"

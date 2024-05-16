@@ -1,6 +1,7 @@
 class_name StoryManager
 extends Node
 
+@export var initialChatsTable:Dictionary
 @export var allEmails:Dictionary = {}
 @export var allFriends:Dictionary = {}
 @export var allForums:Dictionary = {}
@@ -24,10 +25,21 @@ func addInitialContent():
 		gameManager.add_email(email)
 
 	for chatroom in allChatrooms.get("initialChatrooms"):
-		gameManager.add_chat(chatroom)
+		if ( chatroom.chatName == "Minji" || chatroom.chatName == "Horror Fanatics - General" || chatroom.chatName == "Mom"):
+			gameManager.add_chat(chatroom)
+		else:
+			gameManager.chats.add_chatroom(chatroom)
 		
 	gameManager.add_evidence(allEvidence.get("schoolid"))
 	gameManager.obtainedEvidence.append("schoolid")
+	
+	for chatKey in initialChatsTable:
+		var chatHistory = initialChatsTable[chatKey]
+		gameManager.completedChats.append(chatKey)
+		for chatId in chatHistory:
+			gameManager.addChatHistory(chatKey, chatId)
+			
+	gameManager.saveGame()
 
 func advanceStory():
 	if ( gameManager.isAllUnreads() ):
@@ -71,9 +83,8 @@ func advanceStory():
 			gameManager.add_chat_segment(chatroomUpdates.get("horror5Aftermath"), "Horror Fanatics - General")
 			gameManager.seenChats.append("minjiVanessaEmail")
 			gameManager.add_chat_segment(chatroomUpdates.get("minjiVanessaEmail"), "Minji")
-			for chatroom in allChatrooms.get("aprilInitialDMs"):
-				gameManager.add_chat(chatroom)
 			gameManager.seenChats.append("aprilInitialDMs")
+			gameManager.add_chat_segment(chatroomUpdates.get("aprilInitialDMs"), "April")
 			
 			gameManager.dayIndicator = "day3"
 			dayNotification.display("Day Three")
@@ -82,9 +93,8 @@ func advanceStory():
 			gameManager.add_email(email)
 			gameManager.seenEmails.append("minjiVanessaEmail")
 	if ( ! gameManager.seenChats.has("paigeInitialDMs") && gameManager.completedChats.has("Horror5-Aftermath") ):
-		for chatroom in allChatrooms.get("paigeInitialDMs"):
-			gameManager.add_chat(chatroom)
-		gameManager.seenChats.append("paigeInitialDMs")
+			gameManager.seenChats.append("paigeInitialDMs")
+			gameManager.add_chat_segment(chatroomUpdates.get("paigeInitialDMs"), "Paige")
 	if ( ! gameManager.seenChats.has("minji5Trust") && gameManager.unreadEmails.size() == 0 && gameManager.seenEmails.has("minjiVanessaEmail")):
 		gameManager.seenChats.append("minji5Trust")
 		gameManager.add_chat_segment(chatroomUpdates.get("minji5Trust"), "Minji")
@@ -111,13 +121,11 @@ func advanceStory():
 			gameManager.seenEmails.append("noahMinjiEmail")
 		# Search Unlock: Janice Walter & Tableaux
 		if ( ! gameManager.completedChats.has("Calvin1-Translate") && gameManager.completedChats.has("NoahMinji-VanessaEmails")):
-			for chatroom in allChatrooms.get("calvinInitialDMs"):
-				gameManager.add_chat(chatroom)
 			gameManager.seenChats.append("calvinInitialDMs")
+			gameManager.add_chat_segment(chatroomUpdates.get("calvinInitialDMs"), "Calvin")
 		if ( ! gameManager.completedChats.has("James1-Translate") && gameManager.completedChats.has("Calvin1-Translate")):
-			for chatroom in allChatrooms.get("jamesInitialDMs"):
-				gameManager.add_chat(chatroom)
 			gameManager.seenChats.append("jamesInitialDMs")
+			gameManager.add_chat_segment(chatroomUpdates.get("jamesInitialDMs"), "James")
 
 func checkForNewEvidence(id:String):
 	print("selected a thing " + id)

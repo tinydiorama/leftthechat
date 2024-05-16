@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dq13kfn00jmvt"
+path="res://.godot/imported/Paige-PresentEvidence.dialogue-8f799cb80da49e70ddd749525935a0b7.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Paige/Paige-PresentEvidence.dialogue"
+dest_files=["res://.godot/imported/Paige-PresentEvidence.dialogue-8f799cb80da49e70ddd749525935a0b7.tres"]
+
+[params]
+
+defaults=true

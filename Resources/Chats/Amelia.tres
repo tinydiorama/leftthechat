@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Chatroom" load_steps=3 format=3 uid="uid://owl2bk5qjxjm"]
+[gd_resource type="Resource" script_class="Chatroom" load_steps=4 format=3 uid="uid://owl2bk5qjxjm"]
 
 [ext_resource type="Texture2D" uid="uid://bnyqpfd6tibgy" path="res://Sprites/avatars-chat/ameliarate.png" id="1_hai6n"]
 [ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_puea2"]
+[ext_resource type="Resource" uid="uid://h2usvq2ibhu0" path="res://Resources/Chats/AmeliaChats/Amelia0.tres" id="2_y52bu"]
 
 [resource]
 script = ExtResource("1_puea2")
@@ -9,5 +10,5 @@ chatName = "Amelia"
 avatar = ExtResource("1_hai6n")
 numPeople = 1
 category = "Private"
-chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([null])
+chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("2_y52bu")])
 chatId = "amelia"

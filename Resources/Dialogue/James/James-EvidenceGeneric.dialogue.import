@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://ckfmrxrg80cbs"
+path="res://.godot/imported/James-EvidenceGeneric.dialogue-330c871df523016dd5fa62f0cfb848c3.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/James/James-EvidenceGeneric.dialogue"
+dest_files=["res://.godot/imported/James-EvidenceGeneric.dialogue-330c871df523016dd5fa62f0cfb848c3.tres"]
+
+[params]
+
+defaults=true

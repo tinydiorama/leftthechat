@@ -20,6 +20,7 @@ extends SavedData
 @export var unreadChats:Array[String]
 @export var completedChats:Array[String]
 @export var internetUnlocked:bool
+@export var presentEvidenceUnlocked:bool
 @export var vanessaArticleRead:bool
 @export var internetSearchTerms:Array
 @export var dayIndicator:String

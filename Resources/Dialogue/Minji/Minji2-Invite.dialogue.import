@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cohbgoeadd4xl"
+path="res://.godot/imported/Minji2-Invite.dialogue-3d87a9442c484ecf09774dcab1e6342b.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Minji/Minji2-Invite.dialogue"
+dest_files=["res://.godot/imported/Minji2-Invite.dialogue-3d87a9442c484ecf09774dcab1e6342b.tres"]
+
+[params]
+
+defaults=true

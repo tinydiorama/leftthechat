@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c6s1pfwf8ib7j"
+path="res://.godot/imported/Amelia-EvidenceGeneric.dialogue-37bf77bbca02393935f8de3383c50d8c.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Amelia/Amelia-EvidenceGeneric.dialogue"
+dest_files=["res://.godot/imported/Amelia-EvidenceGeneric.dialogue-37bf77bbca02393935f8de3383c50d8c.tres"]
+
+[params]
+
+defaults=true

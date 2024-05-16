@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://ei0ycavnmki4"
+path="res://.godot/imported/Paige1-Suspicious.dialogue-97260d062559215f16e443027fa986bd.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Paige/Paige1-Suspicious.dialogue"
+dest_files=["res://.godot/imported/Paige1-Suspicious.dialogue-97260d062559215f16e443027fa986bd.tres"]
+
+[params]
+
+defaults=true
