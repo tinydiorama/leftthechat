@@ -7,6 +7,7 @@ extends MarginContainer
 @onready var gameManager = get_node("/root/MainScreen/Utilities/GameManager")
 
 @export var searchResults:Array
+@export var optionLabels:Array = ["vanessaArticle"]
 
 signal vanessaArticleRead
 
@@ -38,7 +39,10 @@ func _on_option_button_item_selected(index):
 		vanessaArticleRead.emit()
 
 func add_option(itemName:String):
+	if ( optionLabels.has(itemName) ):
+		return
 	internetDropdown.add_item(itemName)
+	optionLabels.append(itemName)
 
 
 func _on_back_button_pressed():

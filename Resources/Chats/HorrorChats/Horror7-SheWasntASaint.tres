@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://bxkv55mohdr5l"]
+
+[ext_resource type="Resource" uid="uid://bfjel3bpx7368" path="res://Resources/Dialogue/HorrorChat/Horror7-SheWasntASaint.dialogue" id="1_bxyg8"]
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_sp0sj"]
+
+[resource]
+script = ExtResource("1_sp0sj")
+chatMetaName = "Horror7-SheWasntASaint"
+chatPath = ExtResource("1_bxyg8")
+unlocked = false
+chatroomName = "Horror Fanatics - General"

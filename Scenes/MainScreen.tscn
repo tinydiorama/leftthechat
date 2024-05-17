@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=3 uid="uid://drxmlpy8vc5si"]
+[gd_scene load_steps=114 format=3 uid="uid://drxmlpy8vc5si"]
 
 [ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="1_fmx65"]
 [ext_resource type="Texture2D" uid="uid://dikti0npwvcsv" path="res://Sprites/pinkbg.png" id="2_4edjn"]
@@ -36,6 +36,7 @@
 [ext_resource type="Resource" uid="uid://cet7ynlxhh2yw" path="res://Resources/Dialogue/Minji/Minji-EvidenceGeneric.dialogue" id="25_eulrv"]
 [ext_resource type="PackedScene" uid="uid://drrj27plfuxpt" path="res://Scenes/Emails/email_modal.tscn" id="25_u6bpq"]
 [ext_resource type="Resource" uid="uid://ckfmrxrg80cbs" path="res://Resources/Dialogue/James/James-EvidenceGeneric.dialogue" id="26_dqixn"]
+[ext_resource type="Resource" uid="uid://dw4umqh7kx2ig" path="res://Resources/Dialogue/Calvin/Calvin2-Translate.dialogue" id="27_8pidb"]
 [ext_resource type="Script" path="res://Scripts/Managers/StoryManager.gd" id="27_l0knw"]
 [ext_resource type="Resource" uid="uid://c6s1pfwf8ib7j" path="res://Resources/Dialogue/Amelia/Amelia-EvidenceGeneric.dialogue" id="27_xe8n2"]
 [ext_resource type="Resource" uid="uid://7scs3rj00qtw" path="res://Resources/Dialogue/April/April-EvidenceGeneric.dialogue" id="28_62exp"]
@@ -98,9 +99,12 @@
 [ext_resource type="Resource" uid="uid://crigq3vrexjk1" path="res://Resources/Evidence/RamenEmail.tres" id="86_vb4ov"]
 [ext_resource type="Resource" uid="uid://cnxm3n8ktutw5" path="res://Resources/Chats/AprilChats/April1-Worried.tres" id="91_n8n1q"]
 [ext_resource type="Resource" uid="uid://cvvsoohf141x1" path="res://Resources/Chats/JamesChats/James1-Translate.tres" id="92_5l8y8"]
-[ext_resource type="Resource" uid="uid://drxamxx52vx6c" path="res://Resources/Chats/CalvinChats/Calvin1-Translate.tres" id="93_qgqke"]
+[ext_resource type="Resource" uid="uid://drxamxx52vx6c" path="res://Resources/Chats/CalvinChats/Calvin1-Professor.tres" id="93_qgqke"]
 [ext_resource type="Texture2D" uid="uid://cnytro4gfvccy" path="res://Sprites/foundit-icon.png" id="94_qc2nk"]
 [ext_resource type="Resource" uid="uid://cnx5mvm7v4ffk" path="res://Resources/Chats/PaigeChats/Paige1-Suspicious.tres" id="95_psgfx"]
+[ext_resource type="Resource" uid="uid://bxkv55mohdr5l" path="res://Resources/Chats/HorrorChats/Horror7-SheWasntASaint.tres" id="96_45dul"]
+[ext_resource type="Resource" uid="uid://xnch0yibbvx" path="res://Resources/Evidence/LatinPhrase.tres" id="100_v8ns3"]
+[ext_resource type="Resource" uid="uid://bw1rgou5gbf6s" path="res://Resources/Evidence/VanessaDeath.tres" id="102_djdit"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iumoi"]
 bg_color = Color(0.968627, 0.952941, 0.92549, 1)
@@ -671,7 +675,9 @@ evidencePlan = {
 "day4": {
 "Amelia": {},
 "April": {},
-"Calvin": {},
+"Calvin": {
+"vanessaNoahEmail": ExtResource("27_8pidb")
+},
 "James": {},
 "Minji": {},
 "Noah": {},
@@ -858,7 +864,7 @@ visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_right = 43200.0
+offset_right = 45360.0
 grow_horizontal = 2
 script = ExtResource("28_alrkr")
 
@@ -867,7 +873,7 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_top = -263.0
-offset_right = 885600.0
+offset_right = 975240.0
 offset_bottom = 2012.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iumoi")
@@ -967,6 +973,7 @@ chatroomUpdates = {
 "day2PostObit": ExtResource("55_rf06y"),
 "day2PostVanessa": ExtResource("54_n2xkc"),
 "horror5Aftermath": ExtResource("57_8834e"),
+"horror7SheWasntASaint": ExtResource("96_45dul"),
 "horrorNoOneCameForward": ExtResource("62_sstyt"),
 "jamesInitialDMs": ExtResource("92_5l8y8"),
 "minji5Trust": ExtResource("61_wor3x"),
@@ -978,7 +985,11 @@ chatroomUpdates = {
 "vanessaDeath": ExtResource("48_l2ct2")
 }
 allEvidence = {
-"schoolid": ExtResource("81_8ipud")
+"burgerEmail": ExtResource("85_cyeqd"),
+"ramenEmail": ExtResource("86_vb4ov"),
+"schoolid": ExtResource("81_8ipud"),
+"vanessaDeath": ExtResource("102_djdit"),
+"vanessaNoahEmail": ExtResource("100_v8ns3")
 }
 evidencePlan = {
 "day1": {},
@@ -986,7 +997,10 @@ evidencePlan = {
 "burgerEmail": ExtResource("85_cyeqd"),
 "ramenEmail": ExtResource("86_vb4ov")
 },
-"day3": {}
+"day3": {},
+"day4": {
+"vanessaNoahEmail": ExtResource("100_v8ns3")
+}
 }
 
 [node name="CharacterBuilder" type="Control" parent="."]
@@ -1005,12 +1019,14 @@ layout_mode = 1
 offset_right = 5.0
 
 [node name="EvidenceGet" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1080.0
-offset_right = -1080.0
+offset_right = 1080.0
+offset_bottom = 3840.0
 grow_horizontal = 2
 grow_vertical = 2
 

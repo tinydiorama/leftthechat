@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Evidence" load_steps=3 format=3 uid="uid://xnch0yibbvx"]
+
+[ext_resource type="Texture2D" uid="uid://p28kxa0kputv" path="res://Sprites/ChatIcon-Pixel.png" id="1_gfrwy"]
+[ext_resource type="Script" path="res://Resources/Evidence/Evidence.gd" id="1_s7ukk"]
+
+[resource]
+script = ExtResource("1_s7ukk")
+evidenceId = "vanessaNoahEmail"
+evidenceTitle = "In morte ero eius"
+description = "Vanessa mentioned this phrase just before she left the chat."
+icon = ExtResource("1_gfrwy")

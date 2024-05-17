@@ -14,6 +14,7 @@ extends Node
 @onready var gameManager = %GameManager
 @onready var dayNotification = %DayNotification
 @onready var mainGameNav = %MainGameNav
+@onready var internetModal = %InternetModal
 
 func addInitialContent():
 	if not gameManager: await self.ready
@@ -99,13 +100,18 @@ func advanceStory():
 		gameManager.seenChats.append("minji5Trust")
 		gameManager.add_chat_segment(chatroomUpdates.get("minji5Trust"), "Minji")
 	if ( gameManager.isAllUnreads()): 
+		# Day 3
 		if ( ! gameManager.completedChats.has("Horror6-NoOneCameForward") && gameManager.completedChats.has("Paige1-Suspicious")):
 			gameManager.add_chat_segment(chatroomUpdates.get("horrorNoOneCameForward"), "Horror Fanatics - General")
 			gameManager.seenChats.append("horrorNoOneCameForward")
+		# DAY 4
 		if ( ! gameManager.completedChats.has("NoahMinji-VanessaEmails") && gameManager.completedChats.has("Horror6-NoOneCameForward")):
 			for chatroom in allChatrooms.get("noahMinjiInitialDMs"):
 				gameManager.add_chat(chatroom)
 			gameManager.seenChats.append("noahMinjiInitialDMs")
+			
+			gameManager.seenChats.append("horror7SheWasntASaint")
+			gameManager.add_chat_segment(chatroomUpdates.get("horror7SheWasntASaint"), "Horror Fanatics - General")
 			
 			gameManager.friends.clear()
 			gameManager.seenFriends.clear()
@@ -120,12 +126,17 @@ func advanceStory():
 				gameManager.add_email(email)
 			gameManager.seenEmails.append("noahMinjiEmail")
 		# Search Unlock: Janice Walter & Tableaux
-		if ( ! gameManager.completedChats.has("Calvin1-Translate") && gameManager.completedChats.has("NoahMinji-VanessaEmails")):
+		if ( ! gameManager.completedChats.has("Calvin1-Professor") && gameManager.completedChats.has("NoahMinji-VanessaEmails") && gameManager.seenEmails.has("noahMinjiEmail")):
 			gameManager.seenChats.append("calvinInitialDMs")
 			gameManager.add_chat_segment(chatroomUpdates.get("calvinInitialDMs"), "Calvin")
-		if ( ! gameManager.completedChats.has("James1-Translate") && gameManager.completedChats.has("Calvin1-Translate")):
+		if ( gameManager.completedChats.has("Calvin1-Professor") ):
+			gameManager.presentEvidenceUnlocked = true
+		if ( ! gameManager.completedChats.has("James1-Translate") && gameManager.completedChats.has("Calvin1-Professor")):
 			gameManager.seenChats.append("jamesInitialDMs")
 			gameManager.add_chat_segment(chatroomUpdates.get("jamesInitialDMs"), "James")
+		
+	if ( gameManager.seenEmails.has("noahMinjiEmail")):
+		internetModal.add_option("Janice Walker")
 
 func checkForNewEvidence(id:String):
 	print("selected a thing " + id)
@@ -135,4 +146,3 @@ func checkForNewEvidence(id:String):
 		var evidence = evidenceDict.get(id)
 		if ( evidence != null && ! gameManager.evidences.contains(evidence)):
 			gameManager.evidences.add_evidence(evidence)
-			gameManager.obtainedEvidence.append(evidence.evidenceId)

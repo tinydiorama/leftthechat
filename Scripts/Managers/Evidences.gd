@@ -8,5 +8,8 @@ func add_evidence(evidence:Evidence):
 func remove_evidence(evidence:Evidence):
 	_content.erase(evidence)
 	
+func contains(evidence:Evidence) -> bool:
+	return _content.has(evidence)
+	
 func get_evidence() -> Array[Evidence]:
 	return _content

@@ -70,6 +70,8 @@ func add_chat_segment(chatSegment:ChatMeta, chatName:String):
 	
 func add_evidence(evidence:Evidence):
 	evidences.add_evidence(evidence)
+	if ( evidence != null && ! obtainedEvidence.has(evidence.evidenceId) ):
+		obtainedEvidence.append(evidence.evidenceId)
 	
 ############################ Chat History
 func addChatHistory(chatMessageName:String, id:String) -> Array:
@@ -248,7 +250,9 @@ func populate_data():
 			add_friend(friend)
 			
 	for evidenceName in obtainedEvidence:
+		print(evidenceName)
 		var evidenceData = storyManager.allEvidence.get(evidenceName)
+		print(evidenceData)
 		add_evidence(evidenceData)
 			
 	if internetUnlocked:
@@ -258,3 +262,4 @@ func populate_data():
 
 func _on_internet_modal_vanessa_article_read():
 	vanessaArticleRead = true
+	add_evidence(storyManager.allEvidence.get("vanessaDeath"))

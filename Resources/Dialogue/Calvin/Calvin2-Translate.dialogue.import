@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dw4umqh7kx2ig"
+path="res://.godot/imported/Calvin2-Translate.dialogue-c07c3bafb85d74c2276fe0eb534f0eb2.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Calvin/Calvin2-Translate.dialogue"
+dest_files=["res://.godot/imported/Calvin2-Translate.dialogue-c07c3bafb85d74c2276fe0eb534f0eb2.tres"]
+
+[params]
+
+defaults=true

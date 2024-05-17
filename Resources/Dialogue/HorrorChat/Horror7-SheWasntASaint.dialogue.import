@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bfjel3bpx7368"
+path="res://.godot/imported/Horror7-SheWasntASaint.dialogue-4e87c59cede5cca4bc72e84b41beef2b.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/HorrorChat/Horror7-SheWasntASaint.dialogue"
+dest_files=["res://.godot/imported/Horror7-SheWasntASaint.dialogue-4e87c59cede5cca4bc72e84b41beef2b.tres"]
+
+[params]
+
+defaults=true

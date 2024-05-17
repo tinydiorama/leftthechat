@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_ilfke")
-evidenceId = "schoolId"
+evidenceId = "schoolid"
 evidenceTitle = "School ID"
 description = "I can use this to prove I attend State Collegiate University."
 icon = ExtResource("1_64a05")

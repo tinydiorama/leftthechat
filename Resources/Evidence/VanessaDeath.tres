@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Evidence" load_steps=3 format=3 uid="uid://bw1rgou5gbf6s"]
+
+[ext_resource type="Texture2D" uid="uid://rqx4scr2q2vs" path="res://Sprites/avatars-chat/wolfeinthefold.png" id="1_c7a5g"]
+[ext_resource type="Script" path="res://Resources/Evidence/Evidence.gd" id="1_jk0rt"]
+
+[resource]
+script = ExtResource("1_jk0rt")
+evidenceId = "vanessaDeath"
+evidenceTitle = "Vanessa's Death"
+description = "Vanessa died on Saturday, October 9 at 9:13 PM."
+icon = ExtResource("1_c7a5g")

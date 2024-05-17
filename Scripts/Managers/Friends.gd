@@ -13,5 +13,8 @@ func update_status(name:String, status:String):
 func remove_friend(friend:Friend):
 	_content.erase(friend)
 	
+func clear():
+	_content.clear()
+	
 func get_friends() -> Array[Friend]:
 	return _content

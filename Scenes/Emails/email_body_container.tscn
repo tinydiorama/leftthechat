@@ -65,18 +65,21 @@ theme_override_constants/separation = 15
 [node name="EmailFrom" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+mouse_filter = 1
 theme_override_fonts/font = ExtResource("2_5jusd")
 text = "From:"
 
 [node name="EmailDate" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+mouse_filter = 1
 theme_override_fonts/font = ExtResource("2_5jusd")
 text = "Sent:"
 
 [node name="EmailBody" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+mouse_filter = 1
 text = "Email body"
 fit_content = true
 

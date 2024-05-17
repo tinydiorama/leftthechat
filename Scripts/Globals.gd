@@ -30,3 +30,6 @@ func dialogueBack():
 
 func checkForEvidenceGet(id:String):
 	gameManager.onSelectView(id)
+
+func updateEvidence(id:String, newId:String):
+	pass

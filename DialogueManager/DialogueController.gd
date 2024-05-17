@@ -94,7 +94,6 @@ func _on_dialogue_ended(_resource: DialogueResource):
 	responses_menu.hide()
 	nextButton.hide()
 	backButton.show()
-	chat_ended.emit()
 
 func _unhandled_input(_event: InputEvent) -> void:
 	# Only the balloon is allowed to handle input while it's showing
@@ -179,6 +178,7 @@ func _on_back_gui_input(event: InputEvent) -> void:
 		var mouse_was_clicked: bool = event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed()
 		if mouse_was_clicked:
 			get_viewport().set_input_as_handled()
+			chat_ended.emit()
 			back_button.emit()
 
 func _on_mutated(_mutation: Dictionary) -> void:
