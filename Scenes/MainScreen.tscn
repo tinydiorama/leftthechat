@@ -397,6 +397,7 @@ text = "Bubble"
 
 [node name="InternetButton" parent="MainGameNav/VBoxContainer/Menu" instance=ExtResource("8_05vng")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 
 [node name="TextureRect" parent="MainGameNav/VBoxContainer/Menu/InternetButton/VBoxContainer" index="0"]
@@ -864,7 +865,7 @@ visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_right = 45360.0
+offset_right = 48600.0
 grow_horizontal = 2
 script = ExtResource("28_alrkr")
 
@@ -873,7 +874,7 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_top = -263.0
-offset_right = 975240.0
+offset_right = 1.1178e+06
 offset_bottom = 2012.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iumoi")
@@ -1025,8 +1026,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1080.0
-offset_right = 1080.0
-offset_bottom = 3840.0
+offset_right = 4320.0
+offset_bottom = 9600.0
 grow_horizontal = 2
 grow_vertical = 2
 

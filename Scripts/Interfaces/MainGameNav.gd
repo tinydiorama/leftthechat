@@ -96,9 +96,9 @@ func showInternet():
 	internetButton.show()
 	
 func getInternetUnlockedArticles() -> Array:
-	return internetModal.searchResults
+	return internetModal.optionLabels
 	
 func setInternetUnlockedArticles(articlesToSet:Array):
-	internetModal.searchResults = articlesToSet
+	internetModal.initializeDropdownFromSave(articlesToSet)
 
 

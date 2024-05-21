@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvsktvfcj73f8"]
+
+[ext_resource type="PackedScene" uid="uid://ifij1i447f6s" path="res://Scenes/Forums/forum_thread.tscn" id="1_yuhko"]
+[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="2_mivvf"]
+[ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="4_nldcb"]
+[ext_resource type="StyleBox" uid="uid://4028jh63ow77" path="res://Stylebox.tres" id="4_rxrq2"]
+
+[node name="JaniceWalkerObituary" type="VBoxContainer"]
+offset_right = 965.0
+offset_bottom = 1245.0
+theme_override_constants/separation = 40
+
+[node name="Label2" type="Label" parent="."]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Search: Janice Walker"
+autowrap_mode = 2
+
+[node name="ForumThread" parent="." instance=ExtResource("1_yuhko")]
+layout_mode = 2
+
+[node name="PostAvatar" parent="ForumThread/MarginContainer/VBoxContainer/PostHeader" index="0"]
+texture = ExtResource("2_mivvf")
+
+[node name="PostUsername" parent="ForumThread/MarginContainer/VBoxContainer/PostHeader" index="1"]
+text = "GhostGirl5776
+"
+
+[node name="PostSubject" parent="ForumThread/MarginContainer/VBoxContainer" index="1"]
+text = "Was Janice Walter another victim of the Ghost Girl Murders? "
+
+[node name="PostBody" type="Label" parent="ForumThread/MarginContainer/VBoxContainer" index="2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Walter’s autopsy revealed cilbitoxin in her system, just like Samson’s did. We know from Walter's public blog she began speaking with Samson after Samson's death. If you ask me this is one of the Ghost Girl Murders, all perpetrated by the same killer."
+autowrap_mode = 3
+
+[node name="NewFlag" parent="ForumThread/MarginContainer/VBoxContainer/HBoxContainer" index="4"]
+visible = false
+
+[node name="ReadMoreButton" type="Button" parent="."]
+layout_mode = 2
+theme = ExtResource("4_nldcb")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("4_rxrq2")
+theme_override_styles/hover = ExtResource("4_rxrq2")
+theme_override_styles/pressed = ExtResource("4_rxrq2")
+theme_override_styles/focus = ExtResource("4_rxrq2")
+text = "Read More on Tableaux App"
+
+[editable path="ForumThread"]

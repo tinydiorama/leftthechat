@@ -131,7 +131,7 @@ func advanceStory():
 			gameManager.add_chat_segment(chatroomUpdates.get("calvinInitialDMs"), "Calvin")
 		if ( gameManager.completedChats.has("Calvin1-Professor") ):
 			gameManager.presentEvidenceUnlocked = true
-		if ( ! gameManager.completedChats.has("James1-Translate") && gameManager.completedChats.has("Calvin1-Professor")):
+		if ( ! gameManager.completedChats.has("James1-Translate") && gameManager.completedChats.has("Calvin1-Translate")):
 			gameManager.seenChats.append("jamesInitialDMs")
 			gameManager.add_chat_segment(chatroomUpdates.get("jamesInitialDMs"), "James")
 		
@@ -139,8 +139,6 @@ func advanceStory():
 		internetModal.add_option("Janice Walker")
 
 func checkForNewEvidence(id:String):
-	print("selected a thing " + id)
-	print(gameManager.dayIndicator)
 	var evidenceDict = evidencePlan.get(gameManager.dayIndicator)
 	if ( evidenceDict != null ):
 		var evidence = evidenceDict.get(id)

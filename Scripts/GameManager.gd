@@ -250,9 +250,7 @@ func populate_data():
 			add_friend(friend)
 			
 	for evidenceName in obtainedEvidence:
-		print(evidenceName)
 		var evidenceData = storyManager.allEvidence.get(evidenceName)
-		print(evidenceData)
 		add_evidence(evidenceData)
 			
 	if internetUnlocked:
