@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Evidence" load_steps=3 format=3 uid="uid://c57hlqkjnp4ia"]
+
+[ext_resource type="Script" path="res://Resources/Evidence/Evidence.gd" id="1_2legs"]
+[ext_resource type="Texture2D" uid="uid://dceqjwa2286be" path="res://Sprites/evidence/cilbitoxin.png" id="1_eq7oe"]
+
+[resource]
+script = ExtResource("1_2legs")
+evidenceId = "cilbitoxin"
+evidenceTitle = "Cilbitoxin"
+description = "Cilbitoxin is an analgesic that is toxic in high doses. 8000mg of cilbitoxin was found in Vanessa’s system."
+icon = ExtResource("1_eq7oe")

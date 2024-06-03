@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="ForumPost" load_steps=2 format=3 uid="uid://blfl1xoq4tem2"]
+[gd_resource type="Resource" script_class="ForumPost" load_steps=3 format=3 uid="uid://blfl1xoq4tem2"]
 
 [ext_resource type="Script" path="res://Resources/Forums/ForumPost.gd" id="1_ctwi7"]
+[ext_resource type="Texture2D" uid="uid://djgqexjj3i6lf" path="res://Sprites/avatars-chat/genericavatar5.png" id="1_o74gd"]
 
 [resource]
 script = ExtResource("1_ctwi7")
 username = ""
+avatar = ExtResource("1_o74gd")
 body = ""

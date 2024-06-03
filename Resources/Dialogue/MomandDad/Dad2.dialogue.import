@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cvpcxo2qexjn7"
+path="res://.godot/imported/Dad2.dialogue-98085376f43033f5adc2430d41cc94dc.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/MomandDad/Dad2.dialogue"
+dest_files=["res://.godot/imported/Dad2.dialogue-98085376f43033f5adc2430d41cc94dc.tres"]
+
+[params]
+
+defaults=true

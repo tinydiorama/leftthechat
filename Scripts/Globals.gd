@@ -5,6 +5,9 @@ var playerFirstname:String
 var playerUsername:String
 var chatModal:Node
 var gameManager:GameManager
+var schoolGoingFine:bool
+var minjiShouldWrite:bool
+var chanceItsVanessa:bool
 
 func on_save_game(saved_data:Array[SavedData]):
 	var my_data = GlobalsSavedData.new()
@@ -13,6 +16,9 @@ func on_save_game(saved_data:Array[SavedData]):
 	my_data.restaurantChoice = restaurantChoice
 	my_data.playerHandle = playerUsername
 	my_data.playerName = playerFirstname
+	my_data.schoolGoingFine = schoolGoingFine
+	my_data.minjiShouldWrite = minjiShouldWrite
+	my_data.chanceItsVanessa = chanceItsVanessa
 	saved_data.append(my_data)
 
 func on_load_game(saved_data:SavedData):
@@ -21,6 +27,9 @@ func on_load_game(saved_data:SavedData):
 	restaurantChoice = my_data.restaurantChoice
 	playerUsername = my_data.playerHandle
 	playerFirstname = my_data.playerName
+	schoolGoingFine = my_data.schoolGoingFine
+	minjiShouldWrite = my_data.minjiShouldWrite
+	chanceItsVanessa = my_data.chanceItsVanessa
 
 func showEvidenceSelect():
 	chatModal.showSelectEvidenceModal()
@@ -32,4 +41,7 @@ func checkForEvidenceGet(id:String):
 	gameManager.onSelectView(id)
 
 func updateEvidence(id:String, newId:String):
-	pass
+	gameManager.update_evidence(id, newId)
+
+func unlockTableaux():
+	gameManager.unlockTableaux()

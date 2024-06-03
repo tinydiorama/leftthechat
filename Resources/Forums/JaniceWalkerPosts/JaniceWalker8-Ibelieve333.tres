@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="ForumPost" load_steps=3 format=3 uid="uid://cj3auwnfsj2fp"]
 
-[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="1_hcfwy"]
+[ext_resource type="Texture2D" uid="uid://djgqexjj3i6lf" path="res://Sprites/avatars-chat/genericavatar5.png" id="1_8e7wy"]
 [ext_resource type="Script" path="res://Resources/Forums/ForumPost.gd" id="2_awhai"]
 
 [resource]
 script = ExtResource("2_awhai")
 username = "@Ibelieve333"
-avatar = ExtResource("1_hcfwy")
+avatar = ExtResource("1_8e7wy")
 body = "I for one am not willing to discount the supernatural in this case... My mom saw my grandma in her kitchen two days after she died, right before our house caught fire… She was acting as our Guardian Angel… There's more to see than meets the eye if you just look hard enough… We know these girls had troubled home lives. Their souls are not at rest… They acted out of anger… I pray for whoever becomes their next victim.
 "

@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_3pirs"]
 [ext_resource type="Script" path="res://Scripts/Interfaces/Forums/ForumThread.gd" id="1_78js8"]
-[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Scripts/Interfaces/Prompt-Regular.ttf" id="2_slm7y"]
 [ext_resource type="Texture2D" uid="uid://jwygeo26l1o0" path="res://Sprites/upvote-arrow.png" id="3_lncd4"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="3_rbaka"]
 [ext_resource type="Texture2D" uid="uid://cv3pkdnco2ibr" path="res://Sprites/comments-icon.png" id="4_gcgwb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02obw"]
@@ -15,6 +15,15 @@ border_width_bottom = 20
 border_color = Color(0, 0, 0, 1)
 
 [node name="ForumThread" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -80.0
+offset_bottom = -1711.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_02obw")
 script = ExtResource("1_78js8")
 
@@ -38,7 +47,8 @@ expand_mode = 3
 [node name="PostUsername" type="Label" parent="MarginContainer/VBoxContainer/PostHeader"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_slm7y")
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("3_rbaka")
 theme_override_font_sizes/font_size = 40
 text = "sdfasdf"
 
@@ -46,6 +56,7 @@ text = "sdfasdf"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+mouse_filter = 1
 text = "fajsldfjalksdjf"
 autowrap_mode = 3
 
@@ -60,7 +71,7 @@ stretch_mode = 5
 [node name="Upvotes" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_slm7y")
+theme_override_fonts/font = ExtResource("3_rbaka")
 theme_override_font_sizes/font_size = 40
 text = "33"
 vertical_alignment = 1
@@ -73,7 +84,7 @@ stretch_mode = 5
 [node name="Comments" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_slm7y")
+theme_override_fonts/font = ExtResource("3_rbaka")
 theme_override_font_sizes/font_size = 40
 text = "10
 "
@@ -83,7 +94,7 @@ vertical_alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.941176, 1, 1)
-theme_override_fonts/font = ExtResource("2_slm7y")
+theme_override_fonts/font = ExtResource("3_rbaka")
 theme_override_font_sizes/font_size = 40
 text = "NEW"
 vertical_alignment = 1

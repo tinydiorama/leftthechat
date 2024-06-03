@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://v3lvk0lr4io0"]
+
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_ttayu"]
+[ext_resource type="Resource" uid="uid://cgkc7pn5ku7gb" path="res://Resources/Dialogue/HorrorChat/Horror9-ClearAir.dialogue" id="1_w8c2p"]
+
+[resource]
+script = ExtResource("1_ttayu")
+chatMetaName = "Horror9-ClearAir"
+chatPath = ExtResource("1_w8c2p")
+unlocked = false
+chatroomName = "Horror Fanatics - General"

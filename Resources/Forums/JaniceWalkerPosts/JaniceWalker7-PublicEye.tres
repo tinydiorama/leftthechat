@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="ForumPost" load_steps=3 format=3 uid="uid://k085ctnxf34y"]
 
-[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="1_0agh7"]
+[ext_resource type="Texture2D" uid="uid://d3xq2o8c77m3g" path="res://Sprites/avatars-chat/genericavatar2.png" id="1_fsm1x"]
 [ext_resource type="Script" path="res://Resources/Forums/ForumPost.gd" id="2_fwlrm"]
 
 [resource]
 script = ExtResource("2_fwlrm")
 username = "@PublicEye"
-avatar = ExtResource("1_0agh7")
+avatar = ExtResource("1_fsm1x")
 body = "OK regardless this is an absurd suggestion. I didn't make the assessment, the homicide detectives did. You know, the people who actually do this for a living? This is real life, not a soap opera. Wake up.
 "

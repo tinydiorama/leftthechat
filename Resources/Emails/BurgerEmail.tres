@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Email" load_steps=2 format=3 uid="uid://dkv5mn48ol2ss"]
+[gd_resource type="Resource" script_class="Email" load_steps=3 format=3 uid="uid://dkv5mn48ol2ss"]
 
 [ext_resource type="Script" path="res://Resources/Emails/Email.gd" id="1_ipd7y"]
+[ext_resource type="Texture2D" uid="uid://cov1tw18sjt6g" path="res://Sprites/avatars-chat/burgeravatar.png" id="1_m2acd"]
 
 [resource]
 script = ExtResource("1_ipd7y")
@@ -15,6 +16,7 @@ Item 2 orders Monster Burger
 Thank you for your business. Have a nice day!
 
 © Burger Paradise"
+icon = ExtResource("1_m2acd")
 date = "October 10"
 read = false
 emailId = "burgerEmail"

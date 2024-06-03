@@ -35,10 +35,11 @@ func _onPressed(params:Array):
 	var currentEvidenceButton = params[1]
 	
 	for evidenceButton in evidenceButtons:
-		if (evidenceButton == currentEvidenceButton):
-			evidenceButton.selectButton()
-		else:
-			evidenceButton.unselectButton()
+		if ( evidenceButton.is_visible_in_tree()):
+			if (evidenceButton == currentEvidenceButton):
+				evidenceButton.selectButton()
+			else:
+				evidenceButton.unselectButton()
 
 
 func _on_select_button_pressed():

@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ChatMeta" load_steps=2 format=3 uid="uid://b4mbeoovtnb3s"]
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://b4mbeoovtnb3s"]
 
 [ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_mggmv"]
+[ext_resource type="Resource" uid="uid://dw4umqh7kx2ig" path="res://Resources/Dialogue/Calvin/Calvin2-Translate.dialogue" id="1_ynukt"]
 
 [resource]
 script = ExtResource("1_mggmv")
-chatMetaName = ""
+chatMetaName = "Calvin2-Translate"
+chatPath = ExtResource("1_ynukt")
 unlocked = false
-chatroomName = ""
+chatroomName = "Calvin"

@@ -1,0 +1,17 @@
+~ start
+
+@Dadosaurus: Hey kiddo! 
+if Globals.schoolGoingFine
+	@Dadosaurus: Your mom tells me school is going well.
+	@Dadosaurus: Keep up the good work!
+else
+	@Dadosaurus: Mom bear told me you're having a tough time.
+	@Dadosaurus: Hang in there, OK?
+@Dadosaurus: When are you coming home next? We miss you.
+- At winter break.
+	@Dadosaurus: Are you sure you can't dip away for a weekend?
+	@Dadosaurus: I understand though, your studies come first.
+- Not sure yet.
+	@Dadosaurus: Well, let me know. I'd love to see you!
+
+=> END

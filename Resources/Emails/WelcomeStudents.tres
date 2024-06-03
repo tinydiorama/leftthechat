@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Email" load_steps=3 format=3 uid="uid://dl7qcnty45w14"]
 
 [ext_resource type="Script" path="res://Resources/Emails/Email.gd" id="1_7ilhi"]
-[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="1_8xmms"]
+[ext_resource type="Texture2D" uid="uid://b74jdvu2hb0va" path="res://Sprites/avatars-chat/schoolavatar.png" id="1_b3ydo"]
 
 [resource]
 script = ExtResource("1_7ilhi")
@@ -17,7 +17,7 @@ Go Ravens!
 
 Warmly,
 Dean Merryweather"
-icon = ExtResource("1_8xmms")
+icon = ExtResource("1_b3ydo")
 date = "October 9"
 read = false
 emailId = "welcomeStudents"

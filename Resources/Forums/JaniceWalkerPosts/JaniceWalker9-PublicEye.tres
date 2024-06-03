@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ForumPost" load_steps=3 format=3 uid="uid://dqw4cw6oqb86g"]
 
-[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="1_r65or"]
+[ext_resource type="Texture2D" uid="uid://d3xq2o8c77m3g" path="res://Sprites/avatars-chat/genericavatar2.png" id="1_8t32a"]
 [ext_resource type="Script" path="res://Resources/Forums/ForumPost.gd" id="2_w0pq6"]
 
 [resource]
 script = ExtResource("2_w0pq6")
 username = "@PublicEye"
-avatar = ExtResource("1_r65or")
+avatar = ExtResource("1_8t32a")
 body = "See? This is not a serious conversation. "

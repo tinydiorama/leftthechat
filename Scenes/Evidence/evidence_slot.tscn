@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_0hg2k"]
 [ext_resource type="Script" path="res://Scripts/Interfaces/Evidence/EvidenceSlot.gd" id="1_biqds"]
-[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Scripts/Interfaces/Prompt-Regular.ttf" id="2_7uxhi"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="2_7uxhi"]
 
 [node name="EvidenceSlot" type="HBoxContainer"]
 anchors_preset = 10

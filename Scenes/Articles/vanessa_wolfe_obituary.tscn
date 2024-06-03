@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://f35kiotd6037"]
 
 [ext_resource type="Texture2D" uid="uid://explvxaf0qgg" path="res://Sprites/avatars-big/VanessaAvatar.png" id="1_fi05h"]
-[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Scripts/Interfaces/Prompt-Regular.ttf" id="2_y6rym"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="2_l7kei"]
 
 [node name="VanessaWolfeObituary" type="VBoxContainer"]
 theme_override_constants/separation = 40
@@ -45,7 +45,7 @@ texture = ExtResource("1_fi05h")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_y6rym")
+theme_override_fonts/font = ExtResource("2_l7kei")
 theme_override_font_sizes/font_size = 40
 text = "Vanessa Wolfe, 28, of Brookside passed away Saturday evening. She is survived by her parents, Edward and Irene Wolfe, and her sister, Sara Wolfe. 
 

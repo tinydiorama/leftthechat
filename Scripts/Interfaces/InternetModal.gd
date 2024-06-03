@@ -10,6 +10,10 @@ extends MarginContainer
 @export var optionLabels:Array = ["Vanessa Wolfe"]
 
 signal vanessaArticleRead
+signal janiceWalkerArticleRead
+signal cilbitoxinArticleRead
+signal wolfeInDisguise
+signal kingdomOfShadows
 
 func display():
 	show()
@@ -37,6 +41,18 @@ func _on_option_button_item_selected(index):
 	if ( index == 0 ):
 		gameManager.onSelectView("vanessaArticle")
 		vanessaArticleRead.emit()
+	if ( index == 1 ):
+		gameManager.onSelectView("janiceArticle")
+		janiceWalkerArticleRead.emit()
+	if ( index == 2 ):
+		gameManager.onSelectView("cilbitoxinArticle")
+		cilbitoxinArticleRead.emit()
+	if ( index == 3 ):
+		gameManager.onSelectView("wolfeInDisguise")
+		wolfeInDisguise.emit()
+	if ( index == 4 ):
+		gameManager.onSelectView("kingdomOfShadows")
+		kingdomOfShadows.emit()
 
 func add_option(itemName:String):
 	if ( optionLabels.has(itemName) ):
@@ -46,10 +62,8 @@ func add_option(itemName:String):
 
 func initializeDropdownFromSave(articlesToSet:Array):
 	optionLabels = articlesToSet
-	print(optionLabels)
 	internetDropdown.clear()
 	for label in optionLabels:
-		print(label)
 		internetDropdown.add_item(label)
 	internetDropdown.select(-1)
 

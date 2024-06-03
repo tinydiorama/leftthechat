@@ -1,0 +1,125 @@
+[gd_scene load_steps=7 format=3 uid="uid://cu4tbaesfkees"]
+
+[ext_resource type="Texture2D" uid="uid://bpbmia4r07ght" path="res://Sprites/OstrichPublishing.png" id="1_1o7ri"]
+[ext_resource type="Texture2D" uid="uid://c6ysp1grfo6k3" path="res://Sprites/kingdomofshadowsbook.png" id="2_xso5g"]
+[ext_resource type="FontFile" uid="uid://imsbfhmgiiot" path="res://Resources/Fonts/PressStart2P-Regular.ttf" id="3_xk3qf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kita"]
+bg_color = Color(0.905882, 0.905882, 0.905882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_du1rs"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dd4oh"]
+bg_color = Color(0.776471, 0.219608, 0.219608, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[node name="KingdomofShadows" type="PanelContainer"]
+offset_right = 870.0
+offset_bottom = 1407.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0kita")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_du1rs")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_1o7ri")
+
+[node name="Label" type="Label" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Books"
+
+[node name="Label2" type="Label" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "About Us"
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_dd4oh")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("2_xso5g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xk3qf")
+theme_override_font_sizes/font_size = 40
+text = "The Kingdom of Shadows"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "By Vincent Berlusconi"
+
+[node name="Label3" type="Label" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Hardcover"
+
+[node name="Label4" type="Label" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "$30.00"
+
+[node name="Label" type="Label" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "The Kingdom of Shadows by Vincent Berlusconi, pub. 1963, offers a dark retelling of the myth of Hades and Persephone. Hades, portrayed in the book as “The Dark King,” comes across Persephone picking flowers in a meadow. Enraptured by her beauty, he kidnaps her and drags her to the depths of the Underworld. By forcing her to eat the fruit of the dead, The Dark King is able to bind her to the Underworld and “keep her by [his] side for all eternity.” With her lament, “In morte ero eius,” Persephone’s capture marks the end of spring and the dawn of an apocalyptic winter where darkness, disease, and death consume the earth. "
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "The Kingdom of Shadows is a highly controversial novel which some critics have deemed “gruesome” and “unreadable.” It has earned a place on many “banned books” lists due to Berlusconi’s graphic portrayals of violence, torture, and death. Although it never achieved commercial success, it has sparked a dedicated and lasting cult following that is still active in online circles today."
+autowrap_mode = 2

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Evidence" load_steps=3 format=3 uid="uid://dssjuiydjqqf0"]
+
+[ext_resource type="Texture2D" uid="uid://jkfshvmm37wt" path="res://Sprites/evidence/phrase2.png" id="1_1mdvb"]
+[ext_resource type="Script" path="res://Resources/Evidence/Evidence.gd" id="1_qgjke"]
+
+[resource]
+script = ExtResource("1_qgjke")
+evidenceId = "updatedLatinPhrase"
+evidenceTitle = "In morte ero eius"
+description = "Victims Janice Walter, ? Samson, and ? Spring used this phrase. This is the same phrase Vanessa said before she died. It means “in death I am his.”"
+icon = ExtResource("1_1mdvb")

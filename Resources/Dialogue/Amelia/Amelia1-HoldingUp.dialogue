@@ -1,0 +1,15 @@
+~ start
+
+@ameliarate: Hey hon. How are you holding up?
+@ameliarate: It's been a rough week, huh?
+@ameliarate: Dave stayed home with the kids today. I’ve been a nervous wreck!
+@ameliarate: It is a waxing crescent moon so of course our energies have been off. 
+- I'm doing okay. 
+	@ameliarate: Good. 
+	@ameliarate: This is the perfect time to cleanse and purge negative energies. 
+- Things have been hard.
+	@ameliarate: Aww, I'm so sorry, {{Globals.playerFirstname}}!! 
+	@ameliarate: Focus on healing energies. Banish negativity.
+	@ameliarate: And let me know if you need anything. xo
+
+=> END

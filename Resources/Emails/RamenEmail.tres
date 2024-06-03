@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Email" load_steps=2 format=3 uid="uid://dsmtlq7j0uga2"]
+[gd_resource type="Resource" script_class="Email" load_steps=3 format=3 uid="uid://dsmtlq7j0uga2"]
 
 [ext_resource type="Script" path="res://Resources/Emails/Email.gd" id="1_tgi0y"]
+[ext_resource type="Texture2D" uid="uid://d2in3aa34xfng" path="res://Sprites/avatars-chat/ramenavatar.png" id="1_yr3j6"]
 
 [resource]
 script = ExtResource("1_tgi0y")
@@ -15,6 +16,7 @@ Items 2 orders Miso Ramen
 Thank you for your business. Have a nice day!
 
 © Ramen Bowl"
+icon = ExtResource("1_yr3j6")
 date = "October 10"
 read = false
 emailId = "ramenEmail"

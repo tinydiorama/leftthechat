@@ -4,5 +4,6 @@
 @The_Professor_Cal: It means “in death, I am his.”
 @The_Professor_Cal: Hey... that’s kind of cool!
 @The_Professor_Cal: Is that from a game?
+do Globals.updateEvidence("latinPhrase", "updatedLatinPhrase"):
 
 => END

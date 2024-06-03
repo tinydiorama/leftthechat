@@ -1,0 +1,20 @@
+~ start
+
+@jijubee: !!!
+@jijubee: you know i only told two people about my mom.
+@jijubee: you and vanessa.
+@jijubee: you didn't tell anyone right?
+- Of course not!
+	@jijubee: okay.
+- I promised you I wouldn’t.
+	@jijubee: okay.
+@jijubee: Do you think there's a chance this could actually be Vanessa? 
+- Yes
+	do Globals.chanceItsVanessa = true
+	@jijubee: I know it’s crazy but... I think you might be right.
+- No
+	do Globals.chanceItsVanessa = false
+	@jijubee: Yeah..
+	@jijubee: I guess that was kind of a dumb question.
+
+=> END

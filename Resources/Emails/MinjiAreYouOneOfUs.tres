@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Email" load_steps=3 format=3 uid="uid://b015r8dsqnecu"]
+
+[ext_resource type="Script" path="res://Resources/Emails/Email.gd" id="1_nr8ea"]
+[ext_resource type="Texture2D" uid="uid://budyfojw65xt7" path="res://Sprites/avatars-chat/jijubee.png" id="1_wy4t4"]
+
+[resource]
+script = ExtResource("1_nr8ea")
+fromName = "Minji Kim <jijubee@bubble.com>"
+subject = "FW: Re: Are you one of us?"
+body = "Here it is.
+____________________
+From: Vanessa Wolfe <wolfeinthefold@bubble.com>
+To: Minji Kim <jijubee@bubble.com>
+Date: October 12
+
+You told. After I specifically told you not to. Don't you get it? I could have chosen anyone, and I chose you. 
+
+Do you seriously trust those people? I thought you were supposed to be smart. Don't make me regret this, Minji. Keep your damn mouth shut.
+
+Vanessa
+
+_____________________
+"
+icon = ExtResource("1_wy4t4")
+date = "October 12"
+read = false
+emailId = "minjiAreYouOneOfUs"

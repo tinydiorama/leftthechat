@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://ck66w8xs2v5lw"]
 
-[ext_resource type="Resource" uid="uid://cjm3bp6gntlb0" path="res://Sprites/avatars-chat/Minji9-MomDiagnosis.dialogue" id="1_5lukq"]
 [ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_g5i4v"]
+[ext_resource type="Resource" uid="uid://qgi4lrijfqnp" path="res://Resources/Dialogue/Minji/Minji9-MomDiagnosis.dialogue" id="1_lvmc5"]
 
 [resource]
 script = ExtResource("1_g5i4v")
 chatMetaName = "Minji9-MomDiagnosis"
-chatPath = ExtResource("1_5lukq")
+chatPath = ExtResource("1_lvmc5")
 unlocked = false
 chatroomName = "Minji"

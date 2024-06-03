@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dutckl8w4vymk"
+path="res://.godot/imported/Minji10-FeelingWeird.dialogue-8b32973a743bd61109c8d3a2de9cef34.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Minji/Minji10-FeelingWeird.dialogue"
+dest_files=["res://.godot/imported/Minji10-FeelingWeird.dialogue-8b32973a743bd61109c8d3a2de9cef34.tres"]
+
+[params]
+
+defaults=true

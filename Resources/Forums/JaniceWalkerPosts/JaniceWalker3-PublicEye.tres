@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ForumPost" load_steps=3 format=3 uid="uid://cm03a4ka04shc"]
 
-[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="1_oj83s"]
+[ext_resource type="Texture2D" uid="uid://d3xq2o8c77m3g" path="res://Sprites/avatars-chat/genericavatar2.png" id="1_3k1io"]
 [ext_resource type="Script" path="res://Resources/Forums/ForumPost.gd" id="2_p2l0a"]
 
 [resource]
 script = ExtResource("2_p2l0a")
 username = "@PublicEye"
-avatar = ExtResource("1_oj83s")
+avatar = ExtResource("1_3k1io")
 body = "You people call this investigating? Don't quit your day jobs. What's more likely: random girls are being killed off by ghosts, or three morbid, mentally ill girls staged copycat suicides? "

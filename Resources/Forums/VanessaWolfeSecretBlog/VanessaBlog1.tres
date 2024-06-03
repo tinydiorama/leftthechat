@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ForumPost" load_steps=3 format=3 uid="uid://dmt14i3w1m2x"]
+
+[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="1_80ioj"]
+[ext_resource type="Script" path="res://Resources/Forums/ForumPost.gd" id="1_ah4w8"]
+
+[resource]
+script = ExtResource("1_ah4w8")
+username = "abc123"
+avatar = ExtResource("1_80ioj")
+body = "Everyone! Found Vanessa Wolfe’s secret blog!! Search Foundit for “Wolf in Disguise.” She mentions Janice!!! I repeat she mentions Janice!!! (;° ロ°)"

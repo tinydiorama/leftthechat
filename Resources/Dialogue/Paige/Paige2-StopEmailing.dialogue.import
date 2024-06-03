@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cvedfp86gcalv"
+path="res://.godot/imported/Paige2-StopEmailing.dialogue-a230d99f41d2f85bf2555f33a1822428.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Paige/Paige2-StopEmailing.dialogue"
+dest_files=["res://.godot/imported/Paige2-StopEmailing.dialogue-a230d99f41d2f85bf2555f33a1822428.tres"]
+
+[params]
+
+defaults=true

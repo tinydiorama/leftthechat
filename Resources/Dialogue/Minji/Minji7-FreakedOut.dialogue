@@ -1,10 +1,14 @@
 ~ start
 
-@jijubee: I'm so freaked out right now.
-@jijubee: Should I write back?
+@jijubee: i'm so freaked out right now.
+@jijubee: should I write back?
 - Yes 
-	@jijubee: Yeah. I need to think about it.
+	@jijubee: okay. yeah. i think i’m going to.
+	@jijubee: i need to figure out what's going on here.
+	do Globals.minjiShouldWrite = true
 - No
-	@jijubee: Yeah. I need to think about it.
+	@jijubee: hmmm. yeah idk.
+	@jijubee: i need to think about it.
+	do Globals.minjiShouldWrite = false
 
 => END

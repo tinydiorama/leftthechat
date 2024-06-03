@@ -87,6 +87,9 @@ func _on_game_manager_new_forum():
 func _on_game_manager_new_friend():
 	socialButton.get_node("NotificationIcon").show()
 	
+func closeInternetModal():
+	internetModal._on_close_button_pressed()
+	
 func unlockInternet():
 	internetButton.show()
 	internetButton.get_node("NotificationIcon").show()
@@ -94,6 +97,9 @@ func unlockInternet():
 
 func showInternet():
 	internetButton.show()
+	
+func showTableaux():
+	forumButton.show()
 	
 func getInternetUnlockedArticles() -> Array:
 	return internetModal.optionLabels

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Evidence" load_steps=3 format=3 uid="uid://dpcwyh2hsw2rc"]
+
+[ext_resource type="Texture2D" uid="uid://cs8fsa0fjasd3" path="res://Sprites/evidence/vanessaPaigeFight.png" id="1_5mmqt"]
+[ext_resource type="Script" path="res://Resources/Evidence/Evidence.gd" id="2_syihb"]
+
+[resource]
+script = ExtResource("2_syihb")
+evidenceId = "vanessaPaigeFight"
+evidenceTitle = "Paige + Vanessa"
+description = "Paige and Vanessa had an argument before Vanessa died. "
+icon = ExtResource("1_5mmqt")

@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://cgda37hsh13x5" path="res://Sprites/notification-circle.png" id="2_lgqsi"]
 
 [node name="EmailListDisplay" type="VBoxContainer"]
-anchors_preset = 10
-anchor_right = 1.0
+custom_minimum_size = Vector2(950, 0)
+offset_right = 950.0
 offset_bottom = 222.0
-grow_horizontal = 2
+size_flags_horizontal = 0
 theme_override_constants/separation = 30
 script = ExtResource("1_66bhm")
 
@@ -17,9 +17,12 @@ layout_mode = 2
 
 [node name="EmailIcon" type="TextureRect" parent="EmailListDisplayInner"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 mouse_filter = 2
 texture = ExtResource("1_my6wd")
+expand_mode = 2
+stretch_mode = 2
 
 [node name="NotificationBubble" type="TextureRect" parent="EmailListDisplayInner/EmailIcon"]
 unique_name_in_owner = true

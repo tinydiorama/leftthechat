@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ForumPost" load_steps=3 format=3 uid="uid://caji6cx12iego"]
 
-[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="1_so8gb"]
+[ext_resource type="Texture2D" uid="uid://gwhc6b6cw2p5" path="res://Sprites/avatars-chat/genericavatar3.png" id="1_jvgw6"]
 [ext_resource type="Script" path="res://Resources/Forums/ForumPost.gd" id="2_y3xnh"]
 
 [resource]
 script = ExtResource("2_y3xnh")
 username = "@Silkyworm420"
-avatar = ExtResource("1_so8gb")
+avatar = ExtResource("1_jvgw6")
 body = "Cilbitoxin was found in lethal amounts in all three victims. Guaranteed you do not have that amount of cilbitoxin in your system if you're able to write passive aggressive messages on a true crime forum."

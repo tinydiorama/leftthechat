@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Evidence" load_steps=3 format=3 uid="uid://b6w0limrhfw0l"]
 
-[ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_64a05"]
 [ext_resource type="Script" path="res://Resources/Evidence/Evidence.gd" id="1_ilfke"]
+[ext_resource type="Texture2D" uid="uid://cmawwq6i4vu85" path="res://Sprites/evidence/schoolid.png" id="1_x00x0"]
 
 [resource]
 script = ExtResource("1_ilfke")
 evidenceId = "schoolid"
 evidenceTitle = "School ID"
 description = "I can use this to prove I attend State Collegiate University."
-icon = ExtResource("1_64a05")
+icon = ExtResource("1_x00x0")

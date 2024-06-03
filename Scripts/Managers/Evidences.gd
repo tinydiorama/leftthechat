@@ -3,7 +3,8 @@ class_name Evidences
 var _content:Array[Evidence] = []
 
 func add_evidence(evidence:Evidence):
-	_content.push_back(evidence)
+	if ( ! _content.has(evidence) ):
+		_content.push_back(evidence)
 
 func remove_evidence(evidence:Evidence):
 	_content.erase(evidence)

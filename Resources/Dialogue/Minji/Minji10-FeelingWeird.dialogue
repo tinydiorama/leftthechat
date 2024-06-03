@@ -1,0 +1,11 @@
+~ start
+
+@jijubee: Hey {{Globals.playerFirstname}}, how’s it going?
+- Good. How are you?
+	@jijubee: I don’t know. 
+	@jijubee: I guess I’m still feeling weird about everything that’s going on.
+- Are you still talking to "Vanessa"?
+	@jijubee: Don’t worry.
+	@jijubee: I can take care of myself.
+
+=> END

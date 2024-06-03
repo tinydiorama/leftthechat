@@ -22,5 +22,9 @@ extends SavedData
 @export var internetUnlocked:bool
 @export var presentEvidenceUnlocked:bool
 @export var vanessaArticleRead:bool
+@export var janiceArticleRead:bool
+@export var cilbitoxinArticleRead:bool
+@export var wolfeInDisguiseArticleRead:bool
+@export var tableauxUnlocked:bool
 @export var internetSearchTerms:Array
 @export var dayIndicator:String

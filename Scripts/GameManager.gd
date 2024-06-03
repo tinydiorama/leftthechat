@@ -21,7 +21,7 @@ var evidences:Evidences = Evidences.new()
 
 var seenEmails:Array[String] = ["initialEmails"]
 var seenFriends:Array[String] = ["initialFriends"]
-var seenForums:Array[String] = ["initialForums"]
+var seenForums:Array[String] = ["janiceWalkerVictim"]
 var seenChats:Array[String] = ["initialChatrooms"]
 var obtainedEvidence:Array[String] = []
 
@@ -35,8 +35,13 @@ var allChatHistory:Dictionary
 
 var internetUnlocked:bool
 var vanessaArticleRead:bool
+var janiceArticleRead:bool
+var wolfeInDisguiseArticleRead:bool
+var cilbitoxinArticleRead:bool
+var kingdomOfShadowsRead:bool
 var dayIndicator:String
 var presentEvidenceUnlocked:bool
+var tableauxUnlocked:bool
 
 signal newEmail
 signal newFriend
@@ -72,6 +77,15 @@ func add_evidence(evidence:Evidence):
 	evidences.add_evidence(evidence)
 	if ( evidence != null && ! obtainedEvidence.has(evidence.evidenceId) ):
 		obtainedEvidence.append(evidence.evidenceId)
+		
+func contains_evidence_id(id:String):
+	return evidences.contains(storyManager.allEvidence.get(id))
+		
+func update_evidence(evidenceId:String, evidenceToObtainId:String):
+	if ( evidences.contains(storyManager.allEvidence.get(evidenceId)) ):
+		evidences.remove_evidence(storyManager.allEvidence.get(evidenceId))
+		obtainedEvidence.erase(evidenceId)
+		add_evidence(storyManager.allEvidence.get(evidenceToObtainId))
 	
 ############################ Chat History
 func addChatHistory(chatMessageName:String, id:String) -> Array:
@@ -150,6 +164,7 @@ func _on_character_builder_modal_character_submit(fullName, handleParam, pronoun
 	characterBuilder.hide()
 	
 func onSelectView(id:String):
+	print(id)
 	storyManager.checkForNewEvidence(id)
 	
 func saveGame():
@@ -184,6 +199,11 @@ func on_save_game(saved_data:Array[SavedData]):
 	my_data.presentEvidenceUnlocked = presentEvidenceUnlocked
 	my_data.internetSearchTerms = mainGameNav.getInternetUnlockedArticles()
 	my_data.vanessaArticleRead = vanessaArticleRead
+	my_data.janiceArticleRead = janiceArticleRead
+	my_data.cilbitoxinArticleRead = cilbitoxinArticleRead
+	my_data.wolfeInDisguiseArticleRead = wolfeInDisguiseArticleRead
+	my_data.kingdomOfShadowsRead = kingdomOfShadowsRead
+	my_data.tableauxUnlocked = tableauxUnlocked
 	my_data.dayIndicator = dayIndicator
 	saved_data.append(my_data)
 	
@@ -215,6 +235,11 @@ func on_load_game(saved_data:SavedData):
 	internetUnlocked = my_data.internetUnlocked
 	presentEvidenceUnlocked = my_data.presentEvidenceUnlocked
 	vanessaArticleRead = my_data.vanessaArticleRead
+	janiceArticleRead = my_data.janiceArticleRead
+	cilbitoxinArticleRead = my_data.cilbitoxinArticleRead
+	wolfeInDisguiseArticleRead = my_data.wolfeInDisguiseArticleRead
+	kingdomOfShadowsRead = my_data.kingdomOfShadowsRead
+	tableauxUnlocked = my_data.tableauxUnlocked
 	dayIndicator = my_data.dayIndicator
 	
 	mainGameNav.setInternetUnlockedArticles(my_data.internetSearchTerms)
@@ -241,8 +266,7 @@ func populate_data():
 			
 	for forumName in seenForums:
 		var forumData = storyManager.allForums.get(forumName)
-		for forum in forumData:
-			forums.add_thread(forum)
+		forums.add_thread(forumData)
 			
 	for friendName in seenFriends:
 		var friendData = storyManager.allFriends.get(friendName)
@@ -255,9 +279,32 @@ func populate_data():
 			
 	if internetUnlocked:
 		mainGameNav.showInternet()
+		
+	if tableauxUnlocked:
+		mainGameNav.showTableaux()
 
-
+func unlockTableaux():
+	tableauxUnlocked = true
+	mainGameNav.closeInternetModal()
+	mainGameNav._on_forum_button_pressed()
+	mainGameNav.showTableaux()
 
 func _on_internet_modal_vanessa_article_read():
 	vanessaArticleRead = true
 	add_evidence(storyManager.allEvidence.get("vanessaDeath"))
+
+func _on_internet_modal_janice_walker_article_read():
+	janiceArticleRead = true
+
+func _on_internet_modal_cilbitoxin_article_read():
+	cilbitoxinArticleRead = true
+
+func _on_internet_modal_wolfe_in_disguise():
+	wolfeInDisguiseArticleRead = true
+	update_evidence("updatedLatinPhrase", "updatedLatinPhrase2")
+	add_evidence(storyManager.allEvidence.get("vanessaPaigeFight"))
+
+func _on_internet_modal_kingdom_of_shadows():
+	kingdomOfShadowsRead = true
+	update_evidence("updatedLatinPhrase2", "updatedLatinPhrase3")
+	add_evidence(storyManager.allEvidence.get("kingdomOfShadows"))

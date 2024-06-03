@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cgkc7pn5ku7gb"
+path="res://.godot/imported/Horror9-ClearAir.dialogue-cb900a2efc9d7b0695bc92f069f0cf7e.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/HorrorChat/Horror9-ClearAir.dialogue"
+dest_files=["res://.godot/imported/Horror9-ClearAir.dialogue-cb900a2efc9d7b0695bc92f069f0cf7e.tres"]
+
+[params]
+
+defaults=true

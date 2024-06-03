@@ -1,0 +1,331 @@
+[gd_scene load_steps=7 format=3 uid="uid://b45lerfnitwfw"]
+
+[ext_resource type="Texture2D" uid="uid://5jy57pk13gvu" path="res://Sprites/wolfindisguisebg.png" id="1_kt50j"]
+[ext_resource type="Theme" uid="uid://l4ttpcdefaad" path="res://BloggleTheme.tres" id="2_8pwv2"]
+[ext_resource type="Texture2D" uid="uid://cwqvq8ow4vw68" path="res://Sprites/WolfinDisguise.png" id="2_ri0in"]
+[ext_resource type="FontFile" uid="uid://c6sci1h6rpwvs" path="res://Resources/Fonts/Prompt-BoldItalic.ttf" id="3_364x6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_usg50"]
+texture = ExtResource("1_kt50j")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihxvj"]
+bg_color = Color(0, 0.12549, 0.317647, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.113725, 0.278431, 0.52549, 1)
+
+[node name="WolfeIntheFold" type="PanelContainer"]
+offset_right = 870.0
+offset_bottom = 1407.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_usg50")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+theme = ExtResource("2_8pwv2")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ri0in")
+
+[node name="Entry" type="PanelContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ihxvj")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Entry" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "janice says i need to be careful. she sent me a screenshot of paige talking about me behind my back. (paige is my friend from that horror games group chat.) anyway it was something really personal that i told her in confidence a while ago so… yeah. i confronted her and she admitted it. she kept saying it was “taken out of context.” girl, pls. i read what you said in your own words!! you can’t trust anyone these days."
+autowrap_mode = 2
+
+[node name="dATE" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_364x6")
+theme_override_font_sizes/font_size = 35
+text = "October 2, 4:35 pm"
+
+[node name="Entry2" type="PanelContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ihxvj")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry2"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry2/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Entry" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry2/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "ugh. im not talking to paige anymore. im done with her crap. she's a total narcissist and im so over dealing with toxic people "
+autowrap_mode = 2
+
+[node name="dATE" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_364x6")
+theme_override_font_sizes/font_size = 35
+text = "October 2, 10:29 pm"
+
+[node name="Entry3" type="PanelContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ihxvj")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry3"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry3/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Entry" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry3/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "janice told me her secret. he’s the reason she chose me. it's all real. this is why she contacted me in the first place. if i can talk to them i can talk to my grandma too. im scared but excited at the same time."
+autowrap_mode = 2
+
+[node name="dATE" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry3/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_364x6")
+theme_override_font_sizes/font_size = 35
+text = "October 3, 11:56 pm"
+
+[node name="Entry4" type="PanelContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ihxvj")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry4"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry4/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Entry" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry4/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "lots of people don't understand the beauty in suffering. my therapist wants me to change my way of thinking, to hide from the truth. im more interested in truth than i am in choking down pills to try to “be happy.” there is so much more going on than any of them can see"
+autowrap_mode = 2
+
+[node name="dATE" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry4/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_364x6")
+theme_override_font_sizes/font_size = 35
+text = "October 5, 11:55 pm"
+
+[node name="Entry5" type="PanelContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ihxvj")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry5"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry5/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Entry" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry5/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "[Selfie no one has seen before - just to prove this is really her secret blog]"
+autowrap_mode = 2
+
+[node name="dATE" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry5/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_364x6")
+theme_override_font_sizes/font_size = 35
+text = "October 6, 7:45 pm"
+
+[node name="Entry6" type="PanelContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ihxvj")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry6"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry6/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Entry" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry6/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "im scared."
+autowrap_mode = 2
+
+[node name="dATE" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry6/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_364x6")
+theme_override_font_sizes/font_size = 35
+text = "October 9, 10:03 pm"
+
+[node name="Entry7" type="PanelContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ihxvj")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry7"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry7/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Entry" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry7/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "this is so crazy. i don't know who i can talk to at this point. don't ask me what i'm talking about. i couldn’t explain this even if i wanted to."
+autowrap_mode = 2
+
+[node name="dATE" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry7/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_364x6")
+theme_override_font_sizes/font_size = 35
+text = "October 9, 10:07 pm"
+
+[node name="Entry8" type="PanelContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ihxvj")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry8"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry8/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Entry" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry8/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "to the anon in my inbox, i deleted your question. pls don't tell me to check myself into a hospital. i’ve been involuntarily held before and i’m never putting myself in that position again. i didn't ask for your advice and even if i did, you honestly have no idea what's going on."
+autowrap_mode = 2
+
+[node name="dATE" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry8/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_364x6")
+theme_override_font_sizes/font_size = 35
+text = "October 9, 10:10 pm"
+
+[node name="Entry9" type="PanelContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ihxvj")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry9"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry9/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Entry" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry9/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "i know this sounds paranoid. i know. but if i end up dead, i need you to know it was not suicide. it’s not my time."
+autowrap_mode = 2
+
+[node name="dATE" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry9/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_364x6")
+theme_override_font_sizes/font_size = 35
+text = "October 9, 10:17 pm"
+
+[node name="Entry10" type="PanelContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ihxvj")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry10"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry10/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Entry" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry10/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "in morte ero eius"
+autowrap_mode = 2
+
+[node name="dATE" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Entry10/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_364x6")
+theme_override_font_sizes/font_size = 35
+text = "October 9, 10:19 pm"

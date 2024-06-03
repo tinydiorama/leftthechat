@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://dxcxdy2jnlxr0"]
+
+[ext_resource type="Resource" uid="uid://dutckl8w4vymk" path="res://Resources/Dialogue/Minji/Minji10-FeelingWeird.dialogue" id="1_suxlo"]
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="2_ws1ha"]
+
+[resource]
+script = ExtResource("2_ws1ha")
+chatMetaName = "Minji10-FeelingWeird"
+chatPath = ExtResource("1_suxlo")
+unlocked = false
+chatroomName = "Minji"

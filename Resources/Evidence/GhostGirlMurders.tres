@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Evidence" load_steps=3 format=3 uid="uid://dceyhp83cfhfx"]
+
+[ext_resource type="Texture2D" uid="uid://dl8i3bk346i5" path="res://Sprites/evidence/ghostgirlmurders.png" id="1_3r1c3"]
+[ext_resource type="Script" path="res://Resources/Evidence/Evidence.gd" id="1_bl6wa"]
+
+[resource]
+script = ExtResource("1_bl6wa")
+evidenceId = "ghostGirlMurders"
+evidenceTitle = "The Ghost Girl Murders"
+description = "A series of murders in the Brookside area. Victims include Janice Walter, ? Samson, and ? Spring."
+icon = ExtResource("1_3r1c3")

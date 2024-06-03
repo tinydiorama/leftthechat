@@ -1,0 +1,17 @@
+~ start
+
+@MomBear567: Honey, how is school going?
+- It's going fine.
+	do Globals.schoolGoingFine = true
+	@MomBear567: Good.
+	@MomBear567: Don't let your grades slip!
+	@MomBear567: I’m thinking about your future here.
+- Not the best.
+	do Globals.schoolGoingFine = false
+	@MomBear567: Join study groups! Go to office hours!
+	@MomBear567: That’s what they’re there for.
+	@MomBear567: Are you still spending all your time chatting online?
+	@MomBear567: Don't let that distract you from your studies. 
+
+
+=> END

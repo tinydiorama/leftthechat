@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Chatroom" load_steps=4 format=3 uid="uid://dn3s0qqsmgw25"]
 
-[ext_resource type="Texture2D" uid="uid://bnyqpfd6tibgy" path="res://Sprites/avatars-chat/ameliarate.png" id="1_icwcf"]
 [ext_resource type="Resource" uid="uid://dj8honiydg1mp" path="res://Resources/Chats/HorrorChats/Horror1.tres" id="1_kwccq"]
 [ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_lltxh"]
+[ext_resource type="Texture2D" uid="uid://dcshba8esi0rf" path="res://Sprites/avatars-chat/system.png" id="1_sy2we"]
 
 [resource]
 script = ExtResource("1_lltxh")
 chatName = "Horror Fanatics - General"
-avatar = ExtResource("1_icwcf")
+avatar = ExtResource("1_sy2we")
 numPeople = 1
 category = "Chatrooms"
 chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([ExtResource("1_kwccq")])

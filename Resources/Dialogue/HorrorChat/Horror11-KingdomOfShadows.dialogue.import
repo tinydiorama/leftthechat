@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://ccr5dpwrk0h1i"
+path="res://.godot/imported/Horror11-KingdomOfShadows.dialogue-befff3473960ff226c27b7420cdd291c.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/HorrorChat/Horror11-KingdomOfShadows.dialogue"
+dest_files=["res://.godot/imported/Horror11-KingdomOfShadows.dialogue-befff3473960ff226c27b7420cdd291c.tres"]
+
+[params]
+
+defaults=true

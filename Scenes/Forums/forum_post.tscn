@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Interfaces/Forums/ForumPost.gd" id="1_606tj"]
 [ext_resource type="Texture2D" uid="uid://cp0v51p3oq0x8" path="res://Sprites/ChatroomIcon.png" id="1_la1ig"]
-[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Scripts/Interfaces/Prompt-Regular.ttf" id="2_wy2mt"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="2_wy2mt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02obw"]
 bg_color = Color(1, 1, 1, 1)
@@ -13,6 +13,7 @@ border_width_bottom = 20
 border_color = Color(0, 0, 0, 1)
 
 [node name="ForumPost" type="PanelContainer"]
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_02obw")
 script = ExtResource("1_606tj")
 
@@ -35,6 +36,7 @@ texture = ExtResource("1_la1ig")
 [node name="PostUsername" type="Label" parent="MarginContainer/Post/PostHeader"]
 unique_name_in_owner = true
 layout_mode = 2
+mouse_filter = 1
 theme_override_fonts/font = ExtResource("2_wy2mt")
 theme_override_font_sizes/font_size = 40
 text = "sdfasdf"
@@ -43,6 +45,7 @@ text = "sdfasdf"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+mouse_filter = 1
 theme_override_fonts/font = ExtResource("2_wy2mt")
 theme_override_font_sizes/font_size = 40
 text = "fajsldfjalksdjf"

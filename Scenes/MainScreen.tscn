@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://drxmlpy8vc5si"]
+[gd_scene load_steps=145 format=3 uid="uid://drxmlpy8vc5si"]
 
 [ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="1_fmx65"]
 [ext_resource type="Texture2D" uid="uid://dikti0npwvcsv" path="res://Sprites/pinkbg.png" id="2_4edjn"]
@@ -42,7 +42,7 @@
 [ext_resource type="Resource" uid="uid://7scs3rj00qtw" path="res://Resources/Dialogue/April/April-EvidenceGeneric.dialogue" id="28_62exp"]
 [ext_resource type="Script" path="res://Scripts/Interfaces/Notification.gd" id="28_alrkr"]
 [ext_resource type="PackedScene" uid="uid://bnng0mkesov6l" path="res://Scenes/Evidence/select_evidence.tscn" id="28_e20sr"]
-[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Scripts/Interfaces/Prompt-Regular.ttf" id="28_hfkc3"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="28_hfkc3"]
 [ext_resource type="PackedScene" uid="uid://da5d0bcmkaulf" path="res://Scenes/Evidence/notes_modal.tscn" id="28_v2uax"]
 [ext_resource type="Resource" uid="uid://csh5m16knqjs7" path="res://Resources/Dialogue/Calvin/Calvin-EvidenceGeneric.dialogue" id="29_m75ow"]
 [ext_resource type="PackedScene" uid="uid://5iww0467vemc" path="res://Scenes/Main/day_notification.tscn" id="30_88mvv"]
@@ -61,8 +61,13 @@
 [ext_resource type="Resource" uid="uid://bqqp17uvxm1hb" path="res://Resources/Friends/Paige.tres" id="38_gbxim"]
 [ext_resource type="Resource" uid="uid://dr686w8hpi625" path="res://Resources/Emails/MinjiVanessaEmail.tres" id="38_uivbn"]
 [ext_resource type="Resource" uid="uid://chnn3drvnxwn5" path="res://Resources/Friends/Vanessa.tres" id="39_764d0"]
+[ext_resource type="PackedScene" uid="uid://f35kiotd6037" path="res://Scenes/Articles/vanessa_wolfe_obituary.tscn" id="39_j8fr6"]
+[ext_resource type="PackedScene" uid="uid://cvsktvfcj73f8" path="res://Scenes/Articles/janice_walker.tscn" id="40_0c6g3"]
 [ext_resource type="Resource" uid="uid://jigg7sgra4hj" path="res://Resources/Forums/JaniceWalkerVictim.tres" id="40_obb53"]
+[ext_resource type="PackedScene" uid="uid://cyb3imlcavevp" path="res://Scenes/Articles/cilbitoxin.tscn" id="41_26lis"]
+[ext_resource type="PackedScene" uid="uid://b45lerfnitwfw" path="res://Scenes/Articles/wolfeinthefold.tscn" id="42_102u3"]
 [ext_resource type="Resource" uid="uid://dgtqhco17uo0i" path="res://Resources/Chats/Mom.tres" id="42_dkb67"]
+[ext_resource type="PackedScene" uid="uid://cu4tbaesfkees" path="res://Scenes/Articles/kingdomofshadows.tscn" id="43_apo40"]
 [ext_resource type="Resource" uid="uid://bb60x8kkvwqlk" path="res://Resources/Emails/VanessaNoahEmail.tres" id="43_jstkm"]
 [ext_resource type="Resource" uid="uid://dn3s0qqsmgw25" path="res://Resources/Chats/HorrorChatroom.tres" id="44_if2et"]
 [ext_resource type="PackedScene" uid="uid://d3bwjynekexf0" path="res://Scenes/CharacterBuilder/character_builder_modal.tscn" id="46_bon3v"]
@@ -79,7 +84,9 @@
 [ext_resource type="Resource" uid="uid://diqmgr60hvgcu" path="res://Resources/Friends/Update1/James-Update1.tres" id="54_5expx"]
 [ext_resource type="Resource" uid="uid://26t6u8y5b16o" path="res://Resources/Chats/HorrorChats/Horror3-PostVanessaDeath.tres" id="54_n2xkc"]
 [ext_resource type="Resource" uid="uid://crruokecuyy6g" path="res://Resources/Friends/Update1/Minji-Update1.tres" id="55_3jdrw"]
+[ext_resource type="Resource" uid="uid://b015r8dsqnecu" path="res://Resources/Emails/MinjiAreYouOneOfUs.tres" id="55_kgh28"]
 [ext_resource type="Resource" uid="uid://bhitpqx7apbs6" path="res://Resources/Chats/HorrorChats/Horror4-PostVanessaObit.tres" id="55_rf06y"]
+[ext_resource type="Resource" uid="uid://digohsp1i0n0h" path="res://Resources/Emails/MinjiVanessaEmail3.tres" id="56_4ajiv"]
 [ext_resource type="Resource" uid="uid://dj3vf3ljljx3f" path="res://Resources/Chats/Minji Chats/Minji3-Worried.tres" id="56_e4kow"]
 [ext_resource type="Resource" uid="uid://b7g3ltbo3qpb" path="res://Resources/Friends/Update1/Noah-Update1.tres" id="56_uwukb"]
 [ext_resource type="Resource" uid="uid://b8ugbb1oxn2uc" path="res://Resources/Chats/HorrorChats/Horror5-Aftermath.tres" id="57_8834e"]
@@ -91,7 +98,9 @@
 [ext_resource type="Resource" uid="uid://f7yk21ukuj03" path="res://Resources/Chats/HorrorChats/Horror6-NoOneCameForward.tres" id="62_sstyt"]
 [ext_resource type="Resource" uid="uid://h2bhxrk8wn70" path="res://Resources/Chats/Calvin.tres" id="68_8sp0r"]
 [ext_resource type="Resource" uid="uid://cbnd2i7kfpkwb" path="res://Resources/Chats/James.tres" id="69_ckw2v"]
+[ext_resource type="Resource" uid="uid://dt5gkgqypdcns" path="res://Resources/Forums/NewGhostGirlMurder.tres" id="74_vktmf"]
 [ext_resource type="Resource" uid="uid://owl2bk5qjxjm" path="res://Resources/Chats/Amelia.tres" id="76_fddy2"]
+[ext_resource type="Resource" uid="uid://basrhc1eslvm1" path="res://Resources/Forums/VanessaWolfeSecretBlog.tres" id="78_ji5bc"]
 [ext_resource type="Resource" uid="uid://dnns8o7hbpoc6" path="res://Resources/Chats/Noah.tres" id="79_52yjh"]
 [ext_resource type="Resource" uid="uid://b6w0limrhfw0l" path="res://Resources/Evidence/SchoolId.tres" id="81_8ipud"]
 [ext_resource type="PackedScene" uid="uid://0x5u6cmfk2u5" path="res://Scenes/sound_player.tscn" id="82_uaxm6"]
@@ -103,8 +112,30 @@
 [ext_resource type="Texture2D" uid="uid://cnytro4gfvccy" path="res://Sprites/foundit-icon.png" id="94_qc2nk"]
 [ext_resource type="Resource" uid="uid://cnx5mvm7v4ffk" path="res://Resources/Chats/PaigeChats/Paige1-Suspicious.tres" id="95_psgfx"]
 [ext_resource type="Resource" uid="uid://bxkv55mohdr5l" path="res://Resources/Chats/HorrorChats/Horror7-SheWasntASaint.tres" id="96_45dul"]
+[ext_resource type="Resource" uid="uid://cocu0o6nlqtfc" path="res://Resources/Chats/MomChats/Mom-3.tres" id="98_rxco1"]
+[ext_resource type="Resource" uid="uid://chm4t1gqid0i8" path="res://Resources/Chats/HorrorChats/Horror8-Awkward.tres" id="99_py3co"]
+[ext_resource type="Resource" uid="uid://brqvqwshna347" path="res://Resources/Chats/Minji Chats/Minji6-AnotherEmail.tres" id="100_6ru4k"]
 [ext_resource type="Resource" uid="uid://xnch0yibbvx" path="res://Resources/Evidence/LatinPhrase.tres" id="100_v8ns3"]
+[ext_resource type="Resource" uid="uid://b2tl4nyopbrn2" path="res://Resources/Chats/Minji Chats/Minji7-FreakedOut.tres" id="102_cb8mf"]
 [ext_resource type="Resource" uid="uid://bw1rgou5gbf6s" path="res://Resources/Evidence/VanessaDeath.tres" id="102_djdit"]
+[ext_resource type="Resource" uid="uid://dceyhp83cfhfx" path="res://Resources/Evidence/GhostGirlMurders.tres" id="103_rooee"]
+[ext_resource type="Resource" uid="uid://bn4qgnnwoif5n" path="res://Resources/Chats/DadChats/Dad-2.tres" id="103_vee2h"]
+[ext_resource type="Resource" uid="uid://dssjuiydjqqf0" path="res://Resources/Evidence/UpdatedLatinPhrase.tres" id="104_k6obs"]
+[ext_resource type="Resource" uid="uid://dk6pivnkbisxh" path="res://Resources/Chats/JamesChats/James2-Awkward.tres" id="104_s0w1h"]
+[ext_resource type="Resource" uid="uid://c78kudov58o8h" path="res://Resources/Chats/Minji Chats/Minji8-AnotherEmail2.tres" id="105_newrm"]
+[ext_resource type="Resource" uid="uid://ck66w8xs2v5lw" path="res://Resources/Chats/Minji Chats/Minji9-MomDiagnosis.tres" id="106_hdtw4"]
+[ext_resource type="Resource" uid="uid://v3lvk0lr4io0" path="res://Resources/Chats/HorrorChats/Horror9-ClearAir.tres" id="108_rlo8x"]
+[ext_resource type="Resource" uid="uid://impmjii3hdb3" path="res://Resources/Chats/PaigeChats/Paige2-StopEmailing.tres" id="109_3k63f"]
+[ext_resource type="Resource" uid="uid://boq5qmc4wwg0t" path="res://Resources/Chats/AmeliaChats/Amelia1-HoldingUp.tres" id="110_3wf70"]
+[ext_resource type="Resource" uid="uid://dxcxdy2jnlxr0" path="res://Resources/Chats/Minji Chats/Minji10-FeelingWeird.tres" id="115_ejuq1"]
+[ext_resource type="Resource" uid="uid://dvn8g2tcy6k8x" path="res://Resources/Chats/MomChats/Mom-4.tres" id="116_xnfq3"]
+[ext_resource type="Resource" uid="uid://chobslie17qwe" path="res://Resources/Chats/HorrorChats/Horror10-EternalAffliction.tres" id="117_jrqu7"]
+[ext_resource type="Resource" uid="uid://inwlvt0prgw" path="res://Resources/Chats/HorrorChats/Horror11-KingdomOfShadows.tres" id="121_j8jat"]
+[ext_resource type="Resource" uid="uid://c57hlqkjnp4ia" path="res://Resources/Evidence/Cilbitoxin.tres" id="122_1jfuu"]
+[ext_resource type="Resource" uid="uid://lkksds3o48al" path="res://Resources/Evidence/UpdatedLatinPhrase2.tres" id="128_wyyfd"]
+[ext_resource type="Resource" uid="uid://dpcwyh2hsw2rc" path="res://Resources/Evidence/VanessaPaigeFight.tres" id="129_7rhbk"]
+[ext_resource type="Resource" uid="uid://j3ckdvy3divi" path="res://Resources/Evidence/UpdatedLatinPhrase3.tres" id="131_15pcn"]
+[ext_resource type="Resource" uid="uid://dq17ewr5qtbwe" path="res://Resources/Evidence/KingdomOfShadows.tres" id="132_1jg8b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iumoi"]
 bg_color = Color(0.968627, 0.952941, 0.92549, 1)
@@ -677,7 +708,7 @@ evidencePlan = {
 "Amelia": {},
 "April": {},
 "Calvin": {
-"vanessaNoahEmail": ExtResource("27_8pidb")
+"latinPhrase": ExtResource("27_8pidb")
 },
 "James": {},
 "Minji": {},
@@ -843,6 +874,7 @@ unique_name_in_owner = true
 layout_mode = 1
 offset_right = 5.0
 offset_bottom = 0.0
+searchResults = [ExtResource("39_j8fr6"), ExtResource("40_0c6g3"), ExtResource("41_26lis"), ExtResource("42_102u3"), ExtResource("43_apo40")]
 
 [node name="ForumModal" parent="MainGameNav" instance=ExtResource("23_ao6xp")]
 unique_name_in_owner = true
@@ -865,7 +897,7 @@ visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_right = 48600.0
+offset_right = 55080.0
 grow_horizontal = 2
 script = ExtResource("28_alrkr")
 
@@ -874,7 +906,7 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_top = -263.0
-offset_right = 1.1178e+06
+offset_right = 1.43208e+06
 offset_bottom = 2012.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iumoi")
@@ -952,7 +984,9 @@ initialChatsTable = {
 allEmails = {
 "burgerEmail": [ExtResource("36_6dgd0")],
 "initialEmails": [ExtResource("30_p23g8"), ExtResource("31_trvxv")],
+"minjiAreYouOneOfUs": [ExtResource("55_kgh28")],
 "minjiVanessaEmail": [ExtResource("38_uivbn")],
+"minjiVanessaEmail3": [ExtResource("56_4ajiv")],
 "noahMinjiEmail": [ExtResource("43_jstkm")],
 "ramenEmail": [ExtResource("37_58cvp")]
 }
@@ -961,7 +995,9 @@ allFriends = {
 "update1Friends": [ExtResource("51_0ccph"), ExtResource("52_bhohl"), ExtResource("53_w37yl"), ExtResource("54_5expx"), ExtResource("55_3jdrw"), ExtResource("56_uwukb"), ExtResource("57_g4jyt"), ExtResource("58_eumij")]
 }
 allForums = {
-"initialForums": [ExtResource("40_obb53")]
+"janiceWalkerVictim": ExtResource("40_obb53"),
+"newGhostGirlMurder": ExtResource("74_vktmf"),
+"vanessaWolfeSecretBlog": ExtResource("78_ji5bc")
 }
 allChatrooms = {
 "day2DadChat": [ExtResource("48_8pvd5")],
@@ -969,28 +1005,50 @@ allChatrooms = {
 "noahMinjiInitialDMs": [ExtResource("58_awdnb")]
 }
 chatroomUpdates = {
+"amelia1HoldingUp": ExtResource("110_3wf70"),
 "aprilInitialDMs": ExtResource("91_n8n1q"),
 "calvinInitialDMs": ExtResource("93_qgqke"),
+"dad2": ExtResource("103_vee2h"),
 "day2PostObit": ExtResource("55_rf06y"),
 "day2PostVanessa": ExtResource("54_n2xkc"),
+"horror10EternalAffliction": ExtResource("117_jrqu7"),
+"horror11KingdomOfShadows": ExtResource("121_j8jat"),
 "horror5Aftermath": ExtResource("57_8834e"),
 "horror7SheWasntASaint": ExtResource("96_45dul"),
+"horror8Awkward": ExtResource("99_py3co"),
+"horror9ClearAir": ExtResource("108_rlo8x"),
 "horrorNoOneCameForward": ExtResource("62_sstyt"),
+"james2Awkward": ExtResource("104_s0w1h"),
 "jamesInitialDMs": ExtResource("92_5l8y8"),
+"minji10FeelingWeird": ExtResource("115_ejuq1"),
 "minji5Trust": ExtResource("61_wor3x"),
+"minji6AnotherEmail": ExtResource("100_6ru4k"),
+"minji7FreakedOut": ExtResource("102_cb8mf"),
+"minji8AnotherEmail2": ExtResource("105_newrm"),
+"minji9MomDiagnosis": ExtResource("106_hdtw4"),
 "minjiInvite": ExtResource("47_om4wu"),
 "minjiVanessaEmail": ExtResource("58_yx3y3"),
 "minjiWorried": ExtResource("56_e4kow"),
 "mom2": ExtResource("51_5tn64"),
+"mom3": ExtResource("98_rxco1"),
+"mom4": ExtResource("116_xnfq3"),
+"paige2StopEmailing": ExtResource("109_3k63f"),
 "paigeInitialDMs": ExtResource("95_psgfx"),
 "vanessaDeath": ExtResource("48_l2ct2")
 }
 allEvidence = {
 "burgerEmail": ExtResource("85_cyeqd"),
+"cilbitoxin": ExtResource("122_1jfuu"),
+"ghostGirlMurders": ExtResource("103_rooee"),
+"kingdomOfShadows": ExtResource("132_1jg8b"),
+"latinPhrase": ExtResource("100_v8ns3"),
 "ramenEmail": ExtResource("86_vb4ov"),
 "schoolid": ExtResource("81_8ipud"),
+"updatedLatinPhrase": ExtResource("104_k6obs"),
+"updatedLatinPhrase2": ExtResource("128_wyyfd"),
+"updatedLatinPhrase3": ExtResource("131_15pcn"),
 "vanessaDeath": ExtResource("102_djdit"),
-"vanessaNoahEmail": ExtResource("100_v8ns3")
+"vanessaPaigeFight": ExtResource("129_7rhbk")
 }
 evidencePlan = {
 "day1": {},
@@ -1000,7 +1058,10 @@ evidencePlan = {
 },
 "day3": {},
 "day4": {
-"vanessaNoahEmail": ExtResource("100_v8ns3")
+"janiceWalkerVictim": [ExtResource("103_rooee"), ExtResource("100_v8ns3")]
+},
+"day7": {
+"cilbitoxinArticle": null
 }
 }
 
@@ -1026,8 +1087,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1080.0
-offset_right = 4320.0
-offset_bottom = 9600.0
+offset_right = 10800.0
+offset_bottom = 21120.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -1083,7 +1144,11 @@ unique_name_in_owner = true
 [connection signal="pressed" from="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/LoadButton" to="Utilities/SaverLoader" method="load_game"]
 [connection signal="pressed" from="MainGameNav/SettingsModal/PanelContainer/SettingsMarginContainer/VBoxContainer/NewGame" to="MainGameNav/VBoxContainer/Menu/ForumButton/VBoxContainer/Label/SettingsModal" method="_on_new_game_pressed"]
 [connection signal="pressed" from="MainGameNav/SettingsModal/CloseButton" to="MainGameNav/SettingsModal" method="_on_close_button_pressed"]
+[connection signal="cilbitoxinArticleRead" from="MainGameNav/InternetModal" to="Utilities/GameManager" method="_on_internet_modal_cilbitoxin_article_read"]
+[connection signal="janiceWalkerArticleRead" from="MainGameNav/InternetModal" to="Utilities/GameManager" method="_on_internet_modal_janice_walker_article_read"]
+[connection signal="kingdomOfShadows" from="MainGameNav/InternetModal" to="Utilities/GameManager" method="_on_internet_modal_kingdom_of_shadows"]
 [connection signal="vanessaArticleRead" from="MainGameNav/InternetModal" to="Utilities/GameManager" method="_on_internet_modal_vanessa_article_read"]
+[connection signal="wolfeInDisguise" from="MainGameNav/InternetModal" to="Utilities/GameManager" method="_on_internet_modal_wolfe_in_disguise"]
 [connection signal="dayNotificationDisplay" from="MainGameNav/DayNotification" to="MainGameNav/ChatModal" method="_on_day_notification_day_notification_display"]
 [connection signal="newCharacterBuilder" from="Utilities/GameManager" to="." method="_on_game_manager_new_character_builder"]
 [connection signal="newChat" from="Utilities/GameManager" to="MainGameNav" method="_on_game_manager_new_chat"]

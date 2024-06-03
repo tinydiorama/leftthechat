@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://chm4t1gqid0i8"]
+
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_8ct8k"]
+[ext_resource type="Resource" uid="uid://c83f7ik66cp1" path="res://Resources/Dialogue/HorrorChat/Horror8-Awkward.dialogue" id="1_e8hty"]
+
+[resource]
+script = ExtResource("1_8ct8k")
+chatMetaName = "Horror8-Awkward"
+chatPath = ExtResource("1_e8hty")
+unlocked = false
+chatroomName = "Horror Fanatics - General"

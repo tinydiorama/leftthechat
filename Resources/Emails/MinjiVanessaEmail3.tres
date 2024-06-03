@@ -1,12 +1,50 @@
-[gd_resource type="Resource" script_class="Email" load_steps=2 format=3 uid="uid://digohsp1i0n0h"]
+[gd_resource type="Resource" script_class="Email" load_steps=3 format=3 uid="uid://digohsp1i0n0h"]
 
+[ext_resource type="Texture2D" uid="uid://budyfojw65xt7" path="res://Sprites/avatars-chat/jijubee.png" id="1_8slnm"]
 [ext_resource type="Script" path="res://Resources/Emails/Email.gd" id="1_og1ge"]
 
 [resource]
 script = ExtResource("1_og1ge")
-fromName = ""
-subject = ""
-body = ""
-date = ""
-read = false
+fromName = "Minji Kim <jijubee@bubble.com>"
+subject = "Subject: FW: Re: Re: Re: Re: This is serious"
+body = "____________________
+From: Vanessa Wolfe <wolfeinthefold@bubble.com>
+To: Minji Kim <jijubee@bubble.com>
+Date: October 14
+
+Sorry, I was harsh. I know. But can you blame me? This is serious, Minji. There's so much going on that you don't even know. And you told Paige? Paige?!?! Come on.
+
+Vanessa
+
+_____________________
+From: Minji Kim <jijubee@bubble.com>
+To: Vanessa Wolfe <wolfeinthefold@bubble.com>
+Date: October 14
+
+Yes I told Paige I got creepy emails. What's wrong with that? Isn't she your friend, “Vanessa”?
+_____________________
+From: Vanessa Wolfe <wolfeinthefold@bubble.com>
+To: Minji Kim <jijubee@bubble.com>
+Date: October 14
+
+I don't know who my real friends are at this point. Do you? You might be surprised.
+
+You don't believe I'm Vanessa? Fine. I'll prove it to you. Ask me anything.
+
+Vanessa
+_____________________
+From: Minji Kim <jijubee@bubble.com>
+To: Vanessa Wolfe <wolfeinthefold@bubble.com>
+Date: October 14
+
+okay, then tell me something! something only vanessa would know.
+_____________________
+From: Vanessa Wolfe <wolfeinthefold@bubble.com>
+To: Minji Kim <jijubee@bubble.com>
+
+I know about your mom's diagnosis.
+"
+icon = ExtResource("1_8slnm")
+date = "October 14"
+read = true
 emailId = "minjiVanessaEmail3"

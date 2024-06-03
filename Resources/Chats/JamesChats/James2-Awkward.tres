@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://dk6pivnkbisxh"]
+
+[ext_resource type="Resource" uid="uid://dswan2lhuj5fh" path="res://Resources/Dialogue/James/James2-Awkward.dialogue" id="1_17g2j"]
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="2_56way"]
+
+[resource]
+script = ExtResource("2_56way")
+chatMetaName = "James2-Awkward"
+chatPath = ExtResource("1_17g2j")
+unlocked = false
+chatroomName = "James"

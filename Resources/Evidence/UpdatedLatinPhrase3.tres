@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Evidence" load_steps=3 format=3 uid="uid://j3ckdvy3divi"]
+
+[ext_resource type="Texture2D" uid="uid://jkfshvmm37wt" path="res://Sprites/evidence/phrase2.png" id="1_ttkpa"]
+[ext_resource type="Script" path="res://Resources/Evidence/Evidence.gd" id="2_hjdif"]
+
+[resource]
+script = ExtResource("2_hjdif")
+evidenceId = "updatedLatinPhrase3"
+evidenceTitle = "In morte ero eius"
+description = "Victims Janice Walter, ? Samson, and ? Spring used this phrase. This is the same phrase Vanessa said before she died. It means “in death I am his.” It is a quote from the 1963 novel, The Kingdom of Shadows."
+icon = ExtResource("1_ttkpa")

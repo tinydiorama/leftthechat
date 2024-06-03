@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cbe5rujdusmq6"
+path="res://.godot/imported/Horror10-EternalAffliction.dialogue-dce7810d1766107c61e093d0db14a132.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/HorrorChat/Horror10-EternalAffliction.dialogue"
+dest_files=["res://.godot/imported/Horror10-EternalAffliction.dialogue-dce7810d1766107c61e093d0db14a132.tres"]
+
+[params]
+
+defaults=true

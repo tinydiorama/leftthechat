@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://badputgvkcok"]
+[gd_scene load_steps=17 format=3 uid="uid://badputgvkcok"]
 
 [ext_resource type="Texture2D" uid="uid://b5yum1q04mod5" path="res://icon.svg" id="1_05uv2"]
 [ext_resource type="Script" path="res://DialogueManager/ChatNode.gd" id="1_arjx3"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://rqx4scr2q2vs" path="res://Sprites/avatars-chat/wolfeinthefold.png" id="9_2m8xg"]
 [ext_resource type="Texture2D" uid="uid://dwjhyav2nusjc" path="res://Sprites/avatars-chat/MomBear567.png" id="10_rnba4"]
 [ext_resource type="Texture2D" uid="uid://bjqf4wfk4iv1n" path="res://Sprites/avatars-chat/Dadosaurus.png" id="11_aqabm"]
+[ext_resource type="Texture2D" uid="uid://dcshba8esi0rf" path="res://Sprites/avatars-chat/system.png" id="12_lm6kb"]
 
 [node name="Balloon" type="MarginContainer"]
 anchors_preset = 10
@@ -28,6 +29,7 @@ theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 script = ExtResource("1_arjx3")
 characterPortraits = {
+"System": ExtResource("12_lm6kb"),
 "The_Professor_Cal": ExtResource("8_5g7h3"),
 "ameliarate": ExtResource("4_3ufd3"),
 "aprilfoolz": ExtResource("5_0imaw"),

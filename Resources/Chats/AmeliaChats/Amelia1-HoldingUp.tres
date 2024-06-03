@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="Chatroom" load_steps=2 format=3 uid="uid://can5wm2opjpwj"]
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://boq5qmc4wwg0t"]
 
-[ext_resource type="Script" path="res://Resources/Chats/ChatRoom.gd" id="1_vgx51"]
+[ext_resource type="Resource" uid="uid://ghf5lhrr0h3c" path="res://Resources/Dialogue/Amelia/Amelia1-HoldingUp.dialogue" id="1_siirl"]
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_xerue"]
 
 [resource]
-script = ExtResource("1_vgx51")
-chatName = ""
-numPeople = 0
-category = ""
-chats = Array[Resource("res://Resources/Chats/ChatMeta.gd")]([])
+script = ExtResource("1_xerue")
+chatMetaName = "Amelia1-HoldingUp"
+chatPath = ExtResource("1_siirl")
+unlocked = false
+chatroomName = "Amelia"

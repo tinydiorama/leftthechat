@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dswan2lhuj5fh"
+path="res://.godot/imported/James2-Awkward.dialogue-d10a71aec192d3784903057ef11745f7.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/James/James2-Awkward.dialogue"
+dest_files=["res://.godot/imported/James2-Awkward.dialogue-d10a71aec192d3784903057ef11745f7.tres"]
+
+[params]
+
+defaults=true

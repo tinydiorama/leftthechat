@@ -1,14 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvsktvfcj73f8"]
+[gd_scene load_steps=7 format=3 uid="uid://cvsktvfcj73f8"]
 
+[ext_resource type="Script" path="res://Scripts/Interfaces/Articles/JaniceWalkerPage.gd" id="1_ht345"]
 [ext_resource type="PackedScene" uid="uid://ifij1i447f6s" path="res://Scenes/Forums/forum_thread.tscn" id="1_yuhko"]
 [ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="2_mivvf"]
+[ext_resource type="FontFile" uid="uid://ccpintqmys7cq" path="res://Resources/Fonts/Prompt-Regular.ttf" id="3_xh0pm"]
 [ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="4_nldcb"]
 [ext_resource type="StyleBox" uid="uid://4028jh63ow77" path="res://Stylebox.tres" id="4_rxrq2"]
 
 [node name="JaniceWalkerObituary" type="VBoxContainer"]
-offset_right = 965.0
-offset_bottom = 1245.0
+offset_right = 870.0
+offset_bottom = 606.0
+size_flags_horizontal = 3
 theme_override_constants/separation = 40
+script = ExtResource("1_ht345")
 
 [node name="Label2" type="Label" parent="."]
 custom_minimum_size = Vector2(420, 0)
@@ -34,6 +38,7 @@ text = "Was Janice Walter another victim of the Ghost Girl Murders? "
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xh0pm")
 text = "Walter’s autopsy revealed cilbitoxin in her system, just like Samson’s did. We know from Walter's public blog she began speaking with Samson after Samson's death. If you ask me this is one of the Ghost Girl Murders, all perpetrated by the same killer."
 autowrap_mode = 3
 
@@ -49,5 +54,7 @@ theme_override_styles/hover = ExtResource("4_rxrq2")
 theme_override_styles/pressed = ExtResource("4_rxrq2")
 theme_override_styles/focus = ExtResource("4_rxrq2")
 text = "Read More on Tableaux App"
+
+[connection signal="pressed" from="ReadMoreButton" to="." method="_on_read_more_button_pressed"]
 
 [editable path="ForumThread"]

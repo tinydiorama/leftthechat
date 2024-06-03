@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ForumPost" load_steps=3 format=3 uid="uid://de0j43k15kv6r"]
 
-[ext_resource type="Texture2D" uid="uid://cja8bmbmia36t" path="res://Sprites/forum-avatar-placeholder.png" id="1_niv7w"]
+[ext_resource type="Texture2D" uid="uid://bediitnr182pa" path="res://Sprites/avatars-chat/genericavatar1.png" id="1_jsffh"]
 [ext_resource type="Script" path="res://Resources/Forums/ForumPost.gd" id="2_eh7l6"]
 
 [resource]
 script = ExtResource("2_eh7l6")
 username = "@GhostGirl5776"
-avatar = ExtResource("1_niv7w")
+avatar = ExtResource("1_jsffh")
 body = "I'm not suggesting they were killed by ghosts. But okay."

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://ghf5lhrr0h3c"
+path="res://.godot/imported/Amelia1-HoldingUp.dialogue-6d1a38532eba5fce238af1de892f4829.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Amelia/Amelia1-HoldingUp.dialogue"
+dest_files=["res://.godot/imported/Amelia1-HoldingUp.dialogue-6d1a38532eba5fce238af1de892f4829.tres"]
+
+[params]
+
+defaults=true
