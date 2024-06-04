@@ -255,6 +255,8 @@ func populate_data():
 				
 	for chatName in seenChats:
 		var chatData = storyManager.chatroomUpdates.get(chatName)
+		if ( chatData == null ):
+			chatData = storyManager.chatroomUpdates2.get(chatName)
 		if ( chatData != null ):
 			var chatroomName = chatData.chatroomName
 			chats.add_chat_segment(chatData, chatData.chatroomName)

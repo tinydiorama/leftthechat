@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://bdtccqdd8tunh"]
+
+[ext_resource type="Resource" uid="uid://dau5nr26n5gui" path="res://Resources/Dialogue/HorrorChat/Horror12-Alibi.dialogue" id="1_2q84d"]
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_blkfm"]
+
+[resource]
+script = ExtResource("1_blkfm")
+chatMetaName = "Horror12-Alibi"
+chatPath = ExtResource("1_2q84d")
+unlocked = false
+chatroomName = "Horror Fanatics - General"

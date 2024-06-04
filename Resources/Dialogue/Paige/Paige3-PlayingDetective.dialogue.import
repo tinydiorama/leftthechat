@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cr2feq3frq7hd"
+path="res://.godot/imported/Paige3-PlayingDetective.dialogue-d3f184b5d6cc126b57c34faeb68077ed.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Paige/Paige3-PlayingDetective.dialogue"
+dest_files=["res://.godot/imported/Paige3-PlayingDetective.dialogue-d3f184b5d6cc126b57c34faeb68077ed.tres"]
+
+[params]
+
+defaults=true

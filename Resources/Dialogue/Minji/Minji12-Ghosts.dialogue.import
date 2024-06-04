@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cvxruwnfl84t1"
+path="res://.godot/imported/Minji12-Ghosts.dialogue-679e5badfab6732b6d7a6ebcec20553c.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Minji/Minji12-Ghosts.dialogue"
+dest_files=["res://.godot/imported/Minji12-Ghosts.dialogue-679e5badfab6732b6d7a6ebcec20553c.tres"]
+
+[params]
+
+defaults=true

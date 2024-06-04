@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://mqdgvt7l0sfx"
+path="res://.godot/imported/Minji13-AnnoyedPaige.dialogue-6a2a00a26d76cf8729ce0fb1c135ba39.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Minji/Minji13-AnnoyedPaige.dialogue"
+dest_files=["res://.godot/imported/Minji13-AnnoyedPaige.dialogue-6a2a00a26d76cf8729ce0fb1c135ba39.tres"]
+
+[params]
+
+defaults=true

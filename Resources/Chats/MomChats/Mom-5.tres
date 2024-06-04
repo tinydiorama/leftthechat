@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChatMeta" load_steps=3 format=3 uid="uid://th4hjjt2k0ui"]
+
+[ext_resource type="Resource" uid="uid://c2f46uotkxg07" path="res://Resources/Dialogue/MomandDad/Mom5.dialogue" id="1_gvxg2"]
+[ext_resource type="Script" path="res://Resources/Chats/ChatMeta.gd" id="1_obid1"]
+
+[resource]
+script = ExtResource("1_obid1")
+chatMetaName = "Mom-5"
+chatPath = ExtResource("1_gvxg2")
+unlocked = false
+chatroomName = "Mom"

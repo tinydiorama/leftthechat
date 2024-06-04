@@ -7,6 +7,7 @@ extends Node
 @export var allForums:Dictionary = {}
 @export var allChatrooms:Dictionary = {}
 @export var chatroomUpdates:Dictionary = {}
+@export var chatroomUpdates2:Dictionary = {}
 @export var allEvidence:Dictionary = {}
 
 @export var evidencePlan:Dictionary = {}
@@ -213,6 +214,28 @@ func advanceStory():
 		if ( gameManager.kingdomOfShadowsRead && ! gameManager.seenChats.has("horror11KingdomOfShadows")):
 			gameManager.seenChats.append("horror11KingdomOfShadows")
 			gameManager.add_chat_segment(chatroomUpdates.get("horror11KingdomOfShadows"), "Horror Fanatics - General")
+		if ( gameManager.isAllUnreads() && gameManager.completedChats.has("Horror11-KingdomOfShadows") ):
+			gameManager.seenChats.append("minji11StillWeird")
+			gameManager.add_chat_segment(chatroomUpdates.get("minji11StillWeird"), "Minji")
+		if ( gameManager.isAllUnreads() && gameManager.completedChats.has("Minji11-StillWeird")):
+			gameManager.seenChats.append("minji12Ghosts")
+			gameManager.add_chat_segment(chatroomUpdates.get("minji12Ghosts"), "Minji")
+			gameManager.seenChats.append("horror12Alibi")
+			gameManager.add_chat_segment(chatroomUpdates.get("horror12Alibi"), "Horror Fanatics - General")
+			gameManager.seenChats.append("mom5")
+			gameManager.add_chat_segment(chatroomUpdates.get("mom5"), "Mom")
+			gameManager.dayIndicator = "day9"
+			dayNotification.display("Day Nine")
+			
+	if ( gameManager.dayIndicator == "day9" ):
+		if ( gameManager.completedChats.has("Horror12-Alibi") ):
+			gameManager.seenChats.append("minji13AnnoyedPaige")
+			gameManager.add_chat_segment(chatroomUpdates.get("minji13AnnoyedPaige"), "Minji")
+		if ( gameManager.isAllUnreads() && gameManager.completedChats.has("Minji13-AnnoyedPaige") ):
+			gameManager.seenChats.append("paige3PlayingDetective")
+			gameManager.add_chat_segment(chatroomUpdates2.get("paige3PlayingDetective"), "Paige")
+			print("day10")
+		
 			
 
 func checkForNewEvidence(id:String):

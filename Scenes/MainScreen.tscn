@@ -1,4 +1,4 @@
-[gd_scene load_steps=145 format=3 uid="uid://drxmlpy8vc5si"]
+[gd_scene load_steps=152 format=3 uid="uid://drxmlpy8vc5si"]
 
 [ext_resource type="Theme" uid="uid://bnml4e7chgfkf" path="res://PhoneTheme.tres" id="1_fmx65"]
 [ext_resource type="Texture2D" uid="uid://dikti0npwvcsv" path="res://Sprites/pinkbg.png" id="2_4edjn"]
@@ -132,10 +132,17 @@
 [ext_resource type="Resource" uid="uid://chobslie17qwe" path="res://Resources/Chats/HorrorChats/Horror10-EternalAffliction.tres" id="117_jrqu7"]
 [ext_resource type="Resource" uid="uid://inwlvt0prgw" path="res://Resources/Chats/HorrorChats/Horror11-KingdomOfShadows.tres" id="121_j8jat"]
 [ext_resource type="Resource" uid="uid://c57hlqkjnp4ia" path="res://Resources/Evidence/Cilbitoxin.tres" id="122_1jfuu"]
+[ext_resource type="Resource" uid="uid://byfs3i874u4f8" path="res://Resources/Chats/Minji Chats/Minji11-StillWeird.tres" id="122_xq6gj"]
+[ext_resource type="Resource" uid="uid://b1d0ntfxmy572" path="res://Resources/Chats/Minji Chats/Minji12-Ghosts.tres" id="123_kf46c"]
+[ext_resource type="Resource" uid="uid://bdtccqdd8tunh" path="res://Resources/Chats/HorrorChats/Horror12-Alibi.tres" id="124_ucujp"]
+[ext_resource type="Resource" uid="uid://bwr3w8y5bjhbj" path="res://Resources/Chats/Minji Chats/Minji13-AnnoyedPaige.tres" id="125_ci46r"]
+[ext_resource type="Resource" uid="uid://th4hjjt2k0ui" path="res://Resources/Chats/MomChats/Mom-5.tres" id="126_p07jd"]
+[ext_resource type="Resource" uid="uid://b1oo347me4te1" path="res://Resources/Chats/PaigeChats/Paige3-PlayingDetective.tres" id="127_c65pq"]
 [ext_resource type="Resource" uid="uid://lkksds3o48al" path="res://Resources/Evidence/UpdatedLatinPhrase2.tres" id="128_wyyfd"]
 [ext_resource type="Resource" uid="uid://dpcwyh2hsw2rc" path="res://Resources/Evidence/VanessaPaigeFight.tres" id="129_7rhbk"]
 [ext_resource type="Resource" uid="uid://j3ckdvy3divi" path="res://Resources/Evidence/UpdatedLatinPhrase3.tres" id="131_15pcn"]
 [ext_resource type="Resource" uid="uid://dq17ewr5qtbwe" path="res://Resources/Evidence/KingdomOfShadows.tres" id="132_1jg8b"]
+[ext_resource type="Resource" uid="uid://djd13n6poc31q" path="res://Resources/Evidence/MinjisAlibi.tres" id="138_8yhpr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iumoi"]
 bg_color = Color(0.968627, 0.952941, 0.92549, 1)
@@ -1013,6 +1020,7 @@ chatroomUpdates = {
 "day2PostVanessa": ExtResource("54_n2xkc"),
 "horror10EternalAffliction": ExtResource("117_jrqu7"),
 "horror11KingdomOfShadows": ExtResource("121_j8jat"),
+"horror12Alibi": ExtResource("124_ucujp"),
 "horror5Aftermath": ExtResource("57_8834e"),
 "horror7SheWasntASaint": ExtResource("96_45dul"),
 "horror8Awkward": ExtResource("99_py3co"),
@@ -1021,6 +1029,9 @@ chatroomUpdates = {
 "james2Awkward": ExtResource("104_s0w1h"),
 "jamesInitialDMs": ExtResource("92_5l8y8"),
 "minji10FeelingWeird": ExtResource("115_ejuq1"),
+"minji11StillWeird": ExtResource("122_xq6gj"),
+"minji12Ghosts": ExtResource("123_kf46c"),
+"minji13AnnoyedPaige": ExtResource("125_ci46r"),
 "minji5Trust": ExtResource("61_wor3x"),
 "minji6AnotherEmail": ExtResource("100_6ru4k"),
 "minji7FreakedOut": ExtResource("102_cb8mf"),
@@ -1032,9 +1043,13 @@ chatroomUpdates = {
 "mom2": ExtResource("51_5tn64"),
 "mom3": ExtResource("98_rxco1"),
 "mom4": ExtResource("116_xnfq3"),
+"mom5": ExtResource("126_p07jd"),
 "paige2StopEmailing": ExtResource("109_3k63f"),
 "paigeInitialDMs": ExtResource("95_psgfx"),
 "vanessaDeath": ExtResource("48_l2ct2")
+}
+chatroomUpdates2 = {
+"paige3PlayingDetective": ExtResource("127_c65pq")
 }
 allEvidence = {
 "burgerEmail": ExtResource("85_cyeqd"),
@@ -1042,6 +1057,7 @@ allEvidence = {
 "ghostGirlMurders": ExtResource("103_rooee"),
 "kingdomOfShadows": ExtResource("132_1jg8b"),
 "latinPhrase": ExtResource("100_v8ns3"),
+"minjisAlibi": ExtResource("138_8yhpr"),
 "ramenEmail": ExtResource("86_vb4ov"),
 "schoolid": ExtResource("81_8ipud"),
 "updatedLatinPhrase": ExtResource("104_k6obs"),

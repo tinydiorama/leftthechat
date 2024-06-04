@@ -42,6 +42,10 @@ func checkForEvidenceGet(id:String):
 
 func updateEvidence(id:String, newId:String):
 	gameManager.update_evidence(id, newId)
+	
+func addEvidence(id:String):
+	var evidence = gameManager.storyManager.allEvidence.get(id)
+	gameManager.add_evidence(evidence)
 
 func unlockTableaux():
 	gameManager.unlockTableaux()

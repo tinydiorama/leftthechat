@@ -1,0 +1,13 @@
+~ start
+
+@jijubee: ugh, what is paige’s problem?
+@jijubee: this is not some little squabble in the chat.
+@jijubee: our friend is dead!
+- You’re right.
+	@jijubee: thank you!
+- Well... maybe we should try to be more subtle about it. 
+	@jijubee: okay...
+	@jijubee: sorry i’m not more “subtle” about our friend being killed. 
+do Globals.add_evidence("minjisAlibi")
+
+=> END

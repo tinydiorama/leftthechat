@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c2f46uotkxg07"
+path="res://.godot/imported/Mom5.dialogue-05733d056e3b3016f13537d3ed57bfc0.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/MomandDad/Mom5.dialogue"
+dest_files=["res://.godot/imported/Mom5.dialogue-05733d056e3b3016f13537d3ed57bfc0.tres"]
+
+[params]
+
+defaults=true

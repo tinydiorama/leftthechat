@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://d1w2x8fs0rrxw"
+path="res://.godot/imported/Minji11-StillWeird.dialogue-b7dcfa24fa5c15b412e52d296df6fe61.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogue/Minji/Minji11-StillWeird.dialogue"
+dest_files=["res://.godot/imported/Minji11-StillWeird.dialogue-b7dcfa24fa5c15b412e52d296df6fe61.tres"]
+
+[params]
+
+defaults=true
